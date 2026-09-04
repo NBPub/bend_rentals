@@ -1,0 +1,66 @@
+name: Update listings
+
+# Scrape the sources, rebuild the page, commit both.
+#
+# A full run is about three minutes, nearly all of it the crawl delays the
+# sources ask for. Nothing here is time-critical, so it runs once a day.
+on:
+  schedule:
+    # 13:00 UTC — early morning in Bend, so the day's listings are up.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      geocode_limit:
+        description: "New addresses to geocode this run"
+        required: false
+        default: "50"
+
+# One run at a time. Two runs committing the same CSV would conflict, and
+# there is nothing to gain from scraping the same sites twice at once.
+concurrency:
+  group: update-listings
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Scrape and rebuild the page
+        # Snapshots are the local history mechanism; here the commit below is
+        # the history, so a dated copy per run would just be noise.
+        #
+        # The input goes through the environment rather than being interpolated
+        # into the script: a `${{ }}` inside `run:` is substituted before the
+        # shell ever sees it, so its contents would be executed as shell.
+        env:
+          GEOCODE_LIMIT: ${{ inputs.geocode_limit || '50' }}
+        run: python update.py --no-snapshot --geocode-limit "$GEOCODE_LIMIT"
+
+      - name: Commit the results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # cache/geocode.json matters as much as the data: without it every
+          # run would re-ask Nominatim for addresses it has already resolved.
+          git add data/listings.csv cache/geocode.json docs/index.html
+          if git diff --staged --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "data: refresh listings ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+

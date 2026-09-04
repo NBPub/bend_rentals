@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+  <title>Rental Listings</title>
+<meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scaleProfileSnapshotClientTest=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="">
+<meta name="msapplication-config" content="none" />
+<link rel="icon" type="image/x-icon" href="https://public.cdn.appfolio.com/public/favicons/favicon.ico" /><link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://listings.cdn.appfolio.com/listings/assets/listings/appfolio_touch-90fc6855d75f24e7ec2e1b36f2ff871a6ff2e70d4b5faf28c861363994b44ae8.png" /><link rel="apple-touch-startup-image" type="image/x-icon" href="https://listings.cdn.appfolio.com/listings/assets/listings/appfolio_startup-d9243797170560b61e4ad09679cfb1c2fab7410ebc95c245b9e1dff89a3fac82.png" />
+<link rel="stylesheet" href="https://listings.cdn.appfolio.com/listings/assets/listings/application2-09f63b334c5546fef4434a8f82f83bca70ea2b084017614422be88418b52adfc.css" media="all" />
+<link rel="stylesheet" href="https://public.cdn.appfolio.com/bootstrap-coastline/6.5.2/bootstrap-coastline.min.css" />
+  <link rel="stylesheet" href="https://public.cdn.appfolio.com/public/icons/font-awesome/6.2.0/css/all.min.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://listings.cdn.appfolio.com/listings/assets/listings/listings/listings_index-f8582b53f6b4ba9d06ff924c4c4d2e92191176fa45763f6ac05d90b271d0470f.css" />
+<!--[if lt IE 9]>
+<![endif]-->
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id="GTM-N443R47"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+  <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src='https://h.online-metrix.net/fp/tags?org_id=5kfca2gp&amp;session_id=f870fd3a-313f-42d6-9d20-2aec86c07a08'></iframe>
+</noscript>
+<main>
+<form id="filters" class="form js-filter-form form--stacked form--full-width hand-hidden" autocomplete="off" novalidate="novalidate" action="/listings/listings" accept-charset="UTF-8" data-remote="true" method="get">
+<div class="topbar theme-color js-top-bar">
+  <div class="u-float-left">
+    <label class="topbar__sort-by__label mb-0" for="filters_order_by">Sort By</label>
+    <select include_blank="false" class="topbar__sort-by" name="filters[order_by]" id="filters_order_by"><option selected="selected" value="date_posted">Most Recent</option>
+<option value="rent_asc">Rent (Low to High)</option>
+<option value="rent_desc">Rent (High to Low)</option>
+<option value="bedrooms">Bedrooms</option></select>
+  </div>
+<div class="u-float-right">
+    <ul class="topbar__options mb-0">
+      <li class="topbar__item theme-color theme-color--actionable hand-hidden">
+        <a href="#" class="text-white js-toggle-map-button"><span class="fa-solid fa-location-dot"></span> Show Map</a>
+      </li>
+      <li class="topbar__item theme-color theme-color--actionable">
+        <a href="#" class="text-white js-filter-button"><span class="fa-solid fa-filter"></span> Filter</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<input autocomplete="off" type="hidden" name="filters[property_list]" id="filters_property_list" />
+<div class="filter-menu">
+    <div class="grid">
+      <div class="grid__6">
+        <div class="form__row">
+          <label class="form__row__label">Price Range</label>
+<div class="form__row__body">
+            <div class="form__row__field-wrapper">
+              <ul class="grid grid--no-gutters p-0 mb-0">
+ <li class="grid__5"><select include_blank="false" name="filters[market_rent_from]" id="filters_market_rent_from"><option value="">No Min.</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option></select></li>
+ <li class="grid__2 u-text-center" style="line-height: 2em;">to</li>
+ <li class="grid__5"><select include_blank="false" name="filters[market_rent_to]" id="filters_market_rent_to"><option value="">No Max.</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option></select></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="grid__6">
+          <div class="grid">
+            <div class="form__row grid__6"><label class="form__row__label" for="filters_bedrooms">Bedrooms</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[bedrooms]" id="filters_bedrooms"><option value="">0+</option>
+<option value="1">1+</option>
+<option selected="selected" value="2">2+</option>
+<option value="3">3+</option></select></div></div></div>
+            <div class="form__row grid__6"><label class="form__row__label" for="filters_bathrooms">Bathrooms</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[bathrooms]" id="filters_bathrooms"><option value="">0+</option>
+<option value="1">1+</option>
+<option value="2">2+</option></select></div></div></div>
+          </div>
+        </div>
+</div>
+<div class="grid">
+      <div class="grid__6">
+        <div class="form__row"><label class="form__row__label" for="filters_cities">Cities</label><div class="form__row__body"><div class="form__row__field-wrapper"><input name="filters[cities][]" type="hidden" value="" autocomplete="off" /><select multiple="multiple" size="5" class="filter-menu__multi-select" name="filters[cities][]" id="filters_cities"><option value="All Cities">All Cities</option>
+<option selected="selected" value="Bend">Bend</option></select></div></div></div>
+      </div>
+      <div class="grid__6">
+        <div class="form__row"><label class="form__row__label" for="filters_postal_codes">Zip Codes</label><div class="form__row__body"><div class="form__row__field-wrapper"><input name="filters[postal_codes][]" type="hidden" value="" autocomplete="off" /><select multiple="multiple" size="5" class="filter-menu__multi-select" name="filters[postal_codes][]" id="filters_postal_codes"><option value="All Zip Codes">All Zip Codes</option>
+<option value="97701">97701</option>
+<option value="97702">97702</option></select></div></div></div>
+      </div>
+    </div>
+<div class="grid">
+      <div class="grid__6">
+      <div class="form__row"><label class="form__row__label" for="filters_cats">Cats Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[cats]" id="filters_cats"><option value="" label=" "></option>
+<option value="Cats allowed">Yes</option>
+<option selected="selected" value="Cats not allowed">No</option></select></div></div></div>
+      </div>
+      <div class="grid__6">
+      <div class="form__row"><label class="form__row__label" for="filters_dogs">Dogs Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[dogs]" id="filters_dogs"><option value="" label=" "></option>
+<option value="Dogs allowed">Large</option>
+<option value="Small dogs allowed">Small</option>
+<option value="Dogs not allowed">None</option></select></div></div></div>
+      </div>
+      <div class="grid__5">
+        <div class="form__row">
+          <div class="form__row__body">
+            <div class="form__row__field-wrapper">
+              <ul class="grid grid--no-gutters p-0">
+ <div class="form__row"><label class="form__row__label" for="filters_desired_move_in">Desired Move In</label><div class="form__row__body"><div class="form__row__field-wrapper"><div class="js-gears-date input-add-on"><input class="js-datepicker" type="text" name="filters[desired_move_in]" id="filters_desired_move_in" /><span class="js-datepicker-trigger input-add-on__append button"><span class="icon icon-calendar"></span></span></div></div></div></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="u-text-center">
+      <input type="submit" name="commit" value="Filter" class="filter-form-button btn btn-primary theme-color theme-color--actionable theme-color-border" data-disable-with="Filter" />
+    </div>
+  </div>
+</form>
+<form id="mobile_filters" class="form js-mobile-filter-form form--stacked form--full-width desk-hidden tablet-hidden" autocomplete="off" novalidate="novalidate" action="/listings/listings" accept-charset="UTF-8" data-remote="true" method="get">
+<div class="topbar theme-color js-top-bar">
+  <div class="u-float-left">
+    <label class="topbar__sort-by__label mb-0" for="mobile_filters_order_by">Sort By</label>
+    <select include_blank="false" class="topbar__sort-by" name="filters[order_by]" id="mobile_filters_order_by"><option selected="selected" value="date_posted">Most Recent</option>
+<option value="rent_asc">Rent (Low to High)</option>
+<option value="rent_desc">Rent (High to Low)</option>
+<option value="bedrooms">Bedrooms</option></select>
+  </div>
+<div class="u-float-right">
+    <ul class="topbar__options mb-0">
+      <li class="topbar__item theme-color theme-color--actionable hand-hidden">
+        <a href="#" class="text-white js-toggle-map-button"><span class="fa-solid fa-location-dot"></span> Show Map</a>
+      </li>
+      <li class="topbar__item theme-color theme-color--actionable">
+        <a href="#" class="text-white js-filter-button"><span class="fa-solid fa-filter"></span> Filter</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<input autocomplete="off" type="hidden" name="filters[property_list]" id="mobile_filters_property_list" />
+<div class="filter-menu">
+    <div class="grid">
+      <div class="grid__12">
+        <div class="form__row">
+          <div class="form__row__body">
+            <div class="form__row__field-wrapper">
+              <ul class="grid grid--no-gutters p-0">
+ <li class="grid__5 u-text-left" style="line-height: 2em; font-weight: bold">
+ <label>Price Range</label>
+ </li>
+ <li class="grid__3"><select include_blank="false" name="filters[market_rent_from]" id="mobile_filters_market_rent_from"><option value="">No Min.</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option></select></li>
+ <li class="grid__1">&nbsp;</li>
+ <li class="grid__3"><select include_blank="false" name="filters[market_rent_to]" id="mobile_filters_market_rent_to"><option value="">No Max.</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option></select></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="grid__12">
+          <div class="form__row"><label class="form__row__label" for="mobile_filters_bedrooms">Bedrooms</label><div class="form__row__body"><div class="form__row__field-wrapper">
+            <div class="radio_block mobile_filters_bedrooms"><input type="hidden" name="filters[bedrooms]" value="" autocomplete="off" /><span><input type="radio" value="" checked="checked" name="filters[bedrooms]" id="mobile_filters_bedrooms_" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_">0+</label></span><span><input type="radio" value="1" name="filters[bedrooms]" id="mobile_filters_bedrooms_1" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_1">1+</label></span><span><input type="radio" value="2" name="filters[bedrooms]" id="mobile_filters_bedrooms_2" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_2">2+</label></span><span><input type="radio" value="3" name="filters[bedrooms]" id="mobile_filters_bedrooms_3" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_3">3+</label></span><span><input type="radio" value="4" name="filters[bedrooms]" id="mobile_filters_bedrooms_4" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_4">4+</label></span><span><input type="radio" value="5" name="filters[bedrooms]" id="mobile_filters_bedrooms_5" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_5">5+</label></span></div>
+</div></div></div>        </div>
+        <div class="grid__12">
+          <div class="form__row"><label class="form__row__label" for="mobile_filters_bathrooms">Bathrooms</label><div class="form__row__body"><div class="form__row__field-wrapper">
+            <div class="radio_block mobile_filters_bathrooms"><input type="hidden" name="filters[bathrooms]" value="" autocomplete="off" /><span><input type="radio" value="" checked="checked" name="filters[bathrooms]" id="mobile_filters_bathrooms_" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_">0+</label></span><span><input type="radio" value="1" name="filters[bathrooms]" id="mobile_filters_bathrooms_1" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_1">1+</label></span><span><input type="radio" value="2" name="filters[bathrooms]" id="mobile_filters_bathrooms_2" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_2">2+</label></span><span><input type="radio" value="3" name="filters[bathrooms]" id="mobile_filters_bathrooms_3" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_3">3+</label></span><span><input type="radio" value="4" name="filters[bathrooms]" id="mobile_filters_bathrooms_4" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_4">4+</label></span><span><input type="radio" value="5" name="filters[bathrooms]" id="mobile_filters_bathrooms_5" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_5">5+</label></span></div>
+</div></div></div>        </div>
+<div class="grid__12">
+        <div class="form__row multiselect_box mobile_filters_cities"><label class="form__row__label">Cities</label><div class="form__row__body"><div class="form__row__field-wrapper"><input type="hidden" name="filters[cities][]" value="" autocomplete="off" /><span class="form__row__control"><label for="mobile_filters_cities_all_cities"><input type="checkbox" value="All Cities" name="filters[cities][]" id="mobile_filters_cities_all_cities" />All Cities</label></span><span class="form__row__control"><label for="mobile_filters_cities_bend"><input type="checkbox" value="Bend" checked="checked" name="filters[cities][]" id="mobile_filters_cities_bend" />Bend</label></span></div></div></div>
+      </div>
+      <div class="grid__12">
+        <div class="form__row multiselect_box mobile_filters_postal_codes"><label class="form__row__label">Zip Codes</label><div class="form__row__body"><div class="form__row__field-wrapper"><input type="hidden" name="filters[postal_codes][]" value="" autocomplete="off" /><span class="form__row__control"><label for="mobile_filters_postal_codes_all_zip_codes"><input type="checkbox" value="All Zip Codes" name="filters[postal_codes][]" id="mobile_filters_postal_codes_all_zip_codes" />All Zip Codes</label></span><span class="form__row__control"><label for="mobile_filters_postal_codes_97701"><input type="checkbox" value="97701" name="filters[postal_codes][]" id="mobile_filters_postal_codes_97701" />97701</label></span><span class="form__row__control"><label for="mobile_filters_postal_codes_97702"><input type="checkbox" value="97702" name="filters[postal_codes][]" id="mobile_filters_postal_codes_97702" />97702</label></span></div></div></div>
+      </div>
+<div class="grid__12">
+        <div class="form__row"><label class="form__row__label" for="mobile_filters_cats">Cats Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[cats]" id="mobile_filters_cats"><option value="" label=" "></option>
+<option value="Cats allowed">Yes</option>
+<option selected="selected" value="Cats not allowed">No</option></select></div></div></div>
+      </div>
+      <div class="grid__12">
+        <div class="form__row"><label class="form__row__label" for="mobile_filters_dogs">Dogs Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[dogs]" id="mobile_filters_dogs"><option value="" label=" "></option>
+<option value="Dogs allowed">Large</option>
+<option value="Small dogs allowed">Small</option>
+<option value="Dogs not allowed">None</option></select></div></div></div>
+        <div class="form__row"><label class="form__row__label" for="mobile_filters_desired_move_in">Desired Move In</label><div class="form__row__body"><div class="form__row__field-wrapper"><ul class="grid grid--half-gutters"><li class="grid__12"><div class="js-gears-date input-add-on"><input class="js-datepicker" type="text" name="filters[desired_move_in]" id="mobile_filters_desired_move_in" /><span class="js-datepicker-trigger input-add-on__append button"><span class="icon icon-calendar"></span></span></div></li></ul></div></div></div>
+      </div>
+    </div>
+    <div class="u-text-center">
+      <input type="submit" name="commit" value="Filter" class="filter-form-button btn btn-primary theme-color theme-color--actionable theme-color-border" data-disable-with="Filter" />
+    </div>
+  </div>
+</form>
+<div class="map-panel js-listing-map hand-hidden u-hidden">
+    <div id="googlemap" class="map-panel__googlemap"></div>
+    <div class="map-panel__bottom-button u-text-center">
+      <a href="#" class="map-panel__bottom-button__link u-hidden js-exit-streetview-button">Exit Street View</a>
+      <a href="#" class="map-panel__bottom-button__link js-reset-map-button">Reset Map</a>
+    </div>
+  </div>
+<h1 class="text-center mt-4">Current Listings</h1>
+<p class="js-topbar-title listings__filters-title text-center m-auto">Showing listings with <strong>2+ Bedrooms</strong> in <strong>Bend</strong> and <strong>Cats Not Allowed</strong>:</p>
+<div id='result_container' class="listings js-listings-container">
+  <div class="listing-item result js-listing-item" id="listing_53">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/853ad307-23e1-4298-a456-cac030911646" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/4e06089a-f593-4367-a5ea-2df50c66e923/medium.jpg" alt="60889 Granite Dr, Bend, OR 97702" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,295
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,295</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,344</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/17/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/853ad307-23e1-4298-a456-cac030911646" target="_blank">Updated 3 Bed/2 Bath Home in Romaine Village with Garage</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">60889 Granite Dr, Bend, OR 97702</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="53"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,344</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/17/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">This 3 bed/2 bath manufactured home is on an elevated 1/2 acre lot with 1/4 acre fenced in Romaine Village. The home has been updated throughout, includes washer/dryer hookups and has a detached single car garage. 
+<br />
+<br />Tenant responsible for all utilities and landscape maintenance. One-year initial lease term. Dogs considered on a case by case basis with owner approval and additional deposit. So...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Utilities Included:</span> Tenant Responsible for Utilities
+          <br>
+        <span style="font-weight:bold">Appliances:</span> Oven, Refrigerator, Dishwasher, Washer/Dryer Hook-Ups, Microwave
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats not allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/853ad307-23e1-4298-a456-cac030911646">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=853ad307-23e1-4298-a456-cac030911646&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_849">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/e5157618-123c-44e8-8053-efa15199b8f0" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/3cabc473-e01b-4cda-9f3c-0fc7790ef781/medium.jpg" alt="2858 NE Daggett, Bend, OR 97701" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,495
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,495</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,194</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">NOW</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/e5157618-123c-44e8-8053-efa15199b8f0" target="_blank">3 Bed/2 Bath Single Level Home near Parks and Schools - Daggett Lane</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">2858 NE Daggett, Bend, OR 97701</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="849"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,194</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available Now</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">3 Bed/2 Bath single family home located on Bend&#39;s Eastside with easy access to St. Charles, Mountain View High School, shopping and eateries. Comfortable home features large fenced back yard, back deck and attached garage. Washer/dryer included.
+<br />
+<br />Tenant is responsible for all utilities and landscape maintenance. One-year initial lease term. Dogs considered on case by case basis with owner app...</p>
+    <p class="hand-hidden tablet-hidden">
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats not allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/e5157618-123c-44e8-8053-efa15199b8f0">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=e5157618-123c-44e8-8053-efa15199b8f0&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class='listings__page-buttons'>
+</div>
+<div class='no_vacancies u-hidden listings__no-vacancies'>No vacancies found matching your search criteria.</div>
+</div>
+</main>
+<footer id="footer" class="cross-section footer">
+    <div class="cross-section__aside">
+  <figure class="footer__powered-by hand-hidden tablet-hidden"></figure>
+</div>
+<div class="cross-section__main">
+  <div class="footer__inner">
+    <span class="hand-hidden tablet-hidden footer__equal-housing"></span>
+    <div class="footer__privacy-policy">
+      All information provided will be treated in accordance with our <a target="_blank" href="https://www.appfolio.com/privacy">Privacy Policy</a> and <a target="_blank" href="https://www.appfolio.com/terms/listings">Terms of Service</a>.
+    </div>
+    <span class="desk-hidden footer__equal-housing"></span>
+    <span class="desk-hidden footer__powered-by"></span>
+  </div>
+</div>
+</footer>
+</body>
+</html>

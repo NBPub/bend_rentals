@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Per-run dated copies of the CSV. The published history lives in git: the
+# scheduled workflow commits data/listings.csv, so `git log` is the record.
+data/snapshots/
+
+# The geocode cache and the listings CSV are committed deliberately: the
+# scheduled run rewrites both, and the cache means a clone geocodes
+# nothing. Nothing else in data/ or cache/ is committed. The folder
+# READMEs are un-ignored ready for when their drafts are approved.
+data/*
+!data/listings.csv
+!data/README.md
+cache/*
+!cache/geocode.json
+!cache/README.md
+
+# Documentation still under review. Matches at any depth, so the folder
+# placeholders are covered too. Delete these lines when the drafts are ready.
+README_draft.md
+CONTRIBUTING_draft.md
+
+# Local run output
+run.log
+map.html
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store

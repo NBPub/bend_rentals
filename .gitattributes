@@ -1,0 +1,12 @@
+# Normalise text to LF in the repository and in the working tree. The
+# scheduled run rebuilds committed files on Linux; without this, a rebuild on
+# Windows would show up as a whole-file diff rather than as what changed.
+* text=auto eol=lf
+
+# Stored byte for byte. A captured page is test input, not source code, and a
+# line-ending rewrite is a change to the thing under test.
+tests/fixtures/** -text
+
+# csv.writer terminates rows with CRLF by its own default, the same on every
+# platform. Leave it as it is rather than fighting it.
+data/listings.csv -text

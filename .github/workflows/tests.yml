@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -r requirements.txt pytest
+      # Every test runs against the saved fixtures in tests/fixtures/.
+      # None of them reaches the network, so none of them can be flaky.
+      - run: python -m pytest -q

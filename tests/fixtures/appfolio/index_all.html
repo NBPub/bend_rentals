@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+  <title>Rental Listings</title>
+<meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scaleProfileSnapshotClientTest=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="">
+<meta name="msapplication-config" content="none" />
+<link rel="icon" type="image/x-icon" href="https://public.cdn.appfolio.com/public/favicons/favicon.ico" /><link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://listings.cdn.appfolio.com/listings/assets/listings/appfolio_touch-90fc6855d75f24e7ec2e1b36f2ff871a6ff2e70d4b5faf28c861363994b44ae8.png" /><link rel="apple-touch-startup-image" type="image/x-icon" href="https://listings.cdn.appfolio.com/listings/assets/listings/appfolio_startup-d9243797170560b61e4ad09679cfb1c2fab7410ebc95c245b9e1dff89a3fac82.png" />
+<link rel="stylesheet" href="https://listings.cdn.appfolio.com/listings/assets/listings/application2-09f63b334c5546fef4434a8f82f83bca70ea2b084017614422be88418b52adfc.css" media="all" />
+<link rel="stylesheet" href="https://public.cdn.appfolio.com/bootstrap-coastline/6.5.2/bootstrap-coastline.min.css" />
+  <link rel="stylesheet" href="https://public.cdn.appfolio.com/public/icons/font-awesome/6.2.0/css/all.min.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://listings.cdn.appfolio.com/listings/assets/listings/listings/listings_index-f8582b53f6b4ba9d06ff924c4c4d2e92191176fa45763f6ac05d90b271d0470f.css" />
+<!--[if lt IE 9]>
+<![endif]-->
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id="GTM-N443R47"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+  <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src='https://h.online-metrix.net/fp/tags?org_id=5kfca2gp&amp;session_id=ad906ce7-53b6-4a56-87f2-c1c7cf8b04c1'></iframe>
+</noscript>
+<main>
+<form id="filters" class="form js-filter-form form--stacked form--full-width hand-hidden" autocomplete="off" novalidate="novalidate" action="/listings/listings" accept-charset="UTF-8" data-remote="true" method="get">
+<div class="topbar theme-color js-top-bar">
+  <div class="u-float-left">
+    <label class="topbar__sort-by__label mb-0" for="filters_order_by">Sort By</label>
+    <select include_blank="false" class="topbar__sort-by" name="filters[order_by]" id="filters_order_by"><option selected="selected" value="date_posted">Most Recent</option>
+<option value="rent_asc">Rent (Low to High)</option>
+<option value="rent_desc">Rent (High to Low)</option>
+<option value="bedrooms">Bedrooms</option></select>
+  </div>
+<div class="u-float-right">
+    <ul class="topbar__options mb-0">
+      <li class="topbar__item theme-color theme-color--actionable hand-hidden">
+        <a href="#" class="text-white js-toggle-map-button"><span class="fa-solid fa-location-dot"></span> Show Map</a>
+      </li>
+      <li class="topbar__item theme-color theme-color--actionable">
+        <a href="#" class="text-white js-filter-button"><span class="fa-solid fa-filter"></span> Filter</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<input autocomplete="off" type="hidden" name="filters[property_list]" id="filters_property_list" />
+<div class="filter-menu">
+    <div class="grid">
+      <div class="grid__6">
+        <div class="form__row">
+          <label class="form__row__label">Price Range</label>
+<div class="form__row__body">
+            <div class="form__row__field-wrapper">
+              <ul class="grid grid--no-gutters p-0 mb-0">
+ <li class="grid__5"><select include_blank="false" name="filters[market_rent_from]" id="filters_market_rent_from"><option value="">No Min.</option>
+<option value="1500">$1,500</option>
+<option value="1600">$1,600</option>
+<option value="1700">$1,700</option>
+<option value="1800">$1,800</option>
+<option value="1900">$1,900</option>
+<option value="2000">$2,000</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option>
+<option value="2750">$2,750</option>
+<option value="3000">$3,000</option>
+<option value="3500">$3,500</option>
+<option value="4000">$4,000</option></select></li>
+ <li class="grid__2 u-text-center" style="line-height: 2em;">to</li>
+ <li class="grid__5"><select include_blank="false" name="filters[market_rent_to]" id="filters_market_rent_to"><option value="">No Max.</option>
+<option value="1500">$1,500</option>
+<option value="1600">$1,600</option>
+<option value="1700">$1,700</option>
+<option value="1800">$1,800</option>
+<option value="1900">$1,900</option>
+<option value="2000">$2,000</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option>
+<option value="2750">$2,750</option>
+<option value="3000">$3,000</option>
+<option value="3500">$3,500</option>
+<option value="4000">$4,000</option></select></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="grid__6">
+          <div class="grid">
+            <div class="form__row grid__6"><label class="form__row__label" for="filters_bedrooms">Bedrooms</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[bedrooms]" id="filters_bedrooms"><option value="">0+</option>
+<option value="1">1+</option>
+<option selected="selected" value="2">2+</option>
+<option value="3">3+</option>
+<option value="4">4+</option></select></div></div></div>
+            <div class="form__row grid__6"><label class="form__row__label" for="filters_bathrooms">Bathrooms</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[bathrooms]" id="filters_bathrooms"><option value="">0+</option>
+<option value="1">1+</option>
+<option value="2">2+</option>
+<option value="3">3+</option></select></div></div></div>
+          </div>
+        </div>
+</div>
+<div class="grid">
+      <div class="grid__6">
+        <div class="form__row"><label class="form__row__label" for="filters_cities">Cities</label><div class="form__row__body"><div class="form__row__field-wrapper"><input name="filters[cities][]" type="hidden" value="" autocomplete="off" /><select multiple="multiple" size="5" class="filter-menu__multi-select" name="filters[cities][]" id="filters_cities"><option value="All Cities">All Cities</option>
+<option selected="selected" value="Bend">Bend</option></select></div></div></div>
+      </div>
+      <div class="grid__6">
+        <div class="form__row"><label class="form__row__label" for="filters_postal_codes">Zip Codes</label><div class="form__row__body"><div class="form__row__field-wrapper"><input name="filters[postal_codes][]" type="hidden" value="" autocomplete="off" /><select multiple="multiple" size="5" class="filter-menu__multi-select" name="filters[postal_codes][]" id="filters_postal_codes"><option value="All Zip Codes">All Zip Codes</option>
+<option value="97701">97701</option>
+<option value="97702">97702</option>
+<option value="97703">97703</option></select></div></div></div>
+      </div>
+    </div>
+<div class="grid">
+      <div class="grid__6">
+      <div class="form__row"><label class="form__row__label" for="filters_cats">Cats Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[cats]" id="filters_cats"><option value="" label=" "></option>
+<option value="Cats allowed">Yes</option>
+<option value="Cats not allowed">No</option></select></div></div></div>
+      </div>
+      <div class="grid__6">
+      <div class="form__row"><label class="form__row__label" for="filters_dogs">Dogs Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[dogs]" id="filters_dogs"><option value="" label=" "></option>
+<option value="Dogs allowed">Large</option>
+<option value="Small dogs allowed">Small</option>
+<option value="Dogs not allowed">None</option></select></div></div></div>
+      </div>
+      <div class="grid__5">
+        <div class="form__row">
+          <div class="form__row__body">
+            <div class="form__row__field-wrapper">
+              <ul class="grid grid--no-gutters p-0">
+ <div class="form__row"><label class="form__row__label" for="filters_desired_move_in">Desired Move In</label><div class="form__row__body"><div class="form__row__field-wrapper"><div class="js-gears-date input-add-on"><input class="js-datepicker" type="text" name="filters[desired_move_in]" id="filters_desired_move_in" /><span class="js-datepicker-trigger input-add-on__append button"><span class="icon icon-calendar"></span></span></div></div></div></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="u-text-center">
+      <input type="submit" name="commit" value="Filter" class="filter-form-button btn btn-primary theme-color theme-color--actionable theme-color-border" data-disable-with="Filter" />
+    </div>
+  </div>
+</form>
+<form id="mobile_filters" class="form js-mobile-filter-form form--stacked form--full-width desk-hidden tablet-hidden" autocomplete="off" novalidate="novalidate" action="/listings/listings" accept-charset="UTF-8" data-remote="true" method="get">
+<div class="topbar theme-color js-top-bar">
+  <div class="u-float-left">
+    <label class="topbar__sort-by__label mb-0" for="mobile_filters_order_by">Sort By</label>
+    <select include_blank="false" class="topbar__sort-by" name="filters[order_by]" id="mobile_filters_order_by"><option selected="selected" value="date_posted">Most Recent</option>
+<option value="rent_asc">Rent (Low to High)</option>
+<option value="rent_desc">Rent (High to Low)</option>
+<option value="bedrooms">Bedrooms</option></select>
+  </div>
+<div class="u-float-right">
+    <ul class="topbar__options mb-0">
+      <li class="topbar__item theme-color theme-color--actionable hand-hidden">
+        <a href="#" class="text-white js-toggle-map-button"><span class="fa-solid fa-location-dot"></span> Show Map</a>
+      </li>
+      <li class="topbar__item theme-color theme-color--actionable">
+        <a href="#" class="text-white js-filter-button"><span class="fa-solid fa-filter"></span> Filter</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<input autocomplete="off" type="hidden" name="filters[property_list]" id="mobile_filters_property_list" />
+<div class="filter-menu">
+    <div class="grid">
+      <div class="grid__12">
+        <div class="form__row">
+          <div class="form__row__body">
+            <div class="form__row__field-wrapper">
+              <ul class="grid grid--no-gutters p-0">
+ <li class="grid__5 u-text-left" style="line-height: 2em; font-weight: bold">
+ <label>Price Range</label>
+ </li>
+ <li class="grid__3"><select include_blank="false" name="filters[market_rent_from]" id="mobile_filters_market_rent_from"><option value="">No Min.</option>
+<option value="1500">$1,500</option>
+<option value="1600">$1,600</option>
+<option value="1700">$1,700</option>
+<option value="1800">$1,800</option>
+<option value="1900">$1,900</option>
+<option value="2000">$2,000</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option>
+<option value="2750">$2,750</option>
+<option value="3000">$3,000</option>
+<option value="3500">$3,500</option>
+<option value="4000">$4,000</option></select></li>
+ <li class="grid__1">&nbsp;</li>
+ <li class="grid__3"><select include_blank="false" name="filters[market_rent_to]" id="mobile_filters_market_rent_to"><option value="">No Max.</option>
+<option value="1500">$1,500</option>
+<option value="1600">$1,600</option>
+<option value="1700">$1,700</option>
+<option value="1800">$1,800</option>
+<option value="1900">$1,900</option>
+<option value="2000">$2,000</option>
+<option value="2250">$2,250</option>
+<option value="2500">$2,500</option>
+<option value="2750">$2,750</option>
+<option value="3000">$3,000</option>
+<option value="3500">$3,500</option>
+<option value="4000">$4,000</option></select></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+<div class="grid__12">
+          <div class="form__row"><label class="form__row__label" for="mobile_filters_bedrooms">Bedrooms</label><div class="form__row__body"><div class="form__row__field-wrapper">
+            <div class="radio_block mobile_filters_bedrooms"><input type="hidden" name="filters[bedrooms]" value="" autocomplete="off" /><span><input type="radio" value="" checked="checked" name="filters[bedrooms]" id="mobile_filters_bedrooms_" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_">0+</label></span><span><input type="radio" value="1" name="filters[bedrooms]" id="mobile_filters_bedrooms_1" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_1">1+</label></span><span><input type="radio" value="2" name="filters[bedrooms]" id="mobile_filters_bedrooms_2" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_2">2+</label></span><span><input type="radio" value="3" name="filters[bedrooms]" id="mobile_filters_bedrooms_3" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_3">3+</label></span><span><input type="radio" value="4" name="filters[bedrooms]" id="mobile_filters_bedrooms_4" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_4">4+</label></span><span><input type="radio" value="5" name="filters[bedrooms]" id="mobile_filters_bedrooms_5" /><label class="theme-color theme-color-border" for="mobile_filters_bedrooms_5">5+</label></span></div>
+</div></div></div>        </div>
+        <div class="grid__12">
+          <div class="form__row"><label class="form__row__label" for="mobile_filters_bathrooms">Bathrooms</label><div class="form__row__body"><div class="form__row__field-wrapper">
+            <div class="radio_block mobile_filters_bathrooms"><input type="hidden" name="filters[bathrooms]" value="" autocomplete="off" /><span><input type="radio" value="" checked="checked" name="filters[bathrooms]" id="mobile_filters_bathrooms_" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_">0+</label></span><span><input type="radio" value="1" name="filters[bathrooms]" id="mobile_filters_bathrooms_1" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_1">1+</label></span><span><input type="radio" value="2" name="filters[bathrooms]" id="mobile_filters_bathrooms_2" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_2">2+</label></span><span><input type="radio" value="3" name="filters[bathrooms]" id="mobile_filters_bathrooms_3" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_3">3+</label></span><span><input type="radio" value="4" name="filters[bathrooms]" id="mobile_filters_bathrooms_4" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_4">4+</label></span><span><input type="radio" value="5" name="filters[bathrooms]" id="mobile_filters_bathrooms_5" /><label class="theme-color theme-color-border" for="mobile_filters_bathrooms_5">5+</label></span></div>
+</div></div></div>        </div>
+<div class="grid__12">
+        <div class="form__row multiselect_box mobile_filters_cities"><label class="form__row__label">Cities</label><div class="form__row__body"><div class="form__row__field-wrapper"><input type="hidden" name="filters[cities][]" value="" autocomplete="off" /><span class="form__row__control"><label for="mobile_filters_cities_all_cities"><input type="checkbox" value="All Cities" name="filters[cities][]" id="mobile_filters_cities_all_cities" />All Cities</label></span><span class="form__row__control"><label for="mobile_filters_cities_bend"><input type="checkbox" value="Bend" checked="checked" name="filters[cities][]" id="mobile_filters_cities_bend" />Bend</label></span></div></div></div>
+      </div>
+      <div class="grid__12">
+        <div class="form__row multiselect_box mobile_filters_postal_codes"><label class="form__row__label">Zip Codes</label><div class="form__row__body"><div class="form__row__field-wrapper"><input type="hidden" name="filters[postal_codes][]" value="" autocomplete="off" /><span class="form__row__control"><label for="mobile_filters_postal_codes_all_zip_codes"><input type="checkbox" value="All Zip Codes" name="filters[postal_codes][]" id="mobile_filters_postal_codes_all_zip_codes" />All Zip Codes</label></span><span class="form__row__control"><label for="mobile_filters_postal_codes_97701"><input type="checkbox" value="97701" name="filters[postal_codes][]" id="mobile_filters_postal_codes_97701" />97701</label></span><span class="form__row__control"><label for="mobile_filters_postal_codes_97702"><input type="checkbox" value="97702" name="filters[postal_codes][]" id="mobile_filters_postal_codes_97702" />97702</label></span><span class="form__row__control"><label for="mobile_filters_postal_codes_97703"><input type="checkbox" value="97703" name="filters[postal_codes][]" id="mobile_filters_postal_codes_97703" />97703</label></span></div></div></div>
+      </div>
+<div class="grid__12">
+        <div class="form__row"><label class="form__row__label" for="mobile_filters_cats">Cats Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[cats]" id="mobile_filters_cats"><option value="" label=" "></option>
+<option value="Cats allowed">Yes</option>
+<option value="Cats not allowed">No</option></select></div></div></div>
+      </div>
+      <div class="grid__12">
+        <div class="form__row"><label class="form__row__label" for="mobile_filters_dogs">Dogs Allowed</label><div class="form__row__body"><div class="form__row__field-wrapper"><select name="filters[dogs]" id="mobile_filters_dogs"><option value="" label=" "></option>
+<option value="Dogs allowed">Large</option>
+<option value="Small dogs allowed">Small</option>
+<option value="Dogs not allowed">None</option></select></div></div></div>
+        <div class="form__row"><label class="form__row__label" for="mobile_filters_desired_move_in">Desired Move In</label><div class="form__row__body"><div class="form__row__field-wrapper"><ul class="grid grid--half-gutters"><li class="grid__12"><div class="js-gears-date input-add-on"><input class="js-datepicker" type="text" name="filters[desired_move_in]" id="mobile_filters_desired_move_in" /><span class="js-datepicker-trigger input-add-on__append button"><span class="icon icon-calendar"></span></span></div></li></ul></div></div></div>
+      </div>
+    </div>
+    <div class="u-text-center">
+      <input type="submit" name="commit" value="Filter" class="filter-form-button btn btn-primary theme-color theme-color--actionable theme-color-border" data-disable-with="Filter" />
+    </div>
+  </div>
+</form>
+<div class="map-panel js-listing-map hand-hidden u-hidden">
+    <div id="googlemap" class="map-panel__googlemap"></div>
+    <div class="map-panel__bottom-button u-text-center">
+      <a href="#" class="map-panel__bottom-button__link u-hidden js-exit-streetview-button">Exit Street View</a>
+      <a href="#" class="map-panel__bottom-button__link js-reset-map-button">Reset Map</a>
+    </div>
+  </div>
+<h1 class="text-center mt-4">Current Listings</h1>
+<p class="js-topbar-title listings__filters-title text-center m-auto">Showing listings with <strong>2+ Bedrooms</strong> in <strong>Bend</strong>:</p>
+<div id='result_container' class="listings js-listings-container">
+  <div class="listing-item result js-listing-item" id="listing_399">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/de790173-bb10-4086-bb9b-39c5c63ca3de/medium.jpeg" alt="20287 Schaeffer Dr., Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,395
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,395</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,485</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">10/15/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64" target="_blank">Beautiful 3 Bed/2.5 Bath Two-Story Duplex in NW Bend - Schaeffer Drive</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">20287 Schaeffer Dr., Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="399"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,485</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 10/15/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">This 3 bed/2.5 bath duplex in NW Bend comes with a full kitchen and tile countertops throughout. Single car garage, gas fireplace, central air conditioning, washer/dryer included and small back yard. HOA maintains the front yard landscape. 
+<br />
+<br />Tenant responsible for all utilities and landscape maintenance in back yard. One-year initial lease term. Dogs considered on case by case basis with owne...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> Gas Fireplace, A/C, Washer/Dryer
+          <br>
+        <span style="font-weight:bold">Utilities Included:</span> Landscaping
+          <br>
+        <span style="font-weight:bold">Appliances:</span> refrigerator range dishwasher microwave garbage disposal, Washer/Dryer
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Small dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_433">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/263aa66d-6924-41de-9d4f-b61b91ce73b9" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/2db82f77-c31a-43c2-8685-e40497b0c5fb/medium.jpg" alt="2473 NW Sacagawea Ln., Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $3,995
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$3,995</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,800</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/7/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/263aa66d-6924-41de-9d4f-b61b91ce73b9" target="_blank">3 Bed/2.5 Bath In The Heart of NW Crossing - Sacagawea</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">2473 NW Sacagawea Ln., Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="433"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,800</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/7/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">This beautiful 3 bedroom 2.5 bath home is located in the heart of Northwest Crossing. Close to High Lakes Elementary and blocks away from multiple parks and restaurants. This home features stainless steel appliances, living area with gas fireplace, large primary bath with tile shower and tub, washer/dryer included, double car garage, fenced backyard with hot tub and patio area. 
+<br />
+<br />One-year ini...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> Hot Tub, Stainless Steel Appliances, Central Air Conditioning, Washer and Dryer Included
+          <br>
+        <span style="font-weight:bold">Utilities Included:</span> Tenant Responsible for Utilities
+          <br>
+        <span style="font-weight:bold">Appliances:</span> refrigerator range dishwasher microwave garbage disposal, Washer/Dryer, Hot Tub, A/C
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/263aa66d-6924-41de-9d4f-b61b91ce73b9">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=263aa66d-6924-41de-9d4f-b61b91ce73b9&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_642">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/bcd92440-85ae-4129-bead-fb6b65c25ee1" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/7be6afe0-cd96-4558-8d4f-177240f740f4/medium.jpg" alt="795 NE Majesty Lane, Bend, OR 97701" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $3,195
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 4 bd / 2.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$3,195</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">2,050</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">4 bd / 2.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">10/1/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/bcd92440-85ae-4129-bead-fb6b65c25ee1" target="_blank">Spacious 4 Bed/2.5 Bath Home on Cul-De-Sac - NE Bend</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">795 NE Majesty Lane, Bend, OR 97701</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="642"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 2,050</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 10/1/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Spacious 4 Bed/2.5 Bath Home on quiet cul-de-sac in NE Bend with quick access to the parkway and Butler Market Road. Location is walkable to 3rd street restaurants and Pilot Butte. The home features a large kitchen with breakfast nook that looks into the backyard as well as a separate formal dining area. Master bedroom on the main floor along with 3 bedrooms and a full bath upstairs. The home a...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> Gas Fireplace, Attached Garage, Fully Fenced Backyard, Central Air Conditioning
+          <br>
+        <span style="font-weight:bold">Appliances:</span> refrigerator range dishwasher microwave garbage disposal, Washer/Dryer Hook-Ups, A/C
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/bcd92440-85ae-4129-bead-fb6b65c25ee1">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=bcd92440-85ae-4129-bead-fb6b65c25ee1&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_1059">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/6d3f0b44-0e41-4d0f-896b-7955af6afffc" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/fb42c4fa-4832-41cc-bdfb-98e808bac531/medium.jpeg" alt="3120 NE Marea Dr., Bend, OR 97701" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,995
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 4 bd / 2.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,995</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">2,130</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">4 bd / 2.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/5/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/6d3f0b44-0e41-4d0f-896b-7955af6afffc" target="_blank">Spacious 4 Bed/ 2.5 Bath Single Family Home - NE Bend </a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">3120 NE Marea Dr., Bend, OR 97701</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="1059"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 2,130</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/5/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Discover this spacious 4 bed/ 2.5 bath home featuring an inviting open concept layout designed for comfortable living and easy entertaining. All four bedrooms are located upstairs, creating a comfortable separation between the main living spaces and bedrooms. The spacious primary suite offers a large bathroom and an oversized walk-in closet, providing plenty of storage and everyday convenience....</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> Fireplace, Hot Tub, 2 Car Garage, All Bedrooms Upstairs, Laundry Room with Washer and Dryer
+          <br>
+        <span style="font-weight:bold">Appliances:</span> Oven, Refrigerator, Dishwasher, Microwave, Garbage Disposal, Washer/Dryer
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/6d3f0b44-0e41-4d0f-896b-7955af6afffc">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=6d3f0b44-0e41-4d0f-896b-7955af6afffc&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_816">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/2de20a7f-7293-4172-b129-3d940dd54992" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/9a74a2e3-3dd6-411c-b178-a22028e72fc8/medium.png" alt="60983 Lodgepole Dr, Bend, OR 97702" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,395
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 2 bd / 2 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,395</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,032</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">2 bd / 2 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/15/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/2de20a7f-7293-4172-b129-3d940dd54992" target="_blank">Fantastic 2 Bed/2 Bath with Fully Fenced Backyard - Lodgepole Drive</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">60983 Lodgepole Dr, Bend, OR 97702</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="816"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,032</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/15/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">This 2 bed/2 bath home on Lodgepole Drive in southwest Bend is a must see and conveniently located near the Old Mill and Hwy 97 access. The home is updated with a fully-fenced backyard, stainless steel appliances in the kitchen, two-car garage with epoxy flooring, mini split to provide A/C and washer/dryer included. 
+<br />
+<br />*Home is NOT furnished*
+<br />
+<br />Tenant responsible for all utilities and landsca...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Appliances:</span> range refrigerator dishwasher garbage disposal microwave washer dryer blinds, A/C Mini-Split
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/2de20a7f-7293-4172-b129-3d940dd54992">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=2de20a7f-7293-4172-b129-3d940dd54992&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_260">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/47cf387c-c505-4caf-99de-0f864b9d92b3" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/d0d57f36-39fe-4a9c-86ea-7a2366cb3866/medium.jpg" alt="1529 NW Portland Ave - B, Bend, OR 97701" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $1,595
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 2 bd / 1 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$1,595</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">840</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">2 bd / 1 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/23/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/47cf387c-c505-4caf-99de-0f864b9d92b3" target="_blank">2 Bedroom Lower Level Westside Apartment - NW Portland Ave</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">1529 NW Portland Ave - B, Bend, OR 97701</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="260"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 840</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/23/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Fantastic location for this 2 bed/1 bath apartment on Bend&#39;s West Side. Kitchen, dining, and living room. Master bedroom has a small semi private patio area. One parking spot in lot and street parking for additional vehicles. Tile flooring throughout. The master bedroom has a sliding glass door and sliding mirrored closet doors. Ceiling fans in bedrooms and cadet heat throughout.
+<br />
+<br />Water, sewe...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Utilities Included:</span> Water/Sewer, Garbage
+          <br>
+        <span style="font-weight:bold">Appliances:</span> Dishwasher, Refrigerator, Oven
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/47cf387c-c505-4caf-99de-0f864b9d92b3">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=47cf387c-c505-4caf-99de-0f864b9d92b3&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_927">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/e5eb0e0b-4537-4b3f-9362-83c1448fcbbf" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/c4409678-5a49-42b9-b002-11927ceeb160/medium.png" alt="1027 NW 13th Street, Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,995
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,995</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,566</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/22/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/e5eb0e0b-4537-4b3f-9362-83c1448fcbbf" target="_blank">Charming 3 Bed/2 Bath on Bend&#39;s Westside - 13th Street</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">1027 NW 13th Street, Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="927"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,566</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/22/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Introducing a charming 3-bedroom, 2-bathroom house located in the desirable Westside of Bend, OR. This cozy home is conveniently situated near schools, delicious restaurants, and shops, making it the perfect place to call home. With a spacious layout, this house offers a comfortable and convenient lifestyle for its residents. Don&#39;t miss out on the opportunity to live in this prime location in B...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> Westside
+          <br>
+        <span style="font-weight:bold">Appliances:</span> washer dryer refrigerator dishwasher range, Garage Door
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/e5eb0e0b-4537-4b3f-9362-83c1448fcbbf">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=e5eb0e0b-4537-4b3f-9362-83c1448fcbbf&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_410">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/766f203a-70c6-4a8c-9a19-d75d07c54d4c" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/26fdd7f1-8a46-4bb8-b7a4-36468ea27b7c/medium.jpg" alt="21177 SE Azalia Ave., Bend, OR 97702" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,595
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,595</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,395</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/16/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/766f203a-70c6-4a8c-9a19-d75d07c54d4c" target="_blank">Beautiful 3 Bed/2.5 Bath Home in SE Bend - Azalia Ave</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">21177 SE Azalia Ave., Bend, OR 97702</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="410"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,395</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/16/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Light and bright beautiful 3 bed/2.5 bath home off Pettigrew Road in SE Bend.  Features include an open floorplan on the main level with stainless steel appliances and a gas fireplace.  All three bedrooms are on the second floor including the master with full bath and a laundry closet with W/D hookups.  Small fenced in back yard area, two car garage and  A/C for hot summer days. 
+<br />
+<br />Tenant resp...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Appliances:</span> refrigerator range dishwasher microwave garbage disposal, Washer/Dryer Hook-Ups
+      <br>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/766f203a-70c6-4a8c-9a19-d75d07c54d4c">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=766f203a-70c6-4a8c-9a19-d75d07c54d4c&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_932">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/a263b356-3629-48af-abc5-97ed73e05051" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/ddd1d674-b9c0-4831-8948-929013dade93/medium.png" alt="2074 NW Monterey Pines - 2, Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,395
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 2 bd / 1 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,395</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,022</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">2 bd / 1 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/14/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/a263b356-3629-48af-abc5-97ed73e05051" target="_blank">2 Bed/1 Bath Duplex Apartment with Two Car Garage - Westside Bend</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">2074 NW Monterey Pines - 2, Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="932"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,022</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/14/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Beautiful upper-level duplex unit with two-car garage on Bend’s Westside convenient to popular trails, shopping, restaurants and COCC/OSU. Single-level 2bed/1bath layout featuring plank flooring throughout, high end kitchen appliances, quartz countertops, tile backsplash, high end fixtures, in-unit washer/dryer. Ductless mini-splits offer energy efficient heating and cooling with additional cad...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> A/C, Pet Friendly, Water/Sewer/Garbage Included
+          <br>
+        <span style="font-weight:bold">Appliances:</span> A/C Mini-Split, refrigerator range dishwasher microwave garbage disposal, Stackable Washer/Dryer
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/a263b356-3629-48af-abc5-97ed73e05051">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=a263b356-3629-48af-abc5-97ed73e05051&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_53">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/853ad307-23e1-4298-a456-cac030911646" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/4e06089a-f593-4367-a5ea-2df50c66e923/medium.jpg" alt="60889 Granite Dr, Bend, OR 97702" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,295
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,295</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,344</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/17/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/853ad307-23e1-4298-a456-cac030911646" target="_blank">Updated 3 Bed/2 Bath Home in Romaine Village with Garage</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">60889 Granite Dr, Bend, OR 97702</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="53"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,344</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/17/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">This 3 bed/2 bath manufactured home is on an elevated 1/2 acre lot with 1/4 acre fenced in Romaine Village. The home has been updated throughout, includes washer/dryer hookups and has a detached single car garage. 
+<br />
+<br />Tenant responsible for all utilities and landscape maintenance. One-year initial lease term. Dogs considered on a case by case basis with owner approval and additional deposit. So...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Utilities Included:</span> Tenant Responsible for Utilities
+          <br>
+        <span style="font-weight:bold">Appliances:</span> Oven, Refrigerator, Dishwasher, Washer/Dryer Hook-Ups, Microwave
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats not allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/853ad307-23e1-4298-a456-cac030911646">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=853ad307-23e1-4298-a456-cac030911646&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_879">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/0b1eec2d-39c5-4231-ae11-b5062f3f58d9" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/9f3fbf50-d193-4244-910e-4dc95df02340/medium.png" alt="2058 NW Monterey Pines Dr - 1, Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,295
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 2 bd / 1 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,295</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,022</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">2 bd / 1 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/15/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/0b1eec2d-39c5-4231-ae11-b5062f3f58d9" target="_blank">2 Bed/1 Bath Duplex Apartment with Two Car Garage - Westside Bend</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">2058 NW Monterey Pines Dr - 1, Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="879"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,022</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/15/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Beautiful lower-level duplex unit with two-car garage on Bend’s Westside convenient to popular trails, shopping, restaurants and COCC/OSU. Single-level 2bed/1bath layout featuring plank flooring throughout, high end kitchen appliances, quartz countertops, tile backsplash, high end fixtures, in-unit washer/dryer. Ductless mini-splits offer energy efficient heating and cooling with additional cad...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> A/C
+          <br>
+        <span style="font-weight:bold">Appliances:</span> A/C Mini-Split, refrigerator range dishwasher microwave garbage disposal, Stackable Washer/Dryer
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/0b1eec2d-39c5-4231-ae11-b5062f3f58d9">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=0b1eec2d-39c5-4231-ae11-b5062f3f58d9&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_655">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/dbe4d399-2ff7-4ccb-882d-fc16ff3e92a2" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/efbd73eb-b4f2-461a-8ab9-d342bd1a475a/medium.jpg" alt="844 NW Newport Ave. , Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $3,295
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 4 bd / 3 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$3,295</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,808</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">4 bd / 3 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">9/15/26</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/dbe4d399-2ff7-4ccb-882d-fc16ff3e92a2" target="_blank">4 Bed/3 Bath Townhome in NW Bend - Newport Ave</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">844 NW Newport Ave. , Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="655"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,808</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available 9/15/26</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Prime location for this 4 bed/3 bath middle unit townhome located on the corner of NW Newport &amp; NW 9th close to popular shops, restaurants, downtown, OSU/COCC and much more. Ground level features one bedroom, a full bath and the two car garage accessible from the back alley way. Second level features plank flooring with an open living layout, south facing balcony, laundry room with washer/dryer...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> Air Conditioning, Attached Garage, Landscape maintenance included, Bend Westside
+          <br>
+        <span style="font-weight:bold">Utilities Included:</span> Landscaping
+          <br>
+        <span style="font-weight:bold">Appliances:</span> refrigerator range dishwasher microwave garbage disposal, A/C, Washer/Dryer Hook-Ups
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/dbe4d399-2ff7-4ccb-882d-fc16ff3e92a2">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=dbe4d399-2ff7-4ccb-882d-fc16ff3e92a2&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_849">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/e5157618-123c-44e8-8053-efa15199b8f0" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/3cabc473-e01b-4cda-9f3c-0fc7790ef781/medium.jpg" alt="2858 NE Daggett, Bend, OR 97701" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,495
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,495</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,194</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">NOW</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/e5157618-123c-44e8-8053-efa15199b8f0" target="_blank">3 Bed/2 Bath Single Level Home near Parks and Schools - Daggett Lane</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">2858 NE Daggett, Bend, OR 97701</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="849"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,194</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available Now</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">3 Bed/2 Bath single family home located on Bend&#39;s Eastside with easy access to St. Charles, Mountain View High School, shopping and eateries. Comfortable home features large fenced back yard, back deck and attached garage. Washer/dryer included.
+<br />
+<br />Tenant is responsible for all utilities and landscape maintenance. One-year initial lease term. Dogs considered on case by case basis with owner app...</p>
+    <p class="hand-hidden tablet-hidden">
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats not allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/e5157618-123c-44e8-8053-efa15199b8f0">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=e5157618-123c-44e8-8053-efa15199b8f0&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_900">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/2bd7e07c-7240-4060-898f-bf080cf39ad7" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/1bbc4ab7-9ae8-4773-a0f0-b444c7ae0a10/medium.jpg" alt="21185 SE Golden Market Ln. - 2, Bend, OR 97702" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,595
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 3 bd / 2.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,595</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,569</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">3 bd / 2.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">NOW</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/2bd7e07c-7240-4060-898f-bf080cf39ad7" target="_blank">3 Bed/2.5 Bath Duplex with Fully Fenced Backyard - Golden Market Lane</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">21185 SE Golden Market Ln. - 2, Bend, OR 97702</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="900"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,569</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available Now</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Must see, newly constructed, and beautiful 3 bed/2.5 bath two-story duplexes built by MonteVista Homes! Located in SE Bend conveniently near shopping and restaurants of Forum Square, the newly developed Reed South eateries, and much more. Each unit offers a fully loaded kitchen, living room, dining room and single car garage on the main floor with all 3 bedrooms and the laundry room upstairs. W...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> A/C, Washer/Dryer
+          <br>
+        <span style="font-weight:bold">Appliances:</span> range refrigerator dishwasher garbage disposal microwave washer dryer blinds, Garage Door, A/C
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/2bd7e07c-7240-4060-898f-bf080cf39ad7">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=2bd7e07c-7240-4060-898f-bf080cf39ad7&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_909">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/e29d3005-143c-443f-bb1d-c8683f16df12" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/cf6b28a0-694f-4fc7-83de-5362e653c95d/medium.png" alt="2070 NW Monterey Pines Dr. - 2, Bend, OR 97703" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,395
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 2 bd / 1 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,395</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,022</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">2 bd / 1 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">NOW</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/e29d3005-143c-443f-bb1d-c8683f16df12" target="_blank">2 Bed/1 Bath Duplex Apartment with Two Car Garage - Westside Bend</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">2070 NW Monterey Pines Dr. - 2, Bend, OR 97703</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="909"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,022</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available Now</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Beautiful upper-level duplex unit with two-car garage on Bend’s Westside convenient to popular trails, shopping, restaurants and COCC/OSU. Single-level 2bed/1bath layout featuring plank flooring throughout, high end kitchen appliances, quartz countertops, tile backsplash, high end fixtures, in-unit washer/dryer. Ductless mini-splits offer energy efficient heating and cooling with additional cad...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Amenities:</span> A/C
+          <br>
+        <span style="font-weight:bold">Appliances:</span> A/C Mini-Split, refrigerator range dishwasher microwave garbage disposal, Stackable Washer/Dryer
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/e29d3005-143c-443f-bb1d-c8683f16df12">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=e29d3005-143c-443f-bb1d-c8683f16df12&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class="listing-item result js-listing-item" id="listing_362">
+  <div class="listing-item__figure-container">
+    <a href="/listings/detail/613d0c51-4d25-4d98-8337-ad75bcae6d97" target="_blank">
+      <div class="listing-item__figure">
+        <img class="listing-item__image is-placeholder lazy js-listing-image " data-original="https://images.cdn.appfolio.com/mountainviewpm/images/88477d6d-8032-4946-a318-10d4c592dcbd/medium.jpeg" alt="21730 NE Butler Market Rd., Bend, OR 97701" src="https://listings.cdn.appfolio.com/listings/assets/listings/rental_listing/place_holder-ea9e892a45f62e048771a4b22081d1eed003a21f0658a92aa5abcfd357dd4699.png" />
+        <div class="listing-item__blurb js-listing-item-blurb tablet-hidden desk-hidden">
+          <div class="listing-item__blurb__left">
+              <div class="listing-item__facts u-inline-block">
+ <div class="rent-banner__header">RENT</div>
+ <div class="sidebar__price rent-banner__text js-listing-blurb-rent">
+ $2,495
+ </div>
+              </div>
+          </div><!-- No Space Here
+       --><div class="listing-item__blurb__right">
+              <div class="u-float-right">
+ <div class="rent-banner__header">BED / BATH</div>
+ <span class="rent-banner__text js-listing-blurb-bed-bath">
+ 2 bd / 1.5 ba
+ </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+<div class="listing-item__body">
+    <div class="detail-box hand-hidden u-space-bs js-listing-quick-facts">
+      <dl>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">RENT</dt>
+          <dd class="detail-box__value">$2,495</dd>
+        </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Square Feet</dt>
+          <dd class="detail-box__value">1,434</dd>
+        </div>
+          <div class="detail-box__item">
+            <dt class="detail-box__label">Bed / Bath</dt>
+            <dd class="detail-box__value">2 bd / 1.5 ba</dd>
+          </div>
+        <div class="detail-box__item">
+          <dt class="detail-box__label">Available</dt>
+          <dd class="detail-box__value js-listing-available">NOW</dd>
+        </div>
+      </dl>
+    </div>
+<h2 class="listing-item__title js-listing-title">
+        <a href="/listings/detail/613d0c51-4d25-4d98-8337-ad75bcae6d97" target="_blank">2 Bed/1.5 Bath Single Level Farm House with Mountain Views</a>
+      </h2>
+    <p class="u-space-an">
+      <span class="u-pad-rm js-listing-address">21730 NE Butler Market Rd., Bend, OR 97701</span>
+        <a href="#" class="hand-hidden js-listing-map-view-link listing-item__map-link" data-listing-id="362"><span class="fa-solid fa-location-dot"></span>&nbsp;Map</a>
+    </p>
+<p class="u-space-an">
+        <span class="u-space-rm js-listing-square-feet desk-hidden tablet-hidden" style="display: inline-block">Square Feet: 1,434</span>
+<span class="js-listing-available tablet-hidden desk-hidden" style="display: inline-block">Available Now</span>
+    </p>
+    <p class="hand-hidden tablet-hidden u-space-ts js-listing-description">Enjoy the peace and quiet this property offers located on the NE edge of town.  Features including a large deck, spacious yard, mountain views, a cozy fireplace, wood burning stove and large laundry room with washer/dryer included.  Lease includes access to one of the additional out buildings on grounds providing excellent storage and covered parking.  Please note, lease does NOT include access...</p>
+    <p class="hand-hidden tablet-hidden">
+        <span style="font-weight:bold">Appliances:</span> Oven, Refrigerator, Washer/Dryer, Microwave, Dishwasher
+      <br>
+        <span class="js-listing-pet-policy"><span style="font-weight:bold">Pet Policy:</span> Cats allowed, Dogs allowed</span>
+    </p>
+  </div>
+<div class="listing-item__actions js-listing-actions">
+    <a target="_blank" class="btn btn-secondary js-link-to-detail" href="/listings/detail/613d0c51-4d25-4d98-8337-ad75bcae6d97">View Details</a>
+      <a target="_blank" class="btn btn-primary theme-color theme-color--actionable js-listing-apply" href="/listings/rental_applications/new?listable_uid=613d0c51-4d25-4d98-8337-ad75bcae6d97&amp;source=Website">Apply Now</a>
+  </div>
+</div>
+<div class='listings__page-buttons'>
+</div>
+<div class='no_vacancies u-hidden listings__no-vacancies'>No vacancies found matching your search criteria.</div>
+</div>
+</main>
+<footer id="footer" class="cross-section footer">
+    <div class="cross-section__aside">
+  <figure class="footer__powered-by hand-hidden tablet-hidden"></figure>
+</div>
+<div class="cross-section__main">
+  <div class="footer__inner">
+    <span class="hand-hidden tablet-hidden footer__equal-housing"></span>
+    <div class="footer__privacy-policy">
+      All information provided will be treated in accordance with our <a target="_blank" href="https://www.appfolio.com/privacy">Privacy Policy</a> and <a target="_blank" href="https://www.appfolio.com/terms/listings">Terms of Service</a>.
+    </div>
+    <span class="desk-hidden footer__equal-housing"></span>
+    <span class="desk-hidden footer__powered-by"></span>
+  </div>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+# Registry of scrape targets: long-term rentals from Bend, OR property managers.
+#
+# company      = written into every row's `company` column
+# structure    = how to pull values out of the site's HTML  (bendrentals/structures/)
+# title_format = how to parse the listing title string      (bendrentals/formats/)
+# status       = "ready" (working parser) | "candidate" (planned, not built)
+#
+# Only "ready" sites run on a bare `scrape.py`. Naming a candidate explicitly
+# gives a clear message rather than a crash.
+
+[scrape]
+# Keep only listings whose address names this city. Set it to "" to keep every
+# city a source publishes.
+#
+# This is the local half of the policy. The other half is in the AppFolio URLs
+# below, which carry `filters[cities][]=Bend` so the filtering happens at the
+# source. Widening the net means doing both — and note that Utopia alone
+# returns 300+ listings nationwide with its city parameter removed.
+city = "Bend"
+
+# --------------------------------------------------------------------------
+# Squarespace + Craigslist-style titles
+# --------------------------------------------------------------------------
+
+[sites.trailhead]
+label        = "Trailhead"
+company      = "Trailhead Property Management"
+index_url    = "https://www.trailheadpropertymanagement.com/portfolio-1"
+structure    = "squarespace_portfolio"
+title_format = "craigslist"
+status       = "ready"
+notes        = "portfolio-2 is vacation rentals and is deliberately not scraped."
+
+# --------------------------------------------------------------------------
+# AppFolio — nine of thirteen sources. Every one is a tenant subdomain rather
+# than the company's own website, which usually renders its listings with
+# JavaScript and serves HTML containing none of them.
+#
+# NOTE: appfolio.com robots.txt sets Crawl-delay: 10. That is most of the time
+# a full run takes, and it is not something to tune down.
+# --------------------------------------------------------------------------
+
+[sites.velocity]
+label        = "Velocity"
+company      = "Velocity Property Management"
+index_url    = "https://velocitypm.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "velocitypropertymanagement.com/rentals is an iframe wrapper around this URL."
+
+[sites.high_desert]
+label        = "High Desert"
+company      = "High Desert Property Management"
+index_url    = "https://highdesertpm.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "300+ listings across many cities unfiltered. Their own site is a Next.js front end that renders nothing server-side."
+
+[sites.bend_property_management]
+label        = "Bend PM"
+company      = "Bend Property Management"
+index_url    = "https://bend.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "Cities: Bend and Redmond. Tenant subdomain is linked from the site homepage."
+
+[sites.utopia]
+label        = "Utopia"
+company      = "Utopia Management"
+index_url    = "https://utopiamanagement.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "A national company: thousands of listings across dozens of states. The city parameter is mandatory here, not a nicety."
+
+[sites.elevation]
+label        = "Elevation"
+company      = "Elevation Property Management"
+index_url    = "https://elevationpropmgmt.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "Bend only. Tenant subdomain found via the portal links on epmbend.com, whose Squarespace shell renders no listings."
+
+[sites.mountain_view]
+label        = "Mountain View"
+company      = "Mountain View Property Management"
+index_url    = "https://mountainviewpm.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "Cities: Bend, Redmond. Duda-built site; tenant resolved from its Pay Rent link."
+
+[sites.superior]
+label        = "Superior"
+company      = "A Superior Property Management"
+index_url    = "https://asuperior.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "Cities: Bend, Prineville. Duda-built site; tenant resolved from its Pay Rent link."
+
+[sites.high_country]
+label        = "High Country"
+company      = "High Country Property Management"
+index_url    = "https://highcountrypropmgmt.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "Bend only. Duda-built site; tenant resolved from its Pay Rent link."
+
+[sites.plus]
+label        = "Plus"
+company      = "Plus Property Management"
+index_url    = "https://pluspmllc.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "investoregon.com/bend/ is a WordPress feed of this tenant. The tenant page carries pet policies the WordPress page lacks. Cities: Bend, Prineville, Redmond."
+
+# --------------------------------------------------------------------------
+# Buildium
+# --------------------------------------------------------------------------
+
+[sites.hummingbird]
+label        = "Hummingbird"
+company      = "Hummingbird Property Management"
+index_url    = "https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals"
+structure    = "buildium_rentals"
+title_format = "structured"
+status       = "ready"
+notes        = "Index cards carry no link to their own detail page, so the parser collects detail URLs and parses those - they also carry a pet policy the index omits. No source-side filters. No robots.txt (404)."
+
+# --------------------------------------------------------------------------
+# WordPress, server-rendered detail pages
+# --------------------------------------------------------------------------
+
+[sites.preferred_residential]
+label        = "Preferred Residential"
+company      = "Preferred Residential"
+index_url    = "https://prbend.com/bend-long-term-rentals/"
+structure    = "prbend_property_pages"
+title_format = "structured"
+status       = "ready"
+notes        = "The only source that states a property type. Publishes NO street address - the one on each page is the agency office from the footer map - so the address and coordinates come from resolving its 'View This Rental on a Map' short link instead."
+
+# --------------------------------------------------------------------------
+# Rentvine
+# --------------------------------------------------------------------------
+
+[sites.ridgeline]
+label        = "Ridgeline"
+company      = "Ridgeline Property Management"
+index_url    = "https://ridgelinepropertymgmt.rentvine.com/api/public/listings"
+structure    = "rentvine_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "The vacancies page is a JS widget; this is the endpoint that widget itself reads. The richest source here: explicit acceptCats/acceptDogs booleans and real coordinates, so it needs no geocoding. Rentvine publishes no robots.txt (403 on both hosts). No source-side filters."
