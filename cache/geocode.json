@@ -74,6 +74,11 @@
   "lon": "-121.3180143",
   "address": "1427 NW 4th Street - 1, Bend, OR 97703"
  },
+ "1453 ne tucson way 1 bend or 97701": {
+  "lat": "44.0644535",
+  "lon": "-121.2613582",
+  "address": "1453 NE Tucson Way #1 , Bend, OR 97701"
+ },
  "1459 nw albany - 34 bend or 97703": {
   "lat": "44.0518020",
   "lon": "-121.3328429",
@@ -398,6 +403,11 @@
   "lat": "44.0527348",
   "lon": "-121.2764285",
   "address": "55 NE Cessna Dr #2, Bend, OR 97701"
+ },
+ "55 sw wall st bend or 97702": {
+  "lat": "44.0510096",
+  "lon": "-121.3177473",
+  "address": "55 SW Wall St, Bend OR 97702"
  },
  "55803 snow goose rd bend or 97707": {
   "lat": "43.827276518555",
