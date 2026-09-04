@@ -45,6 +45,24 @@ def merge_rows(fresh: list[dict], refreshed: set[str], existing: list[dict]) -> 
     return list(fresh) + kept
 
 
+#: Row order in the file. `link` is unique, so this is a total order and the
+#: same rows always produce the same file.
+SORT_FIELDS = ("company", "address", "link")
+
+
+def sort_rows(rows: list[dict]) -> list[dict]:
+    """A deterministic order, so a diff shows what changed and nothing else.
+
+    Without this the order is scrape order: fresh rows first, then whatever
+    `merge_rows` carried over. That is stable only while every site succeeds.
+    The run after one site fails would move all of its rows to the end of the
+    file, turning a two-line change into a whole-file rewrite — in the file
+    whose commit history is supposed to be the record of what changed.
+    """
+    return sorted(rows, key=lambda row: tuple(
+        str(row.get(field, "")) for field in SORT_FIELDS))
+
+
 def write_rows(
     rows: list[dict],
     *,
@@ -63,7 +81,7 @@ def write_rows(
     with open(csv_path, "w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
-        for row in rows:
+        for row in sort_rows(rows):
             writer.writerow({name: row.get(name, "") for name in fields})
 
     if not snapshot:

@@ -284,3 +284,49 @@ def test_the_page_points_at_the_favicon_beside_it():
     html = build()
     assert f'<link rel="icon" type="image/png" href="{FAVICON}">' in html
     assert "/" not in FAVICON, "a relative sibling, not a path"
+
+
+# --- the template file -------------------------------------------------------
+
+def test_the_template_lives_beside_the_module():
+    from bendrentals.pagehtml import TEMPLATE_PATH
+    assert TEMPLATE_PATH.name == "page.html"
+    assert TEMPLATE_PATH.exists()
+
+
+def test_the_template_is_a_document_not_a_fragment():
+    from bendrentals.pagehtml import template
+    assert template().startswith("<!doctype html>")
+    assert template().rstrip().endswith("</html>")
+
+
+def test_the_editor_note_never_reaches_the_page():
+    """page.html opens with a note to whoever edits it.
+
+    Left in, it would put a comment above the doctype of every published
+    page — which is how a browser ends up in quirks mode.
+    """
+    from bendrentals.pagehtml import TEMPLATE_PATH, template
+    raw = TEMPLATE_PATH.read_text(encoding="utf-8")
+    assert raw.lstrip().startswith("<!--"), "the note has gone missing"
+    assert "not safe to run a formatter over" in raw
+    assert "not safe to run a formatter over" not in template()
+    assert "not safe to run a formatter over" not in build()
+
+
+def test_the_template_still_carries_every_token_render_substitutes():
+    from bendrentals.pagehtml import template
+    for token in ("__TITLE__", "__REPO_URL__", "__FAVICON__",
+                  "__LEAFLET_CSS__", "__LEAFLET_JS__", "__PAYLOAD__"):
+        assert token in template(), token
+
+
+def test_a_missing_template_says_which_file(monkeypatch, tmp_path):
+    from bendrentals import pagehtml
+    pagehtml.template.cache_clear()
+    monkeypatch.setattr(pagehtml, "TEMPLATE_PATH", tmp_path / "gone.html")
+    try:
+        with pytest.raises(RuntimeError, match="gone.html"):
+            pagehtml.template()
+    finally:
+        pagehtml.template.cache_clear()

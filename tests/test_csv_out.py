@@ -116,3 +116,49 @@ def test_a_site_that_failed_keeps_its_previous_listings():
 def test_a_full_run_with_no_existing_file_just_writes_the_fresh_rows():
     fresh = [make_row(company=TRAILHEAD), make_row(company=RIDGELINE)]
     assert merge_rows(fresh, {TRAILHEAD, RIDGELINE}, []) == fresh
+
+
+# --- deterministic order ----------------------------------------------------
+
+def test_rows_are_written_in_a_stable_order(tmp_path):
+    """The file's commit history is the record of what changed.
+
+    Scrape order is stable only while every site succeeds; the run after one
+    fails would move all of its rows and rewrite the whole file.
+    """
+    scrambled = [
+        make_row(link="https://example.com/z", company=RIDGELINE),
+        make_row(link="https://example.com/a", company=TRAILHEAD),
+        make_row(link="https://example.com/m", company=RIDGELINE),
+    ]
+    csv_path, _ = write_rows(scrambled, when=WHEN, root=tmp_path)
+    written = read_rows(csv_path)
+    assert [r["company"] for r in written] == [RIDGELINE, RIDGELINE, TRAILHEAD]
+    assert [r["link"] for r in written] == [
+        "https://example.com/m", "https://example.com/z", "https://example.com/a"]
+
+
+def test_the_same_rows_always_produce_the_same_file(tmp_path):
+    rows = [make_row(link=f"https://example.com/{n}") for n in "cab"]
+    first, _ = write_rows(rows, when=WHEN, root=tmp_path / "one")
+    second, _ = write_rows(list(reversed(rows)), when=WHEN, root=tmp_path / "two")
+    assert first.read_bytes() == second.read_bytes()
+
+
+def test_a_carried_over_company_does_not_move_to_the_end(tmp_path):
+    """merge_rows appends what it kept; the sort is what undoes that."""
+    existing = [make_row(link="https://example.com/old", company=RIDGELINE)]
+    fresh = [make_row(link="https://example.com/new", company=TRAILHEAD)]
+    merged = merge_rows(fresh, {TRAILHEAD}, existing)
+    assert [r["company"] for r in merged] == [TRAILHEAD, RIDGELINE]   # append order
+
+    csv_path, _ = write_rows(merged, when=WHEN, root=tmp_path)
+    assert [r["company"] for r in read_rows(csv_path)] == [RIDGELINE, TRAILHEAD]
+
+
+def test_sorting_never_drops_or_duplicates_a_row(tmp_path):
+    rows = [make_row(link=f"https://example.com/{n}") for n in range(25)]
+    csv_path, _ = write_rows(rows, when=WHEN, root=tmp_path)
+    written = read_rows(csv_path)
+    assert len(written) == 25
+    assert {r["link"] for r in written} == {r["link"] for r in rows}
