@@ -109,6 +109,11 @@
   "lon": "-121.3358936",
   "address": "1590 NW Hartford, Bend, OR 97703"
  },
+ "1622 nw awbrey road bend or 97703": {
+  "lat": "44.0643841",
+  "lon": "-121.3156210",
+  "address": "1622 Nw Awbrey Road, Bend, OR 97703"
+ },
  "1643 nw knoll bend or 97703": {
   "lat": "?",
   "lon": "?",
@@ -269,10 +274,20 @@
   "lon": "-121.3419379",
   "address": "2074 NW Monterey Pines - 2, Bend, OR 97703"
  },
+ "20769 se shea ct bend or 97702": {
+  "lat": "44.0335490",
+  "lon": "-121.2860100",
+  "address": "20769 SE Shea Ct., Bend, OR 97702"
+ },
  "20783 boulderfield avenue - 1 bend or 97701": {
   "lat": "44.0919847",
   "lon": "-121.2857217",
   "address": "20783 Boulderfield Avenue - 1, Bend, OR 97701"
+ },
+ "21 ne cessna dr 1 bend or 97701": {
+  "lat": "44.0527348",
+  "lon": "-121.2764285",
+  "address": "21 NE Cessna Dr #1, Bend, OR 97701"
  },
  "21028 damascus lane 2 bend or 97701": {
   "lat": "44.0528697",
@@ -298,6 +313,11 @@
   "lat": "44.037432191642",
   "lon": "-121.262693388883",
   "address": "21185 SE Golden Market Ln. - 2, Bend, OR 97702"
+ },
+ "21190 darnel ave bend or 97702": {
+  "lat": "44.0435103",
+  "lon": "-121.2645585",
+  "address": "21190 Darnel Ave, Bend, OR 97702"
  },
  "21730 ne butler market rd bend or 97701": {
   "lat": "44.0947603",
