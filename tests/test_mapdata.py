@@ -51,10 +51,14 @@ def test_number_reads_what_a_cell_may_hold(text, expected):
 @pytest.mark.parametrize("price,label", [
     (0, "under $1,000"),
     (999, "under $1,000"),
-    (1000, "$1,000 - $1,999"),
-    (1999, "$1,000 - $1,999"),
-    (2000, "$2,000 - $2,999"),
-    (2999, "$2,000 - $2,999"),
+    (1000, "$1,000 - $1,499"),
+    (1499, "$1,000 - $1,499"),
+    (1500, "$1,500 - $1,999"),
+    (1999, "$1,500 - $1,999"),
+    (2000, "$2,000 - $2,499"),
+    (2499, "$2,000 - $2,499"),
+    (2500, "$2,500 - $2,999"),
+    (2999, "$2,500 - $2,999"),
     (3000, "$3,000 and up"),
     (9500, "$3,000 and up"),
 ])
@@ -62,11 +66,35 @@ def test_price_bands_have_no_gap_at_a_boundary(price, label):
     assert price_band(price)["label"] == label
 
 
-def test_the_band_labels_match_their_own_boundaries():
-    """A label that disagrees with its threshold misleads silently."""
-    assert [b["below"] for b in PRICE_BANDS] == [1000, 2000, 3000, None]
-    assert "1,000" in PRICE_BANDS[0]["label"]
-    assert "3,000" in PRICE_BANDS[-1]["label"]
+def test_the_bands_are_five_hundred_wide_between_one_and_three_thousand():
+    assert [b["below"] for b in PRICE_BANDS] == [1000, 1500, 2000, 2500, 3000, None]
+
+
+def test_every_band_label_agrees_with_its_own_boundary():
+    """A label that disagrees with its threshold misleads silently.
+
+    Derived rather than hard-coded, so it keeps checking after the next
+    change to the bands.
+    """
+    first, *middle, last = PRICE_BANDS
+
+    # The ends are worded as open ranges, so each names one number, not two.
+    assert f"{first['below']:,}" in first["label"], first
+
+    floor = first["below"]
+    for band in middle:
+        assert f"{floor:,}" in band["label"], band
+        assert f"{band['below'] - 1:,}" in band["label"], band
+        floor = band["below"]
+
+    assert f"{floor:,}" in last["label"], last
+
+
+def test_the_bands_are_contiguous_and_ordered():
+    ceilings = [b["below"] for b in PRICE_BANDS]
+    assert ceilings[-1] is None, "the last band must have no ceiling"
+    assert ceilings[:-1] == sorted(ceilings[:-1])
+    assert len(set(ceilings[:-1])) == len(ceilings) - 1
 
 
 def test_bands_are_distinct_colours():
@@ -104,7 +132,7 @@ def test_a_row_becomes_a_record_with_numbers_parsed():
     assert record["sqft"] == 1500.0
     assert record["bathrooms"] == "2.5"          # a string, so it can hold "?"
     assert record["lat"] == 44.05 and record["lon"] == -121.31
-    assert record["band"]["label"] == "$2,000 - $2,999"
+    assert record["band"]["label"] == "$2,000 - $2,499"
 
 
 def test_unknown_becomes_blank_rather_than_a_question_mark():

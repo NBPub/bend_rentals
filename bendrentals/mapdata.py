@@ -22,10 +22,12 @@ from .models import UNKNOWN
 #: greyscale printing and the common forms of colour blindness. Change these
 #: freely — they are read only from here and from `pagehtml`'s legend.
 PRICE_BANDS = (
-    {"below": 1000, "label": "under $1,000", "colour": "#7fcdbb"},
-    {"below": 2000, "label": "$1,000 - $1,999", "colour": "#41b6c4"},
-    {"below": 3000, "label": "$2,000 - $2,999", "colour": "#2c7fb8"},
-    {"below": None, "label": "$3,000 and up", "colour": "#253494"},
+    {"below": 1000, "label": "under $1,000", "colour": "#c7e9b4"},
+    {"below": 1500, "label": "$1,000 - $1,499", "colour": "#7fcdbb"},
+    {"below": 2000, "label": "$1,500 - $1,999", "colour": "#41b6c4"},
+    {"below": 2500, "label": "$2,000 - $2,499", "colour": "#1d91c0"},
+    {"below": 3000, "label": "$2,500 - $2,999", "colour": "#225ea8"},
+    {"below": None, "label": "$3,000 and up", "colour": "#0c2c84"},
 )
 
 #: A listing whose price could not be read still gets a marker.

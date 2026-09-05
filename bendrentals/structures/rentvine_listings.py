@@ -25,7 +25,17 @@ from ..models import UNKNOWN
 from ..place import region_of
 
 #: Client-side route for a single listing on the tenant's public site.
-LISTING_PATH = "/public/listings/{unit_id}"
+#:
+#: The public app answers every path with the same shell, so this cannot be
+#: verified by fetching it. The route is declared in the app's own bundle as
+#: `/listings/:id([0-9]+)`, under the `/public/` mount.
+LISTING_PATH = "/public/listings/{listing_id}"
+
+#: Which id fills that route, most specific first. `propertyListingID` is the
+#: listing's own id and matches the route's name; `unitID` is the fallback,
+#: and is what the API's own `applicationUrl` uses. Every listing published so
+#: far carries the same value for both, so this changes no link today.
+LISTING_ID_KEYS = ("propertyListingID", "unitID")
 
 #: See the property_type note in parse_index.
 OMITTED_FIELDS = frozenset({"property_type"})
@@ -70,6 +80,16 @@ def _accepts(listing: dict, key: str) -> str:
     return UNKNOWN
 
 
+def _listing_id(unit: dict, listing: dict):
+    """The id for the public listing route, or None if the payload has none."""
+    for key in LISTING_ID_KEYS:
+        for source in (listing, unit):
+            value = source.get(key)
+            if value not in (None, ""):
+                return value
+    return None
+
+
 def _address(unit: dict) -> str:
     street = (unit.get("address") or "").strip()
     if not street:
@@ -110,12 +130,13 @@ def parse_index(index_json: str, base_url: str) -> list[dict]:
         headline = _text(listing.get("headline"))
         region = region_of(city, address, headline)
 
-        unit_id = unit.get("unitID") or listing.get("unitID")
+        listing_id = _listing_id(unit, listing)
         pets = _text(listing.get("petDescription"))
         available, available_now = parse_available(listing.get("availabilityDate"))
 
         rows.append({
-            "link": host + LISTING_PATH.format(unit_id=unit_id) if unit_id else UNKNOWN,
+            "link": (host + LISTING_PATH.format(listing_id=listing_id)
+                     if listing_id else UNKNOWN),
             "address": address,
             "region": region,
             "price": _number(unit.get("rent") or unit.get("marketRent")),

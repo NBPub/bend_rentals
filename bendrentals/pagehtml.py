@@ -90,8 +90,8 @@ FIELD_LABELS = {
     "sqft": "Sq Ft",
     "available": "Available",
     "available_now": "Available now",
-    "cats_allowed": "Cats",
-    "dogs_allowed": "Dogs",
+    "cats_allowed": "Cats Allowed",
+    "dogs_allowed": "Dogs Allowed",
     "summary": "Summary",
     "link": "Listing",
     "maps_link": "Map",
@@ -109,6 +109,10 @@ TABLE_FIELDS = (
 #: heading, so it is not repeated here.
 POPUP_FIELDS = ("region", "price", "bedrooms", "bathrooms", "sqft",
                 "available", "cats_allowed", "dogs_allowed", "company")
+
+#: Overrides for the filter panel only. The unit belongs on the box you type
+#: a number into; in the table and the popup the values already carry a "$".
+FILTER_LABELS = {"price": "Price ($)"}
 
 #: Rendered as a link rather than as text.
 LINK_FIELDS = ("link", "maps_link")
@@ -151,6 +155,7 @@ def render(records, unmapped=(), *, generated_at=None, title="Rentals in Bend, O
         "ranges": ranges(everything),
         "bands": list(PRICE_BANDS) + [UNKNOWN_BAND],
         "labels": FIELD_LABELS,
+        "filterLabels": FILTER_LABELS,
         "facetFields": [f for f in FACET_FIELDS if f != SIDE_FACET],
         "sideFacet": SIDE_FACET,
         "rangeFields": list(RANGE_FIELDS),

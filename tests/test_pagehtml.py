@@ -330,3 +330,54 @@ def test_a_missing_template_says_which_file(monkeypatch, tmp_path):
             pagehtml.template()
     finally:
         pagehtml.template.cache_clear()
+
+
+# --- the filter panel and the table -----------------------------------------
+
+def test_the_price_filter_names_its_unit():
+    """The box you type a number into needs it; the table's values carry a $."""
+    from bendrentals.pagehtml import FILTER_LABELS
+    assert FILTER_LABELS["price"] == "Price ($)"
+    assert FIELD_LABELS["price"] == "Price"
+    assert payload_of(build())["filterLabels"]["price"] == "Price ($)"
+
+
+def test_the_pet_columns_say_what_the_tick_means():
+    assert FIELD_LABELS["cats_allowed"] == "Cats Allowed"
+    assert FIELD_LABELS["dogs_allowed"] == "Dogs Allowed"
+
+
+def test_the_map_has_room_to_scroll_past():
+    """A wheel over a Leaflet map zooms it; the margin is the way down a page."""
+    html = build()
+    assert '<div id="mapwrap"><div id="map"></div></div>' in html
+    assert "#mapwrap { padding: .9rem 7%; }" in html
+
+
+def test_the_company_column_does_not_stretch_the_filter_panel():
+    """Thirteen companies would otherwise set the height of the whole panel."""
+    html = build()
+    assert "#filters-side fieldset { position: absolute;" in html
+    assert "#filters-side { border-left: 1px solid var(--line); padding-left: 1.1rem;\n" \
+           "                  position: relative;" in html
+
+
+def test_the_listing_link_is_a_link_styled_as_a_button():
+    """A real <button> would need JS to navigate and would lose middle-click."""
+    html = build()
+    assert "anchor(rec[field], 'open', 'btn')" in html
+    assert "a.btn { display: inline-block;" in html
+
+
+def test_the_icon_columns_stack_their_two_word_headings():
+    """"Cats Allowed" over a tick is what makes that column wide."""
+    html = build()
+    assert "document.createElement('br')" in html
+    assert "th.mark button { text-align: center;" in html
+    assert "td.mark { text-align: center; }" in html
+
+
+def test_only_the_icon_columns_are_marked():
+    """The break is keyed off booleanFields, not off a label having a space."""
+    html = build()
+    assert "if (D.booleanFields.indexOf(field) >= 0) cell.className = 'mark';" in html

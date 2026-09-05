@@ -79,17 +79,26 @@
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     align-content: start;
   }
-  #filters-side { border-left: 1px solid var(--line); padding-left: 1.1rem; }
+  /* Absolutely positioned, so thirteen companies do not stretch the panel
+     to their own height. The row is sized by the other filters, and the list
+     scrolls inside whatever height that leaves. */
+  #filters-side { border-left: 1px solid var(--line); padding-left: 1.1rem;
+                  position: relative; min-height: 5.5rem; }
+  #filters-side fieldset { position: absolute; top: 0; bottom: 0;
+                           left: 1.1rem; right: 0;
+                           display: flex; flex-direction: column; }
+  #filters-side .opts { flex: 1 1 auto; min-height: 0; }
   @media (max-width: 700px) {
     #filters { grid-template-columns: 1fr; }
-    #filters-side { border-left: 0; padding-left: 0;
+    #filters-side { border-left: 0; padding-left: 0; position: static;
                     border-top: 1px solid var(--line); padding-top: .7rem; }
+    #filters-side fieldset { position: static; }
   }
   fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
   legend { font-weight: 600; font-size: .8rem; padding: 0 0 .25rem; }
   .opts { display: flex; flex-wrap: wrap; gap: .1rem .8rem;
           max-height: 9rem; overflow-y: auto; }
-  #filters-side .opts { flex-direction: column; flex-wrap: nowrap; max-height: 13rem; }
+  #filters-side .opts { flex-direction: column; flex-wrap: nowrap; }
   label { display: inline-flex; align-items: center; gap: .3rem;
           font-size: .82rem; cursor: pointer; }
   .range { display: flex; align-items: center; gap: .35rem; font-size: .82rem; }
@@ -98,7 +107,13 @@
                  background: transparent; color: inherit; }
   .actions { display: flex; align-items: flex-end; gap: .5rem; }
 
-  #map { height: 66vh; min-height: 340px; scroll-margin-top: .5rem; }
+  /* Margins either side of the map leave a strip of page to scroll on:
+     a wheel over a Leaflet map zooms it instead of moving the page. */
+  #mapwrap { padding: .9rem 7%; }
+  #map { height: 66vh; min-height: 340px; scroll-margin-top: .5rem;
+         border: 1px solid var(--line); border-radius: .35rem; }
+  @media (max-width: 700px) { #mapwrap { padding: .6rem 0; }
+                              #map { border-radius: 0; } }
   .warn { background: #fff3cd; color: #664d03; padding: .6rem 1rem;
           font-size: .85rem; border-bottom: 1px solid #ffe69c; }
 
@@ -126,9 +141,20 @@
   th { position: sticky; top: 0; background: Canvas; padding: 0; }
   th button { width: 100%; border: 0; border-radius: 0; text-align: left;
               padding: .35rem .55rem; font-weight: 600; }
+  /* The stacked two-word headings over the tick/cross columns, and the marks
+     under them. Centred so the column reads as a narrow strip of icons. */
+  th.mark button { text-align: center; padding-left: .3rem; padding-right: .3rem;
+                   line-height: 1.2; }
+  td.mark { text-align: center; }
   td.wrap { white-space: normal; min-width: 15rem; }
   td.num { text-align: right; font-variant-numeric: tabular-nums; }
   td .maplink { color: var(--accent); margin-left: .4rem; font-size: .95em; }
+  /* An anchor styled as a button, not a <button>: it stays a real link, so
+     middle-click and "open in new tab" keep working. */
+  a.btn { display: inline-block; padding: .1rem .5rem; border-radius: .25rem;
+          border: 1px solid var(--line); background: var(--panel);
+          text-decoration: none; font-size: .95em; line-height: 1.4; }
+  a.btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
   .yes { color: var(--yes); font-weight: 700; }
   .no { color: var(--no); font-weight: 700; }
   .empty { color: var(--muted); padding: .8rem; }
@@ -154,7 +180,7 @@
   <div id="filters-main"></div>
   <div id="filters-side"></div>
 </div>
-<div id="map"></div>
+<div id="mapwrap"><div id="map"></div></div>
 <section id="unmapped"></section>
 
 <section id="tablewrap">
@@ -263,7 +289,7 @@
     if (options.length < 2) return;    // a filter with one choice filters nothing
     var set = document.createElement('fieldset');
     var cap = document.createElement('legend');
-    cap.textContent = D.labels[field] || field;
+    cap.textContent = D.filterLabels[field] || D.labels[field] || field;
     set.appendChild(cap);
     var box = document.createElement('div');
     box.className = 'opts';
@@ -294,7 +320,7 @@
       if (r.min === null || r.min === undefined) return;   // nothing to filter
       var set = document.createElement('fieldset');
       var cap = document.createElement('legend');
-      cap.textContent = D.labels[field] || field;
+      cap.textContent = D.filterLabels[field] || D.labels[field] || field;
       set.appendChild(cap);
       var row = document.createElement('div');
       row.className = 'range';
@@ -302,7 +328,8 @@
         var input = document.createElement('input');
         input.type = 'number';
         input.placeholder = Math.round(which === 'min' ? r.min : r.max);
-        input.setAttribute('aria-label', (D.labels[field] || field) + ' ' + which);
+        input.setAttribute('aria-label',
+          (D.filterLabels[field] || D.labels[field] || field) + ' ' + which);
         input.addEventListener('input', function () {
           var raw = input.value.trim();
           bounds[field][which] = raw === '' ? null : Number(raw);
@@ -504,6 +531,7 @@
     row.textContent = '';
     D.tableFields.forEach(function (field) {
       var cell = document.createElement('th');
+      if (D.booleanFields.indexOf(field) >= 0) cell.className = 'mark';
       var button = document.createElement('button');
       button.type = 'button';
       button.dataset.field = field;
@@ -521,7 +549,20 @@
     document.querySelectorAll('#head button').forEach(function (button) {
       var field = button.dataset.field;
       var arrow = sort.field === field ? (sort.dir === 1 ? ' \u2191' : ' \u2193') : '';
-      button.textContent = (D.labels[field] || field) + arrow;
+      var label = D.labels[field] || field;
+
+      button.textContent = '';
+      // The tick/cross columns are two characters wide, but their headings are
+      // two words, so the heading is what sets the column width. Breaking it
+      // stacks the words and lets the column shrink to fit the mark.
+      var cut = D.booleanFields.indexOf(field) >= 0 ? label.lastIndexOf(' ') : -1;
+      if (cut > 0) {
+        button.appendChild(document.createTextNode(label.slice(0, cut)));
+        button.appendChild(document.createElement('br'));
+        button.appendChild(document.createTextNode(label.slice(cut + 1) + arrow));
+      } else {
+        button.appendChild(document.createTextNode(label + arrow));
+      }
     });
   }
 
@@ -529,11 +570,12 @@
     var td = document.createElement('td');
 
     if (D.linkFields.indexOf(field) >= 0) {
-      if (rec[field]) td.appendChild(anchor(rec[field], 'open'));
+      if (rec[field]) td.appendChild(anchor(rec[field], 'open', 'btn'));
       else td.textContent = '\u2014';
       return td;
     }
     if (D.booleanFields.indexOf(field) >= 0) {
+      td.className = 'mark';
       td.appendChild(boolCell(rec[field]));
       return td;
     }

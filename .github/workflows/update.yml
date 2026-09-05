@@ -48,7 +48,22 @@ jobs:
         # shell ever sees it, so its contents would be executed as shell.
         env:
           GEOCODE_LIMIT: ${{ inputs.geocode_limit || '50' }}
-        run: python update.py --no-snapshot --geocode-limit "$GEOCODE_LIMIT"
+        # The steps share an exit-code contract: 0 fine, 1 one source had
+        # trouble, 2 misconfigured. A `run:` step fails on any non-zero exit,
+        # which would throw away a whole day's update because one of thirteen
+        # sites had a bad minute — the opposite of what the contract is for.
+        # So 1 is a warning and the commit below still runs; 2 stops the job.
+        run: |
+          code=0
+          python update.py --no-snapshot --geocode-limit "$GEOCODE_LIMIT" || code=$?
+          if [ "$code" -ge 2 ]; then
+            echo "::error::update.py exited $code — misconfigured, nothing to commit."
+            exit "$code"
+          fi
+          if [ "$code" -eq 1 ]; then
+            echo "::warning::At least one source failed; see the log above. "\
+              "Those companies keep their previous listings, and the rest are committed."
+          fi
 
       - name: Commit the results
         run: |
