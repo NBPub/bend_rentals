@@ -42,7 +42,14 @@ DOMAIN_USER_AGENTS = {
     "census.gov": NOMINATIM_USER_AGENT,
 }
 
-TIMEOUT = 30
+#: (connect, read), as requests takes them. They are separate because they
+#: fail for different reasons: a slow page deserves 30s to finish sending, but
+#: a host that never completes a handshake is not being slow, it is not
+#: answering. prbend.com does exactly that from GitHub's runners while
+#: responding in under a second from a home connection -- a datacentre IP
+#: block, most likely. With a single 30s value that source burned about 95
+#: seconds of every scheduled run before giving up.
+TIMEOUT = (10, 30)
 
 #: `format` values Squarespace's robots.txt disallows.
 SQUARESPACE_DISALLOWED_FORMATS = frozenset(

@@ -66,3 +66,27 @@ def test_refuses_disallowed_format_json_urls():
         get("https://www.trailheadpropertymanagement.com/page?format=json",
             session=session, delay=0)
     session.get.assert_not_called()
+
+
+def test_connect_and_read_timeouts_are_separate():
+    """A host that never completes a handshake is not a slow page.
+
+    prbend.com answers in under a second from a home connection and never
+    answers at all from GitHub's runners. A single long timeout made that
+    source cost ~95s of every scheduled run.
+    """
+    from bendrentals.fetch import TIMEOUT
+    connect, read = TIMEOUT
+    assert connect < read
+    assert connect <= 15
+
+
+def test_the_timeout_is_passed_through_to_requests():
+    from unittest.mock import MagicMock
+
+    from bendrentals.fetch import TIMEOUT, get
+
+    session = MagicMock()
+    session.get.return_value = FakeResponse()
+    get("https://example.com/x", session=session, delay=0)
+    assert session.get.call_args.kwargs["timeout"] == TIMEOUT

@@ -6,7 +6,10 @@ name: Update listings
 # sources ask for. Nothing here is time-critical, so it runs once a day.
 on:
   schedule:
-    # 13:00 UTC — early morning in Bend, so the day's listings are up.
+    # Cron here is always UTC. GitHub does not read TZ for scheduling, so a
+    # fixed time drifts an hour across daylight saving: 13:00 UTC is 06:00
+    # PDT in summer and 05:00 PST in winter. Both are early morning in Bend,
+    # after the night's listings have gone up, so the drift does not matter.
     - cron: "0 13 * * *"
   workflow_dispatch:
     inputs:
@@ -29,10 +32,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
-    steps:
-      - uses: actions/checkout@v4
+    # The runner is UTC by default, which would stamp every scraped_at and the
+    # page's "updated" line in a timezone no reader of a Bend rentals site is
+    # in. This does not affect the schedule above -- only what datetime.now()
+    # returns inside the run.
+    env:
+      TZ: America/Los_Angeles
 
-      - uses: actions/setup-python@v5
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -75,7 +85,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nothing changed."
           else
-            git commit -m "data: refresh listings ($(date -u +%Y-%m-%d))"
+            git commit -m "data: refresh listings ($(date +%Y-%m-%d))"
             git push
           fi
 
