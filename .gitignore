@@ -10,20 +10,14 @@ venv/
 data/snapshots/
 
 # The geocode cache and the listings CSV are committed deliberately: the
-# scheduled run rewrites both, and the cache means a clone geocodes
-# nothing. Nothing else in data/ or cache/ is committed. The folder
-# READMEs are un-ignored ready for when their drafts are approved.
+# scheduled run rewrites both, and the cache means a clone geocodes nothing.
+# Nothing else in data/ or cache/ is, apart from the folder READMEs.
 data/*
 !data/listings.csv
 !data/README.md
 cache/*
 !cache/geocode.json
 !cache/README.md
-
-# Documentation still under review. Matches at any depth, so the folder
-# placeholders are covered too. Delete these lines when the drafts are ready.
-README_draft.md
-CONTRIBUTING_draft.md
 
 # Local run output
 run.log

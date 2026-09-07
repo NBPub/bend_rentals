@@ -45,12 +45,13 @@
   input[type=checkbox] { accent-color: var(--accent); }
 
   header { border-bottom: 1px solid var(--line); }
-  .titlebar, .statusbar {
+  .titlebar, .statusbar, .navbar {
     padding: .5rem 1rem; display: flex; flex-wrap: wrap;
     gap: .4rem 1.1rem; align-items: center;
   }
   .titlebar { padding-bottom: .1rem; }
-  .statusbar { padding-top: 0; align-items: baseline; }
+  .statusbar, .navbar { padding-top: 0; align-items: baseline; }
+  .navbar { padding-bottom: .55rem; }
   h1 { font-size: 1.15rem; margin: 0; font-weight: 600; }
   .gh { display: inline-flex; color: var(--muted); text-decoration: none; }
   .gh:hover { color: inherit; }
@@ -68,9 +69,11 @@
   }
   button:hover { background: var(--panel); }
 
+  hr { border: 0; border-top: 1px solid var(--line); margin: 0 1rem; }
+
   #filters {
     padding: .7rem 1rem; border-bottom: 1px solid var(--line);
-    background: var(--panel);
+    background: var(--panel); scroll-margin-top: .5rem;
     display: grid; gap: .8rem 1.4rem;
     grid-template-columns: minmax(0, 1fr) minmax(180px, 15rem);
   }
@@ -167,12 +170,15 @@
     <a class="gh" id="repo" href="__REPO_URL__" target="_blank"
        rel="noopener noreferrer" title="Source on GitHub"
        aria-label="Source on GitHub"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+    <span class="meta" id="updated"></span>
   </div>
   <div class="statusbar">
-    <a class="jump" href="#tablewrap">Data table &#8595;</a>
     <span class="meta" id="count"></span>
     <span id="legend"></span>
     <button type="button" id="fit">Fit map to results</button>
+  </div>
+  <div class="navbar">
+    <a class="jump" href="#tablewrap">Data table &#8595;</a>
   </div>
 </header>
 
@@ -182,12 +188,14 @@
 </div>
 <div id="mapwrap"><div id="map"></div></div>
 <section id="unmapped"></section>
+<hr>
 
 <section id="tablewrap">
   <div class="tablehead">
     <h2 id="tabletitle">Listings</h2>
     <span class="meta" id="csvlink"></span>
     <a class="jump" href="#map">Map &#8593;</a>
+    <a class="jump" href="#filters">Filters &#8593;</a>
   </div>
   <div class="scroll"><table><thead><tr id="head"></tr></thead><tbody id="body"></tbody></table></div>
   <p class="meta" id="tablenote"></p>
@@ -618,8 +626,8 @@
     var rest = kept.filter(function (r) { return typeof r.lat !== 'number'; });
 
     document.getElementById('count').textContent =
-      kept.length + ' of ' + D.total + ' listings \u00b7 ' + mappable.length
-      + ' mapped \u00b7 updated ' + D.generated;
+      kept.length + ' of ' + D.total + ' listings \u00b7 '
+      + mappable.length + ' mapped';
     document.getElementById('tabletitle').textContent = 'Listings (' + kept.length + ')';
 
     drawLegend(kept);
@@ -633,6 +641,9 @@
     host.appendChild(document.createTextNode('Filters above apply to this table. '));
     host.appendChild(anchor(D.csvUrl, 'Download the full CSV'));
   }
+
+  // Fixed for the life of the page, unlike the counts, so it is set once.
+  document.getElementById('updated').textContent = 'updated ' + D.generated;
 
   buildFilters();
   buildHead();

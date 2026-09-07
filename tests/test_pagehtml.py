@@ -70,7 +70,7 @@ def test_the_page_needs_only_leaflet_from_the_network():
 def test_the_page_carries_the_elements_its_script_looks_for():
     html = build()
     for element_id in ("payload", "map", "filters", "unmapped", "legend",
-                       "count", "head", "body", "csvlink", "fit"):
+                       "count", "updated", "head", "body", "csvlink", "fit"):
         assert f'id="{element_id}"' in html, element_id
 
 
@@ -381,3 +381,35 @@ def test_only_the_icon_columns_are_marked():
     """The break is keyed off booleanFields, not off a label having a space."""
     html = build()
     assert "if (D.booleanFields.indexOf(field) >= 0) cell.className = 'mark';" in html
+
+
+def test_the_timestamp_sits_on_the_title_line_not_with_the_counts():
+    """It never changes, so it does not belong beside numbers that do."""
+    html = build()
+    titlebar = html.split('<div class="statusbar">')[0]
+    assert 'id="updated"' in titlebar
+    assert 'id="count"' not in titlebar
+    assert "'updated ' + D.generated" in html
+
+
+def test_the_table_link_gets_a_line_of_its_own():
+    html = build()
+    navbar = html.split('<div class="navbar">')[1].split("</div>")[0]
+    assert 'href="#tablewrap"' in navbar
+    # And it has left the line it used to share with the counts.
+    statusbar = html.split('<div class="statusbar">')[1].split("</div>")[0]
+    assert "#tablewrap" not in statusbar
+
+
+def test_the_table_section_links_back_to_both_the_map_and_the_filters():
+    html = build()
+    tablehead = html.split('<div class="tablehead">')[1].split("</div>")[0]
+    assert 'href="#map"' in tablehead
+    assert 'href="#filters"' in tablehead
+    assert "#filters {" in html and "scroll-margin-top" in html
+
+
+def test_a_rule_separates_the_unmappable_list_from_the_table():
+    html = build()
+    between = html.split('<section id="unmapped"></section>')[1]
+    assert between.lstrip().startswith("<hr>")
