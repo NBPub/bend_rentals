@@ -193,3 +193,54 @@ def test_available_date_parses_the_month_name_format(sagewood):
     # The page says "Date Available: August 1, 2026".
     assert sagewood["available"] == "2026-08-01"
     assert sagewood["available_now"] == "False"
+
+
+# --- the slider is the scope ------------------------------------------------
+
+def test_listings_are_read_from_the_slider_not_the_whole_page():
+    """The page links properties from more than one place.
+
+    Today the only other one is the archive index, which the URL pattern
+    already rejects. A second slider — rented, coming soon — would not be
+    rejected by anything but this.
+    """
+    from bendrentals.structures.prbend_property_pages import (
+        LISTING_ANCHOR, LISTING_SLIDER,
+    )
+    soup = soup_of("index.html")
+    assert len(soup.select(LISTING_SLIDER)) == 1
+    inside = {a["href"] for s in soup.select(LISTING_SLIDER)
+              for a in s.select(LISTING_ANCHOR)}
+    everywhere = {a["href"] for a in soup.select(LISTING_ANCHOR)}
+    # The archive index link is the one outside, and it is not a listing.
+    assert everywhere - inside == {"https://prbend.com/property/"}
+    assert len(find_listing_urls(read("index.html"), BASE)) == len(inside)
+
+
+def test_a_second_slider_would_not_be_scraped_as_long_term_rentals():
+    html = (
+        '<div class="dipi_blog_slider">'
+        '  <a href="https://prbend.com/property/real-one/">x</a>'
+        '</div>'
+        '<div class="dipi_other_slider">'
+        '  <a href="https://prbend.com/property/rented-last-year/">x</a>'
+        '</div>'
+    )
+    assert find_listing_urls(html, BASE) == ["https://prbend.com/property/real-one/"]
+
+
+def test_each_listing_is_linked_three_times_and_counted_once():
+    """Image overlay, title, and a View Details button all point at the same page."""
+    soup = soup_of("index.html")
+    anchors = [a for a in soup.select("a[href*='/property/']")
+               if a["href"] != "https://prbend.com/property/"]
+    urls = find_listing_urls(read("index.html"), BASE)
+    assert len(anchors) > len(urls)
+    assert len(urls) == len(set(urls))
+
+
+def test_a_missing_slider_falls_back_loudly_rather_than_returning_nothing(capsys):
+    """A theme update that renames the module should not empty this source."""
+    html = '<div class="something-else"><a href="/property/still-here/">x</a></div>'
+    assert find_listing_urls(html, BASE) == ["https://prbend.com/property/still-here/"]
+    assert "no .dipi_blog_slider" in capsys.readouterr().err

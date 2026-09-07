@@ -1,6 +1,7 @@
 """Wires structure + format + extraction into Listing rows."""
 
 import importlib
+import re
 import sys
 from datetime import datetime
 
@@ -21,7 +22,30 @@ STRUCTURED_FIELDS = (
 
 
 class ScrapeError(RuntimeError):
-    """Raised when a scrape produced no listings — almost always changed markup."""
+    """Raised when a scrape produced no listings."""
+
+
+#: Enough of a page's <title> to recognise it by.
+_TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
+
+
+def describe_page(html: str) -> str:
+    """What we actually received, for a "no listings" message.
+
+    Zero listings has two very different causes and the message used to
+    assert the wrong one. A changed layout and a host answering with
+    something else entirely — a block page, a challenge, an error — look
+    identical from the parser's side, but not from here: the real listings
+    page is large and titled, a refusal is small and says so. One source
+    intermittently serves nothing to datacentre IPs, and a message that
+    blamed the markup sent us looking for a redesign that never happened.
+    """
+    size = f"{len(html):,} bytes"
+    match = _TITLE_RE.search(html or "")
+    if not match:
+        return f"{size}, no <title>"
+    title = " ".join(match.group(1).split())[:80]
+    return f"{size}, titled {title!r}"
 
 
 def _load(package: str, name: str):
@@ -82,6 +106,13 @@ def build_listing(
         scraped_at=scraped_at,
         parse_status=status,
     )
+
+
+def _no_listings(url: str, html: str) -> str:
+    """The message for a page we could read but found nothing in."""
+    return (f"No listings found on {url} — received {describe_page(html)}. "
+            "Either the page changed, or the site served something other "
+            "than its listings.")
 
 
 def _address_from_map_link(fields: dict, map_link, resolver) -> None:
@@ -182,9 +213,7 @@ def _scrape(site: Site, fetcher, *, now=None, resolver=resolve_url) -> list[List
     if hasattr(structure, "parse_index"):
         rows = structure.parse_index(index_html, site.index_url)
         if not rows:
-            raise ScrapeError(
-                f"No listings found on {site.index_url} — the page markup has probably changed."
-            )
+            raise ScrapeError(_no_listings(site.index_url, index_html))
         return [listing_from_fields(row, scraped_at, omitted) for row in rows]
 
     if not hasattr(structure, "find_listing_urls"):
@@ -195,9 +224,7 @@ def _scrape(site: Site, fetcher, *, now=None, resolver=resolve_url) -> list[List
 
     links = structure.find_listing_urls(index_html, site.index_url)
     if not links:
-        raise ScrapeError(
-            f"No listings found on {site.index_url} — the page markup has probably changed."
-        )
+        raise ScrapeError(_no_listings(site.index_url, index_html))
 
     if hasattr(structure, "parse_detail_fields"):
         map_field = getattr(structure, "MAP_LINK_FIELD", None)

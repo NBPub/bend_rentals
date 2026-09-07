@@ -89,3 +89,40 @@ def test_zero_listings_is_an_error_not_an_empty_success():
 
     with pytest.raises(ScrapeError, match="No listings"):
         scrape_site(SITE, empty_fetcher, now=NOW)
+
+
+# --- what "no listings" actually means --------------------------------------
+
+def test_describe_page_names_a_block_page_by_its_title():
+    """A refusal and a redesign look identical to the parser, not to this."""
+    from bendrentals.scraper import describe_page
+    blocked = describe_page(
+        "<html><head><title>Just a moment...</title></head><body></body></html>")
+    assert "Just a moment" in blocked
+    assert "70 bytes" in blocked
+
+
+def test_describe_page_copes_with_no_title_and_no_page():
+    from bendrentals.scraper import describe_page
+    assert "no <title>" in describe_page("")
+    assert "0 bytes" in describe_page("")
+
+
+def test_describe_page_collapses_whitespace_in_a_title():
+    from bendrentals.scraper import describe_page
+    assert "'A Long Title'" in describe_page("<title>A\n  Long   Title</title>")
+
+
+def test_the_no_listings_error_says_what_arrived():
+    """It used to assert the markup had changed, which sent us looking for a
+    redesign that had not happened: the host had served a block page."""
+    def blocked(url):
+        return "<html><head><title>Access denied</title></head><body>no.</body></html>"
+
+    with pytest.raises(ScrapeError) as caught:
+        scrape_site(SITE, blocked, now=NOW)
+
+    message = str(caught.value)
+    assert "Access denied" in message
+    assert "bytes" in message
+    assert "probably changed" not in message      # the old, over-confident claim

@@ -16,6 +16,7 @@ deliberately "?" here.
 """
 
 import re
+import sys
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
@@ -36,6 +37,20 @@ MAP_LINK_FIELD = "map_link"
 #: A listing URL has a slug; https://prbend.com/property/ is the archive page.
 LISTING_HREF_RE = re.compile(r"/property/[^/]+/?$")
 
+#: The listings live in one Divi "blog slider" module: a horizontal carousel
+#: under the "Long-Term Rentals" heading. Every slide is in the HTML — the
+#: carousel only scrolls them — so nothing is hidden behind its arrows.
+#:
+#: Scoping to it matters because the page links properties from more than one
+#: place. Today the only other one is the archive index, which the pattern
+#: above already rejects; but a second slider (rented, coming soon, commercial)
+#: would otherwise be scraped as long-term rentals with nothing to show for it.
+LISTING_SLIDER = ".dipi_blog_slider"
+
+#: Each listing is linked three times inside its slide — the image overlay,
+#: the title, and a "View Details" button — so the URLs need deduplicating.
+LISTING_ANCHOR = "a[href*='/property/']"
+
 PET_RE = re.compile(r"\b(pets?|cats?|dogs?)\b", re.IGNORECASE)
 SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
 
@@ -53,10 +68,25 @@ def _number(text: str):
 
 
 def find_listing_urls(index_html: str, base_url: str) -> list[str]:
-    """Absolute URLs of the properties linked from the long-term rentals page."""
+    """Absolute URLs of the properties in the long-term rentals slider.
+
+    Falls back to the whole page if the slider is not there, because a theme
+    update that renames the module should not empty this source. The fallback
+    warns rather than doing it quietly: it is wider than intended, and that is
+    worth knowing before it starts picking up the wrong listings.
+    """
     soup = BeautifulSoup(index_html, "html.parser")
+
+    sliders = soup.select(LISTING_SLIDER)
+    if sliders:
+        anchors = [a for slider in sliders for a in slider.select(LISTING_ANCHOR)]
+    else:
+        print(f"WARNING: no {LISTING_SLIDER} on the index; reading property "
+              "links from the whole page instead", file=sys.stderr)
+        anchors = soup.select(LISTING_ANCHOR)
+
     urls = []
-    for anchor in soup.select("a[href*='/property/']"):
+    for anchor in anchors:
         url = urljoin(base_url, anchor["href"])
         if LISTING_HREF_RE.search(url) and url not in urls:
             urls.append(url)
