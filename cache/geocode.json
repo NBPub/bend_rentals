@@ -49,6 +49,11 @@
   "lon": "-121.3005914",
   "address": "1244 Northeast 4th Street, Unit 9, Bend, OR 97701"
  },
+ "1299 nw ogden ave bend or 97703": {
+  "lat": "44.0631860",
+  "lon": "-121.3297290",
+  "address": "1299 NW Ogden Ave, Bend, OR 97703"
+ },
  "1302 nw knoxville bend or 97703": {
   "lat": "44.0620990",
   "lon": "-121.3344730",
@@ -123,6 +128,11 @@
   "lat": "?",
   "lon": "?",
   "address": "1643 NW Knoll, Bend OR 97703"
+ },
+ "1664 nw lewis st bend or 97703": {
+  "lat": "44.0652923",
+  "lon": "-121.3532077",
+  "address": "1664 NW Lewis St., Bend, OR 97703"
  },
  "1695 nw portland - 1 bend or 97703": {
   "lat": "44.0640359",
@@ -349,6 +359,11 @@
   "lon": "-121.3503230",
   "address": "2473 NW Sacagawea Ln., Bend, OR 97703"
  },
+ "2485 nw todds crest dr unit 2 bend or 97703": {
+  "lat": "44.0727285",
+  "lon": "-121.3143534",
+  "address": "2485 NW Todds Crest Dr, Unit 2, Bend, OR 97703"
+ },
  "2564 nw shields dr bend or 97703": {
   "lat": "44.0657242",
   "lon": "-121.3526978",
@@ -393,6 +408,11 @@
   "lat": "44.0844120",
   "lon": "-121.2548796",
   "address": "3120 NE Marea Dr., Bend, OR 97701"
+ },
+ "3344 nw celilo ln - 2 bend or 97703": {
+  "lat": "44.0660401",
+  "lon": "-121.3615694",
+  "address": "3344 NW Celilo Ln. - #2, Bend, OR 97703"
  },
  "35 sw mckinley bend or 97702": {
   "lat": "44.0414862",
