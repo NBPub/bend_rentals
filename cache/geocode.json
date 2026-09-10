@@ -14,6 +14,11 @@
   "lon": "-121.2664718",
   "address": "1031 NE Watt Way #1, Bend, OR 97701"
  },
+ "1031 se 4th st 22 bend or 97702": {
+  "lat": "44.0402700",
+  "lon": "-121.3008773",
+  "address": "1031 SE 4th St. #22, Bend, OR 97702"
+ },
  "111 nw bond st bend or 97703": {
   "lat": "44.0524696",
   "lon": "-121.3167237",
@@ -199,6 +204,11 @@
   "lon": "-121.3295680",
   "address": "19899 Antler Point Dr., Bend, OR 97702"
  },
+ "2001 ne neil way bend or 97701": {
+  "lat": "44.0717650",
+  "lon": "-121.2731180",
+  "address": "2001 NE Neil Way, Bend, OR 97701"
+ },
  "20030 voltera pl bend or 97702": {
   "lat": "44.0237365",
   "lon": "-121.3219693",
@@ -298,6 +308,11 @@
   "lat": "44.0919847",
   "lon": "-121.2857217",
   "address": "20783 Boulderfield Avenue - 1, Bend, OR 97701"
+ },
+ "20838 nova loop - a bend or 97701": {
+  "lat": "44.0937431",
+  "lon": "-121.2811332",
+  "address": "20838 Nova Loop - A, Bend, OR 97701"
  },
  "21 ne cessna dr 1 bend or 97701": {
   "lat": "44.0527348",
@@ -443,6 +458,11 @@
   "lat": "44.0559055",
   "lon": "-121.3188730",
   "address": "459 NW Broadway St. , Bend, OR 97703"
+ },
+ "532 nw sisemore bend or 97703": {
+  "lat": "44.0556332",
+  "lon": "-121.3112892",
+  "address": "532 NW Sisemore, Bend, OR 97703"
  },
  "55 ne cessna dr 2 bend or 97701": {
   "lat": "44.0527348",
