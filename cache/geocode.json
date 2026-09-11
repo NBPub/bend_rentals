@@ -59,6 +59,11 @@
   "lon": "-121.3297290",
   "address": "1299 NW Ogden Ave, Bend, OR 97703"
  },
+ "1302 ne dempsey drive bend or 97701": {
+  "lat": "44.0737560",
+  "lon": "-121.2861547",
+  "address": "1302 NE Dempsey Drive, Bend, OR 97701"
+ },
  "1302 nw knoxville bend or 97703": {
   "lat": "44.0620990",
   "lon": "-121.3344730",
@@ -268,6 +273,11 @@
   "lat": "44.033313695235",
   "lon": "-121.298886638266",
   "address": "20511 SE Brentwood, Bend OR 97702"
+ },
+ "2055 ne york circle 1 bend or 97701": {
+  "lat": "44.0713328",
+  "lon": "-121.2731052",
+  "address": "2055 NE York Circle #1, Bend, OR 97701"
  },
  "2058 nw monterey pines dr - 1 bend or 97703": {
   "lat": "44.0644794",
@@ -479,6 +489,11 @@
   "lon": "-121.462236135904",
   "address": "55803 Snow Goose Rd , Bend, OR 97707"
  },
+ "565 ne norton avenue bend or 97701": {
+  "lat": "44.0638795",
+  "lon": "-121.2978773",
+  "address": "565 NE Norton Avenue, Bend, OR 97701"
+ },
  "60149 cheyenne road bend or 97702": {
   "lat": "43.984693482862",
   "lon": "-121.343975771752",
@@ -508,6 +523,11 @@
   "lat": "44.0148131",
   "lon": "-121.2948491",
   "address": "60991 SE Sweet Pea Dr #1, Bend, OR 97702"
+ },
+ "61064 se ruby peak ln bend or 97702": {
+  "lat": "44.0177091",
+  "lon": "-121.2929513",
+  "address": "61064 SE Ruby Peak Ln, Bend, OR 97702"
  },
  "61073 ne unity place bend or 97701": {
   "lat": "?",
