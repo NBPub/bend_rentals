@@ -49,6 +49,11 @@
   "lon": "-121.3123322",
   "address": "1157 SW Silver Lake Blvd, Bend, OR 97702"
  },
+ "1232 nw ogden ave bend or 97703": {
+  "lat": "44.0633587",
+  "lon": "-121.3291892",
+  "address": "1232 NW Ogden Ave. , Bend, OR 97703"
+ },
  "1244 northeast 4th street unit 9 bend or 97701": {
   "lat": "44.0623987",
   "lon": "-121.3005914",
@@ -154,6 +159,11 @@
   "lon": "-121.3390189",
   "address": "1695 NW Portland - #7, Bend, OR 97703"
  },
+ "17376 lively lane bend or 97707": {
+  "lat": "43.804957051376",
+  "lon": "-121.457267530363",
+  "address": "17376 Lively Lane, Bend, OR 97707"
+ },
  "1746 ne janice way bend or 97701": {
   "lat": "44.0673306",
   "lon": "-121.2780072",
@@ -223,6 +233,11 @@
   "lat": "44.0268000",
   "lon": "-121.3211400",
   "address": "20047 Beth Ave - #2, Bend, OR 97702"
+ },
+ "20068 sw doanna way - 02 bend or 97702": {
+  "lat": "44.0275073",
+  "lon": "-121.3198507",
+  "address": "20068 SW Doanna Way - 02, Bend, OR 97702"
  },
  "20077 beth ave unit 3 bend or 97702": {
   "lat": "44.0267879",
@@ -308,6 +323,11 @@
   "lat": "44.0644810",
   "lon": "-121.3419379",
   "address": "2074 NW Monterey Pines - 2, Bend, OR 97703"
+ },
+ "20766 canterbury ct bend or 97702": {
+  "lat": "44.0300985",
+  "lon": "-121.2852005",
+  "address": "20766 Canterbury Ct, Bend, OR 97702"
  },
  "20769 se shea ct bend or 97702": {
   "lat": "44.0335490",
@@ -433,6 +453,16 @@
   "lat": "44.0844120",
   "lon": "-121.2548796",
   "address": "3120 NE Marea Dr., Bend, OR 97701"
+ },
+ "330 se 15th st 11 bend or 97702": {
+  "lat": "44.0466414",
+  "lon": "-121.2836673",
+  "address": "330 SE 15th St. #11, Bend, OR 97702"
+ },
+ "3336 nw celilo ln - 1 bend or 97703": {
+  "lat": "44.0660401",
+  "lon": "-121.3615694",
+  "address": "3336 NW Celilo Ln. - #1, Bend, OR 97703"
  },
  "3344 nw celilo ln - 2 bend or 97703": {
   "lat": "44.0660401",
@@ -653,6 +683,11 @@
   "lat": "44.0805866",
   "lon": "-121.2913043",
   "address": "858 NE Hidden Valley Dr - #1, Bend, OR 97701"
+ },
+ "931 nw carlon ave - 01 bend or 97703": {
+  "lat": "44.0517170",
+  "lon": "-121.3199615",
+  "address": "931 NW Carlon Ave. - 01, Bend, OR 97703"
  },
  "960 ne paula dr 6 bend or 97701": {
   "lat": "44.0592739",
