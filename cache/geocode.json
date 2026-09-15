@@ -114,6 +114,11 @@
   "lon": "-121.3353503",
   "address": "1529 NW Portland Ave - B, Bend, OR 97701"
  },
+ "1565 nw portland - 12 bend or 97703": {
+  "lat": "44.0640692",
+  "lon": "-121.3358859",
+  "address": "1565 NW Portland - #12, Bend, OR 97703"
+ },
  "1567 ne rumgay lane 1 bend or 97701": {
   "lat": "44.0807148",
   "lon": "-121.2841427",
@@ -198,6 +203,11 @@
   "lat": "44.092384043902",
   "lon": "-121.342156477299",
   "address": "1955 NW Brogan, Bend, OR 97703"
+ },
+ "19658 harvard pl bend or 97702": {
+  "lat": "44.0215380",
+  "lon": "-121.3411470",
+  "address": "19658 Harvard Pl, Bend, OR 97702"
  },
  "19766 clarion avenue bend or 97702": {
   "lat": "44.0219760",
@@ -643,6 +653,11 @@
   "lat": "44.1086349",
   "lon": "-121.3020636",
   "address": "65066 Hunnell, Bend OR 97703"
+ },
+ "65280 76th st bend or 97701": {
+  "lat": "44.169465583536",
+  "lon": "-121.2611010287",
+  "address": "65280 76th St, Bend, OR 97701"
  },
  "694 se centennial ave bend or 97702": {
   "lat": "44.044443718189",
