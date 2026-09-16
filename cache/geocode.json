@@ -1,4 +1,9 @@
 {
+ "1000 ne butler market rd - 6 bend or 97701": {
+  "lat": "44.0764301",
+  "lon": "-121.2914063",
+  "address": "1000 NE Butler Market Rd - 6, Bend, OR 97701"
+ },
  "1025 ne rambling ln - 2 bend or 97701": {
   "lat": "44.0601092",
   "lon": "-121.2674469",
@@ -219,6 +224,11 @@
   "lon": "-121.275465845292",
   "address": "1980 NE Zachary Ct - PP-Z1980-2, Bend, OR 97701"
  },
+ "1980 ne zachary ct - pp-z1980-3 bend or 97701": {
+  "lat": "44.059623782773",
+  "lon": "-121.275465845292",
+  "address": "1980 NE Zachary Ct - PP-Z1980-3, Bend, OR 97701"
+ },
  "19884 duck call lane bend or 97702": {
   "lat": "44.0177180",
   "lon": "-121.3307590",
@@ -243,6 +253,11 @@
   "lat": "44.0268000",
   "lon": "-121.3211400",
   "address": "20047 Beth Ave - #2, Bend, OR 97702"
+ },
+ "20058 beth ave - 04 bend or 97702": {
+  "lat": "44.0269522",
+  "lon": "-121.3201273",
+  "address": "20058 Beth Ave. - 04, Bend, OR 97702"
  },
  "20068 sw doanna way - 02 bend or 97702": {
   "lat": "44.0275073",
@@ -363,6 +378,11 @@
   "lat": "44.0528697",
   "lon": "-121.2727081",
   "address": "21028 Damascus Lane, #2, Bend, OR 97701"
+ },
+ "2111 nw awbrey rd - 1 bend or 97703": {
+  "lat": "44.0678816",
+  "lon": "-121.3171223",
+  "address": "2111 NW Awbrey Rd - 1 , Bend, OR 97703"
  },
  "2112 nw harriman bend or 97703": {
   "lat": "44.0706199",
@@ -538,6 +558,11 @@
   "lat": "43.984693482862",
   "lon": "-121.343975771752",
   "address": "60149 Cheyenne Road, Bend, OR 97702"
+ },
+ "60785 willow creek loop bend or 97702": {
+  "lat": "44.0073419",
+  "lon": "-121.3107118",
+  "address": "60785 Willow Creek Loop , Bend, OR 97702"
  },
  "60868 se sweet pea dr bend or 97702": {
   "lat": "44.010447204602",
