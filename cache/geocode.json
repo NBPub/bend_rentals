@@ -39,6 +39,11 @@
   "lon": "-121.3090442",
   "address": "111 NW Hawthorne Avenue #2, Bend, OR 97703"
  },
+ "1117 nw milwaukee ave bend or 97703": {
+  "lat": "44.0614723",
+  "lon": "-121.3281985",
+  "address": "1117 NW Milwaukee Ave., Bend, OR 97703"
+ },
  "112 se mckinley avenue bend or 97702": {
   "lat": "44.0416631",
   "lon": "-121.3051935",
@@ -738,6 +743,11 @@
   "lat": "44.0517170",
   "lon": "-121.3199615",
   "address": "931 NW Carlon Ave. - 01, Bend, OR 97703"
+ },
+ "959 ne hidden valley drive bend or 97701": {
+  "lat": "44.0778869",
+  "lon": "-121.2910235",
+  "address": "959 NE Hidden Valley Drive, Bend, OR 97701"
  },
  "960 ne paula dr 6 bend or 97701": {
   "lat": "44.0592739",
