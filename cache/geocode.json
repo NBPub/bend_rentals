@@ -54,6 +54,11 @@
   "lon": "-121.312209533831",
   "address": "1133 NW Wall St. - Executive Suite #1, Bend, OR 97703"
  },
+ "1147 nw knoxville bend or 97703": {
+  "lat": "44.0604823",
+  "lon": "-121.3373093",
+  "address": "1147 NW Knoxville , Bend, OR 97703"
+ },
  "115 nw mt washington dr bend or 97703": {
   "lat": "44.0748807",
   "lon": "-121.3194316",
@@ -589,6 +594,11 @@
   "lon": "-121.327957597136",
   "address": "60889 Granite Dr, Bend, OR 97702"
  },
+ "60958 snowbrush dr bend or 97702": {
+  "lat": "44.0170751",
+  "lon": "-121.3482022",
+  "address": "60958 Snowbrush Dr., Bend, OR 97702"
+ },
  "60982 grand targhee drive bend or 97702": {
   "lat": "44.0141015",
   "lon": "-121.3173958",
@@ -613,6 +623,11 @@
   "lat": "?",
   "lon": "?",
   "address": "61073 NE Unity Place , Bend, OR 97701"
+ },
+ "61093 larkspur loop bend or 97702": {
+  "lat": "44.0193796",
+  "lon": "-121.2931689",
+  "address": "61093 Larkspur Loop, Bend, OR 97702"
  },
  "611 northeast tracker court bend or 97701": {
   "lat": "44.0754997",
@@ -669,6 +684,11 @@
   "lon": "-121.2932895",
   "address": "631 SE Wilson Ave. - #1, Bend, OR 97702"
  },
+ "63150 dakota dr bend or 97701": {
+  "lat": "44.092807876317",
+  "lon": "-121.274672245105",
+  "address": "63150 Dakota Dr. , Bend, OR 97701"
+ },
  "63264 peale st bend or 97701": {
   "lat": "?",
   "lon": "?",
@@ -708,6 +728,11 @@
   "lat": "44.0631851",
   "lon": "-121.3222503",
   "address": "715 NW Ogden, Bend, OR 97703"
+ },
+ "762 ne savannah dr bend or 97701": {
+  "lat": "44.0585327",
+  "lon": "-121.2741490",
+  "address": "762 NE Savannah Dr. , Bend, OR 97701"
  },
  "79 ne cessna dr 2 bend or 97701": {
   "lat": "44.0527348",
