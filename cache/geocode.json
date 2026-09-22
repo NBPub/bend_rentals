@@ -229,6 +229,11 @@
   "lon": "-121.3411470",
   "address": "19658 Harvard Pl, Bend, OR 97702"
  },
+ "19658 harvard place bend or 97702": {
+  "lat": "44.0215380",
+  "lon": "-121.3411470",
+  "address": "19658 Harvard Place, Bend, OR 97702"
+ },
  "19766 clarion avenue bend or 97702": {
   "lat": "44.0219760",
   "lon": "-121.3349880",
@@ -484,6 +489,11 @@
   "lon": "-121.2785956",
   "address": "2858 NE Daggett, Bend, OR 97701"
  },
+ "2899 ne jackdaw dr bend or 97701": {
+  "lat": "44.0594875",
+  "lon": "-121.2599366",
+  "address": "2899 NE Jackdaw Dr, Bend, OR 97701"
+ },
  "2948 ne conners ave bend or 97701": {
   "lat": "44.0703586",
   "lon": "-121.2578088",
@@ -709,6 +719,11 @@
   "lon": "-121.308804567128",
   "address": "63339 NW Britta #2, Bend, OR 97701"
  },
+ "636 ne irving bend or 97701": {
+  "lat": "44.0590263",
+  "lon": "-121.2965036",
+  "address": "636 NE Irving, Bend, OR 97701"
+ },
  "644 ne greenwood ave suite 2 bend or 97701": {
   "lat": "44.0601742",
   "lon": "-121.2961328",
@@ -768,6 +783,11 @@
   "lat": "44.0805866",
   "lon": "-121.2913043",
   "address": "858 NE Hidden Valley Dr - #1, Bend, OR 97701"
+ },
+ "905 sw pelton pl bend or 97702": {
+  "lat": "44.0414183",
+  "lon": "-121.3073390",
+  "address": "905 SW Pelton Pl , Bend, OR 97702"
  },
  "931 nw carlon ave - 01 bend or 97703": {
   "lat": "44.0517170",
