@@ -119,6 +119,11 @@
   "lon": "-121.2613582",
   "address": "1453 NE Tucson Way #1 , Bend, OR 97701"
  },
+ "1455 nw 8th st - 3 bend or 97703": {
+  "lat": "44.0628649",
+  "lon": "-121.3234734",
+  "address": "1455 NW 8th St. - #3, Bend, OR 97703"
+ },
  "1459 nw albany - 34 bend or 97703": {
   "lat": "44.0518020",
   "lon": "-121.3328429",
@@ -158,6 +163,11 @@
   "lat": "44.0576995",
   "lon": "-121.3358936",
   "address": "1590 NW Hartford, Bend, OR 97703"
+ },
+ "1605 nw 1st st bend or 97703": {
+  "lat": "44.0643198",
+  "lon": "-121.3136770",
+  "address": "1605 NW 1st St., Bend, OR 97703"
  },
  "1622 nw awbrey road bend or 97703": {
   "lat": "44.0643841",
@@ -443,6 +453,11 @@
   "lat": "44.0821280",
   "lon": "-121.2711911",
   "address": "2218 NE Carrie Lane, Bend, OR 97701"
+ },
+ "224 nw jefferson place bend or 97703": {
+  "lat": "44.0539996",
+  "lon": "-121.3198598",
+  "address": "224 NW Jefferson Place, Bend, OR 97703"
  },
  "2301 ne mary rose pl - 2 bend or 97701": {
   "lat": "44.0599510",
