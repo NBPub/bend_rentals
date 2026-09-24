@@ -116,6 +116,13 @@ than a failure: the companies that answered are committed, and the ones that
 did not keep the listings they already had. Only a misconfiguration stops the
 job. Their `scraped_at` is how you tell which is which.
 
+**A failed source says why on the run summary.** The reason — what was
+fetched, and what came back — is written as a GitHub annotation rather than
+only into the log, because run logs need an authenticated request to read even
+on a public repository. So "Preferred Residential failed" is followed by
+whether the host refused the connection or served something that was not its
+listings page, and anyone can read it.
+
 [`.github/workflows/tests.yml`](.github/workflows/tests.yml) is the other
 half: it runs the test suite on every push, across three versions of Python.
 Those tests read saved copies of each source's pages and never touch the
@@ -320,6 +327,10 @@ whoever is looking, and they belong in the page's tick-boxes.
   [US Census geocoder](https://geocoding.geo.census.gov/geocoder/) for the
   addresses OpenStreetMap has not mapped — usually new streets. What neither
   resolves gets no marker, and is listed under the map rather than guessed at.
+  - Not permanently, though. A failure means "not mapped yet", which is a
+    statement about today, so it is retried after thirty days. A listing can
+    therefore move from the list below the map onto the map itself weeks
+    later, without its own details having changed at all.
 - **Listings are matched between runs by URL.** A company that reissues one
   under a new URL looks like a removal and an addition rather than a change.
 - **`region` mixes two things.** Where a source labels a listing itself, that
