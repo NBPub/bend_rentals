@@ -1,99 +1,63 @@
 # [Bend Rentals](https://nbpub.github.io/bend_rentals/)
 
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![Requests](https://img.shields.io/badge/requests-HTTP-2C3E50)
+![BeautifulSoup](https://img.shields.io/badge/Beautiful_Soup-HTML-71A5D8)
+![pytest](https://img.shields.io/badge/pytest-offline-0A9EDC?logo=pytest&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-map-199900?logo=leaflet&logoColor=white)
+![Actions](https://img.shields.io/badge/GitHub_Actions-daily-2088FF?logo=githubactions&logoColor=white)
+![Pages](https://img.shields.io/badge/GitHub_Pages-live-222222?logo=githubpages&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+[![Nominatim](https://img.shields.io/badge/Geocoding-Nominatim-7EBC6F?logo=openstreetmap&logoColor=white)](https://nominatim.openstreetmap.org/)
+[![Census](https://img.shields.io/badge/Geocoding-US_Census-112E51)](https://geocoding.geo.census.gov/geocoder/)
+
 A map and a searchable table of long-term rentals in Bend, Oregon, collected
 once a day from the sites of sixteen local property management companies.
 
-| [Rental Listing Sources](#companies) | [AI disclaimer](#ai-disclaimer) | [Contributing](CONTRIBUTING.md#contributing) |
+> **Not affiliated with any company listed here.** Every listing belongs to the
+> site it was published on and links back to it. This is a directory, nothing
+> more.
+>
+> **The data is presented as published.** It is read from each company's own
+> page, and it is not cleaned or validated. Open the listing itself before
+> acting on any of it. [More on that](DETAILS.md#data).
 
 **[Project Details documentation](DETAILS.md#bend-rentals---details)**
 
-> Not affiliated with any of the companies listed here. Every listing belongs
-> to the site it was published on, and links back to it. This is a directory
-> that saves you opening sixteen tabs, not a broker.
+**Contents**
+
+| [Rental Listing Sources](#companies) | [AI disclaimer](#ai-disclaimer) | [Contributing](CONTRIBUTING.md#contributing) |
 
 *[MIT Licensed](LICENSE)*
 
 ## Companies
 
-Each entry gives the company's own rentals page, how its listings are
-published, and the domain the data is actually read from — which is often not
-the same, because most of these sites render their listings with JavaScript
-and serve HTML containing none of them.
+Sixteen companies, five parsers. What gets read is usually not the company's
+own website but the platform underneath it, because most of these render their
+listings with JavaScript and serve HTML containing none of them. The registry
+is [`sites.toml`](sites.toml); which domain each source is actually read from,
+and how it was found, is in
+[Details: Sources](DETAILS.md#sources).
 
-**AppFolio** — eleven of the sixteen. Every field is on the index card, so one
-request covers the whole source. Their portals publish `Crawl-delay: 10`,
-which is most of the time a full run takes.
-
-- **Velocity** — [velocitypropertymanagement.com](https://velocitypropertymanagement.com/rentals)
-  - The company page is an iframe wrapped around the portal below.
-  - Read from `velocitypm.appfolio.com`
-- **High Desert** — [highdesertpm.com](https://www.highdesertpm.com/listings?city=Bend)
-  - A Next.js front end that renders nothing server-side.
-  - Read from `highdesertpm.appfolio.com`
-- **Bend PM** — [bendpropertymanagement.com](https://www.bendpropertymanagement.com/vacancies)
-  - Lists Bend and Redmond, so the city filter is applied at the source.
-  - Read from `bend.appfolio.com`
-- **Utopia** — [utopiamanagement.com](https://utopiamanagement.com/rental-list/bend-redmond-or)
-  - A national company: thousands of listings across dozens of states.
-  - Read from `utopiamanagement.appfolio.com`
-- **Elevation** — [epmbend.com](https://www.epmbend.com/vacancies)
-  - A Squarespace shell; the portal was found through its tenant login link.
-  - Read from `elevationpropmgmt.appfolio.com`
-- **Mountain View** — [today4rent.com](https://www.today4rent.com/vacancies)
-  - Duda-built, listings loaded client-side. Covers Bend and Redmond.
-  - Read from `mountainviewpm.appfolio.com`
-- **Superior** — [rentaroundbend.com](https://www.rentaroundbend.com/vacancies)
-  - Duda-built. Covers Bend and Prineville.
-  - Read from `asuperior.appfolio.com`
-- **High Country** — [hicountrypm.com](https://www.hicountrypm.com/available-rentals-in-central-oregon)
-  - Duda-built. Bend only.
-  - Read from `highcountrypropmgmt.appfolio.com`
-- **Plus** — [investoregon.com](https://investoregon.com/bend/)
-  - A WordPress feed of the portal below, which carries pet policies the
-    WordPress page leaves out. Covers Bend, Prineville and Redmond.
-  - Read from `pluspmllc.appfolio.com`
-- **Mt. Bachelor** — [bendpropertymanagement.net](https://www.bendpropertymanagement.net/bend-oregon-rentals)
-  - Serves Bend, Redmond, Sisters and Prineville. States a pet policy on
-    every card — and refuses cats on all of them, which is their position
-    rather than a parsing failure.
-  - Read from `mtbachpm.appfolio.com`
-- **Lifestyles** — [bendlifestylesrentals.com](https://www.bendlifestylesrentals.com/)
-  - Lifestyles Realty Group. A Duda-built site reading a synced AppFolio
-    collection, so the portal name appears nowhere in its HTML — it came
-    from the Tenant Portal link. Covers Bend, Redmond and Sunriver.
-  - Read from `lifestylesrealty.appfolio.com`
-
-**Everything else** — four platforms between them.
-
-- **Trailhead** — [trailheadpropertymanagement.com](https://www.trailheadpropertymanagement.com/portfolio-1)
-  - Squarespace. The only source whose listing *title* carries the data —
-    `$3,550 / 3br - 2472ft2 - Description (SW Bend)` — so it needs a page per
-    listing and a title parser. Its second portfolio is vacation rentals and
-    is deliberately left alone.
-  - Read from the same domain
-- **Hummingbird** — [hummingbirdpropertymanagement.managebuilding.com](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals)
-  - Buildium resident portal. The index cards carry no link to their own
-    detail pages, so the parser collects the detail URLs and reads those —
-    which also carry a pet policy the index omits.
-  - Read from the same domain
-- **Preferred Residential** — [prbend.com](https://prbend.com/bend-long-term-rentals/)
-  - WordPress, with labelled fields on each property page. Publishes **no
-    street address**: the only one on a page is the agency's own office, so
-    the address and coordinates come from resolving the "View This Rental on
-    a Map" link instead. The only source that states a property type.
-  - Read from the same domain
-- **Ridgeline** — [ridgelinepropertymanagement.com](https://ridgelinepropertymanagement.com/vacancies/)
-  - Rentvine. The vacancies page is a JavaScript widget; what is read is the
-    public JSON endpoint that widget itself calls. The richest source here:
-    explicit cat and dog booleans, and real coordinates, so it needs no
-    geocoding at all.
-  - Read from `ridgelinepropertymgmt.rentvine.com`
-- **PMI** — [bendpropertymanagementinc.com](https://www.bendpropertymanagementinc.com/bend-homes-for-rent)
-  - PMI Central Oregon. Rentvine as well, so it needed no new code at all.
-    They advertise commercial and short-term rentals separately and this
-    endpoint carries neither. Covers Bend, Prineville, Madras and Hubbard,
-    with no source-side city filter, so that rule is applied here.
-  - Read from `pmicentraloregon.rentvine.com`
+| Company | Full name | Platform | Notes |
+|---|---|---|---|
+| [Velocity](https://velocitypropertymanagement.com/rentals) | Velocity Property Management | AppFolio | Their page is an iframe around the portal |
+| [High Desert](https://www.highdesertpm.com/listings?city=Bend) | High Desert Property Management | AppFolio | Hundreds of listings statewide without the city filter |
+| [Bend PM](https://www.bendpropertymanagement.com/vacancies) | Bend Property Management | AppFolio | Bend and Redmond |
+| [Utopia](https://utopiamanagement.com/rental-list/bend-redmond-or) | Utopia Management | AppFolio | National: thousands of listings across dozens of states |
+| [Elevation](https://www.epmbend.com/vacancies) | Elevation Property Management | AppFolio | Bend only |
+| [Mountain View](https://www.today4rent.com/vacancies) | Mountain View Property Management | AppFolio | Bend and Redmond |
+| [Superior](https://www.rentaroundbend.com/vacancies) | A Superior Property Management | AppFolio | Bend and Prineville |
+| [High Country](https://www.hicountrypm.com/available-rentals-in-central-oregon) | High Country Property Management | AppFolio | Bend only |
+| [Plus](https://investoregon.com/bend/) | Plus Property Management | AppFolio | Their own page omits the pet policies the portal carries |
+| [Mt. Bachelor](https://www.bendpropertymanagement.net/bend-oregon-rentals) | Mt. Bachelor Property Management | AppFolio | States a pet policy on every listing, and refuses cats on all of them |
+| [Lifestyles](https://www.bendlifestylesrentals.com/) | Lifestyles Realty Group | AppFolio | Bend, Redmond and Sunriver |
+| [Trailhead](https://www.trailheadpropertymanagement.com/portfolio-1) | Trailhead Property Management | Squarespace | The only source whose listing *title* carries the data |
+| [Hummingbird](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals) | Hummingbird Property Management | Buildium | Pet policies appear only on the detail pages |
+| [Preferred Residential](https://prbend.com/bend-long-term-rentals/) | Preferred Residential | WordPress | Publishes no street address. The only source stating a property type |
+| [Ridgeline](https://ridgelinepropertymanagement.com/vacancies/) | Ridgeline Property Management | Rentvine | Publishes cat and dog booleans, and real coordinates |
+| [PMI](https://www.bendpropertymanagementinc.com/bend-homes-for-rent) | PMI Central Oregon | Rentvine | Bend, Prineville, Madras and Hubbard |
 
 Suggestions for sources to add are welcome — see
 [Contributing](CONTRIBUTING.md#contributing). A link to a Bend property

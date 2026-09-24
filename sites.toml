@@ -32,7 +32,7 @@ status       = "ready"
 notes        = "portfolio-2 is vacation rentals and is deliberately not scraped."
 
 # --------------------------------------------------------------------------
-# AppFolio — nine of thirteen sources. Every one is a tenant subdomain rather
+# AppFolio — eleven of sixteen sources. Every one is a tenant subdomain rather
 # than the company's own website, which usually renders its listings with
 # JavaScript and serves HTML containing none of them.
 #
