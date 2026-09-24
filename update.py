@@ -14,9 +14,9 @@ It is what the scheduled workflow calls.
 partial, 2 misconfiguration.
 
 - Exit 2 stops the run. Nothing downstream can work without a usable config.
-- Exit 1 warns and carries on. `scrape.py` returns 1 when any one of thirteen
+- Exit 1 warns and carries on. `scrape.py` returns 1 when any one of sixteen
   sites fails, and one site being down is no reason to skip the page for the
-  other twelve.
+  other fifteen.
 """
 
 import sys

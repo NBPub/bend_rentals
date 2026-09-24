@@ -33,7 +33,7 @@ def test_a_stated_commercial_type_is_dropped(stated):
 
 
 def test_an_unstated_property_type_is_never_treated_as_commercial():
-    """Twelve of thirteen sources publish no property type at all.
+    """Fifteen of sixteen sources publish no property type at all.
 
     Reading silence as commercial would empty the file.
     """
@@ -48,7 +48,7 @@ def test_commercial_types_are_matched_as_whole_words():
 
 # --- residential: the headline ----------------------------------------------
 #
-# Every string below is from one real run of the thirteen sources.
+# Every string below is from one real run of the sixteen sources.
 
 def test_a_commercial_listing_is_caught_by_its_own_headline():
     """The one commercial listing in the sources, which states no type."""

@@ -3,7 +3,7 @@
 Pure: no network, no HTML. Every rule about untrusted content lives here, so
 the parts that matter are testable offline.
 
-The data comes from thirteen third-party websites and reaches a page that a
+The data comes from sixteen third-party websites and reaches a page that a
 browser will execute, so the escaping in `embed_json` is load-bearing, not
 decorative.
 """

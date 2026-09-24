@@ -121,6 +121,24 @@ title_format = "structured"
 status       = "ready"
 notes        = "investoregon.com/bend/ is a WordPress feed of this tenant. The tenant page carries pet policies the WordPress page lacks. Cities: Bend, Prineville, Redmond."
 
+[sites.mt_bachelor]
+label        = "Mt. Bachelor"
+company      = "Mt. Bachelor Property Management"
+index_url    = "https://mtbachpm.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "bendpropertymanagement.net. Serves Bend, Redmond, Sisters, Prineville. States a pet policy on every card - and refuses cats on all of them, which is the source's own position, not a parse failure."
+
+[sites.bend_lifestyles]
+label        = "Bend Lifestyles"
+company      = "Lifestyles Realty Group"
+index_url    = "https://lifestylesrealty.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
+structure    = "appfolio_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "bendlifestylesrentals.com. A Duda site reading a synced appfolio-listings collection, so the tenant name appears nowhere in its HTML; it came from the Tenant Portal link. Cities: Bend, Redmond, Sunriver."
+
 # --------------------------------------------------------------------------
 # Buildium
 # --------------------------------------------------------------------------
@@ -159,3 +177,12 @@ structure    = "rentvine_listings"
 title_format = "structured"
 status       = "ready"
 notes        = "The vacancies page is a JS widget; this is the endpoint that widget itself reads. The richest source here: explicit acceptCats/acceptDogs booleans and real coordinates, so it needs no geocoding. Rentvine publishes no robots.txt (403 on both hosts). No source-side filters."
+
+[sites.pmi_central_oregon]
+label        = "PMI Central Oregon"
+company      = "PMI Central Oregon"
+index_url    = "https://pmicentraloregon.rentvine.com/api/public/listings"
+structure    = "rentvine_listings"
+title_format = "structured"
+status       = "ready"
+notes        = "bendpropertymanagementinc.com. The same widget endpoint as Ridgeline, so it needed no new code: explicit acceptCats/acceptDogs and real coordinates. They advertise commercial and short-term rentals separately; this endpoint carries neither. Cities: Bend, Prineville, Madras, Hubbard - no source-side filter, so the city rule is applied locally."

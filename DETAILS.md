@@ -111,7 +111,7 @@ commits three files back to the repository:
   GitHub Pages serves
 
 **A source failing does not lose the day.** The scrape returns 1 when any one
-of the thirteen has trouble, and the workflow treats that as a warning rather
+of the sixteen has trouble, and the workflow treats that as a warning rather
 than a failure: the companies that answered are committed, and the ones that
 did not keep the listings they already had. Only a misconfiguration stops the
 job. Their `scraped_at` is how you tell which is which.
@@ -175,14 +175,14 @@ python changes.py             # what moved between the last two local runs
 python -m pytest              # the test suite, offline
 ```
 
-A full run takes about two minutes, almost all of it spent waiting between
-requests. That is deliberate and is not something to tune down.
+A full run takes a little over two minutes, almost all of it spent waiting
+between requests. That is deliberate and is not something to tune down.
 
-**The cost is per source, not per listing.** Nine of the thirteen are AppFolio
+**The cost is per source, not per listing.** Eleven of the sixteen are AppFolio
 portals that put every field on one index page, so each costs a single request
 — but `appfolio.com` publishes `Crawl-delay: 10`, so that request costs ten
-seconds whether the source has four listings or forty. Those nine are 90 of
-the ~128 seconds. Only the three sources needing a page per listing scale with
+seconds whether the source has four listings or forty. Those eleven are 110 of
+the ~140 seconds. Only the three sources needing a page per listing scale with
 how many there are, at 1.5s each.
 
 So, roughly:
@@ -216,7 +216,7 @@ source was down), and 2 when it was misconfigured — the convention Python
 describes under
 [`sys.exit`](https://docs.python.org/3/library/sys.html#sys.exit). `update.py`
 acts on it: it carries on past a 1 and stops on a 2, because one site being
-down is no reason to skip the page for the other twelve. The scheduled
+down is no reason to skip the page for the other fifteen. The scheduled
 workflow follows the same rule, and commits what it did get.
 
 ## Code Design
@@ -236,11 +236,11 @@ flowchart TD
     F -.-> J
 ```
 
-A source is described by two independent things, which is why a fourteenth one
+A source is described by two independent things, which is why a seventeenth one
 usually needs no code:
 
 - **[`structure`](bendrentals/structures)**: how to get values out of the
-  page. Named for the platform, not the company, because nine of the thirteen
+  page. Named for the platform, not the company, because eleven of the sixteen
   run on AppFolio.
 - **[`title_format`](bendrentals/formats)**: how to decode a title string into
   fields. Only Trailhead needs one; the rest expose each value in its own
@@ -261,7 +261,7 @@ the built page is gone by morning.
 
 ## Sources
 
-Thirteen companies, five parsers. [`sites.toml`](sites.toml) is the registry,
+Sixteen companies, five parsers. [`sites.toml`](sites.toml) is the registry,
 and each entry carries a note about where its data actually lives. The parsers
 are in [`bendrentals/structures/`](bendrentals/structures), one per platform.
 

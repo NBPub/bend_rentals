@@ -82,7 +82,7 @@ def display_names(sites: dict[str, Site]) -> dict[str, str]:
 
     The CSV stores the full name, because that is the useful thing in a data
     file. The page shows the label, because a column reading "... Property
-    Management" thirteen times is noise.
+    Management" sixteen times is noise.
 
     Editing a label in sites.toml and re-running build_page.py is enough to
     change the page: nothing in the CSV moves, so no re-scrape is needed. A

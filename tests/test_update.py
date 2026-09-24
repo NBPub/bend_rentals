@@ -32,7 +32,7 @@ def test_runs_both_steps_in_order(capsys):
 
 
 def test_a_partial_failure_does_not_stop_the_run():
-    """One site of thirteen failing is no reason to skip the page."""
+    """One site of sixteen failing is no reason to skip the page."""
     plan = steps(scrape=1)
     assert main([], plan) == 1
     assert plan["page"].ran

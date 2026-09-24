@@ -355,7 +355,7 @@ def test_the_map_has_room_to_scroll_past():
 
 
 def test_the_company_column_does_not_stretch_the_filter_panel():
-    """Thirteen companies would otherwise set the height of the whole panel."""
+    """Sixteen companies would otherwise set the height of the whole panel."""
     html = build()
     assert "#filters-side fieldset { position: absolute;" in html
     assert "#filters-side { border-left: 1px solid var(--line); padding-left: 1.1rem;\n" \

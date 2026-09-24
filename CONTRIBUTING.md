@@ -22,7 +22,7 @@ page, in an issue, is enough — working out where the data actually lives is
 the interesting part and it can be done from here.
 
 Worth knowing before you suggest one: what matters is not the company's
-website but the platform underneath it. Nine of the thirteen sources here are
+website but the platform underneath it. Eleven of the sixteen sources here are
 AppFolio portals reached through a "Tenant Portal" or "Pay Rent" link, because
 the company's own page renders its listings with JavaScript and serves HTML
 containing none of them. So a site that looks unscrapable often is not.
@@ -30,7 +30,7 @@ containing none of them. So a site that looks unscrapable often is not.
 ## Adding a source
 
 If you would rather do the work: most new sources need a `sites.toml` entry
-and no code at all, because nine of the thirteen already here run on the same
+and no code at all, because eleven of the sixteen already here run on the same
 platform.
 
 1. Find where the data really is. If the company's page renders with

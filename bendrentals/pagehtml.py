@@ -120,7 +120,7 @@ LINK_FIELDS = ("link", "maps_link")
 #: Rendered as a tick or a cross rather than the words True and False.
 BOOLEAN_FIELDS = ("cats_allowed", "dogs_allowed", "available_now")
 
-#: Given its own column on the right of the filter panel. Thirteen long names
+#: Given its own column on the right of the filter panel. Sixteen long names
 #: crowd the other filters when they share the same grid.
 SIDE_FACET = "company"
 

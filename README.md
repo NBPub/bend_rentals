@@ -1,7 +1,7 @@
 # [Bend Rentals](https://nbpub.github.io/bend_rentals/)
 
 A map and a searchable table of long-term rentals in Bend, Oregon, collected
-once a day from the sites of thirteen local property management companies.
+once a day from the sites of sixteen local property management companies.
 
 | [Rental Listing Sources](#companies) | [AI disclaimer](#ai-disclaimer) | [Contributing](CONTRIBUTING.md#contributing) |
 
@@ -9,7 +9,7 @@ once a day from the sites of thirteen local property management companies.
 
 > Not affiliated with any of the companies listed here. Every listing belongs
 > to the site it was published on, and links back to it. This is a directory
-> that saves you opening thirteen tabs, not a broker.
+> that saves you opening sixteen tabs, not a broker.
 
 *[MIT Licensed](LICENSE)*
 
@@ -20,7 +20,7 @@ published, and the domain the data is actually read from — which is often not
 the same, because most of these sites render their listings with JavaScript
 and serve HTML containing none of them.
 
-**AppFolio** — nine of the thirteen. Every field is on the index card, so one
+**AppFolio** — eleven of the sixteen. Every field is on the index card, so one
 request covers the whole source. Their portals publish `Crawl-delay: 10`,
 which is most of the time a full run takes.
 
@@ -52,8 +52,18 @@ which is most of the time a full run takes.
   - A WordPress feed of the portal below, which carries pet policies the
     WordPress page leaves out. Covers Bend, Prineville and Redmond.
   - Read from `pluspmllc.appfolio.com`
+- **Mt. Bachelor** — [bendpropertymanagement.net](https://www.bendpropertymanagement.net/bend-oregon-rentals)
+  - Serves Bend, Redmond, Sisters and Prineville. States a pet policy on
+    every card — and refuses cats on all of them, which is their position
+    rather than a parsing failure.
+  - Read from `mtbachpm.appfolio.com`
+- **Bend Lifestyles** — [bendlifestylesrentals.com](https://www.bendlifestylesrentals.com/)
+  - A Duda-built site reading a synced AppFolio collection, so the portal
+    name appears nowhere in its HTML — it came from the Tenant Portal link.
+    Covers Bend, Redmond and Sunriver.
+  - Read from `lifestylesrealty.appfolio.com`
 
-**Everything else** — one source per platform.
+**Everything else** — four platforms between them.
 
 - **Trailhead** — [trailheadpropertymanagement.com](https://www.trailheadpropertymanagement.com/portfolio-1)
   - Squarespace. The only source whose listing *title* carries the data —
@@ -78,6 +88,12 @@ which is most of the time a full run takes.
     explicit cat and dog booleans, and real coordinates, so it needs no
     geocoding at all.
   - Read from `ridgelinepropertymgmt.rentvine.com`
+- **PMI Central Oregon** — [bendpropertymanagementinc.com](https://www.bendpropertymanagementinc.com/bend-homes-for-rent)
+  - Rentvine as well, so it needed no new code at all. They advertise
+    commercial and short-term rentals separately and this endpoint carries
+    neither. Covers Bend, Prineville, Madras and Hubbard, with no
+    source-side city filter, so that rule is applied here.
+  - Read from `pmicentraloregon.rentvine.com`
 
 Suggestions for sources to add are welcome — see
 [Contributing](CONTRIBUTING.md#contributing). A link to a Bend property

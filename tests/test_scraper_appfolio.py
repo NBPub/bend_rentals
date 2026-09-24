@@ -68,7 +68,7 @@ def test_dogs_are_read_alongside_cats():
 
 
 def test_appfolio_states_no_property_type():
-    """Nine of thirteen sources are AppFolio, and none says what a unit is.
+    """Eleven of sixteen sources are AppFolio, and none says what a unit is.
 
     filters.is_residential therefore has to keep every one of them.
     """

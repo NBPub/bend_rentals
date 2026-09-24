@@ -184,6 +184,11 @@
   "lon": "-121.3532077",
   "address": "1664 NW Lewis St., Bend, OR 97703"
  },
+ "1692 nw william clark st bend or 97703": {
+  "lat": "44.0642191",
+  "lon": "-121.3522524",
+  "address": "1692 NW WIlliam Clark St, Bend, OR 97703"
+ },
  "1695 nw portland - 1 bend or 97703": {
   "lat": "44.0640359",
   "lon": "-121.3390189",
@@ -193,6 +198,11 @@
   "lat": "44.0640359",
   "lon": "-121.3390189",
   "address": "1695 NW Portland - #7, Bend, OR 97703"
+ },
+ "17127 merganser drive bend or 97707": {
+  "lat": "43.845451118767",
+  "lon": "-121.461825455046",
+  "address": "17127 Merganser Drive, Bend, OR 97707"
  },
  "17376 lively lane bend or 97707": {
   "lat": "43.804957051376",
@@ -228,6 +238,11 @@
   "lat": "44.051301191985",
   "lon": "-121.275968522441",
   "address": "1909 NE Bear Creek #2, Bend, OR 97701"
+ },
+ "19318 sw marshmallow pl bend or 97702": {
+  "lat": "44.023074407685",
+  "lon": "-121.35766401109",
+  "address": "19318 SW Marshmallow Pl., Bend, OR 97702"
  },
  "1955 nw brogan bend or 97703": {
   "lat": "44.092384043902",
@@ -358,6 +373,16 @@
   "lat": "44.0644794",
   "lon": "-121.3419375",
   "address": "2058 NW Monterey Pines Dr - 1, Bend, OR 97703"
+ },
+ "206- 200 sw summer lake dr unit 102 bend or 97702": {
+  "lat": "44.0383120",
+  "lon": "-121.3111263",
+  "address": "206- 200 SW Summer Lake Dr , Unit 102, Bend, OR 97702"
+ },
+ "206- 200 sw summer lake dr unit 104 bend or 97702": {
+  "lat": "44.0383120",
+  "lon": "-121.3111263",
+  "address": "206- 200 SW Summer Lake Dr , Unit 104, Bend, OR 97702"
  },
  "20605 se slate ave bend or 97702": {
   "lat": "44.0313696",
@@ -529,6 +554,11 @@
   "lon": "-121.2548796",
   "address": "3120 NE Marea Dr., Bend, OR 97701"
  },
+ "3265 ne bain st bend or 97701": {
+  "lat": "44.0848160",
+  "lon": "-121.2624740",
+  "address": "3265 NE Bain St , Bend, OR 97701"
+ },
  "330 se 15th st 11 bend or 97702": {
   "lat": "44.0466414",
   "lon": "-121.2836673",
@@ -573,6 +603,11 @@
   "lat": "44.0559055",
   "lon": "-121.3188730",
   "address": "459 NW Broadway St. , Bend, OR 97703"
+ },
+ "5 sw taft ave unit 2 bend or 97702": {
+  "lat": "44.0433010",
+  "lon": "-121.3083198",
+  "address": "5 SW Taft Ave , Unit 2 , Bend, OR 97702"
  },
  "532 nw sisemore bend or 97703": {
   "lat": "44.0556332",
@@ -684,6 +719,16 @@
   "lon": "-121.2938338",
   "address": "61456 SE Brosterhous Rd., Bend, OR 97702"
  },
+ "61539 aaron way bend or 97702": {
+  "lat": "44.034311208283",
+  "lon": "-121.299646601839",
+  "address": "61539 Aaron Way, Bend, OR 97702"
+ },
+ "61540 lucia st unit 2 bend or 97702": {
+  "lat": "44.0340677",
+  "lon": "-121.3030501",
+  "address": "61540 Lucia St , Unit 2 , Bend, OR 97702"
+ },
  "61545 parrell road - 7 bend or 97702": {
   "lat": "44.0348338",
   "lon": "-121.3045646",
@@ -693,6 +738,16 @@
   "lat": "44.0354184",
   "lon": "-121.3031614",
   "address": "61550 Brosterhous Rd. - 38, Bend, OR 97702"
+ },
+ "61579 lucia st bend or 97702": {
+  "lat": "?",
+  "lon": "?",
+  "address": "61579 Lucia St , Bend, OR 97702"
+ },
+ "61623 alstrup unit b (6) bend or 97702": {
+  "lat": "?",
+  "lon": "?",
+  "address": "61623 Alstrup , Unit B (6), Bend, OR 97702"
  },
  "61686 daly estates bend or 97702": {
   "lat": "44.0403415",
@@ -784,6 +839,11 @@
   "lon": "-121.2927479",
   "address": "796 NE Copperleaf Loop - #2, Bend, OR 97701"
  },
+ "824 nw newport ave - 1 bend or 97703": {
+  "lat": "44.0624683",
+  "lon": "-121.3237315",
+  "address": "824 NW Newport Ave. - #1, Bend, OR 97703"
+ },
  "834 se 5th street bend or 97702": {
   "lat": "44.0421482",
   "lon": "-121.2986213",
@@ -798,6 +858,11 @@
   "lat": "44.0805866",
   "lon": "-121.2913043",
   "address": "858 NE Hidden Valley Dr - #1, Bend, OR 97701"
+ },
+ "902 nw carlon ave - 2 bend or 97703": {
+  "lat": "44.0522143",
+  "lon": "-121.3191099",
+  "address": "902 NW Carlon Ave. - #2, Bend, OR 97703"
  },
  "905 sw pelton pl bend or 97702": {
   "lat": "44.0414183",
