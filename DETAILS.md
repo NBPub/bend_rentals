@@ -191,9 +191,9 @@ So, roughly:
 - **+1.5s** for each listing on a source that needs a page per listing
 - **+0s** for any number of extra listings on the AppFolio sources
 
-Geocoding is charged separately and only for addresses never seen before, at
-10s each — the cache is permanent, so this is zero on a normal day and is why
-an occasional run takes four or five minutes instead of two.
+Geocoding is charged separately and only for addresses the cache cannot
+already answer, at 10s each. That is zero on a normal day, and is why an
+occasional run takes four or five minutes instead of two.
 
 Flags adjust what a command does — how fast it geocodes, where it writes, or
 which half of the pipeline it runs. Each belongs to the command in the middle
@@ -251,8 +251,10 @@ Two files earn their place in git rather than being build output:
 - [`data/listings.csv`](data/listings.csv), because its commit history is the
   record of what changed.
 - [`cache/geocode.json`](cache/geocode.json), because rebuilding it means
-  re-asking Nominatim about every address. Coordinates for a street address do
-  not change, so the cache is permanent and a fresh clone geocodes nothing.
+  re-asking Nominatim about every address. Coordinates do not move, so a
+  resolved address is kept for good and a fresh clone geocodes nothing. A
+  failure is kept for thirty days only: it meant "not mapped yet", which is a
+  statement about today rather than about the address.
 
 [`docs/index.html`](docs/index.html) is committed too, but as output rather
 than source: the scheduled run rewrites it every day. Edit
