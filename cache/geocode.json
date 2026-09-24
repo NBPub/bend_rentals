@@ -139,6 +139,11 @@
   "lon": "-121.3353503",
   "address": "1529 NW Portland Ave - B, Bend, OR 97701"
  },
+ "1542 ne butler market rd bend or 97701": {
+  "lat": "44.0793976",
+  "lon": "-121.2827396",
+  "address": "1542 NE Butler Market Rd, Bend, OR 97701"
+ },
  "1565 nw portland - 12 bend or 97703": {
   "lat": "44.0640692",
   "lon": "-121.3358859",
@@ -319,10 +324,20 @@
   "lon": "-121.319547161804",
   "address": "20082 SW Porter Place, Bend OR 97702"
  },
+ "20133 flowing water way - 01 bend or 97702": {
+  "lat": "44.0338847",
+  "lon": "-121.3161600",
+  "address": "20133 Flowing Water Way - 01, Bend, OR 97702"
+ },
  "20205 star ridge ct bend or 97703": {
   "lat": "44.0903670",
   "lon": "-121.3136276",
   "address": "20205 Star Ridge Ct, Bend, OR 97703"
+ },
+ "2024 ne neil way 5 bend or 97701": {
+  "lat": "44.0719465",
+  "lon": "-121.2728870",
+  "address": "2024 NE Neil Way #5, Bend, OR 97701"
  },
  "20287 schaeffer dr bend or 97703": {
   "lat": "44.0914968",
@@ -398,6 +413,11 @@
   "lat": "44.1092283",
   "lon": "-121.2904717",
   "address": "20655 Cooley Rd, Bend, OR 97701"
+ },
+ "20681 se iron horse ln bend or 97702": {
+  "lat": "44.0354927",
+  "lon": "-121.2862979",
+  "address": "20681 SE Iron Horse Ln, Bend, OR 97702"
  },
  "2070 nw monterey pines dr - 2 bend or 97703": {
   "lat": "44.0644822",
@@ -548,6 +568,11 @@
   "lat": "44.0905087",
   "lon": "-121.2553206",
   "address": "3032 NE Terreo Place - #2, Bend, OR 97701"
+ },
+ "312 ne 4th st - unit b bend or 97701": {
+  "lat": "44.0581728",
+  "lon": "-121.3153096",
+  "address": "312 NE 4th St. - Unit B, Bend, OR 97701"
  },
  "3120 ne marea dr bend or 97701": {
   "lat": "44.0844120",
