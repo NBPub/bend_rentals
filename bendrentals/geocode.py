@@ -7,18 +7,21 @@ mapped. Coverage is materially better than Nominatim alone.
 
 Two rules drive the design, both from OSM's usage policy:
 
-1. **Never request the same address twice.** The cache is permanent and
-   committed to the repository, so a fresh clone geocodes nothing. Coordinates
-   for a street address do not change.
+1. **Never request the same address twice.** The cache is committed to the
+   repository, so a fresh clone geocodes nothing. A resolved address is kept
+   for good, because coordinates do not move; a failure is kept only for a
+   month, because "not mapped yet" is a statement about today.
 2. **Identify the application.** `fetch.py` sends a real User-Agent to both
    geocoders and the vague one everywhere else.
 
-An address no provider can resolve is cached as a failure so it is never
-retried. A *network* error is not cached — it may be transient.
+An address no provider can resolve is cached as a failure, but only for a
+while: see FAILURE_RETRY_DAYS. A *network* error is not cached at all — it may
+be transient.
 """
 
 import json
 import re
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import unquote, urlencode
 
@@ -36,6 +39,22 @@ CENSUS_BENCHMARK = "Public_AR_Current"
 #: Committed to git — see docs. Rebuilding it means re-crawling Nominatim.
 DEFAULT_CACHE_PATH = Path("cache") / "geocode.json"
 
+#: How long a failure is believed before the address is tried again.
+#:
+#: A success is permanent: the coordinates of a street address do not move.
+#: A failure is not. It only ever meant "no provider knows this address yet",
+#: which is a statement about today — OpenStreetMap gains streets constantly,
+#: and the Census file is revised. Caching that verdict forever means a newly
+#: mapped address stays off the map for good, and nothing would ever say so.
+#:
+#: None of the six addresses currently unresolved recovered on the first
+#: retry, so this is insurance rather than a fix for a known case.
+#:
+#: Thirty days keeps the promise that matters — the same address is not
+#: requested twice in a run, or twice in a month — while letting new map data
+#: in. An entry with no date predates this and is retried once.
+FAILURE_RETRY_DAYS = 30
+
 _PUNCTUATION = str.maketrans({",": " ", ".": " ", "#": " "})
 
 
@@ -47,7 +66,10 @@ def normalise_address(address: str) -> str:
 
 
 class GeocodeCache:
-    """Permanent address -> coordinates store, keyed by normalised address."""
+    """Address -> coordinates store, keyed by normalised address.
+
+    Successes are permanent. Failures expire — see FAILURE_RETRY_DAYS.
+    """
 
     def __init__(self, path: Path | str = DEFAULT_CACHE_PATH):
         self.path = Path(path)
@@ -56,7 +78,28 @@ class GeocodeCache:
             self._entries = json.loads(self.path.read_text(encoding="utf-8"))
 
     def knows(self, address: str) -> bool:
-        return normalise_address(address) in self._entries
+        """True if the cache can answer for this address without asking again.
+
+        A stale failure is deliberately *not* known, so it gets another try.
+        """
+        entry = self._entries.get(normalise_address(address))
+        if entry is None:
+            return False
+        if entry.get("lat", UNKNOWN) != UNKNOWN:
+            return True                      # a success, and successes keep
+        return not self._failure_is_stale(entry)
+
+    @staticmethod
+    def _failure_is_stale(entry: dict) -> bool:
+        """Whether a recorded failure is old enough to be worth retrying."""
+        when = entry.get("failed_at")
+        if not when:
+            return True                      # predates the date being recorded
+        try:
+            failed = date.fromisoformat(when)
+        except ValueError:
+            return True                      # unreadable, so treat as old
+        return date.today() - failed >= timedelta(days=FAILURE_RETRY_DAYS)
 
     def get(self, address: str) -> tuple[str, str] | None:
         entry = self._entries.get(normalise_address(address))
@@ -69,11 +112,18 @@ class GeocodeCache:
         if key:
             self._entries[key] = {"lat": lat, "lon": lon, "address": address}
 
-    def put_failure(self, address: str) -> None:
-        """Record that no provider could resolve this, so we never ask again."""
+    def put_failure(self, address: str, *, when: date | None = None) -> None:
+        """Record that no provider could resolve this, dated so it can expire.
+
+        See FAILURE_RETRY_DAYS: a failure means "not mapped yet", which is a
+        statement about today rather than about the address.
+        """
         key = normalise_address(address)
         if key:
-            self._entries[key] = {"lat": UNKNOWN, "lon": UNKNOWN, "address": address}
+            self._entries[key] = {
+                "lat": UNKNOWN, "lon": UNKNOWN, "address": address,
+                "failed_at": (when or date.today()).isoformat(),
+            }
 
     def save(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
@@ -92,18 +142,33 @@ class GeocodeCache:
 
 #: Unit designators before the city: " - #2", " #1", " Unit 3", " - B", " Apt 4".
 #: Nominatim resolves the building, not the unit, so these cause misses.
+#:
+#: Note the word boundary after the designators. Bend has a "NE Unity Place",
+#: and without it "Unit" matches inside "Unity" — which turns the address into
+#: "61073 NE Place" and geocodes it, confidently, to somewhere else entirely.
 UNIT_RE = re.compile(
     r"\s*-\s*#?\w+\s*(?=,)"
     r"|\s*#\s*\w+\s*(?=,)"
-    r"|\s+(?:Unit|Apt|Apartment|Suite|Ste)\.?\s*\S+\s*(?=,)",
+    r"|\s+(?:Unit|Apt|Apartment|Suite|Ste)\b\.?\s*\S+\s*(?=,)",
     re.IGNORECASE,
 )
+
+
+#: What removing a unit can leave behind. "…, Unit # 2, Bend" loses its number
+#: to the "#2" branch above and strands the word; "…, Unit 102, Bend" empties
+#: the field and leaves ",,". Both make the fallback query worse than the
+#: address it was built from, which is the one thing it must not be.
+_STRANDED_RE = re.compile(
+    r",\s*(?:Unit|Apt|Apartment|Suite|Ste)\b\.?\s*(?=,)", re.IGNORECASE)
+_EMPTY_FIELD_RE = re.compile(r",\s*,")
 
 
 def street_address(address: str) -> str:
     """Address with any unit designator removed, for a fallback lookup."""
     stripped = re.sub(r"\s+", " ", UNIT_RE.sub(" ", address))
-    return stripped.replace(" ,", ",").strip()
+    stripped = stripped.replace(" ,", ",")
+    stripped = _STRANDED_RE.sub("", stripped)
+    return _EMPTY_FIELD_RE.sub(",", stripped).strip()
 
 
 def _query_url(address: str) -> str:

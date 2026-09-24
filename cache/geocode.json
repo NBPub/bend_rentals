@@ -182,7 +182,8 @@
  "1643 nw knoll bend or 97703": {
   "lat": "?",
   "lon": "?",
-  "address": "1643 NW Knoll, Bend OR 97703"
+  "address": "1643 NW Knoll, Bend OR 97703",
+  "failed_at": "2026-09-24"
  },
  "1664 nw lewis st bend or 97703": {
   "lat": "44.0652923",
@@ -367,7 +368,8 @@
  "20505 se evian ave bend or 97702": {
   "lat": "?",
   "lon": "?",
-  "address": "20505 SE Evian Ave, Bend, OR 97702"
+  "address": "20505 SE Evian Ave, Bend, OR 97702",
+  "failed_at": "2026-09-24"
  },
  "20511 se brentwood bend or 97702": {
   "lat": "44.033313695235",
@@ -707,7 +709,8 @@
  "61073 ne unity place bend or 97701": {
   "lat": "?",
   "lon": "?",
-  "address": "61073 NE Unity Place , Bend, OR 97701"
+  "address": "61073 NE Unity Place , Bend, OR 97701",
+  "failed_at": "2026-09-24"
  },
  "61093 larkspur loop bend or 97702": {
   "lat": "44.0193796",
@@ -767,12 +770,14 @@
  "61579 lucia st bend or 97702": {
   "lat": "?",
   "lon": "?",
-  "address": "61579 Lucia St , Bend, OR 97702"
+  "address": "61579 Lucia St , Bend, OR 97702",
+  "failed_at": "2026-09-24"
  },
  "61623 alstrup unit b (6) bend or 97702": {
   "lat": "?",
   "lon": "?",
-  "address": "61623 Alstrup , Unit B (6), Bend, OR 97702"
+  "address": "61623 Alstrup , Unit B (6), Bend, OR 97702",
+  "failed_at": "2026-09-24"
  },
  "61686 daly estates bend or 97702": {
   "lat": "44.0403415",
@@ -802,7 +807,8 @@
  "63264 peale st bend or 97701": {
   "lat": "?",
   "lon": "?",
-  "address": "63264 Peale St., Bend, OR 97701"
+  "address": "63264 Peale St., Bend, OR 97701",
+  "failed_at": "2026-09-24"
  },
  "63266 newhall pl bend or 97703": {
   "lat": "44.096949409441",

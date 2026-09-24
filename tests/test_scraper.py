@@ -126,3 +126,36 @@ def test_the_no_listings_error_says_what_arrived():
     assert "Access denied" in message
     assert "bytes" in message
     assert "probably changed" not in message      # the old, over-confident claim
+
+
+# --- failures have to be visible without authentication ---------------------
+
+def test_annotate_is_silent_outside_github_actions(monkeypatch, capsys):
+    import scrape
+
+    monkeypatch.delenv("GITHUB_ACTIONS", raising=False)
+    scrape.annotate("Somewhere", "it broke")
+    assert capsys.readouterr().out == ""
+
+
+def test_annotate_emits_one_line_github_can_render(monkeypatch, capsys):
+    """Run logs need auth to read, even on a public repo. Annotations do not."""
+    import scrape
+
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    scrape.annotate("Preferred Residential failed",
+                    "No listings found on https://example.com — received\n"
+                    "70 bytes, titled 'Just a moment...'.")
+    out = capsys.readouterr().out.strip()
+    assert out.startswith("::warning title=Preferred Residential failed::")
+    assert out.count("\n") == 0                  # annotations are single-line
+    assert "Just a moment" in out
+
+
+def test_annotate_escapes_the_syntax_characters_in_a_title(monkeypatch, capsys):
+    import scrape
+
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    scrape.annotate("A: name, with syntax", "x")
+    out = capsys.readouterr().out
+    assert "%3A" in out and "%2C" in out

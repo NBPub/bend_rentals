@@ -232,3 +232,111 @@ def test_failure_is_only_recorded_after_every_provider_misses(tmp_path):
     geocode_all(["Nowhere At All, Bend, OR 97701"], cache,
                 fetcher=always_empty, delay=0)
     assert cache.get("Nowhere At All, Bend, OR 97701") == (UNKNOWN, UNKNOWN)
+
+
+# --- a failure is not permanent ---------------------------------------------
+
+def test_a_resolved_address_is_never_asked_about_again(tmp_path):
+    """Coordinates do not move, so a success is kept for good."""
+    from bendrentals.geocode import GeocodeCache
+
+    cache = GeocodeCache(tmp_path / "c.json")
+    cache.put("1 Real St, Bend, OR", "44.0", "-121.3")
+    assert cache.knows("1 Real St, Bend, OR") is True
+
+
+def test_a_recent_failure_is_believed(tmp_path):
+    """Within the window, the same address is not asked about twice."""
+    from bendrentals.geocode import GeocodeCache
+
+    cache = GeocodeCache(tmp_path / "c.json")
+    cache.put_failure("2 New St, Bend, OR")
+    assert cache.knows("2 New St, Bend, OR") is True
+
+
+def test_a_stale_failure_is_tried_again(tmp_path):
+    """"Not mapped yet" is about today, not about the address.
+
+    A real one: 61073 NE Unity Place was cached as unresolvable, and
+    Nominatim answers it now. Caching that forever kept a real listing off
+    the map permanently.
+    """
+    from datetime import date, timedelta
+
+    from bendrentals.geocode import FAILURE_RETRY_DAYS, GeocodeCache
+
+    cache = GeocodeCache(tmp_path / "c.json")
+    cache.put_failure("3 Old St, Bend, OR",
+                      when=date.today() - timedelta(days=FAILURE_RETRY_DAYS + 1))
+    assert cache.knows("3 Old St, Bend, OR") is False
+
+
+def test_a_failure_recorded_before_dating_is_tried_again(tmp_path):
+    """Entries already in the committed cache carry no date."""
+    from bendrentals.geocode import GeocodeCache
+
+    path = tmp_path / "c.json"
+    path.write_text('{"4 undated st bend or": '
+                    '{"lat": "?", "lon": "?", "address": "4 Undated St"}}',
+                    encoding="utf-8")
+    assert GeocodeCache(path).knows("4 Undated St") is False
+
+
+def test_an_unreadable_failure_date_is_tried_again(tmp_path):
+    from bendrentals.geocode import GeocodeCache
+
+    path = tmp_path / "c.json"
+    path.write_text('{"5 bad st bend or": {"lat": "?", "lon": "?", '
+                    '"address": "5 Bad St", "failed_at": "not-a-date"}}',
+                    encoding="utf-8")
+    assert GeocodeCache(path).knows("5 Bad St") is False
+
+
+def test_a_retried_failure_that_resolves_becomes_a_success(tmp_path):
+    from bendrentals.geocode import GeocodeCache
+
+    cache = GeocodeCache(tmp_path / "c.json")
+    cache.put_failure("6 Later St, Bend, OR")
+    cache.put("6 Later St, Bend, OR", "44.1", "-121.4")
+    assert cache.get("6 Later St, Bend, OR") == ("44.1", "-121.4")
+    assert cache.knows("6 Later St, Bend, OR") is True
+
+
+# --- building the fallback query --------------------------------------------
+
+def test_a_street_named_unity_survives_the_unit_stripper():
+    """Bend has a NE Unity Place.
+
+    Without a word boundary, "Unit" matches inside "Unity", the address
+    becomes "61073 NE Place", and a geocoder answers that confidently with
+    somewhere else. A wrong marker is worse than no marker.
+    """
+    from bendrentals.geocode import street_address
+
+    assert street_address("61073 NE Unity Place , Bend, OR 97701") == (
+        "61073 NE Unity Place, Bend, OR 97701")
+    assert street_address("1 Unity Ln, Unit 3, Bend, OR 97701") == (
+        "1 Unity Ln, Bend, OR 97701")
+
+
+def test_removing_a_unit_leaves_no_empty_field():
+    from bendrentals.geocode import street_address
+
+    assert street_address("200 SW Summer Lake Dr , Unit 102, Bend, OR 97702") == (
+        "200 SW Summer Lake Dr, Bend, OR 97702")
+
+
+def test_a_designator_whose_number_went_first_is_not_stranded():
+    """The "#2" branch takes the number, which used to leave "Unit" behind."""
+    from bendrentals.geocode import street_address
+
+    assert street_address("19964 Ashwood Dr., Unit # 2, Bend, OR 97702") == (
+        "19964 Ashwood Dr., Bend, OR 97702")
+
+
+def test_an_address_with_no_unit_is_left_alone():
+    from bendrentals.geocode import street_address
+
+    for address in ("20287 Schaeffer Dr., Bend, OR 97703",
+                    "19884 Duck Call Lane, Bend OR 97702"):
+        assert street_address(address) == address

@@ -15,6 +15,7 @@ Scraping a subset therefore *merges*: the companies you did not ask for, and
 any whose site failed, keep the rows they already had.
 """
 
+import os
 import sys
 
 from bendrentals.csv_out import merge_rows, read_rows, write_rows
@@ -28,8 +29,26 @@ from bendrentals.scraper import ScrapeError, scrape_site
 #: Default ceiling on new geocoding lookups per run. Nominatim is rate-limited
 #: to well under one request a second here, so an unbounded first run on a wide
 #: filter could take hours. Raise it with --geocode-limit for a deliberate
-#: catch-up; the cache is permanent, so the rest resolve on later runs.
+#: catch-up; resolved addresses are kept, so the rest follow on later runs.
 GEOCODE_LIMIT = 50
+
+
+def annotate(title: str, message) -> None:
+    """Surface a failure on the run summary, not only in the log.
+
+    Run logs need an authenticated request to read, even on a public
+    repository, so a source that fails leaves its reason somewhere neither
+    the maintainer nor a passer-by can see. An annotation is public.
+
+    A no-op outside GitHub Actions, so local runs are unchanged.
+    """
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return
+    # Annotations are one line, and the properties section treats ":" and ","
+    # as syntax.
+    safe_title = str(title).replace("%", "%25").replace(":", "%3A").replace(",", "%2C")
+    body = " ".join(str(message).split())
+    print(f"::warning title={safe_title}::{body}")
 
 
 def needs_coordinates(listings):
@@ -94,6 +113,8 @@ def main(argv):
         except (FetchError, ScrapeError) as error:
             print(f"ERROR: {site.label}: {error}", file=sys.stderr)
             print("  keeping this company's existing rows", file=sys.stderr)
+            annotate(f"{site.label} failed",
+                     f"{error} — keeping this company's existing rows.")
             failed = True
             continue
 
@@ -118,8 +139,8 @@ def main(argv):
         new = [a for a in pending if not cache.knows(a)]
         if len(new) > limit:
             print(f"  {len(new)} addresses are new; geocoding {limit} this run "
-                  f"(--geocode-limit raises it). The cache is permanent, so the "
-                  f"rest resolve on later runs.")
+                  f"(--geocode-limit raises it). Resolved addresses are kept, "
+                  f"so the rest follow on later runs.")
         fetched = geocode_all(
             pending, cache,
             delay=BACKFILL_DELAY if backfill else None,
