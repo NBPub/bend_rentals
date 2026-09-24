@@ -131,7 +131,7 @@ status       = "ready"
 notes        = "bendpropertymanagement.net. Serves Bend, Redmond, Sisters, Prineville. States a pet policy on every card - and refuses cats on all of them, which is the source's own position, not a parse failure."
 
 [sites.bend_lifestyles]
-label        = "Bend Lifestyles"
+label        = "Lifestyles"
 company      = "Lifestyles Realty Group"
 index_url    = "https://lifestylesrealty.appfolio.com/listings?filters%5Bcities%5D%5B%5D=Bend"
 structure    = "appfolio_listings"
@@ -179,7 +179,7 @@ status       = "ready"
 notes        = "The vacancies page is a JS widget; this is the endpoint that widget itself reads. The richest source here: explicit acceptCats/acceptDogs booleans and real coordinates, so it needs no geocoding. Rentvine publishes no robots.txt (403 on both hosts). No source-side filters."
 
 [sites.pmi_central_oregon]
-label        = "PMI Central Oregon"
+label        = "PMI"
 company      = "PMI Central Oregon"
 index_url    = "https://pmicentraloregon.rentvine.com/api/public/listings"
 structure    = "rentvine_listings"

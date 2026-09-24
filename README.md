@@ -57,10 +57,10 @@ which is most of the time a full run takes.
     every card — and refuses cats on all of them, which is their position
     rather than a parsing failure.
   - Read from `mtbachpm.appfolio.com`
-- **Bend Lifestyles** — [bendlifestylesrentals.com](https://www.bendlifestylesrentals.com/)
-  - A Duda-built site reading a synced AppFolio collection, so the portal
-    name appears nowhere in its HTML — it came from the Tenant Portal link.
-    Covers Bend, Redmond and Sunriver.
+- **Lifestyles** — [bendlifestylesrentals.com](https://www.bendlifestylesrentals.com/)
+  - Lifestyles Realty Group. A Duda-built site reading a synced AppFolio
+    collection, so the portal name appears nowhere in its HTML — it came
+    from the Tenant Portal link. Covers Bend, Redmond and Sunriver.
   - Read from `lifestylesrealty.appfolio.com`
 
 **Everything else** — four platforms between them.
@@ -88,11 +88,11 @@ which is most of the time a full run takes.
     explicit cat and dog booleans, and real coordinates, so it needs no
     geocoding at all.
   - Read from `ridgelinepropertymgmt.rentvine.com`
-- **PMI Central Oregon** — [bendpropertymanagementinc.com](https://www.bendpropertymanagementinc.com/bend-homes-for-rent)
-  - Rentvine as well, so it needed no new code at all. They advertise
-    commercial and short-term rentals separately and this endpoint carries
-    neither. Covers Bend, Prineville, Madras and Hubbard, with no
-    source-side city filter, so that rule is applied here.
+- **PMI** — [bendpropertymanagementinc.com](https://www.bendpropertymanagementinc.com/bend-homes-for-rent)
+  - PMI Central Oregon. Rentvine as well, so it needed no new code at all.
+    They advertise commercial and short-term rentals separately and this
+    endpoint carries neither. Covers Bend, Prineville, Madras and Hubbard,
+    with no source-side city filter, so that rule is applied here.
   - Read from `pmicentraloregon.rentvine.com`
 
 Suggestions for sources to add are welcome — see
