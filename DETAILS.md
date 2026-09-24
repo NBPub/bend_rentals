@@ -113,9 +113,9 @@ requests, as described under
 [how long a run takes](#how-long-a-run-takes). It then commits three files
 back to the repository:
 
-- [`data/listings.csv`](data/listings.csv) — the day's listings
-- [`cache/geocode.json`](cache/geocode.json) — any addresses newly resolved
-- [`docs/index.html`](docs/index.html) — the rebuilt page
+- [`data/listings.csv`](data/listings.csv): the day's listings
+- [`cache/geocode.json`](cache/geocode.json): any addresses newly resolved
+- [`docs/index.html`](docs/index.html): the rebuilt page
 
 **Notes**
 
@@ -161,7 +161,7 @@ equivalent.
 Three fields are deliberately ignored: `scraped_at`, `lat` and `lon`.
 
 `scraped_at` changes on every row of every run by definition. Coordinates are
-subtler, and the reason to ignore them is that **they are not published data**.
+subtler, and the reason to ignore them is that they are not published data.
 No source except the two Rentvine ones states them; everywhere else they are
 derived from the address after the fact. So when they move, it is usually news
 about this project rather than about the rental: a geocoder has resolved an
@@ -213,9 +213,9 @@ page per listing scale with how many listings there are, at 1.5s each.
 
 So, roughly:
 
-- **+10s** for each new AppFolio source
-- **+1.5s** for each listing on a source that needs a page per listing
-- **+0s** for any number of extra listings on the AppFolio sources
+- +10s for each new AppFolio source
+- +1.5s for each listing on a source that needs a page per listing
+- +0s for any number of extra listings on the AppFolio sources
 
 ### Geocoding
 
@@ -288,7 +288,7 @@ platform underneath: an [AppFolio](https://www.appfolio.com/) tenant
 subdomain, a [Buildium](https://www.buildium.com/) resident portal, or the
 JSON endpoint a [Rentvine](https://www.rentvine.com/) page's own widget reads.
 
-### AppFolio — eleven of the sixteen
+### AppFolio: eleven of the sixteen
 
 Every field is on the index card, so one request covers the whole source.
 These portals publish `Crawl-delay: 10`, which is most of what
@@ -314,14 +314,14 @@ These portals publish `Crawl-delay: 10`, which is most of what
 None of these subdomains is advertised. Each was reached from a link the
 company's own site has to publish anyway:
 
-- **Elevation** — a [Squarespace](https://www.squarespace.com/) shell that
-  renders no listings. Found through its tenant login link.
-- **Mountain View, Superior, High Country** — [Duda](https://www.duda.co/)
-  sites. Each one resolved from its "Pay Rent" link.
-- **Lifestyles** — also Duda, but reading a synced AppFolio collection, so the
+- Elevation: a [Squarespace](https://www.squarespace.com/) shell that renders
+  no listings. Found through its tenant login link.
+- Mountain View, Superior and High Country: [Duda](https://www.duda.co/) sites.
+  Each one resolved from its "Pay Rent" link.
+- Lifestyles: also Duda, but reading a synced AppFolio collection, so the
   portal name appears nowhere in its HTML. It came from the Tenant Portal link.
-- **Plus** — a WordPress feed of the portal.
-- **Velocity** — the rentals page is an iframe whose `src` is the portal.
+- Plus: a WordPress feed of the portal.
+- Velocity: the rentals page is an iframe whose `src` is the portal.
 
 The full address in each case is `https://<subdomain>.appfolio.com/listings`
 with `filters[cities][]=Bend` appended. See the `index_url` of each entry in
@@ -342,19 +342,19 @@ with `filters[cities][]=Bend` appended. See the `index_url` of each entry in
 <details>
 <summary>What each of them needs that the others do not</summary>
 
-- **Trailhead** encodes everything in the title —
+- Trailhead encodes everything in the title —
   `$3,550 / 3br - 2472ft2 - Description (SW Bend)` — so it needs a page per
   listing and a title parser, the only one in
   [`bendrentals/formats/`](bendrentals/formats). Its second portfolio is
   vacation rentals and is deliberately left alone.
-- **Hummingbird**'s index cards carry no link to their own detail pages, so
-  the parser collects the detail URLs and reads those. Those pages also carry
-  a pet policy the index omits.
-- **Preferred Residential** publishes no street address: the only one on a
+- Hummingbird's index cards carry no link to their own detail pages, so the
+  parser collects the detail URLs and reads those. Those pages also carry a
+  pet policy the index omits.
+- Preferred Residential publishes no street address: the only one on a
   property page is the agency's own office, out of the footer map. The address
   and coordinates come from resolving its "View This Rental on a Map" short
   link instead, which reads the redirect target and never fetches a page.
-- **Ridgeline and PMI** are Rentvine. The vacancies page is a JavaScript
+- Ridgeline and PMI are Rentvine. The vacancies page is a JavaScript
   widget; what is read is the public JSON endpoint that widget itself calls.
   It is the richest data here, and needs no geocoding at all. PMI advertises
   commercial and short-term rentals separately, and this endpoint carries
@@ -460,10 +460,10 @@ flowchart TD
 A source is described by two independent things, which is why a seventeenth one
 usually needs no code:
 
-- **[`structure`](bendrentals/structures)**: how to get values out of the
-  page. Named for the platform, not the company, because eleven of the sixteen
-  run on AppFolio.
-- **[`title_format`](bendrentals/formats)**: how to decode a title string into
+- [`structure`](bendrentals/structures): how to get values out of the page.
+  Named for the platform, not the company, because eleven of the sixteen run
+  on AppFolio.
+- [`title_format`](bendrentals/formats): how to decode a title string into
   fields. Only Trailhead needs one; the rest expose each value in its own
   element.
 

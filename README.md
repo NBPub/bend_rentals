@@ -59,8 +59,8 @@ and how it was found, is in
 | [Ridgeline](https://ridgelinepropertymanagement.com/vacancies/) | Ridgeline Property Management | Rentvine | Publishes cat and dog booleans, and real coordinates |
 | [PMI](https://www.bendpropertymanagementinc.com/bend-homes-for-rent) | PMI Central Oregon | Rentvine | Bend, Prineville, Madras and Hubbard |
 
-Suggestions for sources to add are welcome — see
-[Contributing](CONTRIBUTING.md#contributing). A link to a Bend property
+Suggestions for sources to add are welcome. See
+[Contributing](CONTRIBUTING.md#contributing): a link to a Bend property
 manager's rentals page is enough to start with; working out how to read it is
 the part that takes doing.
 
