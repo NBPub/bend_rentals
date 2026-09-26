@@ -345,6 +345,11 @@
   "lon": "-121.3095590",
   "address": "20287 Schaeffer Dr., Bend, OR 97703"
  },
+ "20430 angel ct bend or 97702": {
+  "lat": "44.035727179286",
+  "lon": "-121.301927321495",
+  "address": "20430 Angel Ct., Bend, OR 97702"
+ },
  "20441 aberdeen dr bend or 97702": {
   "lat": "44.0194509",
   "lon": "-121.3017114",
@@ -767,6 +772,11 @@
   "lon": "-121.3045646",
   "address": "61545 Parrell Road - 7, Bend, OR 97702"
  },
+ "61550 brosterhous rd - 07 bend or 97702": {
+  "lat": "44.0354184",
+  "lon": "-121.3031614",
+  "address": "61550 Brosterhous Rd. - 07, Bend, OR 97702"
+ },
  "61550 brosterhous rd - 38 bend or 97702": {
   "lat": "44.0354184",
   "lon": "-121.3031614",
@@ -793,6 +803,11 @@
   "lat": "44.07321717839",
   "lon": "-121.258299538185",
   "address": "62593 Hawkview Road, Bend, OR 97701"
+ },
+ "628 ne isabella ln bend or 97701": {
+  "lat": "44.0705936",
+  "lon": "-121.2968527",
+  "address": "628 NE Isabella Ln, Bend, OR 97701"
  },
  "63086 dakota dr bend or 97701": {
   "lat": "44.0910410",
@@ -879,6 +894,11 @@
   "lat": "44.0624683",
   "lon": "-121.3237315",
   "address": "824 NW Newport Ave. - #1, Bend, OR 97703"
+ },
+ "832 se 6th street unit 2 bend or 97702": {
+  "lat": "44.0421965",
+  "lon": "-121.2966435",
+  "address": "832 SE 6th Street unit #2, Bend, OR 97702"
  },
  "834 se 5th street bend or 97702": {
   "lat": "44.0421482",
