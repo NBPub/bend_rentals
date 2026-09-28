@@ -255,6 +255,11 @@
   "lon": "-121.342156477299",
   "address": "1955 NW Brogan, Bend, OR 97703"
  },
+ "1965 nw monterey pines - 11 bend or 97703": {
+  "lat": "44.0644968",
+  "lon": "-121.3427984",
+  "address": "1965 NW Monterey Pines - #11, Bend, OR 97703"
+ },
  "19658 harvard pl bend or 97702": {
   "lat": "44.0215380",
   "lon": "-121.3411470",
@@ -495,6 +500,11 @@
   "lat": "44.0435103",
   "lon": "-121.2645585",
   "address": "21190 Darnel Ave, Bend, OR 97702"
+ },
+ "21241 se golden market lane bend or 97702": {
+  "lat": "44.037428444223",
+  "lon": "-121.262071212763",
+  "address": "21241 SE Golden Market Lane, Bend, OR 97702"
  },
  "21730 ne butler market rd bend or 97701": {
   "lat": "44.0947603",
