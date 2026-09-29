@@ -190,6 +190,11 @@
   "lon": "-121.3532077",
   "address": "1664 NW Lewis St., Bend, OR 97703"
  },
+ "1673 nw portland - 21 bend or 97703": {
+  "lat": "44.0640518",
+  "lon": "-121.3385405",
+  "address": "1673 NW Portland - #21, Bend, OR 97703"
+ },
  "1692 nw william clark st bend or 97703": {
   "lat": "44.0642191",
   "lon": "-121.3522524",
@@ -349,6 +354,11 @@
   "lat": "44.0914968",
   "lon": "-121.3095590",
   "address": "20287 Schaeffer Dr., Bend, OR 97703"
+ },
+ "20318 knightsbridge place bend or 97702": {
+  "lat": "44.0273989",
+  "lon": "-121.3082914",
+  "address": "20318 Knightsbridge Place, Bend, OR 97702"
  },
  "20430 angel ct bend or 97702": {
   "lat": "44.035727179286",
