@@ -139,6 +139,14 @@ class GeocodeCache:
     def __len__(self) -> int:
         return len(self._entries)
 
+    @property
+    def entries(self) -> dict[str, dict]:
+        """The raw cache, read-only, for reporting.
+
+        A copy, so a reporting caller cannot edit the cache by accident.
+        """
+        return dict(self._entries)
+
 
 #: Unit designators before the city: " - #2", " #1", " Unit 3", " - B", " Apt 4".
 #: Nominatim resolves the building, not the unit, so these cause misses.

@@ -189,3 +189,26 @@ def test_labels_shorten_company_names():
                  {}, labels={"A Very Long Name": "Short"})
     assert "| Short | 0 | 1 |" in text
     assert "A Very Long Name" not in text
+
+
+def test_geocoding_uses_the_short_label_like_every_other_table():
+    """One company must not appear under two names in the same file."""
+    current = [row(company="A Very Long Name", link="L1", lat="?",
+                   address="Unmapped Rd", scraped=f"{TODAY}T08:00:00")]
+    text = build([], current, {}, labels={"A Very Long Name": "Short"})
+    geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
+    assert "| Short | Unmapped Rd |" in geocoding
+    assert "A Very Long Name" not in geocoding
+
+
+def test_the_geocoding_table_is_sorted_by_what_it_displays():
+    """Sorting by the hidden full name makes the visible order look arbitrary."""
+    current = [row(company="Zeta Holdings", link="L1", lat="?",
+                   address="Zed Rd", scraped=f"{TODAY}T08:00:00"),
+               row(company="Alpha Group", link="L2", lat="?",
+                   address="Alpha Rd", scraped=f"{TODAY}T08:00:00")]
+    # Labels invert the alphabetical order of the full names.
+    text = build([], current, {},
+                 labels={"Zeta Holdings": "Aaa", "Alpha Group": "Zzz"})
+    geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
+    assert geocoding.index("| Aaa |") < geocoding.index("| Zzz |")

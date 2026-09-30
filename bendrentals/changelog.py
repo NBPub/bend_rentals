@@ -205,7 +205,7 @@ def _sources_section(status, today, labels) -> list[str]:
     return lines
 
 
-def _geocoding_section(rows, cache_entries) -> list[str]:
+def _geocoding_section(rows, cache_entries, labels) -> list[str]:
     flags = geocode_flags(rows, cache_entries)
     lines = ["## Geocoding", ""]
     if not flags["unmapped"] and not flags["failures"]:
@@ -216,8 +216,14 @@ def _geocoding_section(rows, cache_entries) -> list[str]:
         lines += [f"{len(flags['unmapped'])} listing(s) have no coordinates and "
                   "are listed below the map rather than placed on it.", "",
                   "| Company | Address |", "|---|---|"]
-        for item in flags["unmapped"]:
-            lines.append(f"| {_cell(item['company'])} | {_cell(item['address'])} |")
+        # Sorted on the label, not the full name behind it: geocode_flags
+        # cannot know the labels, and sorting on a name the table does not
+        # show leaves the visible order looking arbitrary.
+        labelled = sorted(
+            ((labels.get(item["company"], item["company"]), item["address"])
+             for item in flags["unmapped"]))
+        for shown, address in labelled:
+            lines.append(f"| {_cell(shown)} | {_cell(address)} |")
         lines.append("")
     if flags["failures"]:
         detail = f"{flags['failures']} address(es) are cached as unresolved"
@@ -280,6 +286,6 @@ def build(days, current, cache_entries, *, labels=None,
     ]
     lines += _changes_section(days, labels, history_error)
     lines += _sources_section(status, today, labels)
-    lines += _geocoding_section(current, cache_entries)
+    lines += _geocoding_section(current, cache_entries, labels)
     lines += _stale_section(current, status, today, labels, stale_days)
     return "\n".join(lines).rstrip() + "\n"
