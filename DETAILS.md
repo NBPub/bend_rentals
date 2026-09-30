@@ -107,15 +107,18 @@ The published page keeps itself current with GitHub Actions.
 
 [`.github/workflows/update.yml`](.github/workflows/update.yml) runs once a day
 on GitHub's servers at 13:00 UTC, early morning locally: [`update.py`](update.py) calls
-[`scrape.py`](scrape.py) and then [`build_page.py`](build_page.py). It takes a
+[`scrape.py`](scrape.py), [`build_page.py`](build_page.py) and
+[`build_changes.py`](build_changes.py). It takes a
 little over two minutes, nearly all of it spent waiting politely between
 requests, as described under
-[how long a run takes](#how-long-a-run-takes). It then commits three files
+[how long a run takes](#how-long-a-run-takes). It then commits four files
 back to the repository:
 
 - [`data/listings.csv`](data/listings.csv): the day's listings
 - [`cache/geocode.json`](cache/geocode.json): any addresses newly resolved
 - [`docs/index.html`](docs/index.html): the rebuilt page
+- [`LISTING_CHANGES.md`](LISTING_CHANGES.md): the readable summary of the
+  last seven days
 
 **Notes**
 
@@ -130,6 +133,12 @@ back to the repository:
   needs an authenticated request even on a public repository. The summary is
   public, so anyone can see whether a host refused the connection or served
   something that was not its listings page.
+- **The run publishes its own summary.** [`LISTING_CHANGES.md`](LISTING_CHANGES.md)
+  reports the last seven days of listings added and removed per company, any
+  source that did not answer, anything worth flagging about geocoding, and
+  listings that have gone three days without a refresh. It is regenerated in
+  full every run and reads its history out of the CSV's own commits, so it
+  needs no state of its own.
 
 [`.github/workflows/tests.yml`](.github/workflows/tests.yml) runs the test suite on every push, across three versions of Python.
 Those tests read saved copies of each source's pages and never touch the
@@ -137,8 +146,7 @@ network, so they cannot fail because a website was slow.
 
 ### Reading what changed
 
-Nothing publishes a changelog of listings, but the history is available in two
-forms.
+The history is available in three forms.
 
 **In the repository**, every daily commit to `data/listings.csv` is a diff of
 what moved. `git log -p -- data/listings.csv` reads them all. Bear in mind
@@ -157,6 +165,10 @@ moved, with their before and after. It compares the dated copies that
 `scrape.py` leaves in `data/snapshots/`, and those are local only: they are
 not committed, so a fresh clone has none and the `git log` above is the
 equivalent.
+
+**On the site**, the link beside the timestamp opens
+[`LISTING_CHANGES.md`](LISTING_CHANGES.md), which is the same history rendered
+for reading rather than for diffing.
 
 Three fields are deliberately ignored: `scraped_at`, `lat` and `lon`.
 
@@ -196,6 +208,7 @@ python update.py --open       # ...and open it
 python scrape.py trailhead    # one source
 python build_page.py --open   # rebuild the page from the CSV alone
 python changes.py             # what moved between the last two local runs
+python build_changes.py       # rebuild LISTING_CHANGES.md from the CSV history
 python -m pytest              # the test suite, offline
 ```
 
@@ -263,7 +276,8 @@ to nobody.
 | `--tiles NAME` | `build_page.py` | `esri`, `carto-light`, `carto-voyager`, `osm` |
 | `--out FILE` | `build_page.py` | Write somewhere other than `docs/index.html` |
 | `--csv FILE` | `build_page.py` | Build from a different CSV |
-| `--skip-scrape`, `--skip-page` | `update.py` | Run only one half |
+| `--days N` | `build_changes.py` | Days of history to report (default 7) |
+| `--skip-scrape`, `--skip-page`, `--skip-changes` | `update.py` | Run only some steps |
 
 Every command exits 0 when it worked, 1 when something partial went wrong such
 as a source being down, and 2 when it was misconfigured. That is the
@@ -482,9 +496,19 @@ usually needs no code:
 | [`geocode.py`](bendrentals/geocode.py) | Nominatim then Census, and the cache |
 | [`csv_out.py`](bendrentals/csv_out.py) | Reading, merging and writing the CSV, including snapshots |
 | [`diff.py`](bendrentals/diff.py) | Compares two snapshots for `changes.py` |
+| [`history.py`](bendrentals/history.py) | Previous days of the CSV, read out of git. The only module that shells out |
+| [`changelog.py`](bendrentals/changelog.py) | Those days into `LISTING_CHANGES.md`. Pure rendering |
 | [`mapdata.py`](bendrentals/mapdata.py) | Rows into map records. Price banding, and all escaping |
 | [`pagehtml.py`](bendrentals/pagehtml.py) | Fills the template with those records |
 | [`page.html`](bendrentals/page.html) | The template itself. Edit the page here |
+
+Two tools report changes and they are not the same.
+[`changes.py`](changes.py) is local and interactive: it compares the dated
+snapshots in `data/snapshots/` and prints a report.
+[`build_changes.py`](build_changes.py) is what the workflow runs: it reads the
+CSV's git history and writes the published
+[`LISTING_CHANGES.md`](LISTING_CHANGES.md). A clone has no snapshots, so only
+the second works there.
 
 Two helper scripts live in [`tools/`](tools) and are not part of a run.
 `strip_fixtures.py` removes the framework bulk from a saved test fixture, and

@@ -27,7 +27,7 @@ once a day from the sites of sixteen local property management companies.
 
 **Contents**
 
-| [Rental Listing Sources](#companies) | [AI disclaimer](#ai-disclaimer) | [Contributing](CONTRIBUTING.md#contributing) |
+| [Rental Listing Sources](#companies) | [Listing changes](LISTING_CHANGES.md#listing-changes) | [AI disclaimer](#ai-disclaimer) | [Contributing](CONTRIBUTING.md#contributing) |
 
 *[MIT Licensed](LICENSE)*
 
