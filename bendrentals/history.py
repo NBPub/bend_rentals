@@ -83,4 +83,11 @@ def rows_at(sha: str, *, root: Path | str = Path("."),
     """
     text = runner(["show", f"{sha}:{_repo_path(path)}"], root=Path(root))
     reader = csv.DictReader(io.StringIO(text))
+    # A revision whose schema predates the `link` column, or renamed it, would
+    # otherwise filter every row out and look like an empty day. The changelog
+    # would then report a full turnover: everything removed, then re-added.
+    if not reader.fieldnames or "link" not in reader.fieldnames:
+        raise GitUnavailable(
+            f"{_repo_path(path)} at {sha[:8]} has no `link` column, so its "
+            "rows cannot be matched against another revision")
     return {row["link"]: row for row in reader if row.get("link")}

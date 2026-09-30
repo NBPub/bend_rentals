@@ -95,7 +95,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # cache/geocode.json matters as much as the data: without it every
           # run would re-ask Nominatim for addresses it has already resolved.
-          git add data/listings.csv cache/geocode.json docs/index.html LISTING_CHANGES.md
+          git add data/listings.csv cache/geocode.json docs/index.html
+          # Separately, and only if it is there. `git add` is all-or-nothing:
+          # naming a file that does not exist stages NOTHING and exits 128, so
+          # a missing report would take the day's listings down with it.
+          if [ -f LISTING_CHANGES.md ]; then
+            git add LISTING_CHANGES.md
+          fi
           if git diff --staged --quiet; then
             echo "Nothing changed."
           else

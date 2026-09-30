@@ -212,3 +212,19 @@ def test_the_geocoding_table_is_sorted_by_what_it_displays():
                  labels={"Zeta Holdings": "Aaa", "Alpha Group": "Zzz"})
     geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
     assert geocoding.index("| Aaa |") < geocoding.index("| Zzz |")
+
+
+def test_an_unreadable_revision_labels_its_day_rather_than_merging_two():
+    """A skipped revision must not silently attribute two days to one date.
+
+    Dropping it from the list would leave two non-adjacent revisions side by
+    side, headed with the later date only.
+    """
+    d1 = rows_by_link(row(link="L1"))
+    d3 = rows_by_link(row(link="L3"))
+    text = build([("2026-01-08", d1), ("2026-01-09", None), (TODAY, d3)],
+                 CURRENT, {})
+    assert "No comparison available" in text
+    # The day whose predecessor is missing gets no invented count table.
+    today_section = text.split(f"### {TODAY}")[1].split("##")[0]
+    assert "| Company | Added | Removed |" not in today_section

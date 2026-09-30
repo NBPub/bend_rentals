@@ -185,6 +185,14 @@ def _changes_section(days, labels, history_error) -> list[str]:
         return lines
     for (before_date, before), (after_date, after) in reversed(
             list(zip(days, days[1:]))):
+        # A revision that could not be read arrives as None rather than being
+        # dropped. Dropping it would leave two non-adjacent revisions side by
+        # side, attributing two days of movement to the later date alone.
+        if before is None or after is None:
+            lines += [f"### {after_date}", "",
+                      "No comparison available: a revision this day is measured "
+                      "against could not be read.", ""]
+            continue
         lines += _one_day(before_date, after_date, before, after, labels)
     return lines
 
@@ -265,7 +273,9 @@ def build(days, current, cache_entries, *, labels=None,
     """The complete LISTING_CHANGES.md text.
 
     `days` is oldest-to-newest (date, rows keyed by link) and includes this
-    run as its last entry, so N reported days need N+1 entries.
+    run as its last entry, so N reported days need N+1 entries. An entry whose
+    rows are None is a revision that could not be read; the days it bounds are
+    labelled rather than compared.
     """
     labels = labels or {}
     today = run_date(current)

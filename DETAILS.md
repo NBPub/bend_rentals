@@ -106,7 +106,7 @@ during parsing, for the bathroom count and the pet policy, and then discarded.
 The published page keeps itself current with GitHub Actions.
 
 [`.github/workflows/update.yml`](.github/workflows/update.yml) runs once a day
-on GitHub's servers at 13:00 UTC, early morning locally: [`update.py`](update.py) calls
+on GitHub's servers at 13:17 UTC, early morning locally: [`update.py`](update.py) calls
 [`scrape.py`](scrape.py), [`build_page.py`](build_page.py) and
 [`build_changes.py`](build_changes.py). It takes a
 little over two minutes, nearly all of it spent waiting politely between

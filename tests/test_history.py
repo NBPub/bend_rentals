@@ -107,3 +107,15 @@ def test_a_missing_git_binary_raises_git_unavailable(repo, monkeypatch):
     monkeypatch.setattr("bendrentals.history.subprocess.run", boom)
     with pytest.raises(GitUnavailable, match="cannot run git"):
         daily_revisions(root=repo)
+
+
+def test_a_revision_without_a_link_column_is_refused(repo):
+    """Review Focus 4, the renamed-column half.
+
+    Filtering every row out would make the revision look empty, and the
+    changelog would report a full turnover: everything removed, then re-added.
+    """
+    def runner(args, *, root):
+        return "company,url,address\nA,https://x/1,Somewhere\n"
+    with pytest.raises(GitUnavailable, match="link"):
+        rows_at("whatever", root=repo, runner=runner)

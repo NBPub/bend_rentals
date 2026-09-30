@@ -21,7 +21,7 @@ import csv
 import sys
 from pathlib import Path
 
-from bendrentals.changelog import build
+from bendrentals.changelog import build, run_date
 from bendrentals.csv_out import read_rows
 from bendrentals.geocode import DEFAULT_CACHE_PATH, GeocodeCache
 from bendrentals.history import GitUnavailable, daily_revisions, rows_at
@@ -54,13 +54,19 @@ def labels(path: Path = REGISTRY) -> dict[str, str]:
 def _history(*, days: int, root: Path) -> tuple[list, str]:
     """(oldest-first [(date, rows)], error message).
 
-    N reported days need N+1 revisions, so this asks for one more than the
-    window. An empty list with a message means the caller should still write
-    the file and say why the history is missing.
+    Asks for one revision more than the window. Reporting N days of movement
+    needs N+1 entries, and whether `_with_today` adds one or replaces the
+    newest depends on whether this run's commit already exists: in the workflow
+    it does not, run again afterwards it does. Fetching the extra and letting
+    the caller trim makes the window the same size either way. An empty list
+    with a message means the caller should still write the file and say why the
+    history is missing.
 
-    A single unreadable revision is skipped rather than losing the lot: the
-    CSV may not have existed that far back, or a schema change may have made
-    it unparseable. Only a failure to list the history at all is total.
+    A single unreadable revision is kept in the list with None for its rows
+    rather than dropped: the CSV may not have existed that far back, or a
+    schema change may have made it unmatchable. Dropping it would put two
+    non-adjacent revisions side by side and blame one date for two days of
+    movement. Only a failure to list the history at all is total.
     """
     try:
         revisions = daily_revisions(days=days + 1, root=root)
@@ -72,9 +78,31 @@ def _history(*, days: int, root: Path) -> tuple[list, str]:
         try:
             past.append((date, rows_at(sha, root=root)))
         except (GitUnavailable, csv.Error) as error:
-            print(f"WARNING: skipping {date} ({sha[:8]}): {error}",
+            print(f"WARNING: cannot read {date} ({sha[:8]}): {error}",
                   file=sys.stderr)
+            past.append((date, None))
     return past, ""
+
+
+def _with_today(past: list, current: list[dict]) -> list:
+    """`past` plus this run as its newest entry.
+
+    The workflow builds this file *before* committing, so the newest commit is
+    yesterday and today's listings exist only in the working tree. Without
+    this, the newest dated section would be yesterday's while the header
+    asserted today's run date, and today's movement would go unreported.
+
+    Run locally after the day's commit, today is already the newest revision.
+    Replace it rather than appending, or the file gains a second section for
+    the same date reporting no change against itself.
+    """
+    today = run_date(current)
+    if not today:
+        return past
+    entry = (today, {row["link"]: row for row in current if row.get("link")})
+    if past and past[-1][0] == today:
+        return past[:-1] + [entry]
+    return past + [entry]
 
 
 def main(argv):
@@ -101,6 +129,10 @@ def main(argv):
     past, error = _history(days=days, root=Path("."))
     if error:
         print(f"WARNING: no history to compare ({error})", file=sys.stderr)
+    else:
+        # Trim to days+1 entries, which is days comparisons. _history fetched
+        # one spare because _with_today may add an entry or replace the newest.
+        past = _with_today(past, current)[-(days + 1):]
 
     try:
         entries = GeocodeCache(DEFAULT_CACHE_PATH).entries
@@ -117,7 +149,11 @@ def main(argv):
     )
     print(f"Wrote {out}  ({len(past)} revision(s) of history, "
           f"{len(current)} listings)")
-    return 0
+    # A 1, not a 0, when there was no history: the file was still written, so
+    # nothing is lost, but a silent 0 would let a broken clone depth go
+    # unnoticed while the published file quietly said history was missing.
+    # update.py carries on past a 1, so the day's data is still committed.
+    return 1 if error else 0
 
 
 if __name__ == "__main__":
