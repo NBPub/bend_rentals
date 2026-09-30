@@ -413,3 +413,29 @@ def test_a_rule_separates_the_unmappable_list_from_the_table():
     html = build()
     between = html.split('<section id="unmapped"></section>')[1]
     assert between.lstrip().startswith("<hr>")
+
+
+def test_the_changelog_link_is_rendered_by_default():
+    from bendrentals.pagehtml import DEFAULT_CHANGES_URL
+    html = render([], [])
+    assert DEFAULT_CHANGES_URL in html
+    assert "listings changelog" in html
+
+
+def test_an_empty_changelog_url_renders_no_link():
+    html = render([], [], changes_url="")
+    assert "listings changelog" not in html
+    assert "__CHANGES_LINK__" not in html
+
+
+def test_a_non_http_changelog_url_is_refused():
+    html = render([], [], changes_url="javascript:alert(1)")
+    assert "javascript:" not in html
+    assert "listings changelog" not in html
+
+
+def test_no_template_token_survives_into_the_page():
+    html = render([], [])
+    for token in ("__TITLE__", "__REPO_URL__", "__FAVICON__", "__LEAFLET_CSS__",
+                  "__LEAFLET_JS__", "__PAYLOAD__", "__CHANGES_LINK__"):
+        assert token not in html
