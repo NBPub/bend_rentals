@@ -265,6 +265,11 @@
   "lon": "-121.342156477299",
   "address": "1955 NW Brogan, Bend, OR 97703"
  },
+ "1959 nw rimrock dr bend or 97703": {
+  "lat": "44.069026900123",
+  "lon": "-121.340361402949",
+  "address": "1959 NW Rimrock Dr., Bend, OR 97703"
+ },
  "1965 nw monterey pines - 11 bend or 97703": {
   "lat": "44.0644968",
   "lon": "-121.3427984",
@@ -340,6 +345,11 @@
   "lon": "-121.319547161804",
   "address": "20082 SW Porter Place, Bend OR 97702"
  },
+ "20118 flowing water way - unit 1 bend or 97702": {
+  "lat": "44.0340496",
+  "lon": "-121.3161219",
+  "address": "20118 Flowing Water Way - Unit 1, Bend, OR 97702"
+ },
  "20133 flowing water way - 01 bend or 97702": {
   "lat": "44.0338847",
   "lon": "-121.3161600",
@@ -359,6 +369,11 @@
   "lat": "44.0914968",
   "lon": "-121.3095590",
   "address": "20287 Schaeffer Dr., Bend, OR 97703"
+ },
+ "20289 nw hardy rd 1 bend or 97703": {
+  "lat": "44.100552582666",
+  "lon": "-121.309080445972",
+  "address": "20289 NW Hardy Rd # 1, Bend, OR 97703"
  },
  "20318 knightsbridge place bend or 97702": {
   "lat": "44.0273989",
@@ -565,6 +580,11 @@
   "lat": "44.0657242",
   "lon": "-121.3526978",
   "address": "2564 NW Shields Dr, Bend, OR 97703"
+ },
+ "2578 nw pompy place bend or 97703": {
+  "lat": "44.0648372",
+  "lon": "-121.3530066",
+  "address": "2578 NW Pompy Place , Bend, OR 97703"
  },
  "2617 nw fawn run ln bend or 97703": {
   "lat": "44.0749346",
@@ -827,6 +847,11 @@
   "lon": "?",
   "address": "61579 Lucia St , Bend, OR 97702",
   "failed_at": "2026-09-24"
+ },
+ "61618 se depot loop bend or 97702": {
+  "lat": "44.0362317",
+  "lon": "-121.2858817",
+  "address": "61618 SE Depot Loop, Bend, OR 97702"
  },
  "61623 alstrup unit b (6) bend or 97702": {
   "lat": "?",
