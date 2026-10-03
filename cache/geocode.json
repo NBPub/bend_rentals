@@ -646,6 +646,11 @@
   "lon": "-121.2610264",
   "address": "2950 NE Nikki Court, Unit D, Bend, OR 97701"
  },
+ "2980 nw shevlin meadows dr 1 bend or 97703": {
+  "lat": "44.070008617813",
+  "lon": "-121.361954465174",
+  "address": "2980 NW Shevlin Meadows Dr. #1, Bend, OR 97703"
+ },
  "3032 ne terreo place - 2 bend or 97701": {
   "lat": "44.0905087",
   "lon": "-121.2553206",
@@ -939,6 +944,12 @@
   "lat": "44.096949409441",
   "lon": "-121.312786931644",
   "address": "63266 Newhall Pl., Bend, OR 97703"
+ },
+ "63273 nw ski ln unit 2 bend or 97703": {
+  "lat": "?",
+  "lon": "?",
+  "address": "63273 NW Ski Ln, Unit 2, Bend, OR 97703",
+  "failed_at": "2026-10-03"
  },
  "63339 nw britta 2 bend or 97701": {
   "lat": "44.099684924541",
