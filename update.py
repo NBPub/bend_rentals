@@ -6,6 +6,7 @@ Usage:
     python update.py --skip-scrape         # rebuild the page from the CSV
     python update.py --backfill --open
     python update.py --tiles carto-light
+    python update.py --skip-changes        # data and page only
 
 Each step is the same code its own command runs; this only sequences them.
 It is what the scheduled workflow calls.
@@ -16,12 +17,14 @@ partial, 2 misconfiguration.
 - Exit 2 stops the run. Nothing downstream can work without a usable config.
 - Exit 1 warns and carries on. `scrape.py` returns 1 when any one of sixteen
   sites fails, and one site being down is no reason to skip the page for the
-  other fifteen.
+  other fifteen. `build_changes.py` returns 1 when it has no history to read,
+  which is a missing report rather than missing data.
 """
 
 import sys
 import time
 
+import build_changes
 import build_page
 import scrape
 
@@ -30,6 +33,8 @@ SCRAPE_FLAGS = ("--backfill", "--no-geocode", "--no-snapshot")
 SCRAPE_VALUE_FLAGS = ("--geocode-limit",)
 PAGE_FLAGS = ("--open",)
 PAGE_VALUE_FLAGS = ("--tiles", "--out", "--csv", "--csv-url")
+CHANGES_FLAGS = ()
+CHANGES_VALUE_FLAGS = ("--days",)
 
 MISCONFIGURED = 2
 
@@ -57,10 +62,13 @@ def _run(name, function, argv):
 
 
 def main(argv, steps=None):
-    steps = steps or {"scrape": scrape.main, "page": build_page.main}
+    steps = steps or {"scrape": scrape.main, "page": build_page.main,
+                      "changes": build_changes.main}
     plan = [
         ("scrape", steps["scrape"], _forward(argv, SCRAPE_FLAGS, SCRAPE_VALUE_FLAGS)),
         ("page", steps["page"], _forward(argv, PAGE_FLAGS, PAGE_VALUE_FLAGS)),
+        ("changes", steps["changes"],
+         _forward(argv, CHANGES_FLAGS, CHANGES_VALUE_FLAGS)),
     ]
 
     worst = 0

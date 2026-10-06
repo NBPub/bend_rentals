@@ -129,9 +129,19 @@ DEFAULT_CSV_URL = (
     "https://raw.githubusercontent.com/NBPub/bend_rentals/main/data/listings.csv"
 )
 
+#: The generated listing changelog, linked beside the page's timestamp.
+#:
+#: The GitHub blob view rather than the file in docs/: docs/.nojekyll turns
+#: Jekyll off, so a .md served from Pages arrives as plain text. GitHub
+#: renders it as markdown.
+DEFAULT_CHANGES_URL = (
+    "https://github.com/NBPub/bend_rentals/blob/main/LISTING_CHANGES.md"
+)
+
 
 def render(records, unmapped=(), *, generated_at=None, title="Rentals in Bend, OR",
-           tiles=DEFAULT_TILES, csv_url=DEFAULT_CSV_URL, repo_url=REPO_URL) -> str:
+           tiles=DEFAULT_TILES, csv_url=DEFAULT_CSV_URL, repo_url=REPO_URL,
+           changes_url=DEFAULT_CHANGES_URL) -> str:
     """One complete HTML document: map, filters and table."""
     generated_at = generated_at or datetime.now()
 
@@ -170,7 +180,18 @@ def render(records, unmapped=(), *, generated_at=None, title="Rentals in Bend, O
         "total": len(everything),
     }
 
+    # Built here rather than passed through the payload: the href is a
+    # build-time constant, so nothing listing-derived reaches the DOM and the
+    # page's textContent discipline is untouched. An unusable URL renders
+    # nothing at all, as --csv-url "" already drops the download link.
+    safe_changes = _safe(changes_url)
+    changes_link = (
+        f'<a class="meta" id="changes" href="{escape(safe_changes, quote=True)}"'
+        f' target="_blank" rel="noopener noreferrer">listings changelog</a>'
+    ) if safe_changes else ""
+
     return (template()
+            .replace("__CHANGES_LINK__", changes_link)
             .replace("__TITLE__", escape(title))
             .replace("__REPO_URL__", escape(_safe(repo_url), quote=True))
             .replace("__FAVICON__", escape(FAVICON, quote=True))

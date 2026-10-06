@@ -19,16 +19,38 @@ class Recorder:
         return bool(self.calls)
 
 
-def steps(scrape=0, page=0):
-    return {"scrape": Recorder(scrape), "page": Recorder(page)}
+def steps(scrape=0, page=0, changes=0):
+    return {"scrape": Recorder(scrape), "page": Recorder(page),
+            "changes": Recorder(changes)}
 
 
-def test_runs_both_steps_in_order(capsys):
+def test_runs_all_three_steps_in_order(capsys):
     plan = steps()
     assert main([], plan) == 0
-    assert plan["scrape"].ran and plan["page"].ran
+    assert all(step.ran for step in plan.values())
     out = capsys.readouterr().out
-    assert out.index("=== scrape") < out.index("=== page")
+    assert out.index("=== scrape") < out.index("=== page") < out.index("=== changes")
+
+
+def test_a_failed_changelog_does_not_fail_the_run():
+    """The report is a nicety; the data is not."""
+    plan = steps(changes=1)
+    assert main([], plan) == 1
+    assert plan["page"].ran
+
+
+def test_the_changelog_can_be_skipped():
+    plan = steps()
+    assert main(["--skip-changes"], plan) == 0
+    assert not plan["changes"].ran
+    assert plan["scrape"].ran and plan["page"].ran
+
+
+def test_changes_flags_are_forwarded_only_to_changes():
+    plan = steps()
+    main(["--days", "14"], plan)
+    assert plan["changes"].calls == [["--days", "14"]]
+    assert plan["scrape"].calls == [[]]
 
 
 def test_a_partial_failure_does_not_stop_the_run():
@@ -48,8 +70,8 @@ def test_the_worst_exit_code_wins():
     assert main([], steps(scrape=0, page=1)) == 1
 
 
-@pytest.mark.parametrize("skip", ["scrape", "page"])
-def test_either_step_can_be_skipped(skip):
+@pytest.mark.parametrize("skip", ["scrape", "page", "changes"])
+def test_any_step_can_be_skipped(skip):
     plan = steps()
     assert main([f"--skip-{skip}"], plan) == 0
     assert not plan[skip].ran
@@ -90,5 +112,5 @@ def test_a_value_flag_at_the_end_of_argv_is_dropped_not_crashed():
 def test_each_step_is_timed_and_reported(capsys):
     main([], steps())
     out = capsys.readouterr().out
-    assert "--- scrape: ok in" in out
-    assert "--- page: ok in" in out
+    for name in ("scrape", "page", "changes"):
+        assert f"--- {name}: ok in" in out

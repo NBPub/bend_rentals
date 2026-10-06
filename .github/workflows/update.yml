@@ -10,7 +10,14 @@ on:
     # fixed time drifts an hour across daylight saving: 13:00 UTC is 06:00
     # PDT in summer and 05:00 PST in winter. Both are early morning in Bend,
     # after the night's listings have gone up, so the drift does not matter.
-    - cron: "0 13 * * *"
+    #
+    # The minute is deliberately not zero. Scheduled runs are best-effort and
+    # queue behind everyone else's, and the top of the hour is the busiest
+    # slot: at "0 13" the commits were landing between 09:55 and 13:02 local,
+    # four to seven hours late and varying daily. An odd minute avoids the
+    # worst of that queue. A run cannot fire *earlier* than nominal, so 06:17
+    # is still after the night's listings are up.
+    - cron: "17 13 * * *"
   workflow_dispatch:
     inputs:
       geocode_limit:
@@ -41,6 +48,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        # The changelog reads previous days out of git, and the default clone
+        # is depth 1. Depth counts commits on the branch rather than commits
+        # touching the CSV, so a fixed small number could fall short after a
+        # run of documentation commits. The repo is small; full history is the
+        # simpler correct answer.
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v7
         with:
@@ -82,6 +96,12 @@ jobs:
           # cache/geocode.json matters as much as the data: without it every
           # run would re-ask Nominatim for addresses it has already resolved.
           git add data/listings.csv cache/geocode.json docs/index.html
+          # Separately, and only if it is there. `git add` is all-or-nothing:
+          # naming a file that does not exist stages NOTHING and exits 128, so
+          # a missing report would take the day's listings down with it.
+          if [ -f LISTING_CHANGES.md ]; then
+            git add LISTING_CHANGES.md
+          fi
           if git diff --staged --quiet; then
             echo "Nothing changed."
           else
