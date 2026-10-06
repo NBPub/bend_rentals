@@ -2,11 +2,84 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). Do not edit: a change made here is gone by morning.
 
-Latest run: 2026-09-30. 115 listings from 16 companies.
+Latest run: 2026-10-06. 123 listings from 16 companies.
 
 The complete record is [`data/listings.csv`](data/listings.csv) and its commit history. This is a readable summary of the last few days of it.
 
 ## Recent changes
+
+### 2026-10-06
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 3 | 2 |
+| Elevation | 1 | 0 |
+| High Country | 1 | 0 |
+| High Desert | 2 | 1 |
+| Hummingbird | 0 | 1 |
+| Lifestyles | 1 | 0 |
+| Mountain View | 5 | 3 |
+| Mt. Bachelor | 1 | 2 |
+| PMI | 1 | 1 |
+| Plus | 0 | 2 |
+| Ridgeline | 0 | 2 |
+| Superior | 7 | 4 |
+| Trailhead | 4 | 0 |
+| Velocity | 2 | 2 |
+
+<details>
+<summary>48 listings</summary>
+
+- new: [1000 NE Butler Market Rd - 9, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c062c09b-1af7-41cf-ba92-6a7b8a9ccf24) ($1595, Mountain View)
+- new: [1010 NW Portland Ave. - #2, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/443ca817-173a-498b-bf75-9d0bc57845d7) ($1995, Superior)
+- new: [1095 NE Hidden Valley Dr. - #B, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/51adcabe-d109-464e-98c0-5f0aac20bbaa) ($1395, Velocity)
+- new: [1302 NW Knoxville Blvd, Bend OR 97703 (Units #107 and #306)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tdblh) ($?, Trailhead)
+- new: [1419 NW 8th St. - 301, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/1f4c752f-11ef-427b-affd-293c7172258c) ($1995, Superior)
+- new: [1663 NW Elgin Ave., Bend, OR 97703](https://bend.appfolio.com/listings/detail/bfe49c1c-8d29-4a3c-99f9-c6ea23113a24) ($2795, Bend PM)
+- new: [1959 NW Rimrock Dr., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/6822d0e8-efc1-4d6d-9853-98caf3616a91) ($5995, Superior)
+- new: [20289 NW Hardy Rd # 1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/8b23bd5a-23e5-48f4-ab95-59d4f6eaa6d0) ($2395, Superior)
+- new: [2150 NW Hill Street - 4, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/5e007824-4292-4b20-8874-9c692bdaf5b2) ($1895, Superior)
+- new: [2399 NE Victor Place #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c0bcb059-16b8-44ea-b2b2-013622f5a1b6) ($1895, Mountain View)
+- new: [2578 NW Pompy Place , Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/f27f96f4-bca6-41b8-a281-3b607316c5b0) ($2450, Velocity)
+- new: [2741 NE Laramie Way , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/43c6ebf7-be9d-4d28-a457-f576286e5231) ($2700, High Desert)
+- new: [2980 NW Shevlin Meadows Dr. #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/8c9ad3aa-0c04-4c3e-969c-2d7b0871aada) ($2995, Mountain View)
+- new: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, PMI)
+- new: [525 NW Broadway, Bend, OR 97703](https://bend.appfolio.com/listings/detail/5d483c83-9daf-4603-bb4f-58d8d11c6c98) ($3300, Bend PM)
+- new: [60303 Addie Triplett Loop, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/67ffe704-a647-4152-b224-eb49b4c56d4e) ($2395, Mountain View)
+- new: [61236 Dayspring Dr., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/d08fd943-efa5-48da-8e11-1543ade08ffe) ($2795, Superior)
+- new: [61320 SW Blakely #5, Bend OR  97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-966b3) ($1600, Trailhead)
+- new: [61416 Elder Ridge St., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/0315a443-5c40-4988-8ea7-52be3cf767b6) ($3495, Mountain View)
+- new: [61608 SE Quill Place, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/04404e6e-0d98-424c-89b2-6422e54dfd2a) ($2395, High Desert)
+- new: [61618 SE Depot Loop, Bend, OR 97702](https://bend.appfolio.com/listings/detail/113cba1a-86f1-4639-b3f9-6cc5b2edc209) ($2495, Bend PM)
+- new: [63084 NE Sophwith Lane, Bend, OR 97701](https://lifestylesrealty.appfolio.com/listings/detail/8f226416-566c-405a-a53b-eec901957fcb) ($2795, Lifestyles)
+- new: [63273 NW Ski Ln, Unit 2, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/66da1d8d-5644-4b4a-a65e-450ed65741b0) ($2500, Mt. Bachelor)
+- new: [63323 Wrangler Place, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-gzrpb) ($5500, Trailhead)
+- new: [817 NW Federal St., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/393fbabc-b6a4-4a5b-9657-4f81e2769e20) ($1995, Superior)
+- new: [84 NW Portland Avenue #2, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/50162556-4a05-421a-b614-6cc84a733338) ($2000, Elevation)
+- new: [847 NE Locksley Drive, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/1060e29a-da30-4043-b5ba-7bb3ce0c6e62) ($2850, High Country)
+- new: [?](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($?, Trailhead)
+- gone: [1147 NW Knoxville , Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/da72c809-2b58-421f-9b01-56c5f6633e4f) ($1850, Superior)
+- gone: [1232 NW Ogden Ave. , Bend, OR 97703](https://bend.appfolio.com/listings/detail/144ae1b5-0168-4d4e-b519-02de207d8ede) ($2200, Bend PM)
+- gone: [1580 NW Newport - #46, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/b2a5e9e4-b83b-48c9-a1c1-9c82384624cb) ($1650, Plus)
+- gone: [1590 NW Hartford, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/7d123cab-8aa3-4c8c-8085-165bb050d3fa) ($2395, Superior)
+- gone: [1664 NW Lewis St., Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/a00766aa-3696-465f-8bd3-ce0b78adf311) ($2995, Velocity)
+- gone: [1692 NW WIlliam Clark St, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/3e399d1a-2f8c-43d4-b2fc-fb38c4b0851b) ($3095, Mt. Bachelor)
+- gone: [19804 Wetland Ct, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/29) ($2995, Ridgeline)
+- gone: [19899 Antler Point Dr., Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/15531c9b-1afe-4bd5-ba58-ff588bd9cb6c) ($2895, Velocity)
+- gone: [20133 Flowing Water Way - 01, Bend, OR 97702](https://bend.appfolio.com/listings/detail/ac96569e-3a42-457e-a293-d3c2545cdfd3) ($2195, Bend PM)
+- gone: [206- 200 SW Summer Lake Dr , Unit 102, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/0142e4a6-e08a-4c0f-8ab2-ff5c01c20fae) ($1795, Mt. Bachelor)
+- gone: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, High Desert)
+- gone: [2070 NW Monterey Pines Dr. - 2, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/e29d3005-143c-443f-bb1d-c8683f16df12) ($2195, Mountain View)
+- gone: [20783 Boulderfield Avenue - 1, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/73950) ($2375, Hummingbird)
+- gone: [224 NW Jefferson Place, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/c0154e1c-759d-409b-a040-31ac673d8aff) ($4495, Mountain View)
+- gone: [26 NW Shasta Pl, Bend, OR 97703, Bend, OR 97703](https://ridgelinepropertymgmt.rentvine.com/public/listings/37) ($5195, Ridgeline)
+- gone: [354 NE Penn Ave Apt 3, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/61) ($1450, PMI)
+- gone: [3807 Eagle Road, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/2b6bd98c-6ba4-4699-a03e-f56fd0e1c35e) ($2495, Plus)
+- gone: [60889 Granite Dr, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/853ad307-23e1-4298-a456-cac030911646) ($2295, Mountain View)
+- gone: [63264 Peale St., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/74e60d99-0869-4e2b-b9e2-fef6d9e0a02a) ($2995, Superior)
+- gone: [762 NE Savannah Dr. , Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/888f5626-8f8c-41c8-bc0c-dec0e111be7f) ($1895, Superior)
+
+</details>
 
 ### 2026-09-30
 
@@ -127,47 +200,37 @@ No listings added or removed since 2026-09-26.
 
 </details>
 
-### 2026-09-24
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-| High Country | 1 | 1 |
-| High Desert | 2 | 0 |
-| Mountain View | 1 | 1 |
-
-<details>
-<summary>7 listings</summary>
-
-- new: [1542 NE Butler Market Rd, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/12e9052d-5717-48d1-9216-48784f3f9269) ($2495, High Desert)
-- new: [20133 Flowing Water Way - 01, Bend, OR 97702](https://bend.appfolio.com/listings/detail/ac96569e-3a42-457e-a293-d3c2545cdfd3) ($2295, Bend PM)
-- new: [2024 NE Neil Way #5, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/6ae38077-44f7-46fc-b60e-7cbf0e660b92) ($1625, Mountain View)
-- new: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, High Desert)
-- new: [312 NE 4th St. - Unit B, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/a7ed523d-8edf-4974-aa71-a3d7e83a3d80) ($1995, High Country)
-- gone: [459 NW Broadway St. , Bend, OR 97703](https://highcountrypropmgmt.appfolio.com/listings/detail/aefdf98e-a2f7-4a6f-ae06-1538c12f57b1) ($3500, High Country)
-- gone: [844 NW Newport Ave. , Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/dbe4d399-2ff7-4ccb-882d-fc16ff3e92a2) ($2995, Mountain View)
-
-</details>
-
 ## Sources
 
-All sources refreshed on 2026-09-30.
+These sources did not answer on this run. Their listings are the ones they published previously, kept rather than dropped.
+
+| Company | Last refreshed | Days behind |
+|---|---|---:|
+| Preferred Residential | 2026-10-03 | 3 |
 
 ## Geocoding
 
-6 listing(s) have no coordinates and are listed below the map rather than placed on it.
+8 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address |
 |---|---|
 | High Desert | 61073 NE Unity Place , Bend, OR 97701 |
+| High Desert | 61608 SE Quill Place, Bend, OR 97702 |
 | Mt. Bachelor | 61579 Lucia St , Bend, OR 97702 |
 | Mt. Bachelor | 61623 Alstrup , Unit B (6), Bend, OR 97702 |
+| Mt. Bachelor | 63273 NW Ski Ln, Unit 2, Bend, OR 97703 |
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 |
-| Superior | 63264 Peale St., Bend, OR 97701 |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 |
+| Trailhead | ? |
 
-6 address(es) are cached as unresolved; the oldest is retried on 2026-10-24.
+8 address(es) are cached as unresolved; the oldest is retried on 2026-10-24.
 
 ## Stale listings
 
-No stale listings: nothing has gone 3 days without a refresh.
+These have not refreshed for 3 days or more, so they may no longer be available. Check the listing itself.
+
+| Company | Address | Price | Last refreshed |
+|---|---|---|---|
+| Preferred Residential | 21170 SE Golden Market Ln, Bend, OR 97702 | 2999 | 2026-10-03 |
+| Preferred Residential | 335 NE Kearney Ave, Bend, OR 97701 | 2395 | 2026-10-03 |
+| Preferred Residential | 61473 Linton Loop, Bend, OR 97702 | 3395 | 2026-10-03 |

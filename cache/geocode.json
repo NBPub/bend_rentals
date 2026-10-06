@@ -4,10 +4,20 @@
   "lon": "-121.2914063",
   "address": "1000 NE Butler Market Rd - 6, Bend, OR 97701"
  },
+ "1000 ne butler market rd - 9 bend or 97701": {
+  "lat": "44.0764281",
+  "lon": "-121.2914053",
+  "address": "1000 NE Butler Market Rd - 9, Bend, OR 97701"
+ },
  "1000 se shadowood dr bend or 97702": {
   "lat": "44.0409650",
   "lon": "-121.2753050",
   "address": "1000 SE Shadowood Dr., Bend, OR 97702"
+ },
+ "1010 nw portland ave - 2 bend or 97701": {
+  "lat": "44.0642270",
+  "lon": "-121.3265067",
+  "address": "1010 NW Portland Ave. - #2, Bend, OR 97701"
  },
  "1025 ne rambling ln - 2 bend or 97701": {
   "lat": "44.0601092",
@@ -28,6 +38,11 @@
   "lat": "44.0402700",
   "lon": "-121.3008773",
   "address": "1031 SE 4th St. #22, Bend, OR 97702"
+ },
+ "1095 ne hidden valley dr - b bend or 97701": {
+  "lat": "44.0778969",
+  "lon": "-121.2892898",
+  "address": "1095 NE Hidden Valley Dr. - #B, Bend, OR 97701"
  },
  "111 nw bond st bend or 97703": {
   "lat": "44.0524696",
@@ -99,6 +114,11 @@
   "lon": "-121.3344730",
   "address": "1302 NW Knoxville, Bend OR 97703"
  },
+ "1302 nw knoxville blvd bend or 97703 (units 107 and 306)": {
+  "lat": "44.06157565041",
+  "lon": "-121.335280594269",
+  "address": "1302 NW Knoxville Blvd, Bend OR 97703 (Units #107 and #306)"
+ },
  "1334 ne purcell - 8 bend or 97701": {
   "lat": "44.0637370",
   "lon": "-121.2746230",
@@ -113,6 +133,11 @@
   "lat": "44.0416509",
   "lon": "-121.3069859",
   "address": "14 SE McKinley Ave - 1, Bend, OR 97702"
+ },
+ "1419 nw 8th st - 301 bend or 97703": {
+  "lat": "44.0626316",
+  "lon": "-121.3234707",
+  "address": "1419 NW 8th St. - 301, Bend, OR 97703"
  },
  "1427 nw 4th street - 1 bend or 97703": {
   "lat": "44.0626122",
@@ -190,6 +215,11 @@
   "address": "1643 NW Knoll, Bend OR 97703",
   "failed_at": "2026-09-24"
  },
+ "1663 nw elgin ave bend or 97703": {
+  "lat": "44.0549749",
+  "lon": "-121.3375330",
+  "address": "1663 NW Elgin Ave., Bend, OR 97703"
+ },
  "1664 nw lewis st bend or 97703": {
   "lat": "44.0652923",
   "lon": "-121.3532077",
@@ -264,6 +294,11 @@
   "lat": "44.092384043902",
   "lon": "-121.342156477299",
   "address": "1955 NW Brogan, Bend, OR 97703"
+ },
+ "1959 nw rimrock dr bend or 97703": {
+  "lat": "44.069026900123",
+  "lon": "-121.340361402949",
+  "address": "1959 NW Rimrock Dr., Bend, OR 97703"
  },
  "1965 nw monterey pines - 11 bend or 97703": {
   "lat": "44.0644968",
@@ -340,6 +375,11 @@
   "lon": "-121.319547161804",
   "address": "20082 SW Porter Place, Bend OR 97702"
  },
+ "20118 flowing water way - unit 1 bend or 97702": {
+  "lat": "44.0340496",
+  "lon": "-121.3161219",
+  "address": "20118 Flowing Water Way - Unit 1, Bend, OR 97702"
+ },
  "20133 flowing water way - 01 bend or 97702": {
   "lat": "44.0338847",
   "lon": "-121.3161600",
@@ -359,6 +399,11 @@
   "lat": "44.0914968",
   "lon": "-121.3095590",
   "address": "20287 Schaeffer Dr., Bend, OR 97703"
+ },
+ "20289 nw hardy rd 1 bend or 97703": {
+  "lat": "44.100552582666",
+  "lon": "-121.309080445972",
+  "address": "20289 NW Hardy Rd # 1, Bend, OR 97703"
  },
  "20318 knightsbridge place bend or 97702": {
   "lat": "44.0273989",
@@ -521,6 +566,11 @@
   "lon": "-121.262071212763",
   "address": "21241 SE Golden Market Lane, Bend, OR 97702"
  },
+ "2150 nw hill street - 4 bend or 97703": {
+  "lat": "44.0710604",
+  "lon": "-121.3082450",
+  "address": "2150 NW Hill Street - 4, Bend, OR 97703"
+ },
  "21730 ne butler market rd bend or 97701": {
   "lat": "44.0947603",
   "lon": "-121.2382012",
@@ -546,6 +596,11 @@
   "lon": "-121.3507175",
   "address": "2345 NW Quinn Creek Loop, Bend, OR 97703"
  },
+ "2399 ne victor place 2 bend or 97701": {
+  "lat": "44.0740860",
+  "lon": "-121.2702690",
+  "address": "2399 NE Victor Place #2, Bend, OR 97701"
+ },
  "2473 nw sacagawea ln bend or 97703": {
   "lat": "44.0626893",
   "lon": "-121.3503230",
@@ -566,6 +621,11 @@
   "lon": "-121.3526978",
   "address": "2564 NW Shields Dr, Bend, OR 97703"
  },
+ "2578 nw pompy place bend or 97703": {
+  "lat": "44.0648372",
+  "lon": "-121.3530066",
+  "address": "2578 NW Pompy Place , Bend, OR 97703"
+ },
  "2617 nw fawn run ln bend or 97703": {
   "lat": "44.0749346",
   "lon": "-121.3484438",
@@ -580,6 +640,11 @@
   "lat": "44.0770970",
   "lon": "-121.2574897",
   "address": "2728 NE Black Oak Place, Bend, OR 97701"
+ },
+ "2741 ne laramie way bend or 97701": {
+  "lat": "44.0678347",
+  "lon": "-121.2591423",
+  "address": "2741 NE Laramie Way , Bend, OR 97701"
  },
  "2858 ne daggett bend or 97701": {
   "lat": "44.0777871",
@@ -600,6 +665,11 @@
   "lat": "44.0653421",
   "lon": "-121.2610264",
   "address": "2950 NE Nikki Court, Unit D, Bend, OR 97701"
+ },
+ "2980 nw shevlin meadows dr 1 bend or 97703": {
+  "lat": "44.070008617813",
+  "lon": "-121.361954465174",
+  "address": "2980 NW Shevlin Meadows Dr. #1, Bend, OR 97703"
  },
  "3032 ne terreo place - 2 bend or 97701": {
   "lat": "44.0905087",
@@ -676,6 +746,11 @@
   "lon": "-121.3083198",
   "address": "5 SW Taft Ave , Unit 2 , Bend, OR 97702"
  },
+ "525 nw broadway bend or 97703": {
+  "lat": "44.0568593",
+  "lon": "-121.3184080",
+  "address": "525 NW Broadway, Bend, OR 97703"
+ },
  "532 nw sisemore bend or 97703": {
   "lat": "44.0556332",
   "lon": "-121.3112892",
@@ -710,6 +785,11 @@
   "lat": "43.984693482862",
   "lon": "-121.343975771752",
   "address": "60149 Cheyenne Road, Bend, OR 97702"
+ },
+ "60303 addie triplett loop bend or 97702": {
+  "lat": "44.0074638",
+  "lon": "-121.3217290",
+  "address": "60303 Addie Triplett Loop, Bend, OR 97702"
  },
  "60785 willow creek loop bend or 97702": {
   "lat": "44.0073419",
@@ -777,15 +857,30 @@
   "lon": "-121.2760082",
   "address": "61175 Ferguson Rd., Bend, OR 97702"
  },
+ "61236 dayspring dr bend or 97701": {
+  "lat": "44.0241573",
+  "lon": "-121.2944417",
+  "address": "61236 Dayspring Dr., Bend, OR 97701"
+ },
  "61275 kristen st bend or 97702": {
   "lat": "44.02628372357",
   "lon": "-121.332252320255",
   "address": "61275 Kristen St, Bend OR 97702"
  },
+ "61320 sw blakely 5 bend or 97702": {
+  "lat": "44.0282943",
+  "lon": "-121.3193583",
+  "address": "61320 SW Blakely #5, Bend OR  97702"
+ },
  "61349 elkhorn st bend or 97702": {
   "lat": "44.0276990",
   "lon": "-121.3224053",
   "address": "61349 Elkhorn St., Bend, OR 97702"
+ },
+ "61416 elder ridge st bend or 97702": {
+  "lat": "44.0311434",
+  "lon": "-121.3417218",
+  "address": "61416 Elder Ridge St., Bend, OR 97702"
  },
  "61456 se brosterhous rd bend or 97702": {
   "lat": "44.0193058",
@@ -828,6 +923,17 @@
   "address": "61579 Lucia St , Bend, OR 97702",
   "failed_at": "2026-09-24"
  },
+ "61608 se quill place bend or 97702": {
+  "lat": "?",
+  "lon": "?",
+  "address": "61608 SE Quill Place, Bend, OR 97702",
+  "failed_at": "2026-10-06"
+ },
+ "61618 se depot loop bend or 97702": {
+  "lat": "44.0362317",
+  "lon": "-121.2858817",
+  "address": "61618 SE Depot Loop, Bend, OR 97702"
+ },
  "61623 alstrup unit b (6) bend or 97702": {
   "lat": "?",
   "lon": "?",
@@ -848,6 +954,11 @@
   "lat": "44.0705936",
   "lon": "-121.2968527",
   "address": "628 NE Isabella Ln, Bend, OR 97701"
+ },
+ "63084 ne sophwith lane bend or 97701": {
+  "lat": "44.090727944397",
+  "lon": "-121.296309306801",
+  "address": "63084 NE Sophwith Lane, Bend, OR 97701"
  },
  "63086 dakota dr bend or 97701": {
   "lat": "44.0910410",
@@ -874,6 +985,17 @@
   "lat": "44.096949409441",
   "lon": "-121.312786931644",
   "address": "63266 Newhall Pl., Bend, OR 97703"
+ },
+ "63273 nw ski ln unit 2 bend or 97703": {
+  "lat": "?",
+  "lon": "?",
+  "address": "63273 NW Ski Ln, Unit 2, Bend, OR 97703",
+  "failed_at": "2026-10-03"
+ },
+ "63323 wrangler place bend or 97703": {
+  "lat": "44.0985940",
+  "lon": "-121.3148534",
+  "address": "63323 Wrangler Place, Bend OR 97703"
  },
  "63339 nw britta 2 bend or 97701": {
   "lat": "44.099684924541",
@@ -930,6 +1052,11 @@
   "lon": "-121.2927479",
   "address": "796 NE Copperleaf Loop - #2, Bend, OR 97701"
  },
+ "817 nw federal st bend or 97703": {
+  "lat": "44.0577471",
+  "lon": "-121.3279009",
+  "address": "817 NW Federal St., Bend, OR 97703"
+ },
  "824 nw newport ave - 1 bend or 97703": {
   "lat": "44.0624683",
   "lon": "-121.3237315",
@@ -945,10 +1072,20 @@
   "lon": "-121.2986213",
   "address": "834 SE 5th Street, Bend, OR 97702"
  },
+ "84 nw portland avenue 2 bend or 97703": {
+  "lat": "44.0642396",
+  "lon": "-121.3132262",
+  "address": "84 NW Portland Avenue #2, Bend, OR 97703"
+ },
  "844 nw newport ave bend or 97703": {
   "lat": "44.0624669",
   "lon": "-121.3239027",
   "address": "844 NW Newport Ave. , Bend, OR 97703"
+ },
+ "847 ne locksley drive bend or 97701": {
+  "lat": "44.0589810",
+  "lon": "-121.2596112",
+  "address": "847 NE Locksley Drive, Bend, OR 97701"
  },
  "858 ne hidden valley dr - 1 bend or 97701": {
   "lat": "44.0805866",
