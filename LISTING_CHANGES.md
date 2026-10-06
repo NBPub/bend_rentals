@@ -26,7 +26,7 @@ The complete record is [`data/listings.csv`](data/listings.csv) and its commit h
 <summary>17 listings</summary>
 
 - new: [1095 NE Hidden Valley Dr. - #B, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/51adcabe-d109-464e-98c0-5f0aac20bbaa) ($1395, Velocity)
-- new: [1302 NW Knoxville Blvd, Bend OR 97703 (Units #107 and #306)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tdblh) ($?, Trailhead)
+- new: [1302 NW Knoxville Blvd, Bend OR 97703 (Units #107 and #306)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tdblh) ($1700, Trailhead)
 - new: [1663 NW Elgin Ave., Bend, OR 97703](https://bend.appfolio.com/listings/detail/bfe49c1c-8d29-4a3c-99f9-c6ea23113a24) ($2795, Bend PM)
 - new: [2741 NE Laramie Way , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/43c6ebf7-be9d-4d28-a457-f576286e5231) ($2700, High Desert)
 - new: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, PMI)
@@ -37,7 +37,7 @@ The complete record is [`data/listings.csv`](data/listings.csv) and its commit h
 - new: [63323 Wrangler Place, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-gzrpb) ($5500, Trailhead)
 - new: [84 NW Portland Avenue #2, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/50162556-4a05-421a-b614-6cc84a733338) ($2000, Elevation)
 - new: [847 NE Locksley Drive, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/1060e29a-da30-4043-b5ba-7bb3ce0c6e62) ($2850, High Country)
-- new: [?](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($?, Trailhead)
+- new: [?](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($2150, Trailhead)
 - gone: [1590 NW Hartford, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/7d123cab-8aa3-4c8c-8085-165bb050d3fa) ($2395, Superior)
 - gone: [20133 Flowing Water Way - 01, Bend, OR 97702](https://bend.appfolio.com/listings/detail/ac96569e-3a42-457e-a293-d3c2545cdfd3) ($2295, Bend PM)
 - gone: [224 NW Jefferson Place, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/c0154e1c-759d-409b-a040-31ac673d8aff) ($4495, Mountain View)
