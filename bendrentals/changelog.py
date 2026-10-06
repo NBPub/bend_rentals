@@ -93,7 +93,7 @@ def geocode_flags(rows: list[dict], cache_entries: dict[str, dict]) -> dict:
     unmapped = [
         {"company": row.get("company") or UNKNOWN,
          "address": row.get("address") or UNKNOWN,
-         "link": row.get("link") or ""}
+         "maps_link": row.get("maps_link") or ""}
         for row in rows if str(row.get("lat", UNKNOWN)) == UNKNOWN
     ]
     failures = [entry for entry in cache_entries.values()
@@ -125,14 +125,19 @@ def _name(row: dict, labels: dict[str, str]) -> str:
     return labels.get(company, company)
 
 
+def _field(row: dict, name: str) -> str:
+    """A row value, or the unknown marker. Never blank: blank would read as 0."""
+    return str(row.get(name) or UNKNOWN)
+
+
 def _entry(row: dict, labels: dict[str, str]) -> str:
-    """One listing as a bullet: address linked to the listing, then details."""
+    """One listing as a bullet: the address linked, then what it is."""
     address = row.get("address") or "(no address published)"
     link = row.get("link") or ""
-    price = row.get("price") or UNKNOWN
     shown = (f"[{address}]({link})"
              if link.startswith(("http://", "https://")) else address)
-    return f"{shown} (${price}, {_name(row, labels)})"
+    return (f"{shown} (${_field(row, 'price')}, {_field(row, 'bedrooms')} BR, "
+            f"{_field(row, 'bathrooms')} BA, {_name(row, labels)})")
 
 
 def _one_day(before_date: str, after_date: str, before: dict, after: dict,
@@ -165,10 +170,11 @@ def _one_day(before_date: str, after_date: str, before: dict, after: dict,
     total = len(added) + len(removed)
     lines += ["", "<details>",
               f"<summary>{total} listing{'' if total == 1 else 's'}</summary>", ""]
+    # Labelled to match the column headings above them.
     for row in sorted(added.values(), key=lambda r: str(r.get("address", ""))):
-        lines.append(f"- new: {_entry(row, labels)}")
+        lines.append(f"- added: {_entry(row, labels)}")
     for row in sorted(removed.values(), key=lambda r: str(r.get("address", ""))):
-        lines.append(f"- gone: {_entry(row, labels)}")
+        lines.append(f"- removed: {_entry(row, labels)}")
     lines += ["", "</details>", ""]
     return lines
 
@@ -183,6 +189,10 @@ def _changes_section(days, labels, history_error) -> list[str]:
         lines += ["Not enough history yet to compare. This needs two committed "
                   "revisions of the CSV to report movement between them.", ""]
         return lines
+
+    lines += ["A removed listing's link will usually no longer resolve: the "
+              "company takes the page down when the property goes. The address "
+              "and price are kept here so the record survives the link.", ""]
     for (before_date, before), (after_date, after) in reversed(
             list(zip(days, days[1:]))):
         # A revision that could not be read arrives as None rather than being
@@ -197,20 +207,42 @@ def _changes_section(days, labels, history_error) -> list[str]:
     return lines
 
 
-def _sources_section(status, today, labels) -> list[str]:
-    behind = companies_behind(status, today=today)
-    lines = ["## Sources", ""]
+def _status_line(today: str, current: list[dict], status: dict[str, str],
+                 behind: dict[str, int], labels: dict[str, str]) -> str:
+    """The one line that says when this ran and whether anything was missing.
+
+    The sources that did not answer are named here rather than in a section of
+    their own: on almost every run there are none, and a heading plus a
+    "nothing to report" line is more furniture than information.
+    """
+    line = (f"Latest run: {today or 'unknown'}. "
+            f"{len(current)} listings from {len(status)} companies.")
     if not behind:
-        lines += [f"All sources refreshed on {today or 'this run'}.", ""]
-        return lines
-    lines += ["These sources did not answer on this run. Their listings are the "
-              "ones they published previously, kept rather than dropped.", "",
-              "| Company | Last refreshed | Days behind |", "|---|---|---:|"]
-    for company in sorted(behind, key=lambda c: (-behind[c], c)):
-        label = labels.get(company, company)
-        lines.append(f"| {_cell(label)} | {status[company]} | {behind[company]} |")
-    lines.append("")
-    return lines
+        return line + " Every source answered."
+
+    named = ", ".join(
+        f"{labels.get(company, company)} ({behind[company]} "
+        f"day{'' if behind[company] == 1 else 's'} behind)"
+        for company in sorted(behind, key=lambda c: (-behind[c], c)))
+    count = len(behind)
+    return (line + f" {count} source{'' if count == 1 else 's'} did not answer "
+            f"and {'its' if count == 1 else 'their'} listings are the ones "
+            f"published previously: {named}.")
+
+
+def _contents(stale_days: int) -> list[str]:
+    return [
+        "**Contents**",
+        "",
+        "- [Recent changes](#recent-changes)",
+        "  - listings added and removed each day, newest first",
+        "- [Geocoding](#geocoding)",
+        "  - listings with no coordinates, which the map cannot place",
+        "- [Stale listings](#stale-listings)",
+        f"  - listings whose source has not answered for {stale_days} days "
+        "or more",
+        "",
+    ]
 
 
 def _geocoding_section(rows, cache_entries, labels) -> list[str]:
@@ -223,15 +255,21 @@ def _geocoding_section(rows, cache_entries, labels) -> list[str]:
     if flags["unmapped"]:
         lines += [f"{len(flags['unmapped'])} listing(s) have no coordinates and "
                   "are listed below the map rather than placed on it.", "",
-                  "| Company | Address |", "|---|---|"]
+                  "| Company | Address | Map |", "|---|---|---|"]
         # Sorted on the label, not the full name behind it: geocode_flags
         # cannot know the labels, and sorting on a name the table does not
         # show leaves the visible order looking arbitrary.
-        labelled = sorted(
-            ((labels.get(item["company"], item["company"]), item["address"])
-             for item in flags["unmapped"]))
-        for shown, address in labelled:
-            lines.append(f"| {_cell(shown)} | {_cell(address)} |")
+        rendered = sorted(
+            (labels.get(item["company"], item["company"]), item["address"],
+             item["maps_link"])
+            for item in flags["unmapped"])
+        for shown, address, maps_link in rendered:
+            # The CSV's own maps_link, so the file and the page send a reader
+            # to the same place. An address we never resolved still searches.
+            search = (f"[search]({maps_link})"
+                      if str(maps_link).startswith(("http://", "https://"))
+                      else "")
+            lines.append(f"| {_cell(shown)} | {_cell(address)} | {search} |")
         lines.append("")
     if flags["failures"]:
         detail = f"{flags['failures']} address(es) are cached as unresolved"
@@ -253,7 +291,8 @@ def _stale_section(rows, status, today, labels, stale_days) -> list[str]:
         return lines
     lines += [f"These have not refreshed for {stale_days} days or more, so "
               "they may no longer be available. Check the listing itself.", "",
-              "| Company | Address | Price | Last refreshed |", "|---|---|---|---|"]
+              "| Company | Address | Price | BR | BA | Last refreshed |",
+              "|---|---|---|---|---|---|"]
     for row in sorted(rows, key=lambda r: (str(r.get("company", "")),
                                            str(r.get("address", "")))):
         company = row.get("company") or UNKNOWN
@@ -262,7 +301,9 @@ def _stale_section(rows, status, today, labels, stale_days) -> list[str]:
         lines.append(
             f"| {_cell(labels.get(company, company))} "
             f"| {_cell(row.get('address') or UNKNOWN)} "
-            f"| {_cell(row.get('price') or UNKNOWN)} "
+            f"| {_cell(_field(row, 'price'))} "
+            f"| {_cell(_field(row, 'bedrooms'))} "
+            f"| {_cell(_field(row, 'bathrooms'))} "
             f"| {status[company]} |")
     lines.append("")
     return lines
@@ -280,22 +321,21 @@ def build(days, current, cache_entries, *, labels=None,
     labels = labels or {}
     today = run_date(current)
     status = source_status(current)
+    behind = companies_behind(status, today=today)
 
     lines = [
         "# Listing changes",
         "",
         "Generated on every scrape by [`build_changes.py`](build_changes.py). "
-        "Do not edit: a change made here is gone by morning.",
+        "The complete record is [`data/listings.csv`](data/listings.csv) and "
+        "its commit history; this is a readable summary of the last few days "
+        "of it.",
         "",
-        f"Latest run: {today or 'unknown'}. "
-        f"{len(current)} listings from {len(status)} companies.",
-        "",
-        "The complete record is [`data/listings.csv`](data/listings.csv) and its "
-        "commit history. This is a readable summary of the last few days of it.",
+        _status_line(today, current, status, behind, labels),
         "",
     ]
+    lines += _contents(stale_days)
     lines += _changes_section(days, labels, history_error)
-    lines += _sources_section(status, today, labels)
     lines += _geocoding_section(current, cache_entries, labels)
     lines += _stale_section(current, status, today, labels, stale_days)
     return "\n".join(lines).rstrip() + "\n"

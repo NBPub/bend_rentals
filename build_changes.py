@@ -29,6 +29,12 @@ from bendrentals.registry import LISTINGS_CSV, display_names, load_sites
 
 DEFAULT_OUT = Path("LISTING_CHANGES.md")
 DEFAULT_DAYS = 7
+
+#: How many extra commits to list beyond the window, to absorb days that carry
+#: more than one. The scheduled run commits once a day, but a fix or a backfill
+#: adds another, and only the newest commit of each date is used. Listing costs
+#: one `git log`; only the revisions actually kept are read with `git show`.
+SAME_DAY_CUSHION = 6
 REGISTRY = Path("sites.toml")
 
 
@@ -54,7 +60,8 @@ def labels(path: Path = REGISTRY) -> dict[str, str]:
 def _history(*, days: int, root: Path) -> tuple[list, str]:
     """(oldest-first [(date, rows)], error message).
 
-    Asks for one revision more than the window. Reporting N days of movement
+    Asks for more commits than the window needs, collapses them to one per
+    date, and keeps the newest dates. Reporting N days of movement
     needs N+1 entries, and whether `_with_today` adds one or replaces the
     newest depends on whether this run's commit already exists: in the workflow
     it does not, run again afterwards it does. Fetching the extra and letting
@@ -69,12 +76,20 @@ def _history(*, days: int, root: Path) -> tuple[list, str]:
     movement. Only a failure to list the history at all is total.
     """
     try:
-        revisions = daily_revisions(days=days + 1, root=root)
+        revisions = daily_revisions(days=days + 1 + SAME_DAY_CUSHION, root=root)
     except GitUnavailable as error:
         return [], str(error)
 
+    # One entry per date, keeping that date's newest commit, which is the state
+    # the day ended in. Without this a day with two commits gets two sections
+    # under the same heading, the first comparing a date against itself.
+    newest_per_date: dict[str, str] = {}
+    for date, sha in revisions:                      # newest first
+        newest_per_date.setdefault(date, sha)
+    wanted = sorted(newest_per_date.items())[-(days + 1):]
+
     past = []
-    for date, sha in reversed(revisions):
+    for date, sha in wanted:
         try:
             past.append((date, rows_at(sha, root=root)))
         except (GitUnavailable, csv.Error) as error:

@@ -134,8 +134,10 @@ DEFAULT_CSV_URL = (
 #: The GitHub blob view rather than the file in docs/: docs/.nojekyll turns
 #: Jekyll off, so a .md served from Pages arrives as plain text. GitHub
 #: renders it as markdown.
+#: The anchor skips GitHub's file-tree header and lands on the content.
 DEFAULT_CHANGES_URL = (
     "https://github.com/NBPub/bend_rentals/blob/main/LISTING_CHANGES.md"
+    "#listing-changes"
 )
 
 

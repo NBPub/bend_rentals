@@ -176,3 +176,30 @@ def test_the_window_is_the_same_when_today_is_already_committed(
         tmp_path, monkeypatch):
     """The local-rebuild case. The window must not shrink by one."""
     assert _window_sections(tmp_path, monkeypatch, TEN_DAYS, "2026-01-20") == 3
+
+
+def test_two_commits_on_one_day_produce_one_section(tmp_path, monkeypatch):
+    """The file reports days, so a day with two commits is still one day.
+
+    Any extra commit touching the CSV (a fix, a backfill) would otherwise add
+    a second section with the same heading, the first of them comparing a date
+    against itself and reporting no change.
+    """
+    csv_path = tmp_path / "listings.csv"
+    write_csv(csv_path, [{"company": "A", "link": "https://x/1",
+                          "address": "Kept Rd", "price": "1000",
+                          "scraped_at": "2026-01-11T08:00:00", "lat": "44.0"}])
+    monkeypatch.setattr(build_changes, "daily_revisions", lambda **kw: [
+        ("2026-01-10", "newer_same_day"),
+        ("2026-01-10", "older_same_day"),
+        ("2026-01-09", "yesterday"),
+    ])
+    monkeypatch.setattr(build_changes, "rows_at", lambda sha, **kw: {
+        "https://x/1": {"company": "A", "link": "https://x/1",
+                        "address": "Kept Rd", "price": "1000"},
+    })
+    out = tmp_path / "out.md"
+    assert build_changes.main(
+        ["--csv", str(csv_path), "--out", str(out), "--days", "5"]) == 0
+    text = out.read_text(encoding="utf-8")
+    assert text.count("### 2026-01-10") == 1

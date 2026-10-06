@@ -133,16 +133,32 @@ def test_a_schema_change_does_not_invent_added_or_removed_listings():
     assert "No listings added or removed" in text
 
 
-def test_all_sources_current_says_so_in_one_line():
-    text = build([], CURRENT, {})
-    assert "All sources refreshed" in text
+def test_there_is_no_separate_sources_section():
+    """Its one line of information belongs beside the run date."""
+    assert "## Sources" not in build([], CURRENT, {})
 
 
-def test_a_source_that_missed_today_is_named():
+def test_every_source_answering_is_stated_on_the_status_line():
+    status_line = _status_line(build([], CURRENT, {}))
+    assert "Every source answered" in status_line
+
+
+def test_a_source_that_missed_today_is_named_on_the_status_line():
     current = [row(company="A", link="1", scraped=f"{TODAY}T08:00:00"),
                row(company="B", link="2", scraped="2026-01-08T08:00:00")]
-    text = build([], current, {})
-    assert "B" in text.split("## Sources")[1].split("##")[0]
+    status_line = _status_line(build([], current, {}))
+    assert "B" in status_line
+    assert "2 days behind" in status_line
+
+
+def test_a_failed_source_uses_its_short_label_on_the_status_line():
+    current = [row(company="A Very Long Name", link="1",
+                   scraped="2026-01-08T08:00:00"),
+               row(company="B", link="2", scraped=f"{TODAY}T08:00:00")]
+    status_line = _status_line(build([], current, {},
+                                     labels={"A Very Long Name": "Short"}))
+    assert "Short" in status_line
+    assert "A Very Long Name" not in status_line
 
 
 def test_stale_listings_are_named_past_the_threshold():
@@ -167,7 +183,7 @@ def test_geocoding_with_nothing_to_report_says_nothing_to_flag():
 def test_history_unavailable_is_stated_not_hidden():
     text = build([], CURRENT, {}, history_error="shallow clone")
     assert "shallow clone" in text
-    assert "## Sources" in text          # the rest of the file is still built
+    assert "## Geocoding" in text        # the rest of the file is still built
 
 
 def test_too_little_history_is_not_an_error():
@@ -228,3 +244,101 @@ def test_an_unreadable_revision_labels_its_day_rather_than_merging_two():
     # The day whose predecessor is missing gets no invented count table.
     today_section = text.split(f"### {TODAY}")[1].split("##")[0]
     assert "| Company | Added | Removed |" not in today_section
+
+
+def _status_line(text):
+    """The 'Latest run: ...' line out of a built file."""
+    return next(l for l in text.splitlines() if l.startswith("Latest run:"))
+
+
+def test_a_contents_block_links_every_section():
+    text = build([], CURRENT, {})
+    contents = text.split("**Contents**")[1].split("## ")[0]
+    for anchor in ("#recent-changes", "#geocoding", "#stale-listings"):
+        assert anchor in contents
+    # Each entry carries a one-line description beneath it.
+    assert "  - " in contents
+
+
+def test_the_contents_block_follows_the_status_line():
+    text = build([], CURRENT, {})
+    assert text.index("Latest run:") < text.index("**Contents**")
+    assert text.index("**Contents**") < text.index("## Recent changes")
+
+
+def test_the_do_not_edit_warning_is_gone():
+    assert "Do not edit" not in build([], CURRENT, {})
+
+
+def test_the_opening_line_carries_the_record_sentences():
+    """The trailing paragraph folded into the first line."""
+    text = build([], CURRENT, {})
+    opening = text.splitlines()[2]
+    assert "build_changes.py" in opening
+    assert "data/listings.csv" in opening
+    assert "readable summary" in opening
+
+
+def test_entries_are_labelled_added_and_removed_like_the_columns():
+    before = rows_by_link(row(link="L1", address="Gone St"))
+    after = rows_by_link(row(link="L2", address="New Ave"))
+    text = build([("2026-01-09", before), (TODAY, after)], CURRENT, {})
+    assert "- added: " in text
+    assert "- removed: " in text
+    assert "- new: " not in text
+    assert "- gone: " not in text
+
+
+def test_an_entry_carries_bedrooms_and_bathrooms_between_price_and_company():
+    after = rows_by_link(row(link="L2", address="New Ave", price="1800",
+                             bedrooms="2", bathrooms="1.5",
+                             company="Acme Property Management"))
+    text = build([("2026-01-09", {}), (TODAY, after)], CURRENT,
+                 {}, labels={"Acme Property Management": "Acme"})
+    assert "($1800, 2 BR, 1.5 BA, Acme)" in text
+
+
+def test_an_entry_missing_bedrooms_shows_the_unknown_marker():
+    after = rows_by_link(row(link="L2", address="New Ave", price="1800",
+                             bedrooms="?", bathrooms="?"))
+    text = build([("2026-01-09", {}), (TODAY, after)], CURRENT, {})
+    assert "($1800, ? BR, ? BA, A)" in text
+
+
+def test_recent_changes_warns_that_removed_links_may_not_resolve():
+    before = rows_by_link(row(link="L1"))
+    after = rows_by_link(row(link="L2"))
+    text = build([("2026-01-09", before), (TODAY, after)], CURRENT, {})
+    section = text.split("## Recent changes")[1].split("### ")[0]
+    assert "no longer resolve" in section
+
+
+def test_the_geocoding_table_links_a_map_search():
+    current = [row(company="A", link="L1", lat="?", address="1 Main St",
+                   maps_link="https://www.google.com/maps/search/?api=1&query=1+Main+St",
+                   scraped=f"{TODAY}T08:00:00")]
+    text = build([], current, {})
+    geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
+    assert "| Company | Address | Map |" in geocoding
+    assert "https://www.google.com/maps/search/?api=1&query=1+Main+St" in geocoding
+
+
+def test_a_row_with_no_map_link_leaves_the_cell_empty_not_broken():
+    current = [row(company="A", link="L1", lat="?", address="1 Main St",
+                   maps_link="?", scraped=f"{TODAY}T08:00:00")]
+    text = build([], current, {})
+    geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
+    table_row = next(l for l in geocoding.splitlines() if "1 Main St" in l)
+    assert table_row.rstrip().endswith("|")
+    assert "](" not in table_row
+
+
+def test_the_stale_table_carries_bedrooms_and_bathrooms():
+    current = [row(company="A", link="1", scraped=f"{TODAY}T08:00:00"),
+               row(company="Old", link="2", scraped="2026-01-05T08:00:00",
+                   address="Stale Rd", price="1400", bedrooms="2",
+                   bathrooms="1")]
+    text = build([], current, {})
+    stale = text.split("## Stale listings")[1]
+    assert "| Company | Address | Price | BR | BA | Last refreshed |" in stale
+    assert "| 1400 | 2 | 1 |" in stale
