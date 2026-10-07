@@ -169,6 +169,11 @@
   "lon": "-121.3353503",
   "address": "1529 NW Portland Ave - B, Bend, OR 97701"
  },
+ "1529 sw knoll ave bend or 97702": {
+  "lat": "44.0502407",
+  "lon": "-121.3341777",
+  "address": "1529 SW Knoll Ave., Bend, OR 97702"
+ },
  "1542 ne butler market rd bend or 97701": {
   "lat": "44.0793976",
   "lon": "-121.2827396",
@@ -656,6 +661,11 @@
   "lon": "-121.2599366",
   "address": "2899 NE Jackdaw Dr, Bend, OR 97701"
  },
+ "2940 ne nikki ct 3 bend or 97701": {
+  "lat": "44.0653463",
+  "lon": "-121.2610425",
+  "address": "2940 NE Nikki Ct. #3, Bend, OR 97701"
+ },
  "2948 ne conners ave bend or 97701": {
   "lat": "44.0703586",
   "lon": "-121.2578088",
@@ -696,6 +706,11 @@
   "lon": "-121.2836673",
   "address": "330 SE 15th St. #11, Bend, OR 97702"
  },
+ "330 se 15th st 4 bend or 97702": {
+  "lat": "44.0466414",
+  "lon": "-121.2836673",
+  "address": "330 SE 15th St. #4, Bend, OR 97702"
+ },
  "3336 nw celilo ln - 1 bend or 97703": {
   "lat": "44.0660401",
   "lon": "-121.3615694",
@@ -730,6 +745,11 @@
   "lat": "44.0624776",
   "lon": "-121.3182180",
   "address": "418 NW Newport Ave. , Bend, OR 97703"
+ },
+ "423 sw garfield - 100 bend or 97702": {
+  "lat": "44.0354022",
+  "lon": "-121.3146980",
+  "address": "423 SW Garfield - 100, Bend, OR 97702"
  },
  "437 se railroad st bend or 97702": {
   "lat": "44.0493261",
@@ -1017,6 +1037,11 @@
   "lon": "-121.3020636",
   "address": "65066 Hunnell, Bend OR 97703"
  },
+ "65145 76th street bend or 97703": {
+  "lat": "44.166500481564",
+  "lon": "-121.261245576785",
+  "address": "65145 76th Street, Bend, OR 97703"
+ },
  "65280 76th st bend or 97701": {
   "lat": "44.169465583536",
   "lon": "-121.2611010287",
@@ -1056,6 +1081,11 @@
   "lat": "44.0577471",
   "lon": "-121.3279009",
   "address": "817 NW Federal St., Bend, OR 97703"
+ },
+ "82 ne cessna dr 2 bend or 97701": {
+  "lat": "44.0527348",
+  "lon": "-121.2764285",
+  "address": "82 NE Cessna Dr #2, Bend, OR 97701"
  },
  "824 nw newport ave - 1 bend or 97703": {
   "lat": "44.0624683",

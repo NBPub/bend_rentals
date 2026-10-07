@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-06. 123 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (3 days behind).
+Latest run: 2026-10-07. 126 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -16,6 +16,36 @@ Latest run: 2026-10-06. 123 listings from 16 companies. 1 source did not answer 
 ## Recent changes
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-07
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 0 |
+| Elevation | 0 | 1 |
+| High Desert | 1 | 0 |
+| Hummingbird | 0 | 1 |
+| Mountain View | 3 | 0 |
+| Mt. Bachelor | 0 | 1 |
+| Plus | 1 | 0 |
+| Ridgeline | 1 | 1 |
+
+<details>
+<summary>11 listings</summary>
+
+- added: [1529 SW Knoll Ave., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/465bbff8-b0f2-4a4c-a8f1-0b5b6bc08c37) ($1595, 1 BR, 1 BA, Mountain View)
+- added: [2940 NE Nikki Ct. #3, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/040b2822-0b40-4649-970e-7477ea654e4a) ($1795, 2 BR, 1.5 BA, High Desert)
+- added: [330 SE 15th St. #4, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/7c6e5a2b-2ee4-4eea-a230-d568c7938b27) ($1295, 1 BR, 1 BA, Plus)
+- added: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2195, 3 BR, 2 BA, Bend PM)
+- added: [61394 Cultus Lake Ct, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/62) ($5495, 5 BR, 4 BA, Ridgeline)
+- added: [65145 76th Street, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/41888f22-de9b-4850-b32c-52ac85836111) ($4795, 4 BR, 3.5 BA, Mountain View)
+- added: [82 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/15ed2f3f-059f-4643-b4a5-f8ef2bdbd6fb) ($1595, 1 BR, 1 BA, Mountain View)
+- removed: [1801 Northeast Purcell Boulevard, Unit #20, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/45) ($2225, 2 BR, 3 BA, Ridgeline)
+- removed: [1909 NE Bear Creek #2, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/152735) ($1650, 2 BR, 1 BA, Hummingbird)
+- removed: [1955 NW Brogan, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/0a1992b1-7270-4655-bc20-1d90d99357d6) ($4500, 5 BR, 3.5 BA, Elevation)
+- removed: [61623 Alstrup , Unit B (6), Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/fe9c3839-a44e-4861-85d1-0af6415de35e) ($1695, 1 BR, 1 BA, Mt. Bachelor)
+
+</details>
 
 ### 2026-10-06
 
@@ -175,39 +205,15 @@ A removed listing's link will usually no longer resolve: the company takes the p
 
 </details>
 
-### 2026-09-29
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Desert | 1 | 0 |
-| Hummingbird | 1 | 0 |
-| Mountain View | 0 | 2 |
-| Mt. Bachelor | 0 | 2 |
-| Plus | 1 | 0 |
-
-<details>
-<summary>7 listings</summary>
-
-- added: [1673 NW Portland - #21, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/3f5b94ac-47d5-46f4-88ff-2bbedff84615) ($1400, ? BR, ? BA, Plus)
-- added: [20318 Knightsbridge Place, Bend, OR 97702](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/64670) ($2225, 2 BR, 2 BA, Hummingbird)
-- added: [2728 NE Black Oak Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/b4aa166d-8793-4d1a-8d00-70cf9c2fbe8c) ($3195, 3 BR, 2.5 BA, High Desert)
-- removed: [1302 NE Dempsey Drive, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/462bcffd-4a57-4aa5-8dc4-178d2cdafe46) ($2250, 3 BR, 1 BA, Mountain View)
-- removed: [206- 200 SW Summer Lake Dr , Unit 104, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/af1896ff-4469-475f-ba26-640781b320eb) ($1795, 2 BR, 2 BA, Mt. Bachelor)
-- removed: [20766 Canterbury Ct, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/6b53d56b-c56c-45bc-9cf6-7f9efd14c9ca) ($2495, 3 BR, 2 BA, Mountain View)
-- removed: [3265 NE Bain St , Bend, OR 97701](https://mtbachpm.appfolio.com/listings/detail/940a2ace-db4c-4d3d-a7af-c1113d13556d) ($3200, 4 BR, 2.5 BA, Mt. Bachelor)
-
-</details>
-
 ## Geocoding
 
-8 listing(s) have no coordinates and are listed below the map rather than placed on it.
+7 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61073 NE Unity Place , Bend, OR 97701 | [search](https://www.google.com/maps/search/?api=1&query=61073+NE+Unity+Place+%2C+Bend%2C+OR+97701) |
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
 | Mt. Bachelor | 61579 Lucia St , Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61579+Lucia+St+%2C+Bend%2C+OR+97702) |
-| Mt. Bachelor | 61623 Alstrup , Unit B (6), Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61623+Alstrup+%2C+Unit+B+%286%29%2C+Bend%2C+OR+97702) |
 | Mt. Bachelor | 63273 NW Ski Ln, Unit 2, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+NW+Ski+Ln%2C+Unit+2%2C+Bend%2C+OR+97703) |
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
@@ -217,10 +223,4 @@ A removed listing's link will usually no longer resolve: the company takes the p
 
 ## Stale listings
 
-These have not refreshed for 3 days or more, so they may no longer be available. Check the listing itself.
-
-| Company | Address | Price | BR | BA | Last refreshed |
-|---|---|---|---|---|---|
-| Preferred Residential | 21170 SE Golden Market Ln, Bend, OR 97702 | 2999 | 2 | 2.5 | 2026-10-03 |
-| Preferred Residential | 335 NE Kearney Ave, Bend, OR 97701 | 2395 | 2 | 1 | 2026-10-03 |
-| Preferred Residential | 61473 Linton Loop, Bend, OR 97702 | 3395 | 3 | 2.5 | 2026-10-03 |
+No stale listings: nothing has gone 3 days without a refresh.
