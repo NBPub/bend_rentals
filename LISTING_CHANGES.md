@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-07. 126 listings from 16 companies. Every source answered.
+Latest run: 2026-10-08. 126 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
 
 **Contents**
 
@@ -16,6 +16,30 @@ Latest run: 2026-10-07. 126 listings from 16 companies. Every source answered.
 ## Recent changes
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-08
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 0 | 1 |
+| Mountain View | 2 | 1 |
+| Mt. Bachelor | 1 | 0 |
+| Plus | 1 | 0 |
+| Superior | 0 | 2 |
+
+<details>
+<summary>8 listings</summary>
+
+- added: [1727 NW Wall St. #7, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/a79432f9-e166-418d-a9d2-a50befe2e01c) ($2095, 3 BR, 1 BA, Plus)
+- added: [1940 NE Monterey Pines, #15, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/f5b74f22-81c1-4d6e-98f9-28efbfa5d12d) ($2600, 1 BR, 1 BA, Mt. Bachelor)
+- added: [2058 NW Black Pines Pl #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/648d3d0a-569f-4b78-a556-78e8c77861c1) ($1895, 2 BR, 1 BA, Mountain View)
+- added: [20661 Tango Creek Ave, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/de2eaa03-5502-4c0b-a7c7-1ecbe8d71644) ($2895, 4 BR, 3 BA, Mountain View)
+- removed: [1000 SE Shadowood Dr., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/bc40834d-6d7e-45da-aff9-2d8a3151fecf) ($2995, 4 BR, 2.5 BA, Mountain View)
+- removed: [20629 SE Gemstone Ave, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/f831f8b6-ea0e-4092-9d8a-a63f0184274f) ($2895, 4 BR, 2.5 BA, Superior)
+- removed: [2150 NW Hill Street - 4, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/5e007824-4292-4b20-8874-9c692bdaf5b2) ($1895, 2 BR, 1 BA, Superior)
+- removed: [2899 NE Jackdaw Dr, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/bfd78975-f55c-40aa-9c0f-a1906c4f295b) ($2450, 3 BR, 2.5 BA, Elevation)
+
+</details>
 
 ### 2026-10-07
 
@@ -178,30 +202,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [20783 Boulderfield Avenue - 1, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/73950) ($2375, 3 BR, 2.5 BA, Hummingbird)
 - removed: [63264 Peale St., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/74e60d99-0869-4e2b-b9e2-fef6d9e0a02a) ($2995, 4 BR, 2.5 BA, Superior)
 - removed: [762 NE Savannah Dr. , Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/888f5626-8f8c-41c8-bc0c-dec0e111be7f) ($1895, 2 BR, 2 BA, Superior)
-
-</details>
-
-### 2026-09-30
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Country | 0 | 1 |
-| Mountain View | 1 | 0 |
-| Mt. Bachelor | 1 | 0 |
-| Plus | 1 | 1 |
-| Superior | 1 | 2 |
-
-<details>
-<summary>8 listings</summary>
-
-- added: [1133 NW Wall Street - 230, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/41abea8e-9f15-4eb4-8531-df9fce89ca51) ($2250, 1 BR, 1 BA, Mountain View)
-- added: [2521 NE Cretia Ct, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/582c3da6-6a81-485f-9a2b-bfde343c48da) ($2800, 3 BR, 2.5 BA, Plus)
-- added: [3336 NW Celilo Ln. - #2, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/c60663cc-6876-4bd5-bf59-ebf7a1775b6e) ($1795, 0 BR, 1 BA, Superior)
-- added: [61540 Lucia St , Unit 1, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/f6fd7d7e-f455-41e9-8580-962f06bbd930) ($2195, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [20030 Voltera Pl., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/01c8ff75-b421-41d1-ae10-e2cd1b318716) ($2195, 3 BR, 2 BA, Superior)
-- removed: [2112 NW Harriman, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/b8000cb4-1ecd-4266-bb75-57f2ad4a9f0e) ($1995, 1 BR, 1.5 BA, Plus)
-- removed: [3336 NW Celilo Ln. - #1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/43b209f1-732f-421d-8294-ee2b3712b2cd) ($3400, 2 BR, 2.5 BA, Superior)
-- removed: [63150 Dakota Dr. , Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/acce4e3e-13e6-494c-8849-5fbc285eab9d) ($2495, 3 BR, 2.5 BA, High Country)
 
 </details>
 

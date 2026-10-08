@@ -255,6 +255,11 @@
   "lon": "-121.461825455046",
   "address": "17127 Merganser Drive, Bend, OR 97707"
  },
+ "1727 nw wall st 7 bend or 97703": {
+  "lat": "44.0670033",
+  "lon": "-121.3088656",
+  "address": "1727 NW Wall St. #7, Bend, OR 97703"
+ },
  "17376 lively lane bend or 97707": {
   "lat": "43.804957051376",
   "lon": "-121.457267530363",
@@ -294,6 +299,11 @@
   "lat": "44.023074407685",
   "lon": "-121.35766401109",
   "address": "19318 SW Marshmallow Pl., Bend, OR 97702"
+ },
+ "1940 ne monterey pines 15 bend or 97703": {
+  "lat": "44.064451383614",
+  "lon": "-121.341928864741",
+  "address": "1940 NE Monterey Pines, #15, Bend, OR 97703"
  },
  "1955 nw brogan bend or 97703": {
   "lat": "44.092384043902",
@@ -461,6 +471,11 @@
   "lon": "-121.2731052",
   "address": "2055 NE York Circle #1, Bend, OR 97701"
  },
+ "2058 nw black pines pl 1 bend or 97703": {
+  "lat": "44.065689902334",
+  "lon": "-121.343779407801",
+  "address": "2058 NW Black Pines Pl #1, Bend, OR 97703"
+ },
  "2058 nw monterey pines dr - 1 bend or 97703": {
   "lat": "44.0644794",
   "lon": "-121.3419375",
@@ -490,6 +505,11 @@
   "lat": "44.1092283",
   "lon": "-121.2904717",
   "address": "20655 Cooley Rd, Bend, OR 97701"
+ },
+ "20661 tango creek ave bend or 97701": {
+  "lat": "44.101715936422",
+  "lon": "-121.290074602142",
+  "address": "20661 Tango Creek Ave, Bend, OR 97701"
  },
  "20681 se iron horse ln bend or 97702": {
   "lat": "44.0354927",
