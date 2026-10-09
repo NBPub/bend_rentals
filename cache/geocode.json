@@ -345,6 +345,11 @@
   "lon": "-121.275465845292",
   "address": "1980 NE Zachary Ct - PP-Z1980-3, Bend, OR 97701"
  },
+ "1980 ne zachary ct bend or 97701": {
+  "lat": "44.0596512",
+  "lon": "-121.2754814",
+  "address": "1980 NE Zachary Ct., Bend, OR 97701"
+ },
  "19884 duck call lane bend or 97702": {
   "lat": "44.0177180",
   "lon": "-121.3307590",
@@ -460,6 +465,11 @@
   "lat": "44.033313695235",
   "lon": "-121.298886638266",
   "address": "20511 SE Brentwood, Bend OR 97702"
+ },
+ "20523 se cameron ave bend or 97702": {
+  "lat": "44.0357380",
+  "lon": "-121.2973329",
+  "address": "20523 SE Cameron Ave., Bend, OR 97702"
  },
  "20537 dylan loop bend or 97702": {
   "lat": "44.0282464",
@@ -1046,6 +1056,11 @@
   "lat": "44.0590263",
   "lon": "-121.2965036",
   "address": "636 NE Irving, Bend, OR 97701"
+ },
+ "638 ne vail lane bend or 97701": {
+  "lat": "44.0713832",
+  "lon": "-121.2965018",
+  "address": "638 NE Vail Lane, Bend, OR 97701"
  },
  "644 ne greenwood ave suite 2 bend or 97701": {
   "lat": "44.0601742",

@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-08. 126 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
+Latest run: 2026-10-09. 128 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -16,6 +16,25 @@ Latest run: 2026-10-08. 126 listings from 16 companies. 1 source did not answer 
 ## Recent changes
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-09
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Desert | 1 | 0 |
+| Lifestyles | 1 | 0 |
+| Mountain View | 1 | 0 |
+| Velocity | 0 | 1 |
+
+<details>
+<summary>4 listings</summary>
+
+- added: [20523 SE Cameron Ave., Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/129a7012-88c4-483c-ae4d-2b2fc2db08e9) ($2700, 3 BR, 2.5 BA, Lifestyles)
+- added: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, 2 BR, 2 BA, High Desert)
+- added: [638 NE Vail Lane, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/f37cc795-18b2-46d5-853d-5dad89072463) ($2495, 3 BR, 2.5 BA, Mountain View)
+- removed: [3344 NW Celilo Ln. - #2, Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/c44fb3c2-42b4-4bf5-83a4-a67f1fd81d5c) ($1595, 0 BR, 1 BA, Velocity)
+
+</details>
 
 ### 2026-10-08
 
@@ -173,35 +192,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, 2 BR, 2 BA, High Desert)
 - removed: [354 NE Penn Ave Apt 3, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/61) ($1450, 1 BR, 1 BA, PMI)
 - removed: [3807 Eagle Road, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/2b6bd98c-6ba4-4699-a03e-f56fd0e1c35e) ($2495, 3 BR, 2.5 BA, Plus)
-
-</details>
-
-### 2026-10-01
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-| Hummingbird | 0 | 1 |
-| Mountain View | 0 | 1 |
-| Mt. Bachelor | 1 | 1 |
-| Ridgeline | 0 | 1 |
-| Superior | 2 | 2 |
-| Velocity | 1 | 0 |
-
-<details>
-<summary>11 listings</summary>
-
-- added: [1959 NW Rimrock Dr., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/6822d0e8-efc1-4d6d-9853-98caf3616a91) ($5995, 5 BR, 3 BA, Superior)
-- added: [20118 Flowing Water Way - Unit 1, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/0e5e4c66-01fe-4010-8b58-bee8893c8fa3) ($2445, 2 BR, 2.5 BA, Mt. Bachelor)
-- added: [20289 NW Hardy Rd # 1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/8b23bd5a-23e5-48f4-ab95-59d4f6eaa6d0) ($2395, 2 BR, 2 BA, Superior)
-- added: [2578 NW Pompy Place , Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/f27f96f4-bca6-41b8-a281-3b607316c5b0) ($2450, 1 BR, 1 BA, Velocity)
-- added: [61618 SE Depot Loop, Bend, OR 97702](https://bend.appfolio.com/listings/detail/113cba1a-86f1-4639-b3f9-6cc5b2edc209) ($2495, 3 BR, 2.5 BA, Bend PM)
-- removed: [19804 Wetland Ct, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/29) ($2995, 3 BR, 2 BA, Ridgeline)
-- removed: [206- 200 SW Summer Lake Dr , Unit 102, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/0142e4a6-e08a-4c0f-8ab2-ff5c01c20fae) ($1795, 2 BR, 2 BA, Mt. Bachelor)
-- removed: [2070 NW Monterey Pines Dr. - 2, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/e29d3005-143c-443f-bb1d-c8683f16df12) ($2195, 2 BR, 1 BA, Mountain View)
-- removed: [20783 Boulderfield Avenue - 1, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/73950) ($2375, 3 BR, 2.5 BA, Hummingbird)
-- removed: [63264 Peale St., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/74e60d99-0869-4e2b-b9e2-fef6d9e0a02a) ($2995, 4 BR, 2.5 BA, Superior)
-- removed: [762 NE Savannah Dr. , Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/888f5626-8f8c-41c8-bc0c-dec0e111be7f) ($1895, 2 BR, 2 BA, Superior)
 
 </details>
 
