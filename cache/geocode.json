@@ -89,6 +89,11 @@
   "lon": "-121.3123322",
   "address": "1157 SW Silver Lake Blvd, Bend, OR 97702"
  },
+ "1205 ne ross rd - b bend or 97701": {
+  "lat": "44.0793067",
+  "lon": "-121.2891436",
+  "address": "1205 NE Ross Rd - B, Bend, OR 97701"
+ },
  "1232 nw ogden ave bend or 97703": {
   "lat": "44.0633587",
   "lon": "-121.3291892",
@@ -158,6 +163,16 @@
   "lat": "44.0518020",
   "lon": "-121.3328429",
   "address": "1459 NW Albany - 34, Bend, OR 97703"
+ },
+ "1459 nw albany - 42 bend or 97703": {
+  "lat": "44.0518000",
+  "lon": "-121.3328419",
+  "address": "1459 NW Albany - 42, Bend, OR 97703"
+ },
+ "1469 nw kingston bend or 97703": {
+  "lat": "44.0597437",
+  "lon": "-121.3332557",
+  "address": "1469 NW Kingston , Bend, OR 97703"
  },
  "1522 ne butler market rd bend or 97701": {
   "lat": "44.0790785",
@@ -995,6 +1010,11 @@
   "lon": "-121.2660695",
   "address": "61686 Daly Estates, Bend, OR 97702"
  },
+ "61701 bridge creek dr bend or 97702": {
+  "lat": "44.0417000",
+  "lon": "-121.3448157",
+  "address": "61701 Bridge Creek Dr., Bend, OR 97702"
+ },
  "62593 hawkview road bend or 97701": {
   "lat": "44.07321717839",
   "lon": "-121.258299538185",
@@ -1066,6 +1086,11 @@
   "lat": "44.0601742",
   "lon": "-121.2961328",
   "address": "644 NE Greenwood Ave Suite #2, Bend, OR 97701"
+ },
+ "64420 bailey rd bend or 97703": {
+  "lat": "44.1370015",
+  "lon": "-121.3409347",
+  "address": "64420 Bailey Rd, Bend, OR 97703"
  },
  "65066 hunnell bend or 97703": {
   "lat": "44.1086349",

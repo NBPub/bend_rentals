@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-09. 128 listings from 16 companies. Every source answered.
+Latest run: 2026-10-10. 128 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -16,6 +16,33 @@ Latest run: 2026-10-09. 128 listings from 16 companies. Every source answered.
 ## Recent changes
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-10
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 3 | 1 |
+| High Desert | 0 | 1 |
+| Hummingbird | 0 | 1 |
+| PMI | 0 | 1 |
+| Superior | 1 | 0 |
+| Velocity | 1 | 1 |
+
+<details>
+<summary>10 listings</summary>
+
+- added: [1205 NE Ross Rd - B, Bend, OR 97701](https://bend.appfolio.com/listings/detail/3dc8688c-4353-42cb-9176-4b5fb26e14fb) ($1695, 2 BR, 1 BA, Bend PM)
+- added: [1459 NW Albany - 42, Bend, OR 97703](https://bend.appfolio.com/listings/detail/7714dbbf-db90-479f-90bd-0395bfc71472) ($1595, 3 BR, 1 BA, Bend PM)
+- added: [1469 NW Kingston , Bend, OR 97703](https://bend.appfolio.com/listings/detail/370c18df-b926-4f17-91b0-66b01aa2eedf) ($2495, 3 BR, 2 BA, Bend PM)
+- added: [61701 Bridge Creek Dr., Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/e66b7451-6c5a-4559-b66f-15b474abb124) ($2695, 3 BR, 2.5 BA, Velocity)
+- added: [64420 Bailey Rd, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/f41b304f-3c53-4fb2-a973-c9d8bb8e2465) ($5750, 4 BR, 3 BA, Superior)
+- removed: [1754 NE Lotus Dr #1, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/55894afc-8bfa-49c4-addd-ee9abad2fe3c) ($2195, 3 BR, 2.5 BA, High Desert)
+- removed: [20058 Beth Ave. - 04, Bend, OR 97702](https://bend.appfolio.com/listings/detail/27e85839-c196-445a-8366-35e6faa5cbee) ($2095, 3 BR, 2.5 BA, Bend PM)
+- removed: [20318 Knightsbridge Place, Bend, OR 97702](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/64670) ($2225, 2 BR, 2 BA, Hummingbird)
+- removed: [3032 NE Terreo Place - #2, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/9d761c35-7e7f-4f41-959b-28d34cac8df7) ($2395, 3 BR, 2.5 BA, Velocity)
+- removed: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
+
+</details>
 
 ### 2026-10-09
 
@@ -155,43 +182,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - added: [63273 NW Ski Ln, Unit 2, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/66da1d8d-5644-4b4a-a65e-450ed65741b0) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
 - removed: [1664 NW Lewis St., Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/a00766aa-3696-465f-8bd3-ce0b78adf311) ($2995, 2 BR, 2.5 BA, Velocity)
 - removed: [20118 Flowing Water Way - Unit 1, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/0e5e4c66-01fe-4010-8b58-bee8893c8fa3) ($2445, 2 BR, 2.5 BA, Mt. Bachelor)
-
-</details>
-
-### 2026-10-02
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 0 | 1 |
-| High Desert | 0 | 1 |
-| Lifestyles | 1 | 0 |
-| Mountain View | 3 | 0 |
-| Mt. Bachelor | 0 | 1 |
-| PMI | 0 | 1 |
-| Plus | 0 | 2 |
-| Superior | 5 | 1 |
-| Velocity | 0 | 1 |
-
-<details>
-<summary>17 listings</summary>
-
-- added: [1000 NE Butler Market Rd - 9, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c062c09b-1af7-41cf-ba92-6a7b8a9ccf24) ($1595, 2 BR, 1 BA, Mountain View)
-- added: [1010 NW Portland Ave. - #2, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/443ca817-173a-498b-bf75-9d0bc57845d7) ($1995, 3 BR, 1 BA, Superior)
-- added: [1419 NW 8th St. - 301, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/1f4c752f-11ef-427b-affd-293c7172258c) ($1995, 2 BR, 2 BA, Superior)
-- added: [2150 NW Hill Street - 4, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/5e007824-4292-4b20-8874-9c692bdaf5b2) ($1895, 2 BR, 1 BA, Superior)
-- added: [2399 NE Victor Place #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c0bcb059-16b8-44ea-b2b2-013622f5a1b6) ($1895, 2 BR, 2.5 BA, Mountain View)
-- added: [61236 Dayspring Dr., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/d08fd943-efa5-48da-8e11-1543ade08ffe) ($2795, 3 BR, 2.5 BA, Superior)
-- added: [61416 Elder Ridge St., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/0315a443-5c40-4988-8ea7-52be3cf767b6) ($3495, 3 BR, 2.5 BA, Mountain View)
-- added: [63084 NE Sophwith Lane, Bend, OR 97701](https://lifestylesrealty.appfolio.com/listings/detail/8f226416-566c-405a-a53b-eec901957fcb) ($2795, 3 BR, 3 BA, Lifestyles)
-- added: [817 NW Federal St., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/393fbabc-b6a4-4a5b-9657-4f81e2769e20) ($1995, 2 BR, 1 BA, Superior)
-- removed: [1147 NW Knoxville , Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/da72c809-2b58-421f-9b01-56c5f6633e4f) ($1850, 1 BR, 1 BA, Superior)
-- removed: [1232 NW Ogden Ave. , Bend, OR 97703](https://bend.appfolio.com/listings/detail/144ae1b5-0168-4d4e-b519-02de207d8ede) ($2200, 3 BR, 2 BA, Bend PM)
-- removed: [1580 NW Newport - #46, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/b2a5e9e4-b83b-48c9-a1c1-9c82384624cb) ($1650, 2 BR, 1 BA, Plus)
-- removed: [1692 NW WIlliam Clark St, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/3e399d1a-2f8c-43d4-b2fc-fb38c4b0851b) ($3095, 3 BR, 2.5 BA, Mt. Bachelor)
-- removed: [19899 Antler Point Dr., Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/15531c9b-1afe-4bd5-ba58-ff588bd9cb6c) ($2895, 3 BR, 2 BA, Velocity)
-- removed: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, 2 BR, 2 BA, High Desert)
-- removed: [354 NE Penn Ave Apt 3, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/61) ($1450, 1 BR, 1 BA, PMI)
-- removed: [3807 Eagle Road, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/2b6bd98c-6ba4-4699-a03e-f56fd0e1c35e) ($2495, 3 BR, 2.5 BA, Plus)
 
 </details>
 
