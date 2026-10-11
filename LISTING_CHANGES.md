@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-10. 128 listings from 16 companies. Every source answered.
+Latest run: 2026-10-11. 128 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -16,6 +16,10 @@ Latest run: 2026-10-10. 128 listings from 16 companies. Every source answered.
 ## Recent changes
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-11
+
+No listings added or removed since 2026-10-10.
 
 ### 2026-10-10
 
@@ -164,24 +168,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 <summary>1 listing</summary>
 
 - removed: [26 NW Shasta Pl, Bend, OR 97703, Bend, OR 97703](https://ridgelinepropertymgmt.rentvine.com/public/listings/37) ($5195, 3 BR, 2 BA, Ridgeline)
-
-</details>
-
-### 2026-10-03
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Mountain View | 1 | 0 |
-| Mt. Bachelor | 1 | 1 |
-| Velocity | 0 | 1 |
-
-<details>
-<summary>4 listings</summary>
-
-- added: [2980 NW Shevlin Meadows Dr. #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/8c9ad3aa-0c04-4c3e-969c-2d7b0871aada) ($2995, 5 BR, 3 BA, Mountain View)
-- added: [63273 NW Ski Ln, Unit 2, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/66da1d8d-5644-4b4a-a65e-450ed65741b0) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [1664 NW Lewis St., Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/a00766aa-3696-465f-8bd3-ce0b78adf311) ($2995, 2 BR, 2.5 BA, Velocity)
-- removed: [20118 Flowing Water Way - Unit 1, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/0e5e4c66-01fe-4010-8b58-bee8893c8fa3) ($2445, 2 BR, 2.5 BA, Mt. Bachelor)
 
 </details>
 
