@@ -179,6 +179,11 @@
   "lon": "-121.2830799",
   "address": "1522 NE Butler Market Rd, Bend, OR 97701"
  },
+ "1529 nw portland ave - a bend or 97701": {
+  "lat": "44.0640722",
+  "lon": "-121.3353503",
+  "address": "1529 NW Portland Ave - A, Bend, OR 97701"
+ },
  "1529 nw portland ave - b bend or 97701": {
   "lat": "44.0640722",
   "lon": "-121.3353503",
@@ -615,6 +620,11 @@
   "lat": "44.037428444223",
   "lon": "-121.262071212763",
   "address": "21241 SE Golden Market Lane, Bend, OR 97702"
+ },
+ "21375 ne kristin court bend or 97701": {
+  "lat": "44.078692054753",
+  "lon": "-121.254673482627",
+  "address": "21375 NE Kristin Court, Bend, OR 97701"
  },
  "2150 nw hill street - 4 bend or 97703": {
   "lat": "44.0710604",
@@ -1141,6 +1151,11 @@
   "lat": "44.0577471",
   "lon": "-121.3279009",
   "address": "817 NW Federal St., Bend, OR 97703"
+ },
+ "817 se 5th st unit 1 bend or 97702": {
+  "lat": "44.0422646",
+  "lon": "-121.2986211",
+  "address": "817 SE 5th St , Unit 1, Bend, OR 97702"
  },
  "82 ne cessna dr 2 bend or 97701": {
   "lat": "44.0527348",

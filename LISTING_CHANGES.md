@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-11. 128 listings from 16 companies. Every source answered.
+Latest run: 2026-10-12. 131 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
 
 **Contents**
 
@@ -16,6 +16,22 @@ Latest run: 2026-10-11. 128 listings from 16 companies. Every source answered.
 ## Recent changes
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-12
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Mountain View | 2 | 0 |
+| Mt. Bachelor | 1 | 0 |
+
+<details>
+<summary>3 listings</summary>
+
+- added: [1529 NW Portland Ave - A, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/62315115-78da-48bc-a4e2-b6e3953582e4) ($1595, 2 BR, 1 BA, Mountain View)
+- added: [21375 NE Kristin Court, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/5f63f537-27bf-4433-b1ee-be956b0f9913) ($2450, 3 BR, 2 BA, Mountain View)
+- added: [817 SE 5th St , Unit 1, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/09474a59-d997-4efb-9f6f-94996250e8a3) ($2175, 3 BR, 2 BA, Mt. Bachelor)
+
+</details>
 
 ### 2026-10-11
 
@@ -155,19 +171,6 @@ No listings added or removed since 2026-10-10.
 - removed: [20133 Flowing Water Way - 01, Bend, OR 97702](https://bend.appfolio.com/listings/detail/ac96569e-3a42-457e-a293-d3c2545cdfd3) ($2295, 2 BR, 2 BA, Bend PM)
 - removed: [224 NW Jefferson Place, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/c0154e1c-759d-409b-a040-31ac673d8aff) ($4495, 3 BR, 2.5 BA, Mountain View)
 - removed: [60889 Granite Dr, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/853ad307-23e1-4298-a456-cac030911646) ($2295, 3 BR, 2 BA, Mountain View)
-
-</details>
-
-### 2026-10-04
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Ridgeline | 0 | 1 |
-
-<details>
-<summary>1 listing</summary>
-
-- removed: [26 NW Shasta Pl, Bend, OR 97703, Bend, OR 97703](https://ridgelinepropertymgmt.rentvine.com/public/listings/37) ($5195, 3 BR, 2 BA, Ridgeline)
 
 </details>
 
