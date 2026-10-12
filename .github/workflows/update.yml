@@ -84,9 +84,14 @@ jobs:
             echo "::error::update.py exited $code — misconfigured, nothing to commit."
             exit "$code"
           fi
+          # Exit 1 has had two meanings since the changelog became a step, so
+          # this no longer asserts which one it was: scrape.py returns 1 when a
+          # source fails, build_changes.py when it cannot read enough history.
+          # Either way the listings collected this run are committed below.
           if [ "$code" -eq 1 ]; then
-            echo "::warning::At least one source failed; see the log above. "\
-              "Those companies keep their previous listings, and the rest are committed."
+            echo "::warning::Something was partial (exit 1): a source failed, or "\
+              "the changelog could not read enough history. The listings collected "\
+              "this run are committed either way; the annotations above name the source."
           fi
 
       - name: Commit the results
