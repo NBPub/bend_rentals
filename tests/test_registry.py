@@ -50,10 +50,13 @@ def test_no_appfolio_url_still_carries_the_personal_bedroom_filter():
 
 
 def test_the_appfolio_urls_agree_with_the_configured_city():
-    """AppFolio can filter at the source; the other four cannot.
+    """AppFolio can filter at the source; the other platforms cannot.
 
-    Both halves have to say the same thing, or the file would hold Bend
-    listings from nine companies and everywhere from four.
+    Both halves of the city policy have to say the same thing, or the file
+    would hold Bend listings from the AppFolio sources and every city the
+    others publish. Deliberately no counts here: they were written as "nine"
+    and "four", went stale when three sources were added, and a test gains
+    nothing from naming them.
     """
     settings, sites = load_registry("sites.toml")
     for site in sites.values():
