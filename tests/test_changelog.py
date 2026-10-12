@@ -3,9 +3,12 @@ from bendrentals.changelog import (
 )
 
 
-def row(company="A", link="L1", scraped="2026-01-10T08:00:00", lat="44.0", **kw):
+def row(company="A", link="L1", scraped="2026-01-10T08:00:00", lat="44.0",
+        lon="-121.3", **kw):
+    # Both coordinates, because a listing is only on the map when both read as
+    # numbers, which is what mapdata requires of the page.
     base = {"company": company, "link": link, "scraped_at": scraped,
-            "lat": lat, "address": "1 Main St", "price": "1000"}
+            "lat": lat, "lon": lon, "address": "1 Main St", "price": "1000"}
     base.update(kw)
     return base
 
@@ -342,3 +345,35 @@ def test_the_stale_table_carries_bedrooms_and_bathrooms():
     stale = text.split("## Stale listings")[1]
     assert "| Company | Address | Price | BR | BA | Last refreshed |" in stale
     assert "| 1400 | 2 | 1 |" in stale
+
+
+def test_an_unknown_address_says_so_rather_than_linking_a_question_mark():
+    """`"?"` is truthy, so an `or` fallback never fired and published `[?]`."""
+    after = rows_by_link(row(link="https://x/2", address="?", price="1800"))
+    text = build([("2026-01-09", {}), (TODAY, after)], CURRENT, {})
+    assert "[?](" not in text
+    assert "(no address published)" in text
+
+
+def test_a_listing_is_unplaced_if_either_coordinate_is_missing():
+    """mapdata needs both to be numbers, so testing lat alone let them differ."""
+    current = [row(company="A", link="L1", lat="44.0", lon="?",
+                   address="Half Coords Rd", scraped=f"{TODAY}T08:00:00")]
+    text = build([], current, {})
+    geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
+    assert "Half Coords Rd" in geocoding
+
+
+def test_a_listing_with_both_coordinates_is_not_listed_as_unplaced():
+    current = [row(company="A", link="L1", lat="44.0", lon="-121.3",
+                   address="Fine Rd", scraped=f"{TODAY}T08:00:00")]
+    text = build([], current, {})
+    geocoding = text.split("## Geocoding")[1].split("## Stale")[0]
+    assert "Nothing to flag" in geocoding
+
+
+def test_an_unreadable_coordinate_counts_as_unplaced():
+    current = [row(company="A", link="L1", lat="not-a-number", lon="-121.3",
+                   address="Bad Coords Rd", scraped=f"{TODAY}T08:00:00")]
+    text = build([], current, {})
+    assert "Bad Coords Rd" in text.split("## Geocoding")[1].split("## Stale")[0]

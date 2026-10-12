@@ -29,7 +29,8 @@ def csv_file(tmp_path):
 
 def test_it_writes_the_file(tmp_path, csv_file, monkeypatch):
     out = tmp_path / "LISTING_CHANGES.md"
-    monkeypatch.setattr(build_changes, "_history", lambda **kw: ([], ""))
+    monkeypatch.setattr(build_changes, "_history",
+                        lambda **kw: ([("2026-01-08", {}), ("2026-01-09", {})], ""))
     assert build_changes.main(["--csv", str(csv_file), "--out", str(out)]) == 0
     assert "# Listing changes" in out.read_text(encoding="utf-8")
 
@@ -50,19 +51,25 @@ def test_history_trouble_still_writes_the_file(tmp_path, csv_file, monkeypatch):
     assert "shallow clone" in out.read_text(encoding="utf-8")
 
 
-def test_a_non_integer_day_count_is_a_misconfiguration(csv_file):
-    """Review Focus 5."""
-    assert build_changes.main(["--csv", str(csv_file), "--days", "banana"]) == 2
+def test_a_non_integer_day_count_is_a_one_not_a_two(csv_file):
+    """Review Focus 5, re-graded.
+
+    A 2 makes update.py stop and the workflow skip its commit, so a bad
+    reporting flag would discard a completed scrape. No reporting flag should
+    be able to cost a day's data.
+    """
+    assert build_changes.main(["--csv", str(csv_file), "--days", "banana"]) == 1
 
 
-def test_a_day_count_below_one_is_a_misconfiguration(csv_file):
-    """Review Focus 5."""
-    assert build_changes.main(["--csv", str(csv_file), "--days", "0"]) == 2
+def test_a_day_count_below_one_is_a_one_not_a_two(csv_file):
+    """Review Focus 5, re-graded. See above."""
+    assert build_changes.main(["--csv", str(csv_file), "--days", "0"]) == 1
 
 
 def test_the_file_ends_with_one_newline(tmp_path, csv_file, monkeypatch):
     out = tmp_path / "out.md"
-    monkeypatch.setattr(build_changes, "_history", lambda **kw: ([], ""))
+    monkeypatch.setattr(build_changes, "_history",
+                        lambda **kw: ([("2026-01-08", {}), ("2026-01-09", {})], ""))
     build_changes.main(["--csv", str(csv_file), "--out", str(out)])
     text = out.read_text(encoding="utf-8")
     assert text.endswith("\n") and not text.endswith("\n\n")
@@ -203,3 +210,46 @@ def test_two_commits_on_one_day_produce_one_section(tmp_path, monkeypatch):
         ["--csv", str(csv_path), "--out", str(out), "--days", "5"]) == 0
     text = out.read_text(encoding="utf-8")
     assert text.count("### 2026-01-10") == 1
+
+
+def test_too_little_history_to_compare_is_a_one(tmp_path, csv_file, monkeypatch):
+    """The broken-clone-depth case: git answers, with not enough in it.
+
+    A depth-1 clone lists one revision and raises nothing, so keying the exit
+    code on an exception alone reported success for the very case the code was
+    written to catch.
+    """
+    out = tmp_path / "out.md"
+    monkeypatch.setattr(build_changes, "_history", lambda **kw: ([], ""))
+    assert build_changes.main(["--csv", str(csv_file), "--out", str(out)]) == 1
+    assert "Not enough history yet" in out.read_text(encoding="utf-8")
+
+
+def test_the_csv_flag_also_chooses_whose_history_is_read(tmp_path, csv_file,
+                                                        monkeypatch):
+    """Otherwise --csv compares one file against another file's history."""
+    seen = {}
+
+    def daily_revisions(*, days, root, path=None, **kw):
+        seen["path"] = path
+        return []
+    monkeypatch.setattr(build_changes, "daily_revisions", daily_revisions)
+    build_changes.main(["--csv", str(csv_file), "--out", str(tmp_path / "o.md")])
+    assert seen["path"] is not None
+    assert "listings.csv" in str(seen["path"])
+
+
+def test_a_run_date_older_than_the_newest_revision_stays_in_order(tmp_path):
+    """Appending blindly put dates out of order and reversed a day's diff."""
+    past = [("2026-01-09", {}), ("2026-01-10", {})]
+    current = [{"link": "L1", "scraped_at": "2026-01-08T00:00:00"}]
+    dates = [d for d, _ in build_changes._with_today(past, current)]
+    assert dates == sorted(dates)
+
+
+def test_a_current_csv_with_no_link_column_is_not_compared(tmp_path, capsys):
+    """It would otherwise read as an empty day and report a full turnover."""
+    past = [("2026-01-09", {"L1": {"link": "L1"}})]
+    current = [{"url": "L1", "scraped_at": "2026-01-10T00:00:00"}]
+    assert build_changes._with_today(past, current) == past
+    assert "link" in capsys.readouterr().err

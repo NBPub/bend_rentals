@@ -83,6 +83,22 @@ def companies_behind(status: dict[str, str], *, today: str,
     return behind
 
 
+def _unplaced(row: dict) -> bool:
+    """Whether the page will leave this listing off the map.
+
+    `mapdata.records_from_rows` needs both coordinates to read as numbers, so
+    testing `lat` alone let this section and the page it mirrors disagree: a
+    row with a latitude and no longitude was unmapped on the page and mapped
+    here.
+    """
+    for name in ("lat", "lon"):
+        try:
+            float(str(row.get(name, UNKNOWN)).strip())
+        except ValueError:
+            return True
+    return False
+
+
 def geocode_flags(rows: list[dict], cache_entries: dict[str, dict]) -> dict:
     """What is worth saying about geocoding, and nothing more.
 
@@ -94,7 +110,7 @@ def geocode_flags(rows: list[dict], cache_entries: dict[str, dict]) -> dict:
         {"company": row.get("company") or UNKNOWN,
          "address": row.get("address") or UNKNOWN,
          "maps_link": row.get("maps_link") or ""}
-        for row in rows if str(row.get("lat", UNKNOWN)) == UNKNOWN
+        for row in rows if _unplaced(row)
     ]
     failures = [entry for entry in cache_entries.values()
                 if str(entry.get("lat", UNKNOWN)) == UNKNOWN]
@@ -132,7 +148,11 @@ def _field(row: dict, name: str) -> str:
 
 def _entry(row: dict, labels: dict[str, str]) -> str:
     """One listing as a bullet: the address linked, then what it is."""
-    address = row.get("address") or "(no address published)"
+    # Not `or`: the address is "?" when the source published none, and "?"
+    # is truthy, so the fallback never fired and the file linked a bare "[?]".
+    address = row.get("address") or UNKNOWN
+    if address == UNKNOWN:
+        address = "(no address published)"
     link = row.get("link") or ""
     shown = (f"[{address}]({link})"
              if link.startswith(("http://", "https://")) else address)

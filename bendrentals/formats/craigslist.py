@@ -21,12 +21,12 @@ import re
 
 from ..models import UNKNOWN
 
-#: The numbers, which are the part worth being strict about. The leading `.*?`
-#: skips anything typed before the price: it is lazy, so it stops at the first
-#: `$`, and what follows it is specific enough that junk cannot match by
+#: The numbers, which are the part worth being strict about. Anything typed
+#: before the price is captured rather than skipped: it is lazy, so it stops at
+#: the first `$`, and what follows is specific enough that junk cannot match by
 #: accident. A title with no `$` at all is still rejected.
 TITLE_RE = re.compile(
-    r"^.*?\$(?P<price>[\d,]+)\s*/\s*"
+    r"^(?P<prefix>.*?)\$(?P<price>[\d,]+)\s*/\s*"
     r"(?P<bedrooms>\d+)\s*br\s*-\s*"
     r"(?P<sqft>\d+)\s*ft2\s*-\s*"
     r"(?P<rest>.*)$"
@@ -39,11 +39,24 @@ TITLE_RE = re.compile(
 REGION_RE = re.compile(r"^(?P<summary>.*)\((?P<region>[^)]*)\)\s*$")
 
 
+def _kept_prefix(prefix: str) -> str:
+    """Text typed before the price, if it is text rather than a slip.
+
+    "Available Now!" is content and belongs in the summary. The `1` of a real
+    `1$2,150` is a finger slip and belongs nowhere. A prefix with no letter in
+    it is treated as the slip.
+    """
+    prefix = prefix.strip()
+    return prefix if any(char.isalpha() for char in prefix) else ""
+
+
 def parse_title(title: str) -> dict | None:
     """Parse a Craigslist-style title. Returns None if it does not match.
 
     A missing region is `UNKNOWN`, not a failure: `"?"` means the source did
-    not say it, which is exactly the case here.
+    not say it, which is exactly the case here. So is a summary that turns out
+    empty, because an empty cell means a bug in this project and this is not
+    one.
     """
     if not title:
         return None
@@ -57,10 +70,12 @@ def parse_title(title: str) -> dict | None:
     if tail:
         rest, region = tail["summary"].strip(), tail["region"].strip()
 
+    summary = " ".join(part for part in (_kept_prefix(match["prefix"]), rest)
+                       if part)
     return {
         "price": int(match["price"].replace(",", "")),
         "bedrooms": int(match["bedrooms"]),
         "sqft": int(match["sqft"]),
-        "summary": rest,
+        "summary": summary or UNKNOWN,
         "region": region or UNKNOWN,
     }

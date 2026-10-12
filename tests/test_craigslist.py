@@ -69,6 +69,34 @@ def test_a_missing_region_is_unknown_rather_than_a_failed_parse():
     assert got["region"] == UNKNOWN
 
 
+def test_a_title_with_no_summary_left_is_unknown_not_blank():
+    """An empty cell means a bug, by the project's own convention."""
+    got = parse_title("$1,500 / 2br - 900ft2 - (NE Bend)")
+    assert got["summary"] == UNKNOWN
+    assert got["region"] == "NE Bend"
+
+
+def test_words_before_the_price_are_kept_in_the_summary():
+    """Dropping them silently loses published text and still reports ok."""
+    got = parse_title(
+        "Available Now! $1,500 / 2br - 900ft2 - Nice place (NE Bend)")
+    assert got["summary"] == "Available Now! Nice place"
+    assert got["price"] == 1500
+
+
+def test_a_stray_digit_before_the_price_is_not_kept():
+    """`1$2,150` is a slip, not content: a prefix with no letters is noise."""
+    got = parse_title(
+        "1$2,150 / 3br - 1650ft2 - Large Fairhaven Vista townhome in Redmond")
+    assert got["summary"] == "Large Fairhaven Vista townhome in Redmond"
+    assert got["price"] == 2150
+
+
+def test_words_before_the_price_survive_an_otherwise_empty_summary():
+    got = parse_title("Available Now! $1,500 / 2br - 900ft2 - (NE Bend)")
+    assert got["summary"] == "Available Now!"
+
+
 def test_junk_before_the_price_is_tolerated():
     """A real title began `1$2,150`, a fat-finger while typing."""
     got = parse_title(

@@ -150,7 +150,7 @@ No listings added or removed since 2026-10-10.
 - added: [63323 Wrangler Place, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-gzrpb) ($5500, 4 BR, ? BA, Trailhead)
 - added: [84 NW Portland Avenue #2, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/50162556-4a05-421a-b614-6cc84a733338) ($2000, 1 BR, 1 BA, Elevation)
 - added: [847 NE Locksley Drive, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/1060e29a-da30-4043-b5ba-7bb3ce0c6e62) ($2850, 4 BR, 2.5 BA, High Country)
-- added: [?](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($2150, 3 BR, ? BA, Trailhead)
+- added: [(no address published)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($2150, 3 BR, ? BA, Trailhead)
 - removed: [1590 NW Hartford, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/7d123cab-8aa3-4c8c-8085-165bb050d3fa) ($2395, 3 BR, 1.5 BA, Superior)
 - removed: [20133 Flowing Water Way - 01, Bend, OR 97702](https://bend.appfolio.com/listings/detail/ac96569e-3a42-457e-a293-d3c2545cdfd3) ($2295, 2 BR, 2 BA, Bend PM)
 - removed: [224 NW Jefferson Place, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/c0154e1c-759d-409b-a040-31ac673d8aff) ($4495, 3 BR, 2.5 BA, Mountain View)

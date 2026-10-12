@@ -57,7 +57,20 @@ def labels(path: Path = REGISTRY) -> dict[str, str]:
         return {}
 
 
-def _history(*, days: int, root: Path) -> tuple[list, str]:
+def _repo_relative(source: Path, root: Path) -> Path:
+    """`source` as git wants a pathspec: relative to the repository root.
+
+    An absolute path, or one outside the repository, is handed over unchanged;
+    git then refuses it and the caller reports that history was unavailable,
+    which is the truth.
+    """
+    try:
+        return source.resolve().relative_to(root.resolve())
+    except ValueError:
+        return source
+
+
+def _history(*, days: int, root: Path, path: Path) -> tuple[list, str]:
     """(oldest-first [(date, rows)], error message).
 
     Asks for more commits than the window needs, collapses them to one per
@@ -76,7 +89,8 @@ def _history(*, days: int, root: Path) -> tuple[list, str]:
     movement. Only a failure to list the history at all is total.
     """
     try:
-        revisions = daily_revisions(days=days + 1 + SAME_DAY_CUSHION, root=root)
+        revisions = daily_revisions(days=days + 1 + SAME_DAY_CUSHION, root=root,
+                                    path=path)
     except GitUnavailable as error:
         return [], str(error)
 
@@ -91,7 +105,7 @@ def _history(*, days: int, root: Path) -> tuple[list, str]:
     past = []
     for date, sha in wanted:
         try:
-            past.append((date, rows_at(sha, root=root)))
+            past.append((date, rows_at(sha, root=root, path=path)))
         except (GitUnavailable, csv.Error) as error:
             print(f"WARNING: cannot read {date} ({sha[:8]}): {error}",
                   file=sys.stderr)
@@ -100,38 +114,49 @@ def _history(*, days: int, root: Path) -> tuple[list, str]:
 
 
 def _with_today(past: list, current: list[dict]) -> list:
-    """`past` plus this run as its newest entry.
+    """`past` plus this run, in date order.
 
     The workflow builds this file *before* committing, so the newest commit is
     yesterday and today's listings exist only in the working tree. Without
     this, the newest dated section would be yesterday's while the header
     asserted today's run date, and today's movement would go unreported.
 
-    Run locally after the day's commit, today is already the newest revision.
-    Replace it rather than appending, or the file gains a second section for
-    the same date reporting no change against itself.
+    Keyed by date and re-sorted rather than appended, which handles all three
+    cases the same way: a run newer than every commit, a rebuild on a date
+    already committed (it replaces that entry), and a CSV older than the
+    newest commit, which appending blindly left out of order and rendered as a
+    reversed diff under the older date's heading.
     """
     today = run_date(current)
     if not today:
         return past
-    entry = (today, {row["link"]: row for row in current if row.get("link")})
-    if past and past[-1][0] == today:
-        return past[:-1] + [entry]
-    return past + [entry]
+    if current and not any(row.get("link") for row in current):
+        # Every row keys on `link`. Without that column the day reads as empty
+        # and the file reports a full turnover; `rows_at` refuses the same
+        # case for a committed revision.
+        print("WARNING: the CSV has no `link` column, so this run is not "
+              "compared against the history", file=sys.stderr)
+        return past
+    by_date = dict(past)
+    by_date[today] = {row["link"]: row for row in current if row.get("link")}
+    return sorted(by_date.items())
 
 
 def main(argv):
     out = Path(flag_value(argv, "--out", DEFAULT_OUT))
     source = Path(flag_value(argv, "--csv", LISTINGS_CSV))
 
+    # A 1 rather than a 2 on purpose. update.py stops on a 2 and the workflow
+    # skips its commit, so a mistyped reporting flag would throw away a
+    # completed scrape. Nothing about this file is worth that.
     try:
         days = int(flag_value(argv, "--days", DEFAULT_DAYS))
     except (TypeError, ValueError):
         print("--days takes a whole number.", file=sys.stderr)
-        return 2
+        return 1
     if days < 1:
         print("--days must be at least 1.", file=sys.stderr)
-        return 2
+        return 1
 
     if not source.exists():
         print(f"ERROR: no CSV at {source}. Run scrape.py first.", file=sys.stderr)
@@ -141,7 +166,9 @@ def main(argv):
         print(f"ERROR: {source} has no listings.", file=sys.stderr)
         return 1
 
-    past, error = _history(days=days, root=Path("."))
+    root = Path(".")
+    past, error = _history(days=days, root=root,
+                           path=_repo_relative(source, root))
     if error:
         print(f"WARNING: no history to compare ({error})", file=sys.stderr)
     else:
@@ -164,11 +191,19 @@ def main(argv):
     )
     print(f"Wrote {out}  ({len(past)} revision(s) of history, "
           f"{len(current)} listings)")
-    # A 1, not a 0, when there was no history: the file was still written, so
-    # nothing is lost, but a silent 0 would let a broken clone depth go
-    # unnoticed while the published file quietly said history was missing.
-    # update.py carries on past a 1, so the day's data is still committed.
-    return 1 if error else 0
+
+    # A 1, not a 0, whenever nothing could be compared. The file was still
+    # written so nothing is lost, and update.py carries on past a 1, so the
+    # day's data is still committed. Keying this on the exception alone was
+    # wrong: a depth-1 clone lists one revision and raises nothing, so the one
+    # case this was written to catch was the one it reported as success.
+    if error:
+        return 1
+    if len(past) < 2:
+        print("WARNING: not enough committed history to compare; "
+              "a shallow clone cannot report movement.", file=sys.stderr)
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
