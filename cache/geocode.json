@@ -44,6 +44,11 @@
   "lon": "-121.2892898",
   "address": "1095 NE Hidden Valley Dr. - #B, Bend, OR 97701"
  },
+ "11 nw hixon ave - 2 bend or 97703": {
+  "lat": "44.0558373",
+  "lon": "-121.3239436",
+  "address": "11 NW Hixon Ave - #2, Bend, OR 97703"
+ },
  "111 nw bond st bend or 97703": {
   "lat": "44.0524696",
   "lon": "-121.3167237",
@@ -73,6 +78,11 @@
   "lat": "44.0608907",
   "lon": "-121.3127099",
   "address": "1133 NW Wall Street - 230, Bend, OR 97703"
+ },
+ "1145 nw knoxville - 1145 bend or 97703": {
+  "lat": "44.0604614",
+  "lon": "-121.3374065",
+  "address": "1145 NW Knoxville - 1145, Bend, OR 97703"
  },
  "1147 nw knoxville bend or 97703": {
   "lat": "44.0604823",
@@ -284,6 +294,11 @@
   "lat": "43.804957051376",
   "lon": "-121.457267530363",
   "address": "17376 Lively Lane, Bend, OR 97707"
+ },
+ "1743 ne lotus drive - a bend or 97701": {
+  "lat": "44.0635189",
+  "lon": "-121.2779230",
+  "address": "1743 NE Lotus Drive - A, Bend, OR 97701"
  },
  "1746 ne janice way bend or 97701": {
   "lat": "44.0673306",
@@ -621,6 +636,11 @@
   "lon": "-121.262071212763",
   "address": "21241 SE Golden Market Lane, Bend, OR 97702"
  },
+ "21246 thornhill lane bend or 97701": {
+  "lat": "44.0879162",
+  "lon": "-121.2613865",
+  "address": "21246 Thornhill Lane, Bend, OR 97701"
+ },
  "21375 ne kristin court bend or 97701": {
   "lat": "44.078692054753",
   "lon": "-121.254673482627",
@@ -901,6 +921,11 @@
   "lon": "-121.2948491",
   "address": "60991 SE Sweet Pea Dr #1, Bend, OR 97702"
  },
+ "61049 larkspur loop bend or 97702": {
+  "lat": "44.019438955819",
+  "lon": "-121.291785258002",
+  "address": "61049 Larkspur Loop, Bend, OR 97702"
+ },
  "61064 se ruby peak ln bend or 97702": {
   "lat": "44.0177091",
   "lon": "-121.2929513",
@@ -961,6 +986,12 @@
   "lat": "44.0193058",
   "lon": "-121.2938338",
   "address": "61456 SE Brosterhous Rd., Bend, OR 97702"
+ },
+ "61525 jennifer ln - 3 bend or 97702": {
+  "lat": "?",
+  "lon": "?",
+  "address": "61525 Jennifer Ln. - #3, Bend, OR 97702",
+  "failed_at": "2026-10-13"
  },
  "61539 aaron way bend or 97702": {
   "lat": "44.034311208283",
@@ -1087,6 +1118,11 @@
   "lon": "-121.2965036",
   "address": "636 NE Irving, Bend, OR 97701"
  },
+ "63737 hunters circle bend or 97701": {
+  "lat": "44.1145255",
+  "lon": "-121.2902072",
+  "address": "63737 Hunters Circle, Bend, OR 97701"
+ },
  "638 ne vail lane bend or 97701": {
   "lat": "44.0713832",
   "lon": "-121.2965018",
@@ -1196,6 +1232,11 @@
   "lat": "44.0805866",
   "lon": "-121.2913043",
   "address": "858 NE Hidden Valley Dr - #1, Bend, OR 97701"
+ },
+ "885 sw silver lake blvd bend or 97702": {
+  "lat": "44.0418169",
+  "lon": "-121.3112109",
+  "address": "885 SW Silver Lake Blvd., Bend, OR 97702"
  },
  "902 nw carlon ave - 2 bend or 97703": {
   "lat": "44.0522143",
