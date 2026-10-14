@@ -52,7 +52,7 @@ LINK_FIELDS = ("link", "maps_link")
 RECORD_FIELDS = (
     "company", "address", "region", "price", "bedrooms", "bathrooms", "sqft",
     "available", "available_now", "cats_allowed", "dogs_allowed", "summary",
-    "link", "maps_link",
+    "link", "maps_link", "first_seen",
 )
 
 #: Fields offered as tick-box filters, in the order the panel shows them.

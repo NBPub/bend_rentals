@@ -95,14 +95,19 @@ FIELD_LABELS = {
     "summary": "Summary",
     "link": "Listing",
     "maps_link": "Map",
+    "first_seen": "First Seen",
 }
 
 #: Table columns, in order. `maps_link` is absent because the map link is
 #: rendered inside the address cell rather than taking a column of its own.
+#: `first_seen` is last, after the summary: it is the one column that is
+#: derived rather than published, and sorting by it is the point of having it.
+#: An ISO date sorts correctly as a string, and the comparator already puts
+#: blanks last in both directions, so a "?" needs no special handling.
 TABLE_FIELDS = (
     "company", "link", "address", "region", "price", "bedrooms", "bathrooms",
     "sqft", "available", "available_now", "cats_allowed", "dogs_allowed",
-    "summary",
+    "summary", "first_seen",
 )
 
 #: Shown in a marker popup when present, in this order. The address is the

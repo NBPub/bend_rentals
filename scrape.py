@@ -17,9 +17,12 @@ any whose site failed, keep the rows they already had.
 
 import os
 import sys
+from datetime import date
 
 from bendrentals.cli import FlagError, flag_value
-from bendrentals.csv_out import merge_rows, read_rows, write_rows
+from bendrentals.csv_out import (
+    carry_first_seen, merge_rows, read_rows, write_rows,
+)
 from bendrentals.fetch import BACKFILL_DELAY, FetchError, get
 from bendrentals.filters import apply_filters
 from bendrentals.geocode import GeocodeCache, geocode_all
@@ -149,7 +152,13 @@ def main(argv):
         print("Every site failed; data/listings.csv left as it was.", file=sys.stderr)
         return 1
 
-    rows = merge_rows([l.to_row() for l in scraped], refreshed, read_rows(LISTINGS_CSV))
+    previous = read_rows(LISTINGS_CSV)
+    fresh = [l.to_row() for l in scraped]
+    # Before merging: `previous` still holds the dates this run has to inherit.
+    new_listings = carry_first_seen(fresh, previous, today=date.today().isoformat())
+    if new_listings:
+        print(f"  {new_listings} listing(s) seen for the first time")
+    rows = merge_rows(fresh, refreshed, previous)
     csv_path, snapshot_path = write_rows(rows, snapshot=snapshot)
     print(f"\nWrote {csv_path}  ({len(rows)} listings from "
           f"{len({r.get('company') for r in rows})} companies)")

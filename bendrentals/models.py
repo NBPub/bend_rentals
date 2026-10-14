@@ -46,6 +46,14 @@ class Listing:
     pets_raw: str
     scraped_at: str
     parse_status: str
+    #: The earliest date this listing was observed, as ISO, or "?".
+    #:
+    #: Derived, not scraped: no source publishes it. `csv_out.carry_first_seen`
+    #: fills it from the previous run, which is why it has a default here and
+    #: the parsers never set it. It is a floor, not an exact birthday: a
+    #: listing already present when collection began can only be dated to the
+    #: first run, and one reissued under a new URL looks new.
+    first_seen: str = UNKNOWN
 
     @classmethod
     def fieldnames(cls) -> list[str]:

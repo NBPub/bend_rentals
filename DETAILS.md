@@ -86,6 +86,7 @@ record.
 | `summary` | The source's headline. Longer descriptions are not saved |
 | `pets_raw` | The pet sentence, verbatim and uninterpreted |
 | `scraped_at`, `parse_status` | How fresh the row is, and whether it parsed cleanly |
+| `first_seen` | Earliest date this listing was observed. A floor rather than a listing date: see [Limitations](#project-limitations) |
 
 Two conventions run through all of it:
 
@@ -391,6 +392,40 @@ with `filters[cities][]=Bend` appended. See the `index_url` of each entry in
 
 </details>
 
+### Why Craigslist and Zillow are not sources
+
+Both are obvious places to look for Bend rentals, and neither is here. The
+reason is their terms, not the difficulty.
+
+**Craigslist** publishes a permissive `robots.txt`, and its search pages are
+server-rendered, so it would be straightforward to read. The Terms of Use are
+what rule it out:
+
+> You agree not to copy/collect CL content via robots, spiders, scripts,
+> scrapers, crawlers, or any automated or manual equivalent (e.g., by hand).
+
+They have enforced it in court (*craigslist v. 3Taps*, *craigslist v.
+RadPad*), and the old RSS route now returns 403. Worth noting the yield would
+be thin regardless: the search results carry a title, a price and a
+neighbourhood, with no bedrooms, bathrooms, square footage, address,
+coordinates or pet policy as fields, so every column this project stores would
+need a separate request per listing.
+
+**Zillow** disallows `/api/` and `/homes/` among 210 rules for `*`, and its
+Terms of Use prohibit "screen and database scraping, spiders, robots,
+crawlers", permitting copying only "without the aid of any automated
+processes". The pages carry bot detection. Their genuinely open data is
+[Zillow Research](https://www.zillow.com/research/data/), which is rent
+indices and aggregates rather than listings.
+
+**A note on what either would have cost.** The sixteen sources here are
+disjoint by construction: each company lists only its own inventory, so no two
+can describe the same unit and `link` is a sound identity. An aggregator
+breaks that. The same unit appears under a different URL on each platform, so
+deduplication would need a normalised address plus bedrooms and price, with
+the managing company's own listing treated as authoritative. That is a real
+piece of machinery this project does not currently need.
+
 ### Politeness
 
 Set in [`fetch.py`](bendrentals/fetch.py). Requests are spaced per domain: 10s
@@ -465,6 +500,19 @@ whoever is looking, and they belong in the page's tick-boxes.
     NE/NW/SE/SW. Correct, and still a little surprising.
   - A listing known only to be "in Bend" shows whenever any Bend quadrant is
     ticked, because it could be in any of them.
+- **`first_seen` is a floor, not the date a listing went up.**
+  - It is the earliest date *this project* saw the listing, which is not the
+    same thing. Collection began on 2026-09-03, so anything already listed
+    then is dated to that day and is older than it reads. That was 37 of 134
+    listings when the column was added, and the share shrinks with every run.
+  - It was reconstructed from the CSV's own commit history by
+    `tools/backfill_first_seen.py`, which is why it has useful values from the
+    start rather than reading `?` for weeks.
+  - Listings are matched by URL, so one reissued under a new URL reads as new.
+  - A unit that is let and re-listed at the same URL keeps its original date,
+    which counts two vacancies as one.
+  - Sorting the table by it works, and `?` rows sort to the bottom whichever
+    direction you choose.
 - **There is no notion of a listing being taken down mid-day.**
   - The page is as fresh as its last run, and says so at the top.
 
@@ -495,6 +543,35 @@ usually needs no code:
   fields. Only Trailhead needs one; the rest expose each value in its own
   element.
 
+### Why not Scrapy
+
+A scraper of this shape is the obvious candidate for
+[Scrapy](https://scrapy.org/), and it would be the wrong tool today. Sixteen
+sources cost about twenty requests a run, nearly all of the runtime is crawl
+delays the sources ask for, and `fetch.py` is a few dozen lines. Scrapy's
+value is concurrency, scheduling and retry policy at a scale this is nowhere
+near; adopting it now would add a framework without removing a problem.
+
+The checkpoint is written down so the decision can be revisited on evidence
+rather than taste. Adopt it when any one of these becomes true:
+
+- more than roughly fifteen sites needing a page per listing, rather than
+  sixteen sources of which most answer in one request
+- more than roughly 500 requests per run
+- a runtime that needs real concurrency, as opposed to one dominated by
+  politeness delays
+- per-domain throttling and retry policy elaborate enough that
+  [`fetch.py`](bendrentals/fetch.py) is reimplementing Scrapy badly
+- a source needing multi-level crawling, rather than an index and a detail page
+
+One thing Scrapy would not solve: it does not execute JavaScript. Most of
+these companies' own sites render their listings client-side, and the answer
+has been to find the server-rendered platform underneath rather than to drive
+a browser. If a source ever appears that has no such route, that is a
+[Playwright](https://playwright.dev/python/) decision, and it belongs behind
+the existing [`structures/`](bendrentals/structures) seam rather than
+replacing the fetching layer.
+
 ### The rest of the package
 
 | File | Responsibility |
@@ -523,6 +600,13 @@ snapshots in `data/snapshots/` and prints a report.
 CSV's git history and writes the published
 [`LISTING_CHANGES.md`](LISTING_CHANGES.md). A clone has no snapshots, so only
 the second works there.
+
+A third script in [`tools/`](tools) is a one-off:
+`backfill_first_seen.py` reconstructed the `first_seen` column by walking the
+CSV's committed revisions oldest-first and recording where each `link` first
+appears. It needs running once, not on a schedule, and
+[`csv_out.carry_first_seen`](bendrentals/csv_out.py) keeps the column current
+after that.
 
 Two helper scripts live in [`tools/`](tools) and are not part of a run.
 `strip_fixtures.py` removes the framework bulk from a saved test fixture, and

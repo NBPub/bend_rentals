@@ -17,7 +17,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
-from .models import Listing
+from .models import UNKNOWN, Listing
 from .registry import LISTINGS_CSV, SNAPSHOT_DIR
 
 #: No colons — they are invalid in Windows filenames.
@@ -43,6 +43,35 @@ def merge_rows(fresh: list[dict], refreshed: set[str], existing: list[dict]) -> 
     """
     kept = [row for row in existing if row.get("company") not in refreshed]
     return list(fresh) + kept
+
+
+def carry_first_seen(fresh: list[dict], existing: list[dict], *,
+                     today: str) -> int:
+    """Fill `first_seen` on fresh rows. Returns how many were newly dated.
+
+    A link already in the previous file keeps the date it had; one never seen
+    before takes today's. A known link whose date is "?" stays "?" rather than
+    being dated today: it is demonstrably not new, and claiming otherwise
+    would make an old listing look like it appeared this morning with no later
+    run able to correct it. Those are what `tools/backfill_first_seen.py`
+    fills, from the CSV's own commit history.
+
+    Rows that already carry a date are left alone, so the backfill can write
+    straight onto the file and survive the next run.
+    """
+    known = {row.get("link"): row.get("first_seen", UNKNOWN)
+             for row in existing if row.get("link")}
+    dated = 0
+    for row in fresh:
+        link = row.get("link")
+        if not link or row.get("first_seen", UNKNOWN) != UNKNOWN:
+            continue
+        if link in known:
+            row["first_seen"] = known[link]
+        else:
+            row["first_seen"] = today
+            dated += 1
+    return dated
 
 
 #: Row order in the file. `link` is unique, so this is a total order and the

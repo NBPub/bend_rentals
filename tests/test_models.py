@@ -10,7 +10,7 @@ def test_fieldnames_are_in_csv_order():
         "company", "link", "address", "region", "price", "bedrooms",
         "bathrooms", "sqft", "property_type", "available", "available_now",
         "cats_allowed", "dogs_allowed", "maps_link", "lat", "lon", "summary",
-        "pets_raw", "scraped_at", "parse_status",
+        "pets_raw", "scraped_at", "parse_status", "first_seen",
     ]
 
 
