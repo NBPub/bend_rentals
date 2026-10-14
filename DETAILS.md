@@ -151,7 +151,21 @@ The history is available in three forms.
 **In the repository**, every daily commit to `data/listings.csv` is a diff of
 what moved. `git log -p -- data/listings.csv` reads them all. Bear in mind
 that `scraped_at` is rewritten on every row every run, so most of what a diff
-shows is that the file was re-read rather than that anything changed.
+shows is that the file was re-read rather than that anything changed. On a
+typical day that is almost all of it: 260 changed lines, of which a couple are
+real.
+
+Git cannot filter that out. `--ignore-matching-lines` drops a change only when
+every changed line matches the pattern, and a CSV row carries the timestamp
+*value* rather than the column name, so no pattern separates "this row was
+re-read" from "this row's price moved". That is what
+[`LISTING_CHANGES.md`](LISTING_CHANGES.md) is for: it does the comparison
+field by field and reports only what moved.
+
+The column stays in the file rather than moving somewhere quieter, because it
+is what distinguishes a row read today from one
+[kept after a source failed](#refreshing-data). The run summary's source line
+and the stale table are both read off it.
 
 **Locally**, [`changes.py`](changes.py) says it in words instead:
 
