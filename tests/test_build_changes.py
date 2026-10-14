@@ -253,3 +253,20 @@ def test_a_current_csv_with_no_link_column_is_not_compared(tmp_path, capsys):
     current = [{"url": "L1", "scraped_at": "2026-01-10T00:00:00"}]
     assert build_changes._with_today(past, current) == past
     assert "link" in capsys.readouterr().err
+
+
+def test_the_equals_form_of_days_is_honoured(tmp_path, csv_file, monkeypatch):
+    """It used to fall back to 7 and say nothing."""
+    seen = {}
+    monkeypatch.setattr(build_changes, "_history",
+                        lambda **kw: (seen.update(kw) or
+                                      [("2026-01-08", {}), ("2026-01-09", {})], ""))
+    build_changes.main(["--csv", str(csv_file), "--out", str(tmp_path / "o.md"),
+                        "--days=3"])
+    assert seen["days"] == 3
+
+
+def test_a_dangling_days_flag_is_a_one_not_a_crash(tmp_path, csv_file):
+    """A reporting flag must never cost the day's data, so never a 2."""
+    assert build_changes.main(
+        ["--csv", str(csv_file), "--out", str(tmp_path / "o.md"), "--days"]) == 1

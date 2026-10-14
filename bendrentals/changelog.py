@@ -99,7 +99,8 @@ def _unplaced(row: dict) -> bool:
     return False
 
 
-def geocode_flags(rows: list[dict], cache_entries: dict[str, dict]) -> dict:
+def geocode_flags(rows: list[dict], cache_entries: dict[str, dict],
+                  *, today: str = "") -> dict:
     """What is worth saying about geocoding, and nothing more.
 
     `unmapped` is the listings with no coordinates, which are the ones the
@@ -115,11 +116,17 @@ def geocode_flags(rows: list[dict], cache_entries: dict[str, dict]) -> dict:
     failures = [entry for entry in cache_entries.values()
                 if str(entry.get("lat", UNKNOWN)) == UNKNOWN]
     dated = sorted(filter(None, (_day(e.get("failed_at")) for e in failures)))
-    next_retry = ""
+    next_retry, overdue = "", False
     if dated:
-        next_retry = (date.fromisoformat(dated[0])
-                      + timedelta(days=FAILURE_RETRY_DAYS)).isoformat()
+        due = date.fromisoformat(dated[0]) + timedelta(days=FAILURE_RETRY_DAYS)
+        next_retry = due.isoformat()
+        # A failure whose address has left the listings is never looked up
+        # again, so its failed_at never moves and the date it is "due" slides
+        # quietly into the past. Say so rather than printing it.
+        if _day(today) and due <= date.fromisoformat(_day(today)):
+            next_retry, overdue = "", True
     return {
+        "retry_overdue": overdue,
         "unmapped": sorted(unmapped, key=lambda u: (u["company"], u["address"])),
         "failures": len(failures),
         "undated_failures": sum(1 for e in failures if not _day(e.get("failed_at"))),
@@ -210,7 +217,12 @@ def _changes_section(days, labels, history_error) -> list[str]:
                   "revisions of the CSV to report movement between them.", ""]
         return lines
 
-    lines += ["A removed listing's link will usually no longer resolve: the "
+    span = len(days) - 1
+    lines += [f"Covering {span} day{'' if span == 1 else 's'}, "
+              f"{days[0][0]} to {days[-1][0]}. A shorter span than expected "
+              "means git had less history to read than the window asked for.",
+              "",
+              "A removed listing's link will usually no longer resolve: the "
               "company takes the page down when the property goes. The address "
               "and price are kept here so the record survives the link.", ""]
     for (before_date, before), (after_date, after) in reversed(
@@ -265,8 +277,8 @@ def _contents(stale_days: int) -> list[str]:
     ]
 
 
-def _geocoding_section(rows, cache_entries, labels) -> list[str]:
-    flags = geocode_flags(rows, cache_entries)
+def _geocoding_section(rows, cache_entries, labels, today) -> list[str]:
+    flags = geocode_flags(rows, cache_entries, today=today)
     lines = ["## Geocoding", ""]
     if not flags["unmapped"] and not flags["failures"]:
         lines += ["Nothing to flag: every listing has coordinates.", ""]
@@ -295,6 +307,9 @@ def _geocoding_section(rows, cache_entries, labels) -> list[str]:
         detail = f"{flags['failures']} address(es) are cached as unresolved"
         if flags["next_retry"]:
             detail += f"; the oldest is retried on {flags['next_retry']}"
+        elif flags["retry_overdue"]:
+            detail += ("; the oldest is already due and will be retried the "
+                       "next time its address appears in a listing")
         if flags["undated_failures"]:
             detail += (f". {flags['undated_failures']} predate the retry window "
                        "and are tried again on the next run")
@@ -356,6 +371,6 @@ def build(days, current, cache_entries, *, labels=None,
     ]
     lines += _contents(stale_days)
     lines += _changes_section(days, labels, history_error)
-    lines += _geocoding_section(current, cache_entries, labels)
+    lines += _geocoding_section(current, cache_entries, labels, today)
     lines += _stale_section(current, status, today, labels, stale_days)
     return "\n".join(lines).rstrip() + "\n"

@@ -22,6 +22,7 @@ import sys
 from pathlib import Path
 
 from bendrentals.changelog import build, run_date
+from bendrentals.cli import FlagError, flag_value
 from bendrentals.csv_out import read_rows
 from bendrentals.geocode import DEFAULT_CACHE_PATH, GeocodeCache
 from bendrentals.history import GitUnavailable, daily_revisions, rows_at
@@ -36,15 +37,6 @@ DEFAULT_DAYS = 7
 #: one `git log`; only the revisions actually kept are read with `git show`.
 SAME_DAY_CUSHION = 6
 REGISTRY = Path("sites.toml")
-
-
-def flag_value(argv, name, fallback=None):
-    """Read `--name value` from a raw argv, returning `fallback` when absent."""
-    if name in argv:
-        index = argv.index(name)
-        if index + 1 < len(argv):
-            return argv[index + 1]
-    return fallback
 
 
 def labels(path: Path = REGISTRY) -> dict[str, str]:
@@ -143,14 +135,17 @@ def _with_today(past: list, current: list[dict]) -> list:
 
 
 def main(argv):
-    out = Path(flag_value(argv, "--out", DEFAULT_OUT))
-    source = Path(flag_value(argv, "--csv", LISTINGS_CSV))
-
-    # A 1 rather than a 2 on purpose. update.py stops on a 2 and the workflow
-    # skips its commit, so a mistyped reporting flag would throw away a
-    # completed scrape. Nothing about this file is worth that.
+    # Every bad flag here is a 1 rather than a 2, on purpose. update.py stops
+    # on a 2 and the workflow skips its commit, so a mistyped reporting flag
+    # would throw away a completed scrape. Nothing about this file is worth
+    # that.
     try:
+        out = Path(flag_value(argv, "--out", DEFAULT_OUT))
+        source = Path(flag_value(argv, "--csv", LISTINGS_CSV))
         days = int(flag_value(argv, "--days", DEFAULT_DAYS))
+    except FlagError as error:
+        print(error, file=sys.stderr)
+        return 1
     except (TypeError, ValueError):
         print("--days takes a whole number.", file=sys.stderr)
         return 1

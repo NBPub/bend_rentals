@@ -114,3 +114,11 @@ def test_each_step_is_timed_and_reported(capsys):
     out = capsys.readouterr().out
     for name in ("scrape", "page", "changes"):
         assert f"--- {name}: ok in" in out
+
+
+def test_the_csv_flag_reaches_both_output_steps():
+    """It went only to the page, so the two were built from different files."""
+    plan = steps()
+    main(["--csv", "other.csv"], plan)
+    assert plan["page"].calls == [["--csv", "other.csv"]]
+    assert plan["changes"].calls == [["--csv", "other.csv"]]

@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-13. 135 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (2 days behind).
+Latest run: 2026-10-14. 134 listings from 16 companies. 15 sources did not answer and their listings are the ones published previously: Preferred Residential (3 days behind), Superior (1 day behind), Bend PM (1 day behind), Elevation (1 day behind), High Country (1 day behind), High Desert (1 day behind), Hummingbird (1 day behind), Lifestyles (1 day behind), Mountain View (1 day behind), Mt. Bachelor (1 day behind), PMI (1 day behind), Plus (1 day behind), Ridgeline (1 day behind), Utopia (1 day behind), Velocity (1 day behind).
 
 **Contents**
 
@@ -15,7 +15,22 @@ Latest run: 2026-10-13. 135 listings from 16 companies. 1 source did not answer 
 
 ## Recent changes
 
+Covering 7 days, 2026-10-07 to 2026-10-14. A shorter span than expected means git had less history to read than the window asked for.
+
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-14
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Trailhead | 0 | 1 |
+
+<details>
+<summary>1 listing</summary>
+
+- removed: [(no address published)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($2150, 3 BR, ? BA, Trailhead)
+
+</details>
 
 ### 2026-10-13
 
@@ -135,39 +150,9 @@ No listings added or removed since 2026-10-10.
 
 </details>
 
-### 2026-10-07
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-| Elevation | 0 | 1 |
-| High Desert | 1 | 0 |
-| Hummingbird | 0 | 1 |
-| Mountain View | 3 | 0 |
-| Mt. Bachelor | 0 | 1 |
-| Plus | 1 | 0 |
-| Ridgeline | 1 | 1 |
-
-<details>
-<summary>11 listings</summary>
-
-- added: [1529 SW Knoll Ave., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/465bbff8-b0f2-4a4c-a8f1-0b5b6bc08c37) ($1595, 1 BR, 1 BA, Mountain View)
-- added: [2940 NE Nikki Ct. #3, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/040b2822-0b40-4649-970e-7477ea654e4a) ($1795, 2 BR, 1.5 BA, High Desert)
-- added: [330 SE 15th St. #4, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/7c6e5a2b-2ee4-4eea-a230-d568c7938b27) ($1295, 1 BR, 1 BA, Plus)
-- added: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2195, 3 BR, 2 BA, Bend PM)
-- added: [61394 Cultus Lake Ct, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/62) ($5495, 5 BR, 4 BA, Ridgeline)
-- added: [65145 76th Street, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/41888f22-de9b-4850-b32c-52ac85836111) ($4795, 4 BR, 3.5 BA, Mountain View)
-- added: [82 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/15ed2f3f-059f-4643-b4a5-f8ef2bdbd6fb) ($1595, 1 BR, 1 BA, Mountain View)
-- removed: [1801 Northeast Purcell Boulevard, Unit #20, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/45) ($2225, 2 BR, 3 BA, Ridgeline)
-- removed: [1909 NE Bear Creek #2, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/152735) ($1650, 2 BR, 1 BA, Hummingbird)
-- removed: [1955 NW Brogan, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/0a1992b1-7270-4655-bc20-1d90d99357d6) ($4500, 5 BR, 3.5 BA, Elevation)
-- removed: [61623 Alstrup , Unit B (6), Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/fe9c3839-a44e-4861-85d1-0af6415de35e) ($1695, 1 BR, 1 BA, Mt. Bachelor)
-
-</details>
-
 ## Geocoding
 
-8 listing(s) have no coordinates and are listed below the map rather than placed on it.
+7 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
@@ -178,10 +163,15 @@ No listings added or removed since 2026-10-10.
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
-| Trailhead | ? |  |
 
 9 address(es) are cached as unresolved; the oldest is retried on 2026-10-24.
 
 ## Stale listings
 
-No stale listings: nothing has gone 3 days without a refresh.
+These have not refreshed for 3 days or more, so they may no longer be available. Check the listing itself.
+
+| Company | Address | Price | BR | BA | Last refreshed |
+|---|---|---|---|---|---|
+| Preferred Residential | 21170 SE Golden Market Ln, Bend, OR 97702 | 2999 | 2 | 2.5 | 2026-10-11 |
+| Preferred Residential | 335 NE Kearney Ave, Bend, OR 97701 | 2395 | 2 | 1 | 2026-10-11 |
+| Preferred Residential | 61473 Linton Loop, Bend, OR 97702 | 3395 | 3 | 2.5 | 2026-10-11 |

@@ -2,6 +2,7 @@ import csv
 
 import pytest
 
+from bendrentals.cli import FlagError
 from bendrentals.models import Listing
 from build_page import DEFAULT_OUT, flag_value, main
 
@@ -99,5 +100,15 @@ def test_flag_value_falls_back_when_absent():
     assert flag_value([], "--tiles", "esri") == "esri"
 
 
-def test_flag_value_at_the_end_of_argv_does_not_crash():
-    assert flag_value(["--tiles"], "--tiles", "esri") == "esri"
+def test_a_flag_at_the_end_of_argv_is_an_error_not_a_silent_default():
+    """This used to return the fallback, which answers a different question.
+
+    `--tiles` with nothing after it built the page with esri and said nothing
+    about having ignored what was asked for.
+    """
+    with pytest.raises(FlagError):
+        flag_value(["--tiles"], "--tiles", "esri")
+
+
+def test_a_dangling_flag_is_reported_rather_than_raising_out_of_main(tmp_path):
+    assert main(["--out", str(tmp_path / "p.html"), "--tiles"]) == 2

@@ -18,6 +18,7 @@ any whose site failed, keep the rows they already had.
 import os
 import sys
 
+from bendrentals.cli import FlagError, flag_value
 from bendrentals.csv_out import merge_rows, read_rows, write_rows
 from bendrentals.fetch import BACKFILL_DELAY, FetchError, get
 from bendrentals.filters import apply_filters
@@ -64,22 +65,15 @@ def add_coordinates(listings, cache):
             listing.lat, listing.lon = found
 
 
-def _flag_value(argv, name, fallback):
-    if name in argv:
-        index = argv.index(name)
-        if index + 1 < len(argv):
-            return argv[index + 1]
-    return fallback
-
-
 def main(argv):
     backfill = "--backfill" in argv
     geocoding = "--no-geocode" not in argv
     snapshot = "--no-snapshot" not in argv
     try:
-        limit = int(_flag_value(argv, "--geocode-limit", GEOCODE_LIMIT))
-    except ValueError:
-        print("--geocode-limit takes a whole number.", file=sys.stderr)
+        limit = int(flag_value(argv, "--geocode-limit", GEOCODE_LIMIT))
+    except (FlagError, ValueError) as error:
+        print(f"--geocode-limit takes a whole number ({error}).",
+              file=sys.stderr)
         return 2
 
     value_flags = {"--geocode-limit"}

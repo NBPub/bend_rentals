@@ -18,6 +18,7 @@ import sys
 import webbrowser
 from pathlib import Path
 
+from bendrentals.cli import FlagError, flag_value
 from bendrentals.csv_out import read_rows
 from bendrentals.mapdata import records_from_rows
 from bendrentals.pagehtml import (
@@ -45,20 +46,15 @@ def labels(path: Path = REGISTRY) -> dict[str, str]:
         return {}
 
 
-def flag_value(argv, name, fallback=None):
-    """Read `--name value` from a raw argv, returning `fallback` when absent."""
-    if name in argv:
-        index = argv.index(name)
-        if index + 1 < len(argv):
-            return argv[index + 1]
-    return fallback
-
-
 def main(argv):
-    out = Path(flag_value(argv, "--out", DEFAULT_OUT))
-    source = Path(flag_value(argv, "--csv", LISTINGS_CSV))
-    tiles = flag_value(argv, "--tiles", DEFAULT_TILES)
-    csv_url = flag_value(argv, "--csv-url", DEFAULT_CSV_URL)
+    try:
+        out = Path(flag_value(argv, "--out", DEFAULT_OUT))
+        source = Path(flag_value(argv, "--csv", LISTINGS_CSV))
+        tiles = flag_value(argv, "--tiles", DEFAULT_TILES)
+        csv_url = flag_value(argv, "--csv-url", DEFAULT_CSV_URL)
+    except FlagError as error:
+        print(error, file=sys.stderr)
+        return 2
 
     if tiles not in TILE_PROVIDERS:
         print(f"Unknown tile provider {tiles!r}.", file=sys.stderr)

@@ -34,7 +34,9 @@ SCRAPE_VALUE_FLAGS = ("--geocode-limit",)
 PAGE_FLAGS = ("--open",)
 PAGE_VALUE_FLAGS = ("--tiles", "--out", "--csv", "--csv-url")
 CHANGES_FLAGS = ()
-CHANGES_VALUE_FLAGS = ("--days",)
+#: --csv belongs here as well as on the page: without it `update.py --csv
+#: other.csv` built the page from one file and the changelog from another.
+CHANGES_VALUE_FLAGS = ("--days", "--csv")
 
 MISCONFIGURED = 2
 

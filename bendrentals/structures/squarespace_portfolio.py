@@ -17,8 +17,24 @@ from ..models import UNKNOWN
 #: Trailing UI text that is not part of the listing.
 NAV_TEXT = {"Next", "Previous", "Request an Application"}
 
-#: Addresses on Bend sources always end with ", Bend OR <zip>".
-ADDRESS_RE = re.compile(r",\s*Bend\s+OR\s+\d{5}", re.IGNORECASE)
+#: The address line, identified by the city, state and ZIP it ends with.
+#:
+#: The address has no markup of its own — it is one line in a stack of
+#: paragraphs — so it has to be recognised by its shape. The city is
+#: deliberately not pinned to Bend. It was, and the effect was the opposite of
+#: what the pattern looked like it did: a Trailhead listing in Redmond
+#: publishes a real address, the detector did not see it as one, the row was
+#: written with address "?", and `filters.in_city` keeps whatever it cannot
+#: disprove. So the Bend-only pattern was exactly what let a non-Bend listing
+#: onto a Bend-only site.
+#:
+#: The ZIP is what keeps this off prose: a sentence mentioning a town has no
+#: ", <town> OR <five digits>" in it. The city part is lazy so it cannot run
+#: past the state hunting for a later ZIP.
+ADDRESS_RE = re.compile(
+    r",\s*[A-Za-z][A-Za-z.'\- ]*?,?\s*\bOR\b\.?\s+\d{5}",
+    re.IGNORECASE,
+)
 
 
 def _soup(html: str) -> BeautifulSoup:

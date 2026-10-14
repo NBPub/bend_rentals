@@ -141,9 +141,11 @@ class GeocodeCache:
 
     @property
     def entries(self) -> dict[str, dict]:
-        """The raw cache, read-only, for reporting.
+        """The raw cache, for reporting.
 
-        A copy, so a reporting caller cannot edit the cache by accident.
+        A shallow copy: adding or dropping an address cannot affect the cache,
+        but the entry dicts are shared, so editing one would. Reporting only
+        reads them.
         """
         return dict(self._entries)
 

@@ -95,3 +95,42 @@ def test_empty_main_yields_unknowns():
     assert got["title"] == UNKNOWN
     assert got["address"] == UNKNOWN
     assert got["description"] == UNKNOWN
+
+
+# The detector finds the address line by the city and state in it, because the
+# page gives it no markup to go on. Hardcoding "Bend" meant an out-of-town
+# listing had no address at all, and filters.in_city — which reads the address
+# and keeps whatever it cannot disprove — then published it on a Bend-only
+# site. The one listing that should have been filtered was the only one whose
+# address was invisible.
+
+def _page(address_line):
+    return ("<html><body><main>"
+            "<p>$1,000 / 1br - 500ft2 - A title (SW Bend)</p>"
+            f"<p>{address_line}</p>"
+            "<p>Some description.</p>"
+            "</main></body></html>")
+
+
+@pytest.mark.parametrize("line", [
+    "451 NW 25th, Redmond OR 97756",
+    "123 Main St, Sisters OR 97759",
+    "9 Elm Ave, La Pine OR 97739",
+    "1 A St, Bend, OR 97701",            # the comma-before-state variant
+])
+def test_an_address_outside_bend_is_still_found(line):
+    assert parse_detail(_page(line))["address"] == line
+
+
+def test_a_bend_address_is_still_found():
+    line = "1302 NW Knoxville Blvd, Bend OR 97703"
+    assert parse_detail(_page(line))["address"] == line
+
+
+def test_a_line_that_is_not_an_address_is_not_mistaken_for_one():
+    """A description mentioning a town must not be read as the address."""
+    html = ("<html><body><main>"
+            "<p>$1,000 / 1br - 500ft2 - A title (SW Bend)</p>"
+            "<p>A short walk to everything, minutes from Sisters.</p>"
+            "</main></body></html>")
+    assert parse_detail(html)["address"] == UNKNOWN
