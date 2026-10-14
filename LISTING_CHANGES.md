@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-14. 134 listings from 16 companies. 15 sources did not answer and their listings are the ones published previously: Preferred Residential (3 days behind), Superior (1 day behind), Bend PM (1 day behind), Elevation (1 day behind), High Country (1 day behind), High Desert (1 day behind), Hummingbird (1 day behind), Lifestyles (1 day behind), Mountain View (1 day behind), Mt. Bachelor (1 day behind), PMI (1 day behind), Plus (1 day behind), Ridgeline (1 day behind), Utopia (1 day behind), Velocity (1 day behind).
+Latest run: 2026-10-14. 132 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -23,11 +23,15 @@ A removed listing's link will usually no longer resolve: the company takes the p
 
 | Company | Added | Removed |
 |---|---:|---:|
+| Lifestyles | 0 | 1 |
+| Mt. Bachelor | 0 | 1 |
 | Trailhead | 0 | 1 |
 
 <details>
-<summary>1 listing</summary>
+<summary>3 listings</summary>
 
+- removed: [61579 Lucia St , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/c3a5f92f-06b0-46a6-9314-2a85b0fd2eaa) ($3195, 2 BR, 2.5 BA, Mt. Bachelor)
+- removed: [902 NW Carlon Ave. - #2, Bend, OR 97703](https://lifestylesrealty.appfolio.com/listings/detail/ad15987d-86c4-42b1-8446-f0bd00359d9d) ($2095, 2 BR, 1.5 BA, Lifestyles)
 - removed: [(no address published)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($2150, 3 BR, ? BA, Trailhead)
 
 </details>
@@ -152,13 +156,12 @@ No listings added or removed since 2026-10-10.
 
 ## Geocoding
 
-7 listing(s) have no coordinates and are listed below the map rather than placed on it.
+6 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61073 NE Unity Place , Bend, OR 97701 | [search](https://www.google.com/maps/search/?api=1&query=61073+NE+Unity+Place+%2C+Bend%2C+OR+97701) |
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
-| Mt. Bachelor | 61579 Lucia St , Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61579+Lucia+St+%2C+Bend%2C+OR+97702) |
 | Mt. Bachelor | 63273 NW Ski Ln, Unit 2, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+NW+Ski+Ln%2C+Unit+2%2C+Bend%2C+OR+97703) |
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
@@ -168,10 +171,4 @@ No listings added or removed since 2026-10-10.
 
 ## Stale listings
 
-These have not refreshed for 3 days or more, so they may no longer be available. Check the listing itself.
-
-| Company | Address | Price | BR | BA | Last refreshed |
-|---|---|---|---|---|---|
-| Preferred Residential | 21170 SE Golden Market Ln, Bend, OR 97702 | 2999 | 2 | 2.5 | 2026-10-11 |
-| Preferred Residential | 335 NE Kearney Ave, Bend, OR 97701 | 2395 | 2 | 1 | 2026-10-11 |
-| Preferred Residential | 61473 Linton Loop, Bend, OR 97702 | 3395 | 3 | 2.5 | 2026-10-11 |
+No stale listings: nothing has gone 3 days without a refresh.
