@@ -99,6 +99,11 @@
   "lon": "-121.3123322",
   "address": "1157 SW Silver Lake Blvd, Bend, OR 97702"
  },
+ "1181 nw knoxville unit b bend or 97703": {
+  "lat": "44.0609979",
+  "lon": "-121.3362801",
+  "address": "1181 NW Knoxville, Unit B, Bend, OR 97703"
+ },
  "1205 ne ross rd - b bend or 97701": {
   "lat": "44.0793067",
   "lon": "-121.2891436",
@@ -460,6 +465,11 @@
   "lon": "-121.309080445972",
   "address": "20289 NW Hardy Rd # 1, Bend, OR 97703"
  },
+ "20289 schaeffer drive bend or 97703": {
+  "lat": "44.0914767",
+  "lon": "-121.3094671",
+  "address": "20289 Schaeffer Drive, Bend, OR 97703"
+ },
  "20318 knightsbridge place bend or 97702": {
   "lat": "44.0273989",
   "lon": "-121.3082914",
@@ -590,6 +600,11 @@
   "lat": "44.0937431",
   "lon": "-121.2811332",
   "address": "20838 Nova Loop - A, Bend, OR 97701"
+ },
+ "20991 spinnaker st 2 bend or 97701": {
+  "lat": "44.0877330",
+  "lon": "-121.2743065",
+  "address": "20991 Spinnaker St. #2, Bend, OR 97701"
  },
  "21 ne cessna dr 1 bend or 97701": {
   "lat": "44.0527348",
@@ -771,6 +786,11 @@
   "lon": "-121.2548796",
   "address": "3120 NE Marea Dr., Bend, OR 97701"
  },
+ "3141 ne monte vista ln bend or 97701": {
+  "lat": "44.0673598",
+  "lon": "-121.2545913",
+  "address": "3141 NE Monte Vista Ln., Bend, OR 97701"
+ },
  "3265 ne bain st bend or 97701": {
   "lat": "44.0848160",
   "lon": "-121.2624740",
@@ -815,6 +835,11 @@
   "lat": "44.0904801",
   "lon": "-121.2524051",
   "address": "3807 Eagle Road, Bend, OR 97701"
+ },
+ "403 se 4th street bend or 97702": {
+  "lat": "44.0460728",
+  "lon": "-121.2996795",
+  "address": "403 SE 4th Street, Bend, OR 97702"
  },
  "418 nw newport ave bend or 97703": {
   "lat": "44.0624776",
