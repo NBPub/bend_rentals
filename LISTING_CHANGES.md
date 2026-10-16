@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-15. 135 listings from 16 companies. Every source answered.
+Latest run: 2026-10-16. 133 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,31 @@ Latest run: 2026-10-15. 135 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-08 to 2026-10-15. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-09 to 2026-10-16. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-16
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 0 | 1 |
+| PMI | 1 | 1 |
+| Plus | 0 | 1 |
+| Ridgeline | 1 | 0 |
+| Superior | 0 | 1 |
+
+<details>
+<summary>6 listings</summary>
+
+- added: [1527 NW Juniper St, Unit 2, Bend, OR 97703](https://ridgelinepropertymgmt.rentvine.com/public/listings/66) ($1650, 1 BR, 1 BA, Ridgeline)
+- added: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
+- removed: [20047 Beth Ave - #2, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/4128f407-21d6-4a9f-af12-d042a2d1e13e) ($1795, 2 BR, 2.5 BA, Superior)
+- removed: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, 1 BR, 1 BA, PMI)
+- removed: [61158 SW Teton Lane, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/be4cb419-d670-4573-b095-791e4673b38b) ($2950, 3 BR, 2.5 BA, Plus)
+- removed: [61550 Brosterhous Rd. - 07, Bend, OR 97702](https://bend.appfolio.com/listings/detail/63d5daf2-63e9-4d76-88fc-7d222f05b6fc) ($1395, 2 BR, 1 BA, Bend PM)
+
+</details>
 
 ### 2026-10-15
 
@@ -139,25 +161,6 @@ No listings added or removed since 2026-10-10.
 - removed: [20318 Knightsbridge Place, Bend, OR 97702](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/64670) ($2225, 2 BR, 2 BA, Hummingbird)
 - removed: [3032 NE Terreo Place - #2, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/9d761c35-7e7f-4f41-959b-28d34cac8df7) ($2395, 3 BR, 2.5 BA, Velocity)
 - removed: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
-
-</details>
-
-### 2026-10-09
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Desert | 1 | 0 |
-| Lifestyles | 1 | 0 |
-| Mountain View | 1 | 0 |
-| Velocity | 0 | 1 |
-
-<details>
-<summary>4 listings</summary>
-
-- added: [20523 SE Cameron Ave., Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/129a7012-88c4-483c-ae4d-2b2fc2db08e9) ($2700, 3 BR, 2.5 BA, Lifestyles)
-- added: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, 2 BR, 2 BA, High Desert)
-- added: [638 NE Vail Lane, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/f37cc795-18b2-46d5-853d-5dad89072463) ($2495, 3 BR, 2.5 BA, Mountain View)
-- removed: [3344 NW Celilo Ln. - #2, Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/c44fb3c2-42b4-4bf5-83a4-a67f1fd81d5c) ($1595, 0 BR, 1 BA, Velocity)
 
 </details>
 
