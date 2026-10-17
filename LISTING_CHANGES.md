@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-16. 133 listings from 16 companies. Every source answered.
+Latest run: 2026-10-17. 133 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,24 @@ Latest run: 2026-10-16. 133 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-09 to 2026-10-16. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-10 to 2026-10-17. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-17
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 1 | 0 |
+| PMI | 0 | 1 |
+
+<details>
+<summary>2 listings</summary>
+
+- added: [60134 Turquoise Road, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/304c5a89-1ab7-4b28-ac94-dd83fa436fc3) ($3500, 3 BR, 2 BA, Elevation)
+- removed: [20278 Knightsbridge Place, Bend, OR 97702](https://pmicentraloregon.rentvine.com/public/listings/233) ($2895, 4 BR, 3 BA, PMI)
+
+</details>
 
 ### 2026-10-16
 
@@ -136,33 +151,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 ### 2026-10-11
 
 No listings added or removed since 2026-10-10.
-
-### 2026-10-10
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 3 | 1 |
-| High Desert | 0 | 1 |
-| Hummingbird | 0 | 1 |
-| PMI | 0 | 1 |
-| Superior | 1 | 0 |
-| Velocity | 1 | 1 |
-
-<details>
-<summary>10 listings</summary>
-
-- added: [1205 NE Ross Rd - B, Bend, OR 97701](https://bend.appfolio.com/listings/detail/3dc8688c-4353-42cb-9176-4b5fb26e14fb) ($1695, 2 BR, 1 BA, Bend PM)
-- added: [1459 NW Albany - 42, Bend, OR 97703](https://bend.appfolio.com/listings/detail/7714dbbf-db90-479f-90bd-0395bfc71472) ($1595, 3 BR, 1 BA, Bend PM)
-- added: [1469 NW Kingston , Bend, OR 97703](https://bend.appfolio.com/listings/detail/370c18df-b926-4f17-91b0-66b01aa2eedf) ($2495, 3 BR, 2 BA, Bend PM)
-- added: [61701 Bridge Creek Dr., Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/e66b7451-6c5a-4559-b66f-15b474abb124) ($2695, 3 BR, 2.5 BA, Velocity)
-- added: [64420 Bailey Rd, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/f41b304f-3c53-4fb2-a973-c9d8bb8e2465) ($5750, 4 BR, 3 BA, Superior)
-- removed: [1754 NE Lotus Dr #1, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/55894afc-8bfa-49c4-addd-ee9abad2fe3c) ($2195, 3 BR, 2.5 BA, High Desert)
-- removed: [20058 Beth Ave. - 04, Bend, OR 97702](https://bend.appfolio.com/listings/detail/27e85839-c196-445a-8366-35e6faa5cbee) ($2095, 3 BR, 2.5 BA, Bend PM)
-- removed: [20318 Knightsbridge Place, Bend, OR 97702](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/64670) ($2225, 2 BR, 2 BA, Hummingbird)
-- removed: [3032 NE Terreo Place - #2, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/9d761c35-7e7f-4f41-959b-28d34cac8df7) ($2395, 3 BR, 2.5 BA, Velocity)
-- removed: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
-
-</details>
 
 ## Geocoding
 
