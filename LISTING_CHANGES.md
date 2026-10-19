@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-18. 133 listings from 16 companies. Every source answered.
+Latest run: 2026-10-19. 131 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,26 @@ Latest run: 2026-10-18. 133 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-11 to 2026-10-18. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-12 to 2026-10-19. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-19
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 1 | 1 |
+| Superior | 0 | 2 |
+
+<details>
+<summary>4 listings</summary>
+
+- added: [63337 Stonewood Drive, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/004edb30-48e9-4201-bdb0-2056bd7733bc) ($4000, 4 BR, 3.5 BA, Elevation)
+- removed: [111 NW Hawthorne Avenue #2, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/b8d301cf-ba01-4c5f-802e-10b995c511c8) ($2200, 1 BR, 1.5 BA, Elevation)
+- removed: [21246 Thornhill Lane, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/4eafe173-823f-4991-b878-4fdea676452b) ($2295, 3 BR, 2 BA, Superior)
+- removed: [885 SW Silver Lake Blvd., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/480ce7cb-1a43-43fc-a4e1-49bbb259a0a9) ($2795, 3 BR, 2 BA, Superior)
+
+</details>
 
 ### 2026-10-18
 
@@ -133,22 +150,6 @@ No listings added or removed since 2026-10-17.
 - removed: [60991 SE Sweet Pea Dr #1, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/99147a99-edb7-4643-bcb0-67b1420bfa32) ($2495, 3 BR, 2 BA, High Desert)
 - removed: [61540 Lucia St , Unit 2 , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/3b09dcec-a1d9-4bc2-9a84-22528bab9cb7) ($2195, 2 BR, 2.5 BA, Mt. Bachelor)
 - removed: [628 NE Isabella Ln, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/6b1dfc27-bcd9-49a3-bff9-5ee81badbaf2) ($2395, 2 BR, 2 BA, Mountain View)
-
-</details>
-
-### 2026-10-12
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Mountain View | 2 | 0 |
-| Mt. Bachelor | 1 | 0 |
-
-<details>
-<summary>3 listings</summary>
-
-- added: [1529 NW Portland Ave - A, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/62315115-78da-48bc-a4e2-b6e3953582e4) ($1595, 2 BR, 1 BA, Mountain View)
-- added: [21375 NE Kristin Court, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/5f63f537-27bf-4433-b1ee-be956b0f9913) ($2450, 3 BR, 2 BA, Mountain View)
-- added: [817 SE 5th St , Unit 1, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/09474a59-d997-4efb-9f6f-94996250e8a3) ($2175, 3 BR, 2 BA, Mt. Bachelor)
 
 </details>
 
