@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-19. 131 listings from 16 companies. Every source answered.
+Latest run: 2026-10-20. 130 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,30 @@ Latest run: 2026-10-19. 131 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-12 to 2026-10-19. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-13 to 2026-10-20. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-20
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Country | 1 | 0 |
+| Lifestyles | 0 | 1 |
+| Mt. Bachelor | 0 | 1 |
+| Plus | 1 | 0 |
+| Superior | 0 | 1 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [60881 SE Sweet Pea Drive, Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/e1658edc-bfed-4b7a-a8c4-4ddbd311dffd) ($2795, 3 BR, 2 BA, High Country)
+- added: [61158 SW Teton Lane, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/be4cb419-d670-4573-b095-791e4673b38b) ($2950, 3 BR, 2.5 BA, Plus)
+- removed: [115 NW Mt. Washington Dr., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/173fa78f-b6fb-43cc-b130-f0416c7ebcf8) ($3000, 3 BR, 2.5 BA, Superior)
+- removed: [63273 NW Ski Ln, Unit 2, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/66da1d8d-5644-4b4a-a65e-450ed65741b0) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
+- removed: [824 NW Newport Ave. - #1, Bend, OR 97703](https://lifestylesrealty.appfolio.com/listings/detail/662f2284-4edf-4e77-9293-9db27c1f4322) ($2300, 2 BR, 2 BA, Lifestyles)
+
+</details>
 
 ### 2026-10-19
 
@@ -125,44 +146,15 @@ No listings added or removed since 2026-10-17.
 
 </details>
 
-### 2026-10-13
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Elevation | 1 | 0 |
-| High Desert | 0 | 1 |
-| Mountain View | 1 | 2 |
-| Mt. Bachelor | 0 | 1 |
-| Superior | 6 | 0 |
-
-<details>
-<summary>12 listings</summary>
-
-- added: [11 NW Hixon Ave - #2, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/8599c579-045a-4076-825c-ff838f5cbe78) ($1395, 1 BR, 1 BA, Superior)
-- added: [1145 NW Knoxville - 1145, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/88f65811-962c-4334-8969-7066eeff098e) ($2600, 2 BR, 2 BA, Superior)
-- added: [1743 NE Lotus Drive - A, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/e81e3d31-34d4-4897-9ab3-e74d5b6e8d9c) ($2100, 3 BR, 2.5 BA, Superior)
-- added: [21246 Thornhill Lane, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/4eafe173-823f-4991-b878-4fdea676452b) ($2295, 3 BR, 2 BA, Superior)
-- added: [61049 Larkspur Loop, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/fd4fa7d0-e904-43c3-90d0-3712b4f929e3) ($2800, 3 BR, 2 BA, Elevation)
-- added: [61525 Jennifer Ln. - #3, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/d78143f6-633f-4db0-9229-d03ee1b64432) ($2295, 3 BR, 2.5 BA, Superior)
-- added: [63737 Hunters Circle, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/905c3392-1fce-4123-89a1-f6d543b8ed9f) ($2395, 3 BR, 2 BA, Mountain View)
-- added: [885 SW Silver Lake Blvd., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/480ce7cb-1a43-43fc-a4e1-49bbb259a0a9) ($2795, 3 BR, 2 BA, Superior)
-- removed: [56333 Solar Drive , Bend, OR 97707](https://mountainviewpm.appfolio.com/listings/detail/6cf7ac51-2ed3-4685-b80b-08400c681bfe) ($2195, 2 BR, 1.5 BA, Mountain View)
-- removed: [60991 SE Sweet Pea Dr #1, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/99147a99-edb7-4643-bcb0-67b1420bfa32) ($2495, 3 BR, 2 BA, High Desert)
-- removed: [61540 Lucia St , Unit 2 , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/3b09dcec-a1d9-4bc2-9a84-22528bab9cb7) ($2195, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [628 NE Isabella Ln, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/6b1dfc27-bcd9-49a3-bff9-5ee81badbaf2) ($2395, 2 BR, 2 BA, Mountain View)
-
-</details>
-
 ## Geocoding
 
-7 listing(s) have no coordinates and are listed below the map rather than placed on it.
+6 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61073 NE Unity Place , Bend, OR 97701 | [search](https://www.google.com/maps/search/?api=1&query=61073+NE+Unity+Place+%2C+Bend%2C+OR+97701) |
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
 | Mt. Bachelor | 61579 Lucia St , Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61579+Lucia+St+%2C+Bend%2C+OR+97702) |
-| Mt. Bachelor | 63273 NW Ski Ln, Unit 2, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+NW+Ski+Ln%2C+Unit+2%2C+Bend%2C+OR+97703) |
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
