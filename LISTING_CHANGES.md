@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-20. 130 listings from 16 companies. Every source answered.
+Latest run: 2026-10-21. 134 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,32 @@ Latest run: 2026-10-20. 130 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-13 to 2026-10-20. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-14 to 2026-10-21. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-21
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 0 |
+| Elevation | 1 | 0 |
+| High Desert | 1 | 0 |
+| Hummingbird | 1 | 0 |
+| Mountain View | 0 | 1 |
+| Utopia | 1 | 0 |
+
+<details>
+<summary>6 listings</summary>
+
+- added: [20345 Sonata Way, Unit #1, Bend, OR 97702](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/154892) ($2050, 2 BR, 2 BA, Hummingbird)
+- added: [245 SW James Drive, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/a3ac8d05-953d-4a08-a877-056af6adf27f) ($2500, 3 BR, 2 BA, Elevation)
+- added: [2747 NE North Pilot Butte Drive, Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/f542fb7f-f123-4420-8373-d4012b55b599) ($2595, 3 BR, 2 BA, Utopia)
+- added: [61077 NE Unity Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/0e793642-993e-48be-9f74-5060c41793b0) ($2525, 3 BR, 2.5 BA, High Desert)
+- added: [61550 Brosterhous Rd. - 07, Bend, OR 97702](https://bend.appfolio.com/listings/detail/63d5daf2-63e9-4d76-88fc-7d222f05b6fc) ($1350, 2 BR, 1 BA, Bend PM)
+- removed: [2058 NW Black Pines Pl #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/648d3d0a-569f-4b78-a556-78e8c77861c1) ($1895, 2 BR, 1 BA, Mountain View)
+
+</details>
 
 ### 2026-10-20
 
@@ -129,37 +152,21 @@ No listings added or removed since 2026-10-17.
 
 </details>
 
-### 2026-10-14
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Lifestyles | 0 | 1 |
-| Mt. Bachelor | 0 | 1 |
-| Trailhead | 0 | 1 |
-
-<details>
-<summary>3 listings</summary>
-
-- removed: [61579 Lucia St , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/c3a5f92f-06b0-46a6-9314-2a85b0fd2eaa) ($3195, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [902 NW Carlon Ave. - #2, Bend, OR 97703](https://lifestylesrealty.appfolio.com/listings/detail/ad15987d-86c4-42b1-8446-f0bd00359d9d) ($2095, 2 BR, 1.5 BA, Lifestyles)
-- removed: [(no address published)](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-tt2sz) ($2150, 3 BR, ? BA, Trailhead)
-
-</details>
-
 ## Geocoding
 
-6 listing(s) have no coordinates and are listed below the map rather than placed on it.
+7 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61073 NE Unity Place , Bend, OR 97701 | [search](https://www.google.com/maps/search/?api=1&query=61073+NE+Unity+Place+%2C+Bend%2C+OR+97701) |
+| High Desert | 61077 NE Unity Place, Bend, OR 97701 | [search](https://www.google.com/maps/search/?api=1&query=61077+NE+Unity+Place%2C+Bend%2C+OR+97701) |
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
 | Mt. Bachelor | 61579 Lucia St , Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61579+Lucia+St+%2C+Bend%2C+OR+97702) |
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
 
-9 address(es) are cached as unresolved; the oldest is retried on 2026-10-24.
+10 address(es) are cached as unresolved; the oldest is retried on 2026-10-24.
 
 ## Stale listings
 
