@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-21. 134 listings from 16 companies. Every source answered.
+Latest run: 2026-10-22. 132 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,33 @@ Latest run: 2026-10-21. 134 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-14 to 2026-10-21. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-15 to 2026-10-22. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-22
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 3 | 1 |
+| Plus | 0 | 1 |
+| Ridgeline | 0 | 1 |
+| Superior | 0 | 1 |
+| Trailhead | 0 | 1 |
+
+<details>
+<summary>8 listings</summary>
+
+- added: [24 SW 15th St. - 22, Bend, OR 97702](https://bend.appfolio.com/listings/detail/fb7af5d4-d07a-498c-beac-3bb88f6464de) ($1095, 1 BR, 1 BA, Bend PM)
+- added: [24 SW 15th St. - 23, Bend, OR 97702](https://bend.appfolio.com/listings/detail/44ee1004-90d7-4442-b771-eaef30909809) ($1095, 1 BR, 1 BA, Bend PM)
+- added: [471 SW Garfield - 300, Bend, OR 97702](https://bend.appfolio.com/listings/detail/3915d2d7-62c1-4796-97d8-384320ed2ff4) ($1995, 2 BR, 1.5 BA, Bend PM)
+- removed: [11 NW Hixon Ave - #2, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/8599c579-045a-4076-825c-ff838f5cbe78) ($1395, 1 BR, 1 BA, Superior)
+- removed: [1527 NW Juniper St, Unit 2, Bend, OR 97703](https://ridgelinepropertymgmt.rentvine.com/public/listings/66) ($1650, 1 BR, 1 BA, Ridgeline)
+- removed: [1663 NW Elgin Ave., Bend, OR 97703](https://bend.appfolio.com/listings/detail/bfe49c1c-8d29-4a3c-99f9-c6ea23113a24) ($2795, 3 BR, 2 BA, Bend PM)
+- removed: [2055 NE York Circle #1, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/75f3d070-79b4-4c07-adca-2b77e3f4853d) ($1595, 2 BR, 1.5 BA, Plus)
+- removed: [61275 Kristen St, Bend OR 97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-n9hac-ecdk2-dmpzm) ($2895, 3 BR, 2.5 BA, Trailhead)
+
+</details>
 
 ### 2026-10-21
 
@@ -118,37 +142,6 @@ No listings added or removed since 2026-10-17.
 - removed: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, 1 BR, 1 BA, PMI)
 - removed: [61158 SW Teton Lane, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/be4cb419-d670-4573-b095-791e4673b38b) ($2950, 3 BR, 2.5 BA, Plus)
 - removed: [61550 Brosterhous Rd. - 07, Bend, OR 97702](https://bend.appfolio.com/listings/detail/63d5daf2-63e9-4d76-88fc-7d222f05b6fc) ($1395, 2 BR, 1 BA, Bend PM)
-
-</details>
-
-### 2026-10-15
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 0 | 1 |
-| Elevation | 0 | 2 |
-| High Country | 1 | 0 |
-| High Desert | 0 | 1 |
-| Mountain View | 2 | 0 |
-| Mt. Bachelor | 1 | 0 |
-| Plus | 1 | 0 |
-| Superior | 1 | 0 |
-| Utopia | 1 | 0 |
-
-<details>
-<summary>11 listings</summary>
-
-- added: [1181 NW Knoxville, Unit B, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/7a3fe2df-bc13-457c-a8f6-cf60cc7988eb) ($1795, 1 BR, 1 BA, Plus)
-- added: [2001 NE Neil Way, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/7847fde5-ae0a-4354-b1a8-eb43b8458552) ($1550, 2 BR, 1.5 BA, Mountain View)
-- added: [20289 Schaeffer Drive, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/c18a06df-422d-4593-be8f-11824d926b6c) ($2295, 2 BR, 2.5 BA, Superior)
-- added: [20991 Spinnaker St. #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/54584392-096f-4c34-b9ba-bfceff0d3bf1) ($2100, 2 BR, 1 BA, Mountain View)
-- added: [3141 NE Monte Vista Ln., Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/cab54f53-f21c-49aa-9599-46785f359893) ($3195, 3 BR, 2.5 BA, High Country)
-- added: [403 SE 4th Street, Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/02e00c6e-7047-4cc3-93f5-68b28ced0fdb) ($1995, 2 BR, 1 BA, Utopia)
-- added: [61579 Lucia St , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/c3a5f92f-06b0-46a6-9314-2a85b0fd2eaa) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [19658 Harvard Place, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/a59ccc98-ba8c-414f-8fab-3ad415cb2d56) ($3300, 4 BR, 2.5 BA, Elevation)
-- removed: [20681 SE Iron Horse Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/8010d6e7-2ce1-4491-b737-1b1897dd9bfc) ($2295, 2 BR, 2 BA, High Desert)
-- removed: [21241 SE Golden Market Lane, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/29ba44c5-68c5-4371-9953-bc36fac76ab9) ($3000, 3 BR, 2.5 BA, Elevation)
-- removed: [832 SE 6th Street unit #2, Bend, OR 97702](https://bend.appfolio.com/listings/detail/480a5ef2-5e90-460d-af28-66f912778354) ($1950, 2 BR, 1 BA, Bend PM)
 
 </details>
 

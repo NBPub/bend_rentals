@@ -701,6 +701,16 @@
   "lon": "-121.2702690",
   "address": "2399 NE Victor Place #2, Bend, OR 97701"
  },
+ "24 sw 15th st - 22 bend or 97702": {
+  "lat": "44.0511570",
+  "lon": "-121.3334857",
+  "address": "24 SW 15th St. - 22, Bend, OR 97702"
+ },
+ "24 sw 15th st - 23 bend or 97702": {
+  "lat": "44.0511570",
+  "lon": "-121.3334857",
+  "address": "24 SW 15th St. - 23, Bend, OR 97702"
+ },
  "245 sw james drive bend or 97702": {
   "lat": "44.0396613",
   "lon": "-121.3112170",
@@ -875,6 +885,11 @@
   "lat": "44.0559055",
   "lon": "-121.3188730",
   "address": "459 NW Broadway St. , Bend, OR 97703"
+ },
+ "471 sw garfield - 300 bend or 97702": {
+  "lat": "44.0354529",
+  "lon": "-121.3153036",
+  "address": "471 SW Garfield - 300, Bend, OR 97702"
  },
  "5 sw taft ave unit 2 bend or 97702": {
   "lat": "44.0433010",
