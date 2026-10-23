@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-22. 132 listings from 16 companies. Every source answered.
+Latest run: 2026-10-23. 137 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,33 @@ Latest run: 2026-10-22. 132 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-15 to 2026-10-22. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-16 to 2026-10-23. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-23
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 0 | 1 |
+| Elevation | 2 | 0 |
+| High Country | 1 | 0 |
+| Hummingbird | 1 | 0 |
+| Mountain View | 1 | 0 |
+| Utopia | 1 | 0 |
+
+<details>
+<summary>7 listings</summary>
+
+- added: [2022 NE Neil Way #4, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/af92fe9b-269f-49d7-8d9f-f08d062a2777) ($1595, 2 BR, 1.5 BA, Mountain View)
+- added: [20788 SE Shea Ct., Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/4a36d7ea-d9d6-48ac-9444-e969c92b6dfe) ($3195, 4 BR, 3 BA, High Country)
+- added: [21241 SE Golden Market Lane, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/29ba44c5-68c5-4371-9953-bc36fac76ab9) ($3000, 3 BR, 2.5 BA, Elevation)
+- added: [3525 NW McCready Drive, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/c1166e9b-e17d-40c3-aff5-98d26566df39) ($4500, 3 BR, 2.5 BA, Elevation)
+- added: [4 SW Cleveland Ave , Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/873eba74-6775-4c45-9aa2-b52c34bcb477) ($1395, 1 BR, 1 BA, Utopia)
+- added: [510 Northwest Delaware Avenue, Bend, OR 97703](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/90045) ($3750, 4 BR, 2 BA, Hummingbird)
+- removed: [1459 NW Albany - 42, Bend, OR 97703](https://bend.appfolio.com/listings/detail/7714dbbf-db90-479f-90bd-0395bfc71472) ($1595, 3 BR, 1 BA, Bend PM)
+
+</details>
 
 ### 2026-10-22
 
@@ -120,28 +144,6 @@ No listings added or removed since 2026-10-17.
 
 - added: [60134 Turquoise Road, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/304c5a89-1ab7-4b28-ac94-dd83fa436fc3) ($3500, 3 BR, 2 BA, Elevation)
 - removed: [20278 Knightsbridge Place, Bend, OR 97702](https://pmicentraloregon.rentvine.com/public/listings/233) ($2895, 4 BR, 3 BA, PMI)
-
-</details>
-
-### 2026-10-16
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 0 | 1 |
-| PMI | 1 | 1 |
-| Plus | 0 | 1 |
-| Ridgeline | 1 | 0 |
-| Superior | 0 | 1 |
-
-<details>
-<summary>6 listings</summary>
-
-- added: [1527 NW Juniper St, Unit 2, Bend, OR 97703](https://ridgelinepropertymgmt.rentvine.com/public/listings/66) ($1650, 1 BR, 1 BA, Ridgeline)
-- added: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
-- removed: [20047 Beth Ave - #2, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/4128f407-21d6-4a9f-af12-d042a2d1e13e) ($1795, 2 BR, 2.5 BA, Superior)
-- removed: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, 1 BR, 1 BA, PMI)
-- removed: [61158 SW Teton Lane, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/be4cb419-d670-4573-b095-791e4673b38b) ($2950, 3 BR, 2.5 BA, Plus)
-- removed: [61550 Brosterhous Rd. - 07, Bend, OR 97702](https://bend.appfolio.com/listings/detail/63d5daf2-63e9-4d76-88fc-7d222f05b6fc) ($1395, 2 BR, 1 BA, Bend PM)
 
 </details>
 
