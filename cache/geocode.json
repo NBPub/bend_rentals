@@ -253,7 +253,7 @@
   "lat": "?",
   "lon": "?",
   "address": "1643 NW Knoll, Bend OR 97703",
-  "failed_at": "2026-09-24"
+  "failed_at": "2026-10-24"
  },
  "1663 nw elgin ave bend or 97703": {
   "lat": "44.0549749",
@@ -400,6 +400,11 @@
   "lon": "-121.3295680",
   "address": "19899 Antler Point Dr., Bend, OR 97702"
  },
+ "1996 ne hollow tree lane bend or 97701": {
+  "lat": "44.080653290069",
+  "lon": "-121.274914825215",
+  "address": "1996 NE Hollow Tree Lane, Bend, OR 97701"
+ },
  "2001 ne neil way bend or 97701": {
   "lat": "44.0717650",
   "lon": "-121.2731180",
@@ -514,7 +519,7 @@
   "lat": "?",
   "lon": "?",
   "address": "20505 SE Evian Ave, Bend, OR 97702",
-  "failed_at": "2026-09-24"
+  "failed_at": "2026-10-24"
  },
  "20511 se brentwood bend or 97702": {
   "lat": "44.033313695235",
@@ -545,6 +550,11 @@
   "lat": "44.0644794",
   "lon": "-121.3419375",
   "address": "2058 NW Monterey Pines Dr - 1, Bend, OR 97703"
+ },
+ "20581 sun meadow way bend or 97702": {
+  "lat": "44.0245401",
+  "lon": "-121.2951574",
+  "address": "20581 Sun Meadow Way, Bend, OR 97702"
  },
  "206- 200 sw summer lake dr unit 102 bend or 97702": {
   "lat": "44.0383120",
@@ -971,6 +981,11 @@
   "lon": "-121.3217290",
   "address": "60303 Addie Triplett Loop, Bend, OR 97702"
  },
+ "60615 river bend dr bend or 97702": {
+  "lat": "44.001349332101",
+  "lon": "-121.372090068135",
+  "address": "60615 River Bend Dr, Bend, OR 97702"
+ },
  "60785 willow creek loop bend or 97702": {
   "lat": "44.0073419",
   "lon": "-121.3107118",
@@ -1161,6 +1176,11 @@
   "lat": "44.0705936",
   "lon": "-121.2968527",
   "address": "628 NE Isabella Ln, Bend, OR 97701"
+ },
+ "630 nw silver buckle rd bend or 97703": {
+  "lat": "44.0939130",
+  "lon": "-121.3163894",
+  "address": "630 NW Silver Buckle Rd, Bend, OR 97703"
  },
  "63084 ne sophwith lane bend or 97701": {
   "lat": "44.090727944397",
