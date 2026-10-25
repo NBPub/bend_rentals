@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-24. 138 listings from 16 companies. Every source answered.
+Latest run: 2026-10-25. 138 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,13 @@ Latest run: 2026-10-24. 138 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-17 to 2026-10-24. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-18 to 2026-10-25. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-25
+
+No listings added or removed since 2026-10-24.
 
 ### 2026-10-24
 
@@ -151,10 +155,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [885 SW Silver Lake Blvd., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/480ce7cb-1a43-43fc-a4e1-49bbb259a0a9) ($2795, 3 BR, 2 BA, Superior)
 
 </details>
-
-### 2026-10-18
-
-No listings added or removed since 2026-10-17.
 
 ## Geocoding
 
