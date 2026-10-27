@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-26. 137 listings from 16 companies. Every source answered.
+Latest run: 2026-10-27. 134 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,31 @@ Latest run: 2026-10-26. 137 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-19 to 2026-10-26. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-20 to 2026-10-27. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-27
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Mountain View | 0 | 2 |
+| Plus | 1 | 1 |
+| Superior | 0 | 2 |
+| Velocity | 1 | 0 |
+
+<details>
+<summary>7 listings</summary>
+
+- added: [20824 Gateway Dr. , Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/42739e34-6452-4f9e-8c34-3ac02f4e8af5) ($2750, 3 BR, 2.5 BA, Velocity)
+- added: [792 NE Copperleaf Loop - #2, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/53e26fe0-4a2c-4b09-83d4-a4c1d09114fd) ($2050, 2 BR, 2.5 BA, Plus)
+- removed: [1565 NW Portland - #12, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/817f446e-e108-4628-873b-4352f2276537) ($1350, 0 BR, 1 BA, Plus)
+- removed: [2001 NE Neil Way, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/7847fde5-ae0a-4354-b1a8-eb43b8458552) ($1550, 2 BR, 1.5 BA, Mountain View)
+- removed: [2024 NE Neil Way #5, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/6ae38077-44f7-46fc-b60e-7cbf0e660b92) ($1595, 2 BR, 1.5 BA, Mountain View)
+- removed: [61236 Dayspring Dr., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/d08fd943-efa5-48da-8e11-1543ade08ffe) ($2600, 3 BR, 2.5 BA, Superior)
+- removed: [61456 SE Brosterhous Rd., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/44dc0d4a-68d5-4dc3-89d8-99f8cece535a) ($2495, 4 BR, 2 BA, Superior)
+
+</details>
 
 ### 2026-10-26
 
@@ -132,27 +154,6 @@ No listings added or removed since 2026-10-24.
 - added: [61077 NE Unity Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/0e793642-993e-48be-9f74-5060c41793b0) ($2525, 3 BR, 2.5 BA, High Desert)
 - added: [61550 Brosterhous Rd. - 07, Bend, OR 97702](https://bend.appfolio.com/listings/detail/63d5daf2-63e9-4d76-88fc-7d222f05b6fc) ($1350, 2 BR, 1 BA, Bend PM)
 - removed: [2058 NW Black Pines Pl #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/648d3d0a-569f-4b78-a556-78e8c77861c1) ($1895, 2 BR, 1 BA, Mountain View)
-
-</details>
-
-### 2026-10-20
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Country | 1 | 0 |
-| Lifestyles | 0 | 1 |
-| Mt. Bachelor | 0 | 1 |
-| Plus | 1 | 0 |
-| Superior | 0 | 1 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [60881 SE Sweet Pea Drive, Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/e1658edc-bfed-4b7a-a8c4-4ddbd311dffd) ($2795, 3 BR, 2 BA, High Country)
-- added: [61158 SW Teton Lane, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/be4cb419-d670-4573-b095-791e4673b38b) ($2950, 3 BR, 2.5 BA, Plus)
-- removed: [115 NW Mt. Washington Dr., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/173fa78f-b6fb-43cc-b130-f0416c7ebcf8) ($3000, 3 BR, 2.5 BA, Superior)
-- removed: [63273 NW Ski Ln, Unit 2, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/66da1d8d-5644-4b4a-a65e-450ed65741b0) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [824 NW Newport Ave. - #1, Bend, OR 97703](https://lifestylesrealty.appfolio.com/listings/detail/662f2284-4edf-4e77-9293-9db27c1f4322) ($2300, 2 BR, 2 BA, Lifestyles)
 
 </details>
 

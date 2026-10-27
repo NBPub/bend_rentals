@@ -621,6 +621,11 @@
   "lon": "-121.2851984",
   "address": "20788 SE Shea Ct., Bend, OR 97702"
  },
+ "20824 gateway dr bend or 97702": {
+  "lat": "44.0168352",
+  "lon": "-121.2833933",
+  "address": "20824 Gateway Dr. , Bend, OR 97702"
+ },
  "20838 nova loop - a bend or 97701": {
   "lat": "44.0937431",
   "lon": "-121.2811332",
@@ -1293,6 +1298,11 @@
   "lat": "44.0527348",
   "lon": "-121.2764285",
   "address": "79 NE Cessna Dr #2, Bend, OR 97701"
+ },
+ "792 ne copperleaf loop - 2 bend or 97701": {
+  "lat": "44.0791985",
+  "lon": "-121.2927847",
+  "address": "792 NE Copperleaf Loop - #2, Bend, OR 97701"
  },
  "795 ne majesty lane bend or 97701": {
   "lat": "44.0735802",
