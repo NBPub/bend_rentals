@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-27. 134 listings from 16 companies. Every source answered.
+Latest run: 2026-10-28. 132 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
 
 **Contents**
 
@@ -15,9 +15,30 @@ Latest run: 2026-10-27. 134 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-20 to 2026-10-27. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-21 to 2026-10-28. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-28
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Country | 0 | 1 |
+| Mountain View | 0 | 2 |
+| PMI | 1 | 0 |
+| Superior | 1 | 1 |
+
+<details>
+<summary>6 listings</summary>
+
+- added: [19650 Harvard Pl., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/f017ddf9-470d-4009-b994-180a11495e04) ($2995, 3 BR, 2.5 BA, Superior)
+- added: [65709 93rd St, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/31) ($2250, 3 BR, 2 BA, PMI)
+- removed: [1000 NE Butler Market Rd - 9, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c062c09b-1af7-41cf-ba92-6a7b8a9ccf24) ($1495, 2 BR, 1 BA, Mountain View)
+- removed: [20838 Nova Loop - A, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/2639e5bd-9f9d-400a-800a-73a3902e5e37) ($2095, 3 BR, 2.5 BA, Mountain View)
+- removed: [3141 NE Monte Vista Ln., Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/cab54f53-f21c-49aa-9599-46785f359893) ($3195, 3 BR, 2.5 BA, High Country)
+- removed: [61093 Larkspur Loop, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/51f8d069-45f6-43dd-8a70-e0075bfaf602) ($2395, 3 BR, 2 BA, Superior)
+
+</details>
 
 ### 2026-10-27
 
@@ -131,29 +152,6 @@ No listings added or removed since 2026-10-24.
 - removed: [1663 NW Elgin Ave., Bend, OR 97703](https://bend.appfolio.com/listings/detail/bfe49c1c-8d29-4a3c-99f9-c6ea23113a24) ($2795, 3 BR, 2 BA, Bend PM)
 - removed: [2055 NE York Circle #1, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/75f3d070-79b4-4c07-adca-2b77e3f4853d) ($1595, 2 BR, 1.5 BA, Plus)
 - removed: [61275 Kristen St, Bend OR 97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-n9hac-ecdk2-dmpzm) ($2895, 3 BR, 2.5 BA, Trailhead)
-
-</details>
-
-### 2026-10-21
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-| Elevation | 1 | 0 |
-| High Desert | 1 | 0 |
-| Hummingbird | 1 | 0 |
-| Mountain View | 0 | 1 |
-| Utopia | 1 | 0 |
-
-<details>
-<summary>6 listings</summary>
-
-- added: [20345 Sonata Way, Unit #1, Bend, OR 97702](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/154892) ($2050, 2 BR, 2 BA, Hummingbird)
-- added: [245 SW James Drive, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/a3ac8d05-953d-4a08-a877-056af6adf27f) ($2500, 3 BR, 2 BA, Elevation)
-- added: [2747 NE North Pilot Butte Drive, Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/f542fb7f-f123-4420-8373-d4012b55b599) ($2595, 3 BR, 2 BA, Utopia)
-- added: [61077 NE Unity Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/0e793642-993e-48be-9f74-5060c41793b0) ($2525, 3 BR, 2.5 BA, High Desert)
-- added: [61550 Brosterhous Rd. - 07, Bend, OR 97702](https://bend.appfolio.com/listings/detail/63d5daf2-63e9-4d76-88fc-7d222f05b6fc) ($1350, 2 BR, 1 BA, Bend PM)
-- removed: [2058 NW Black Pines Pl #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/648d3d0a-569f-4b78-a556-78e8c77861c1) ($1895, 2 BR, 1 BA, Mountain View)
 
 </details>
 
