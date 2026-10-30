@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-29. 129 listings from 16 companies. Every source answered.
+Latest run: 2026-10-30. 126 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,29 @@ Latest run: 2026-10-29. 129 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-22 to 2026-10-29. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-23 to 2026-10-30. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-30
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 0 | 1 |
+| Mountain View | 0 | 2 |
+| Plus | 1 | 0 |
+| Ridgeline | 0 | 1 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [1519 NW Juniper #4, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/2ec47e87-4fce-41fe-bc1f-7fccfc2d99b4) ($1500, 1 BR, 1 BA, Plus)
+- removed: [2980 NW Shevlin Meadows Dr. #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/8c9ad3aa-0c04-4c3e-969c-2d7b0871aada) ($2995, 5 BR, 3 BA, Mountain View)
+- removed: [61394 Cultus Lake Ct, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/62) ($5495, 5 BR, 4 BA, Ridgeline)
+- removed: [63337 Stonewood Drive, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/004edb30-48e9-4201-bdb0-2056bd7733bc) ($4000, 4 BR, 3.5 BA, Elevation)
+- removed: [63737 Hunters Circle, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/905c3392-1fce-4123-89a1-f6d543b8ed9f) ($2395, 3 BR, 2 BA, Mountain View)
+
+</details>
 
 ### 2026-10-29
 
@@ -127,30 +147,6 @@ No listings added or removed since 2026-10-24.
 - removed: [330 SE 15th St. #4, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/7c6e5a2b-2ee4-4eea-a230-d568c7938b27) ($1295, 1 BR, 1 BA, Plus)
 - removed: [61073 NE Unity Place , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/8e294f67-8d12-4ad2-b028-565982e69e1d) ($2395, 3 BR, 2.5 BA, High Desert)
 - removed: [61579 Lucia St , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/c3a5f92f-06b0-46a6-9314-2a85b0fd2eaa) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-
-</details>
-
-### 2026-10-23
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 0 | 1 |
-| Elevation | 2 | 0 |
-| High Country | 1 | 0 |
-| Hummingbird | 1 | 0 |
-| Mountain View | 1 | 0 |
-| Utopia | 1 | 0 |
-
-<details>
-<summary>7 listings</summary>
-
-- added: [2022 NE Neil Way #4, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/af92fe9b-269f-49d7-8d9f-f08d062a2777) ($1595, 2 BR, 1.5 BA, Mountain View)
-- added: [20788 SE Shea Ct., Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/4a36d7ea-d9d6-48ac-9444-e969c92b6dfe) ($3195, 4 BR, 3 BA, High Country)
-- added: [21241 SE Golden Market Lane, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/29ba44c5-68c5-4371-9953-bc36fac76ab9) ($3000, 3 BR, 2.5 BA, Elevation)
-- added: [3525 NW McCready Drive, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/c1166e9b-e17d-40c3-aff5-98d26566df39) ($4500, 3 BR, 2.5 BA, Elevation)
-- added: [4 SW Cleveland Ave , Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/873eba74-6775-4c45-9aa2-b52c34bcb477) ($1395, 1 BR, 1 BA, Utopia)
-- added: [510 Northwest Delaware Avenue, Bend, OR 97703](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/90045) ($3750, 4 BR, 2 BA, Hummingbird)
-- removed: [1459 NW Albany - 42, Bend, OR 97703](https://bend.appfolio.com/listings/detail/7714dbbf-db90-479f-90bd-0395bfc71472) ($1595, 3 BR, 1 BA, Bend PM)
 
 </details>
 
