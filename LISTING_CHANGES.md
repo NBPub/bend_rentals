@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-30. 126 listings from 16 companies. Every source answered.
+Latest run: 2026-10-31. 124 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,27 @@ Latest run: 2026-10-30. 126 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-23 to 2026-10-30. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-24 to 2026-10-31. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-10-31
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 0 | 1 |
+| PMI | 1 | 1 |
+| Superior | 0 | 1 |
+
+<details>
+<summary>4 listings</summary>
+
+- added: [20540 Gloucester Lane, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/240) ($2500, 3 BR, 3 BA, PMI)
+- removed: [1419 NW 8th St. - 301, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/1f4c752f-11ef-427b-affd-293c7172258c) ($1995, 2 BR, 2 BA, Superior)
+- removed: [1996 NE Hollow Tree Lane, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/041e9225-7786-447a-935f-9b25d0b0929a) ($2400, 3 BR, 2 BA, Elevation)
+- removed: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
+
+</details>
 
 ### 2026-10-30
 
@@ -125,30 +143,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 ### 2026-10-25
 
 No listings added or removed since 2026-10-24.
-
-### 2026-10-24
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Elevation | 1 | 0 |
-| High Desert | 1 | 1 |
-| Mountain View | 1 | 0 |
-| Mt. Bachelor | 0 | 1 |
-| Plus | 0 | 1 |
-| Utopia | 1 | 0 |
-
-<details>
-<summary>7 listings</summary>
-
-- added: [1996 NE Hollow Tree Lane, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/041e9225-7786-447a-935f-9b25d0b0929a) ($2400, 3 BR, 2 BA, Elevation)
-- added: [20581 Sun Meadow Way, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/5bd3db34-b0f8-4d1b-a259-683d7dc21617) ($2595, 3 BR, 2 BA, High Desert)
-- added: [60615 River Bend Dr, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/e41c37d7-626d-4758-a087-ea5596456eaa) ($5595, 3 BR, 2.5 BA, Mountain View)
-- added: [630 NW Silver Buckle Rd, Bend, OR 97703](https://utopiamanagement.appfolio.com/listings/detail/12eb4122-ebc3-4ed6-974d-59ecf2b0bcb8) ($4995, 4 BR, 3.5 BA, Utopia)
-- removed: [330 SE 15th St. #4, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/7c6e5a2b-2ee4-4eea-a230-d568c7938b27) ($1295, 1 BR, 1 BA, Plus)
-- removed: [61073 NE Unity Place , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/8e294f67-8d12-4ad2-b028-565982e69e1d) ($2395, 3 BR, 2.5 BA, High Desert)
-- removed: [61579 Lucia St , Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/c3a5f92f-06b0-46a6-9314-2a85b0fd2eaa) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-
-</details>
 
 ## Geocoding
 
