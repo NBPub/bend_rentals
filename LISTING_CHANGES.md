@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-10-31. 124 listings from 16 companies. Every source answered.
+Latest run: 2026-11-01. 124 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,13 @@ Latest run: 2026-10-31. 124 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-24 to 2026-10-31. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-25 to 2026-11-01. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-01
+
+No listings added or removed since 2026-10-31.
 
 ### 2026-10-31
 
@@ -139,10 +143,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
 
 </details>
-
-### 2026-10-25
-
-No listings added or removed since 2026-10-24.
 
 ## Geocoding
 
