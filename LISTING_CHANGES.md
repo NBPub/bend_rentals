@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-01. 124 listings from 16 companies. Every source answered.
+Latest run: 2026-11-02. 126 listings from 15 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,31 @@ Latest run: 2026-11-01. 124 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-25 to 2026-11-01. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-26 to 2026-11-02. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-02
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 0 |
+| Elevation | 1 | 0 |
+| Lifestyles | 1 | 1 |
+| Ridgeline | 0 | 1 |
+| Velocity | 1 | 0 |
+
+<details>
+<summary>6 listings</summary>
+
+- added: [1601 NW 3rd St., #5, Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/5539008b-efc8-474c-8636-15b642fe8076) ($1395, 1 BR, 1 BA, Velocity)
+- added: [20429 Dixie Ct., Bend, OR 97702](https://bend.appfolio.com/listings/detail/8efe9c08-df8f-40cd-8077-540d89c00e57) ($2395, 3 BR, 2.5 BA, Bend PM)
+- added: [2836 NE Sedalia Lp, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/0affc917-4dbb-439c-8c56-ac8198504d88) ($2300, 3 BR, 2 BA, Elevation)
+- added: [61235 SE Splendor Lane, Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/22634e1a-cc22-42b5-aaca-750f098541b1) ($3450, 4 BR, 2.5 BA, Lifestyles)
+- removed: [442 Northeast Dekalb Avenue, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/5) ($1745, 2 BR, 1 BA, Ridgeline)
+- removed: [63084 NE Sophwith Lane, Bend, OR 97701](https://lifestylesrealty.appfolio.com/listings/detail/8f226416-566c-405a-a53b-eec901957fcb) ($2595, 3 BR, 3 BA, Lifestyles)
+
+</details>
 
 ### 2026-11-01
 
@@ -124,23 +146,6 @@ No listings added or removed since 2026-10-31.
 - removed: [2024 NE Neil Way #5, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/6ae38077-44f7-46fc-b60e-7cbf0e660b92) ($1595, 2 BR, 1.5 BA, Mountain View)
 - removed: [61236 Dayspring Dr., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/d08fd943-efa5-48da-8e11-1543ade08ffe) ($2600, 3 BR, 2.5 BA, Superior)
 - removed: [61456 SE Brosterhous Rd., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/44dc0d4a-68d5-4dc3-89d8-99f8cece535a) ($2495, 4 BR, 2 BA, Superior)
-
-</details>
-
-### 2026-10-26
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 0 | 1 |
-| Mountain View | 0 | 1 |
-| Ridgeline | 1 | 0 |
-
-<details>
-<summary>3 listings</summary>
-
-- added: [442 Northeast Dekalb Avenue, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/5) ($1745, 2 BR, 1 BA, Ridgeline)
-- removed: [1000 NE Butler Market Rd - 6, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/a3e1c0ca-5998-472c-82f6-1b04f036081e) ($1495, 2 BR, 1 BA, Mountain View)
-- removed: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
 
 </details>
 
