@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-02. 126 listings from 15 companies. Every source answered.
+Latest run: 2026-11-03. 130 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
 
 **Contents**
 
@@ -15,9 +15,34 @@ Latest run: 2026-11-02. 126 listings from 15 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-26 to 2026-11-02. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-27 to 2026-11-03. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-03
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Mt. Bachelor | 1 | 0 |
+| Plus | 0 | 1 |
+| Ridgeline | 1 | 0 |
+| Superior | 1 | 0 |
+| Trailhead | 3 | 0 |
+| Velocity | 0 | 1 |
+
+<details>
+<summary>8 listings</summary>
+
+- added: [1425 NW Lexington, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3) ($2300, 2 BR, ? BA, Trailhead)
+- added: [20541 Sun Meadow Way, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/43505b37-8999-4c77-aa79-e8000731fa9d) ($2995, 4 BR, 2.5 BA, Superior)
+- added: [312 SW McKinley Ave, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/67) ($2595, 2 BR, 1 BA, Ridgeline)
+- added: [60023 Ridgeview Dr, East , Bend OR 97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3-6gaex) ($4000, 4 BR, 3 BA, Trailhead)
+- added: [63273 NW Ski Ln, Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/717a53db-8bc1-4679-922e-61541aeb0989) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
+- added: [73 NW Tumalo, Bend, OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3-6gaex-3es53) ($4750, 4 BR, ? BA, Trailhead)
+- removed: [1095 NE Hidden Valley Dr. - #B, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/51adcabe-d109-464e-98c0-5f0aac20bbaa) ($1395, 1 BR, 1 BA, Velocity)
+- removed: [60149 Cheyenne Road, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/1b250c90-d703-4e80-88b2-9f9070c2df30) ($2450, 3 BR, 2 BA, Plus)
+
+</details>
 
 ### 2026-11-02
 
@@ -127,40 +152,19 @@ No listings added or removed since 2026-10-31.
 
 </details>
 
-### 2026-10-27
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Mountain View | 0 | 2 |
-| Plus | 1 | 1 |
-| Superior | 0 | 2 |
-| Velocity | 1 | 0 |
-
-<details>
-<summary>7 listings</summary>
-
-- added: [20824 Gateway Dr. , Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/42739e34-6452-4f9e-8c34-3ac02f4e8af5) ($2750, 3 BR, 2.5 BA, Velocity)
-- added: [792 NE Copperleaf Loop - #2, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/53e26fe0-4a2c-4b09-83d4-a4c1d09114fd) ($2050, 2 BR, 2.5 BA, Plus)
-- removed: [1565 NW Portland - #12, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/817f446e-e108-4628-873b-4352f2276537) ($1350, 0 BR, 1 BA, Plus)
-- removed: [2001 NE Neil Way, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/7847fde5-ae0a-4354-b1a8-eb43b8458552) ($1550, 2 BR, 1.5 BA, Mountain View)
-- removed: [2024 NE Neil Way #5, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/6ae38077-44f7-46fc-b60e-7cbf0e660b92) ($1595, 2 BR, 1.5 BA, Mountain View)
-- removed: [61236 Dayspring Dr., Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/d08fd943-efa5-48da-8e11-1543ade08ffe) ($2600, 3 BR, 2.5 BA, Superior)
-- removed: [61456 SE Brosterhous Rd., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/44dc0d4a-68d5-4dc3-89d8-99f8cece535a) ($2495, 4 BR, 2 BA, Superior)
-
-</details>
-
 ## Geocoding
 
-4 listing(s) have no coordinates and are listed below the map rather than placed on it.
+5 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
+| Mt. Bachelor | 63273 NW Ski Ln, Unit 1, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+NW+Ski+Ln%2C+Unit+1%2C+Bend%2C+OR+97703) |
 | Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
 
-10 address(es) are cached as unresolved; the oldest is already due and will be retried the next time its address appears in a listing.
+11 address(es) are cached as unresolved; the oldest is already due and will be retried the next time its address appears in a listing.
 
 ## Stale listings
 

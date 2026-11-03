@@ -159,6 +159,11 @@
   "lon": "-121.3234707",
   "address": "1419 NW 8th St. - 301, Bend, OR 97703"
  },
+ "1425 nw lexington bend or 97703": {
+  "lat": "44.0605875",
+  "lon": "-121.3324605",
+  "address": "1425 NW Lexington, Bend OR 97703"
+ },
  "1427 nw 4th street - 1 bend or 97703": {
   "lat": "44.0626122",
   "lon": "-121.3180143",
@@ -354,6 +359,11 @@
   "lat": "44.064451383614",
   "lon": "-121.341928864741",
   "address": "1940 NE Monterey Pines, #15, Bend, OR 97703"
+ },
+ "1940 nw monterey pines 15 bend or 97703": {
+  "lat": "44.0644710",
+  "lon": "-121.3419110",
+  "address": "1940 NW Monterey Pines, #15, Bend, OR 97703"
  },
  "1955 nw brogan bend or 97703": {
   "lat": "44.092384043902",
@@ -555,6 +565,11 @@
   "lat": "44.0282464",
   "lon": "-121.2966840",
   "address": "20537 Dylan Loop, Bend, OR 97702"
+ },
+ "20541 sun meadow way bend or 97702": {
+  "lat": "44.0244025",
+  "lon": "-121.2961194",
+  "address": "20541 Sun Meadow Way, Bend, OR 97702"
  },
  "2055 ne york circle 1 bend or 97701": {
   "lat": "44.0713328",
@@ -996,6 +1011,11 @@
   "lon": "-121.2978773",
   "address": "565 NE Norton Avenue, Bend, OR 97701"
  },
+ "60023 ridgeview dr east bend or 97702": {
+  "lat": "43.980401515084",
+  "lon": "-121.293261208355",
+  "address": "60023 Ridgeview Dr, East , Bend OR 97702"
+ },
  "60134 turquoise road bend or 97702": {
   "lat": "43.983643505332",
   "lon": "-121.376773583218",
@@ -1253,6 +1273,12 @@
   "lon": "-121.312786931644",
   "address": "63266 Newhall Pl., Bend, OR 97703"
  },
+ "63273 nw ski ln unit 1 bend or 97703": {
+  "lat": "?",
+  "lon": "?",
+  "address": "63273 NW Ski Ln, Unit 1, Bend, OR 97703",
+  "failed_at": "2026-11-03"
+ },
  "63273 nw ski ln unit 2 bend or 97703": {
   "lat": "?",
   "lon": "?",
@@ -1323,6 +1349,11 @@
   "lat": "44.0631851",
   "lon": "-121.3222503",
   "address": "715 NW Ogden, Bend, OR 97703"
+ },
+ "73 nw tumalo bend or 97703": {
+  "lat": "44.0561500",
+  "lon": "-121.3200469",
+  "address": "73 NW Tumalo, Bend, OR 97703"
  },
  "762 ne savannah dr bend or 97701": {
   "lat": "44.0585327",
