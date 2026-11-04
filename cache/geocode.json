@@ -154,6 +154,11 @@
   "lon": "-121.3069859",
   "address": "14 SE McKinley Ave - 1, Bend, OR 97702"
  },
+ "1400 whisper ridge dr unit 2 bend or 97701": {
+  "lat": "44.0641407",
+  "lon": "-121.2735538",
+  "address": "1400 Whisper Ridge Dr , Unit 2, Bend, OR 97701"
+ },
  "1419 nw 8th st - 301 bend or 97703": {
   "lat": "44.0626316",
   "lon": "-121.3234707",
@@ -665,6 +670,11 @@
   "lat": "44.0937431",
   "lon": "-121.2811332",
   "address": "20838 Nova Loop - A, Bend, OR 97701"
+ },
+ "20870 dione way bend or 97703-8424": {
+  "lat": "44.153366314959",
+  "lon": "-121.281351807706",
+  "address": "20870 Dione Way, Bend, OR 97703-8424"
  },
  "20991 spinnaker st 2 bend or 97701": {
   "lat": "44.0877330",

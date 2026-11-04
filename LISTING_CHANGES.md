@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-03. 130 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
+Latest run: 2026-11-04. 131 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (2 days behind).
 
 **Contents**
 
@@ -15,9 +15,29 @@ Latest run: 2026-11-03. 130 listings from 16 companies. 1 source did not answer 
 
 ## Recent changes
 
-Covering 7 days, 2026-10-27 to 2026-11-03. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-28 to 2026-11-04. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-04
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 0 | 1 |
+| Mountain View | 1 | 1 |
+| Mt. Bachelor | 1 | 0 |
+| Ridgeline | 1 | 0 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [1286 NE Dawson Dr, Unit B, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/69) ($1850, 2 BR, 3 BA, Ridgeline)
+- added: [1400 Whisper Ridge Dr , Unit 2, Bend, OR 97701](https://mtbachpm.appfolio.com/listings/detail/664e860b-e950-4369-8add-51e444027ed8) ($1895, 2 BR, 1.5 BA, Mt. Bachelor)
+- added: [20870 Dione Way, Bend, OR 97703-8424](https://mountainviewpm.appfolio.com/listings/detail/f19a25ac-7e40-4f23-a1ef-c35a37777b43) ($3395, 3 BR, 2.5 BA, Mountain View)
+- removed: [2399 NE Victor Place #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c0bcb059-16b8-44ea-b2b2-013622f5a1b6) ($1795, 2 BR, 2.5 BA, Mountain View)
+- removed: [2836 NE Sedalia Lp, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/0affc917-4dbb-439c-8c56-ac8198504d88) ($2300, 3 BR, 2 BA, Elevation)
+
+</details>
 
 ### 2026-11-03
 
@@ -128,27 +148,6 @@ No listings added or removed since 2026-10-31.
 - removed: [20769 SE Shea Ct., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/887c036e-2f30-4cfb-bbbc-e7581edf8c84) ($2695, 3 BR, 2.5 BA, Mountain View)
 - removed: [20991 Spinnaker St. #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/54584392-096f-4c34-b9ba-bfceff0d3bf1) ($2095, 2 BR, 1 BA, Mountain View)
 - removed: [61077 NE Unity Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/0e793642-993e-48be-9f74-5060c41793b0) ($2525, 3 BR, 2.5 BA, High Desert)
-
-</details>
-
-### 2026-10-28
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Country | 0 | 1 |
-| Mountain View | 0 | 2 |
-| PMI | 1 | 0 |
-| Superior | 1 | 1 |
-
-<details>
-<summary>6 listings</summary>
-
-- added: [19650 Harvard Pl., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/f017ddf9-470d-4009-b994-180a11495e04) ($2995, 3 BR, 2.5 BA, Superior)
-- added: [65709 93rd St, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/31) ($2250, 3 BR, 2 BA, PMI)
-- removed: [1000 NE Butler Market Rd - 9, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c062c09b-1af7-41cf-ba92-6a7b8a9ccf24) ($1495, 2 BR, 1 BA, Mountain View)
-- removed: [20838 Nova Loop - A, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/2639e5bd-9f9d-400a-800a-73a3902e5e37) ($2095, 3 BR, 2.5 BA, Mountain View)
-- removed: [3141 NE Monte Vista Ln., Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/cab54f53-f21c-49aa-9599-46785f359893) ($3195, 3 BR, 2.5 BA, High Country)
-- removed: [61093 Larkspur Loop, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/51f8d069-45f6-43dd-8a70-e0075bfaf602) ($2395, 3 BR, 2 BA, Superior)
 
 </details>
 
