@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-04. 131 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (2 days behind).
+Latest run: 2026-11-05. 132 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,37 @@ Latest run: 2026-11-04. 131 listings from 16 companies. 1 source did not answer 
 
 ## Recent changes
 
-Covering 7 days, 2026-10-28 to 2026-11-04. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-29 to 2026-11-05. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-05
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 0 | 1 |
+| High Country | 1 | 1 |
+| Mountain View | 1 | 1 |
+| Mt. Bachelor | 0 | 1 |
+| Plus | 1 | 1 |
+| Superior | 3 | 0 |
+
+<details>
+<summary>11 listings</summary>
+
+- added: [11 NW Hixon Ave - #1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/a18abe59-b71a-48bf-86ca-dcca1bffe5eb) ($2295, 3 BR, 1 BA, Superior)
+- added: [20058 Mount Faith Place, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/cc19b831-a785-4cea-8219-a7cdb3d6155b) ($2395, 3 BR, 2 BA, Plus)
+- added: [236 NW Newport Ave., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/14fafc3c-7bbb-4921-aa3c-e699e3416080) ($3250, 4 BR, 2 BA, Mountain View)
+- added: [2379 NW Labiche, Bend, OR 97703](https://highcountrypropmgmt.appfolio.com/listings/detail/c057b5f1-7eef-47bf-ab01-b3be704e1c68) ($2995, 3 BR, 2.5 BA, High Country)
+- added: [61546 SE Lucia St. - #2, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/41bd7601-9b20-41d4-81e4-fefb24bf50f5) ($2295, 2 BR, 2.5 BA, Superior)
+- added: [698 SE Centennial Ave, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/75747716-4611-456f-b3c7-cef8d4e58743) ($1795, 3 BR, 1 BA, Superior)
+- removed: [19318 SW Marshmallow Pl., Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/8e8e5382-f74d-49d9-a0fe-3d9d1a263cd1) ($3995, 5 BR, 3 BA, Mt. Bachelor)
+- removed: [20505 SE Evian Ave, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/854822e6-ef4f-4833-a497-1c4e7b3c644d) ($2895, 4 BR, 2.5 BA, Plus)
+- removed: [2345 NW Quinn Creek Loop, Bend, OR 97703](https://highcountrypropmgmt.appfolio.com/listings/detail/b121b78f-2a4d-4d19-b9a0-d9c718768764) ($3295, 3 BR, 3.5 BA, High Country)
+- removed: [636 NE Irving, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/3355ccb2-ff3c-4b61-a8b8-abcf14f16c91) ($2795, 3 BR, 2 BA, Mountain View)
+- removed: [931 NW Carlon Ave. - 01, Bend, OR 97703](https://bend.appfolio.com/listings/detail/c72648d1-c622-46ab-ad91-2d73015e49ba) ($2295, 3 BR, 1.5 BA, Bend PM)
+
+</details>
 
 ### 2026-11-04
 
@@ -128,38 +156,14 @@ No listings added or removed since 2026-10-31.
 
 </details>
 
-### 2026-10-29
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 0 | 1 |
-| High Desert | 0 | 1 |
-| Mountain View | 0 | 2 |
-| Plus | 1 | 1 |
-| Velocity | 1 | 0 |
-
-<details>
-<summary>7 listings</summary>
-
-- added: [1580 NW Newport - #46, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/b2a5e9e4-b83b-48c9-a1c1-9c82384624cb) ($1650, 2 BR, 1 BA, Plus)
-- added: [631 SE Wilson Ave. - #2, Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/ce086903-dd4d-457e-8ad5-46dee9c1163e) ($2095, 2 BR, 2.5 BA, Velocity)
-- removed: [1031 NE Watt Way #1, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/a9e1398d-1866-4077-9f44-6f1b8ebe94b4) ($1750, 2 BR, 1 BA, Plus)
-- removed: [20430 Angel Ct., Bend, OR 97702](https://bend.appfolio.com/listings/detail/fa4f4682-81e0-47ad-965a-315595dc5e09) ($2395, 3 BR, 2.5 BA, Bend PM)
-- removed: [20769 SE Shea Ct., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/887c036e-2f30-4cfb-bbbc-e7581edf8c84) ($2695, 3 BR, 2.5 BA, Mountain View)
-- removed: [20991 Spinnaker St. #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/54584392-096f-4c34-b9ba-bfceff0d3bf1) ($2095, 2 BR, 1 BA, Mountain View)
-- removed: [61077 NE Unity Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/0e793642-993e-48be-9f74-5060c41793b0) ($2525, 3 BR, 2.5 BA, High Desert)
-
-</details>
-
 ## Geocoding
 
-5 listing(s) have no coordinates and are listed below the map rather than placed on it.
+4 listing(s) have no coordinates and are listed below the map rather than placed on it.
 
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
 | Mt. Bachelor | 63273 NW Ski Ln, Unit 1, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+NW+Ski+Ln%2C+Unit+1%2C+Bend%2C+OR+97703) |
-| Plus | 20505 SE Evian Ave, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=20505+SE+Evian+Ave%2C+Bend%2C+OR+97702) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
 

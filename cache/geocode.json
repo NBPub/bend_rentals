@@ -44,6 +44,11 @@
   "lon": "-121.2892898",
   "address": "1095 NE Hidden Valley Dr. - #B, Bend, OR 97701"
  },
+ "11 nw hixon ave - 1 bend or 97703": {
+  "lat": "44.0558384",
+  "lon": "-121.3239446",
+  "address": "11 NW Hixon Ave - #1, Bend, OR 97703"
+ },
  "11 nw hixon ave - 2 bend or 97703": {
   "lat": "44.0558373",
   "lon": "-121.3239436",
@@ -455,6 +460,11 @@
   "lon": "-121.3201273",
   "address": "20058 Beth Ave. - 04, Bend, OR 97702"
  },
+ "20058 mount faith place bend or 97702": {
+  "lat": "44.0259355",
+  "lon": "-121.3213873",
+  "address": "20058 Mount Faith Place, Bend, OR 97702"
+ },
  "20068 sw doanna way - 02 bend or 97702": {
   "lat": "44.0275073",
   "lon": "-121.3198507",
@@ -765,6 +775,16 @@
   "lat": "44.0529230",
   "lon": "-121.3507175",
   "address": "2345 NW Quinn Creek Loop, Bend, OR 97703"
+ },
+ "236 nw newport ave bend or 97703": {
+  "lat": "44.0621282",
+  "lon": "-121.3161428",
+  "address": "236 NW Newport Ave., Bend, OR 97703"
+ },
+ "2379 nw labiche bend or 97703": {
+  "lat": "44.0641163",
+  "lon": "-121.3488957",
+  "address": "2379 NW Labiche, Bend, OR 97703"
  },
  "2399 ne victor place 2 bend or 97701": {
   "lat": "44.0740860",
@@ -1189,6 +1209,11 @@
   "lon": "-121.3045646",
   "address": "61545 Parrell Road - 7, Bend, OR 97702"
  },
+ "61546 se lucia st - 2 bend or 97702": {
+  "lat": "44.033015802176",
+  "lon": "-121.303919219265",
+  "address": "61546 SE Lucia St. - #2, Bend, OR 97702"
+ },
  "61550 brosterhous rd - 07 bend or 97702": {
   "lat": "44.0354184",
   "lon": "-121.3031614",
@@ -1209,7 +1234,7 @@
   "lat": "?",
   "lon": "?",
   "address": "61608 SE Quill Place, Bend, OR 97702",
-  "failed_at": "2026-10-06"
+  "failed_at": "2026-11-05"
  },
  "61618 se depot loop bend or 97702": {
   "lat": "44.0362317",
@@ -1354,6 +1379,11 @@
   "lat": "44.044443718189",
   "lon": "-121.295087868465",
   "address": "694 SE Centennial Ave, Bend, OR 97702"
+ },
+ "698 se centennial ave bend or 97702": {
+  "lat": "44.044366970405",
+  "lon": "-121.295030383879",
+  "address": "698 SE Centennial Ave, Bend, OR 97702"
  },
  "715 nw ogden bend or 97703": {
   "lat": "44.0631851",
