@@ -169,6 +169,11 @@
   "lon": "-121.3234707",
   "address": "1419 NW 8th St. - 301, Bend, OR 97703"
  },
+ "1421 nw 3rd st bend or 97701": {
+  "lat": "44.0625920",
+  "lon": "-121.3169520",
+  "address": "1421 NW 3rd St., Bend, OR 97701"
+ },
  "1425 nw lexington bend or 97703": {
   "lat": "44.0605875",
   "lon": "-121.3324605",
@@ -781,6 +786,11 @@
   "lon": "-121.3161428",
   "address": "236 NW Newport Ave., Bend, OR 97703"
  },
+ "2368 ne keats dr 3 bend or 97701": {
+  "lat": "44.0731510",
+  "lon": "-121.2954440",
+  "address": "2368 NE Keats Dr. #3, Bend, OR 97701"
+ },
  "2379 nw labiche bend or 97703": {
   "lat": "44.0641163",
   "lon": "-121.3488957",
@@ -960,6 +970,11 @@
   "lat": "44.0904801",
   "lon": "-121.2524051",
   "address": "3807 Eagle Road, Bend, OR 97701"
+ },
+ "39 ne cessna dr 1 bend or 97701": {
+  "lat": "44.0527348",
+  "lon": "-121.2764285",
+  "address": "39 NE Cessna Dr #1, Bend, OR 97701"
  },
  "4 sw cleveland ave bend or 97702": {
   "lat": "44.0407910",

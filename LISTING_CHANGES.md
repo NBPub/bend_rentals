@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-05. 132 listings from 16 companies. Every source answered.
+Latest run: 2026-11-06. 133 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,29 @@ Latest run: 2026-11-05. 132 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-29 to 2026-11-05. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-10-30 to 2026-11-06. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-06
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 0 | 1 |
+| High Country | 1 | 0 |
+| Mountain View | 2 | 0 |
+| Superior | 0 | 1 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [1421 NW 3rd St., Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/fcd5ecfa-b016-42c0-beb9-d2989765babf) ($2995, 3 BR, 2 BA, Mountain View)
+- added: [2368 NE Keats Dr. #3, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/5bc0599e-346f-4c1f-a810-265f6f8fe237) ($2700, 3 BR, 2.5 BA, High Country)
+- added: [39 NE Cessna Dr #1, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/e8f89f64-8a4a-4310-a4b3-18f161739caf) ($2575, 3 BR, 2 BA, Mountain View)
+- removed: [60134 Turquoise Road, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/304c5a89-1ab7-4b28-ac94-dd83fa436fc3) ($3500, 3 BR, 2 BA, Elevation)
+- removed: [64420 Bailey Rd, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/f41b304f-3c53-4fb2-a973-c9d8bb8e2465) ($5500, 4 BR, 3 BA, Superior)
+
+</details>
 
 ### 2026-11-05
 
@@ -133,26 +153,6 @@ No listings added or removed since 2026-10-31.
 - removed: [1419 NW 8th St. - 301, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/1f4c752f-11ef-427b-affd-293c7172258c) ($1995, 2 BR, 2 BA, Superior)
 - removed: [1996 NE Hollow Tree Lane, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/041e9225-7786-447a-935f-9b25d0b0929a) ($2400, 3 BR, 2 BA, Elevation)
 - removed: [66538 Ponderosa Loop, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/86) ($2900, 3 BR, 2 BA, PMI)
-
-</details>
-
-### 2026-10-30
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Elevation | 0 | 1 |
-| Mountain View | 0 | 2 |
-| Plus | 1 | 0 |
-| Ridgeline | 0 | 1 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [1519 NW Juniper #4, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/2ec47e87-4fce-41fe-bc1f-7fccfc2d99b4) ($1500, 1 BR, 1 BA, Plus)
-- removed: [2980 NW Shevlin Meadows Dr. #1, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/8c9ad3aa-0c04-4c3e-969c-2d7b0871aada) ($2995, 5 BR, 3 BA, Mountain View)
-- removed: [61394 Cultus Lake Ct, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/62) ($5495, 5 BR, 4 BA, Ridgeline)
-- removed: [63337 Stonewood Drive, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/004edb30-48e9-4201-bdb0-2056bd7733bc) ($4000, 4 BR, 3.5 BA, Elevation)
-- removed: [63737 Hunters Circle, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/905c3392-1fce-4123-89a1-f6d543b8ed9f) ($2395, 3 BR, 2 BA, Mountain View)
 
 </details>
 
