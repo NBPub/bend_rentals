@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-07. 133 listings from 16 companies. Every source answered.
+Latest run: 2026-11-08. 134 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,22 @@ Latest run: 2026-11-07. 133 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-10-31 to 2026-11-07. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-01 to 2026-11-08. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-08
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 0 |
+
+<details>
+<summary>1 listing</summary>
+
+- added: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
+
+</details>
 
 ### 2026-11-07
 
@@ -148,10 +161,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [63084 NE Sophwith Lane, Bend, OR 97701](https://lifestylesrealty.appfolio.com/listings/detail/8f226416-566c-405a-a53b-eec901957fcb) ($2595, 3 BR, 3 BA, Lifestyles)
 
 </details>
-
-### 2026-11-01
-
-No listings added or removed since 2026-10-31.
 
 ## Geocoding
 
