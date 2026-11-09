@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-08. 134 listings from 16 companies. Every source answered.
+Latest run: 2026-11-09. 137 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,32 @@ Latest run: 2026-11-08. 134 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-01 to 2026-11-08. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-02 to 2026-11-09. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-09
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Mountain View | 1 | 1 |
+| Mt. Bachelor | 1 | 0 |
+| PMI | 1 | 0 |
+| Trailhead | 0 | 1 |
+| Utopia | 2 | 0 |
+
+<details>
+<summary>7 listings</summary>
+
+- added: [20514 SE Cameron Avenue, Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/d86d036d-4bb5-4a9f-924e-bf3f226f3371) ($2850, 3 BR, 2.5 BA, Utopia)
+- added: [20540 Gloucester Lane, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/240) ($2500, 3 BR, 3 BA, PMI)
+- added: [206- 200 SW Summer Lake Dr , Unit 202, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/bba4be5e-5712-4ec9-9aaf-82e0179b2ac2) ($1795, 2 BR, 2 BA, Mt. Bachelor)
+- added: [2318 NE Atherton Ct., Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/b1e2d5f3-57ad-4c3f-833f-4fd0160fe528) ($3995, 4 BR, 3.5 BA, Utopia)
+- added: [62908 NE Nolan Street, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/610452ba-6950-4316-b2ce-5e7a9571b799) ($2895, 3 BR, 2.5 BA, Mountain View)
+- removed: [1425 NW Lexington, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3) ($2300, 2 BR, ? BA, Trailhead)
+- removed: [20287 Schaeffer Dr., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64) ($2195, 3 BR, 2.5 BA, Mountain View)
+
+</details>
 
 ### 2026-11-08
 
@@ -137,28 +160,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - added: [73 NW Tumalo, Bend, OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3-6gaex-3es53) ($4750, 4 BR, ? BA, Trailhead)
 - removed: [1095 NE Hidden Valley Dr. - #B, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/51adcabe-d109-464e-98c0-5f0aac20bbaa) ($1395, 1 BR, 1 BA, Velocity)
 - removed: [60149 Cheyenne Road, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/1b250c90-d703-4e80-88b2-9f9070c2df30) ($2450, 3 BR, 2 BA, Plus)
-
-</details>
-
-### 2026-11-02
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-| Elevation | 1 | 0 |
-| Lifestyles | 1 | 1 |
-| Ridgeline | 0 | 1 |
-| Velocity | 1 | 0 |
-
-<details>
-<summary>6 listings</summary>
-
-- added: [1601 NW 3rd St., #5, Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/5539008b-efc8-474c-8636-15b642fe8076) ($1395, 1 BR, 1 BA, Velocity)
-- added: [20429 Dixie Ct., Bend, OR 97702](https://bend.appfolio.com/listings/detail/8efe9c08-df8f-40cd-8077-540d89c00e57) ($2395, 3 BR, 2.5 BA, Bend PM)
-- added: [2836 NE Sedalia Lp, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/0affc917-4dbb-439c-8c56-ac8198504d88) ($2300, 3 BR, 2 BA, Elevation)
-- added: [61235 SE Splendor Lane, Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/22634e1a-cc22-42b5-aaca-750f098541b1) ($3450, 4 BR, 2.5 BA, Lifestyles)
-- removed: [442 Northeast Dekalb Avenue, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/5) ($1745, 2 BR, 1 BA, Ridgeline)
-- removed: [63084 NE Sophwith Lane, Bend, OR 97701](https://lifestylesrealty.appfolio.com/listings/detail/8f226416-566c-405a-a53b-eec901957fcb) ($2595, 3 BR, 3 BA, Lifestyles)
 
 </details>
 

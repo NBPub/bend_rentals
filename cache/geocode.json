@@ -576,6 +576,11 @@
   "lon": "-121.298886638266",
   "address": "20511 SE Brentwood, Bend OR 97702"
  },
+ "20514 se cameron avenue bend or 97702": {
+  "lat": "44.0359020",
+  "lon": "-121.2975964",
+  "address": "20514 SE Cameron Avenue, Bend, OR 97702"
+ },
  "2052 nw black pines pl 2 bend or 97703": {
   "lat": "44.065689292583",
   "lon": "-121.343732331506",
@@ -625,6 +630,11 @@
   "lat": "44.0383120",
   "lon": "-121.3111263",
   "address": "206- 200 SW Summer Lake Dr , Unit 104, Bend, OR 97702"
+ },
+ "206- 200 sw summer lake dr unit 202 bend or 97702": {
+  "lat": "44.0383120",
+  "lon": "-121.3111263",
+  "address": "206- 200 SW Summer Lake Dr , Unit 202, Bend, OR 97702"
  },
  "20605 se slate ave bend or 97702": {
   "lat": "44.0313696",
@@ -780,6 +790,11 @@
   "lat": "44.0599510",
   "lon": "-121.2681250",
   "address": "2301 NE Mary Rose Pl. - #2, Bend, OR 97701"
+ },
+ "2318 ne atherton ct bend or 97701": {
+  "lat": "44.0734749",
+  "lon": "-121.2615628",
+  "address": "2318 NE Atherton Ct., Bend, OR 97701"
  },
  "2345 nw quinn creek loop bend or 97703": {
   "lat": "44.0529230",
@@ -1286,6 +1301,11 @@
   "lat": "44.0705936",
   "lon": "-121.2968527",
   "address": "628 NE Isabella Ln, Bend, OR 97701"
+ },
+ "62908 ne nolan street bend or 97701": {
+  "lat": "44.0858400",
+  "lon": "-121.2555164",
+  "address": "62908 NE Nolan Street, Bend, OR 97701"
  },
  "630 nw silver buckle rd bend or 97703": {
   "lat": "44.0939130",
