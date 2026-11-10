@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-09. 137 listings from 16 companies. Every source answered.
+Latest run: 2026-11-10. 134 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,30 @@ Latest run: 2026-11-09. 137 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-02 to 2026-11-09. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-03 to 2026-11-10. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-10
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Plus | 1 | 0 |
+| Ridgeline | 0 | 1 |
+| Superior | 0 | 1 |
+| Utopia | 0 | 1 |
+| Velocity | 0 | 1 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [1615 NW Portland - #4, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/af0c9891-8718-4fff-8b76-c65adb45a375) ($1700, 1 BR, 1 BA, Plus)
+- removed: [1157 SW Silver Lake Blvd, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/b2568d19-a6c1-427c-ad72-d60c508a66af) ($2495, 3 BR, 2 BA, Superior)
+- removed: [1286 NE Dawson Dr, Unit B, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/69) ($1850, 2 BR, 3 BA, Ridgeline)
+- removed: [20824 Gateway Dr. , Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/42739e34-6452-4f9e-8c34-3ac02f4e8af5) ($2750, 3 BR, 2.5 BA, Velocity)
+- removed: [55803 Snow Goose Rd , Bend, OR 97707](https://utopiamanagement.appfolio.com/listings/detail/5e229b31-37af-41bd-8daf-2d67e4d29d01) ($2150, 3 BR, 2 BA, Utopia)
+
+</details>
 
 ### 2026-11-09
 
@@ -135,31 +156,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - added: [20870 Dione Way, Bend, OR 97703-8424](https://mountainviewpm.appfolio.com/listings/detail/f19a25ac-7e40-4f23-a1ef-c35a37777b43) ($3395, 3 BR, 2.5 BA, Mountain View)
 - removed: [2399 NE Victor Place #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c0bcb059-16b8-44ea-b2b2-013622f5a1b6) ($1795, 2 BR, 2.5 BA, Mountain View)
 - removed: [2836 NE Sedalia Lp, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/0affc917-4dbb-439c-8c56-ac8198504d88) ($2300, 3 BR, 2 BA, Elevation)
-
-</details>
-
-### 2026-11-03
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Mt. Bachelor | 1 | 0 |
-| Plus | 0 | 1 |
-| Ridgeline | 1 | 0 |
-| Superior | 1 | 0 |
-| Trailhead | 3 | 0 |
-| Velocity | 0 | 1 |
-
-<details>
-<summary>8 listings</summary>
-
-- added: [1425 NW Lexington, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3) ($2300, 2 BR, ? BA, Trailhead)
-- added: [20541 Sun Meadow Way, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/43505b37-8999-4c77-aa79-e8000731fa9d) ($2995, 4 BR, 2.5 BA, Superior)
-- added: [312 SW McKinley Ave, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/67) ($2595, 2 BR, 1 BA, Ridgeline)
-- added: [60023 Ridgeview Dr, East , Bend OR 97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3-6gaex) ($4000, 4 BR, 3 BA, Trailhead)
-- added: [63273 NW Ski Ln, Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/717a53db-8bc1-4679-922e-61541aeb0989) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-- added: [73 NW Tumalo, Bend, OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3-6gaex-3es53) ($4750, 4 BR, ? BA, Trailhead)
-- removed: [1095 NE Hidden Valley Dr. - #B, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/51adcabe-d109-464e-98c0-5f0aac20bbaa) ($1395, 1 BR, 1 BA, Velocity)
-- removed: [60149 Cheyenne Road, Bend, OR 97702](https://pluspmllc.appfolio.com/listings/detail/1b250c90-d703-4e80-88b2-9f9070c2df30) ($2450, 3 BR, 2 BA, Plus)
 
 </details>
 
