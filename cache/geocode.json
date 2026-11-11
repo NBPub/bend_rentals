@@ -736,6 +736,11 @@
   "lon": "-121.3092960",
   "address": "2112 NW Harriman, Bend, OR 97703"
  },
+ "21169 se golden market ln - 1 bend or 97702": {
+  "lat": "44.037441937885",
+  "lon": "-121.262851412482",
+  "address": "21169 SE Golden Market Ln. - 1, Bend, OR 97702"
+ },
  "21177 se azalia ave bend or 97702": {
   "lat": "44.043894556074",
   "lon": "-121.265209217142",
@@ -1010,6 +1015,16 @@
   "lat": "44.0460728",
   "lon": "-121.2996795",
   "address": "403 SE 4th Street, Bend, OR 97702"
+ },
+ "413 se yew ln - 3 bend or 97702": {
+  "lat": "44.0581728",
+  "lon": "-121.3153096",
+  "address": "413 SE Yew Ln - 3, Bend, OR 97702"
+ },
+ "414 ne norton avenue 6 bend or 97701": {
+  "lat": "44.0640350",
+  "lon": "-121.3003487",
+  "address": "414 NE Norton Avenue #6, Bend, OR 97701"
  },
  "418 nw newport ave bend or 97703": {
   "lat": "44.0624776",
@@ -1419,6 +1434,11 @@
   "lat": "44.169465583536",
   "lon": "-121.2611010287",
   "address": "65280 76th St, Bend, OR 97701"
+ },
+ "674 se centennial st bend or 97702": {
+  "lat": "44.0448433",
+  "lon": "-121.2953625",
+  "address": "674 SE Centennial St., Bend, OR 97702"
  },
  "694 se centennial ave bend or 97702": {
   "lat": "44.044443718189",

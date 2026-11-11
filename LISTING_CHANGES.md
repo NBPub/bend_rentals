@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-10. 134 listings from 16 companies. Every source answered.
+Latest run: 2026-11-11. 136 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,30 @@ Latest run: 2026-11-10. 134 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-03 to 2026-11-10. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-04 to 2026-11-11. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-11
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 0 |
+| Elevation | 0 | 1 |
+| Mountain View | 3 | 0 |
+| Superior | 0 | 1 |
+
+<details>
+<summary>6 listings</summary>
+
+- added: [21169 SE Golden Market Ln. - 1, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/40450826-2528-4d31-8785-13b15a708d01) ($2595, 3 BR, 2.5 BA, Mountain View)
+- added: [413 SE Yew Ln - 3, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/c255e901-7eb9-4289-a3bc-87cf9c895ea3) ($1950, 2 BR, 1 BA, Mountain View)
+- added: [414 NE Norton Avenue #6, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/2526ad10-1448-4bba-910c-8cdf863c0a0c) ($1595, 2 BR, 1 BA, Mountain View)
+- added: [674 SE Centennial St., Bend, OR 97702](https://bend.appfolio.com/listings/detail/f340a4ef-3781-4ac8-ad0f-afbc257785fb) ($1350, 3 BR, 1 BA, Bend PM)
+- removed: [3525 NW McCready Drive, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/c1166e9b-e17d-40c3-aff5-98d26566df39) ($4500, 3 BR, 2.5 BA, Elevation)
+- removed: [61349 Elkhorn St., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/dd6ca8b5-4f07-44d3-8bcd-3f8faaa634d6) ($2995, 5 BR, 3 BA, Superior)
+
+</details>
 
 ### 2026-11-10
 
@@ -136,26 +157,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [2345 NW Quinn Creek Loop, Bend, OR 97703](https://highcountrypropmgmt.appfolio.com/listings/detail/b121b78f-2a4d-4d19-b9a0-d9c718768764) ($3295, 3 BR, 3.5 BA, High Country)
 - removed: [636 NE Irving, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/3355ccb2-ff3c-4b61-a8b8-abcf14f16c91) ($2795, 3 BR, 2 BA, Mountain View)
 - removed: [931 NW Carlon Ave. - 01, Bend, OR 97703](https://bend.appfolio.com/listings/detail/c72648d1-c622-46ab-ad91-2d73015e49ba) ($2295, 3 BR, 1.5 BA, Bend PM)
-
-</details>
-
-### 2026-11-04
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Elevation | 0 | 1 |
-| Mountain View | 1 | 1 |
-| Mt. Bachelor | 1 | 0 |
-| Ridgeline | 1 | 0 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [1286 NE Dawson Dr, Unit B, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/69) ($1850, 2 BR, 3 BA, Ridgeline)
-- added: [1400 Whisper Ridge Dr , Unit 2, Bend, OR 97701](https://mtbachpm.appfolio.com/listings/detail/664e860b-e950-4369-8add-51e444027ed8) ($1895, 2 BR, 1.5 BA, Mt. Bachelor)
-- added: [20870 Dione Way, Bend, OR 97703-8424](https://mountainviewpm.appfolio.com/listings/detail/f19a25ac-7e40-4f23-a1ef-c35a37777b43) ($3395, 3 BR, 2.5 BA, Mountain View)
-- removed: [2399 NE Victor Place #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/c0bcb059-16b8-44ea-b2b2-013622f5a1b6) ($1795, 2 BR, 2.5 BA, Mountain View)
-- removed: [2836 NE Sedalia Lp, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/0affc917-4dbb-439c-8c56-ac8198504d88) ($2300, 3 BR, 2 BA, Elevation)
 
 </details>
 
