@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-12. 128 listings from 15 companies. Every source answered.
+Latest run: 2026-11-13. 127 listings from 15 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,28 @@ Latest run: 2026-11-12. 128 listings from 15 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-05 to 2026-11-12. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-06 to 2026-11-13. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-13
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 1 |
+| High Desert | 1 | 1 |
+| Mountain View | 0 | 1 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [2705 NE Flower Ct., Bend, OR 97701](https://bend.appfolio.com/listings/detail/b79144dd-cb36-44ba-9a89-96579dcb75f9) ($2150, 3 BR, 2 BA, Bend PM)
+- added: [61438 Linton Loop, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/f9d47211-408b-4fb1-9a15-5742eb555dab) ($4495, 3 BR, 3 BA, High Desert)
+- removed: [24 SW 15th St. - 22, Bend, OR 97702](https://bend.appfolio.com/listings/detail/fb7af5d4-d07a-498c-beac-3bb88f6464de) ($1095, 1 BR, 1 BA, Bend PM)
+- removed: [2741 NE Laramie Way , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/43c6ebf7-be9d-4d28-a457-f576286e5231) ($2375, 3 BR, 2 BA, High Desert)
+- removed: [65145 76th Street, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/41888f22-de9b-4850-b32c-52ac85836111) ($4495, 4 BR, 3.5 BA, Mountain View)
+
+</details>
 
 ### 2026-11-12
 
@@ -134,26 +153,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 
 - added: [2052 NW Black Pines Pl #2, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/8b60602a-e2ce-4563-8285-4eb2739804d7) ($1895, 2 BR, 1 BA, Mountain View)
 - removed: [20540 Gloucester Lane, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/240) ($2500, 3 BR, 3 BA, PMI)
-
-</details>
-
-### 2026-11-06
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Elevation | 0 | 1 |
-| High Country | 1 | 0 |
-| Mountain View | 2 | 0 |
-| Superior | 0 | 1 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [1421 NW 3rd St., Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/fcd5ecfa-b016-42c0-beb9-d2989765babf) ($2995, 3 BR, 2 BA, Mountain View)
-- added: [2368 NE Keats Dr. #3, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/5bc0599e-346f-4c1f-a810-265f6f8fe237) ($2700, 3 BR, 2.5 BA, High Country)
-- added: [39 NE Cessna Dr #1, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/e8f89f64-8a4a-4310-a4b3-18f161739caf) ($2575, 3 BR, 2 BA, Mountain View)
-- removed: [60134 Turquoise Road, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/304c5a89-1ab7-4b28-ac94-dd83fa436fc3) ($3500, 3 BR, 2 BA, Elevation)
-- removed: [64420 Bailey Rd, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/f41b304f-3c53-4fb2-a973-c9d8bb8e2465) ($5500, 4 BR, 3 BA, Superior)
 
 </details>
 

@@ -881,6 +881,11 @@
   "lon": "-121.3079341",
   "address": "27 NW Lake Place - #203, Bend, OR 97703"
  },
+ "2705 ne flower ct bend or 97701": {
+  "lat": "44.0768780",
+  "lon": "-121.2788233",
+  "address": "2705 NE Flower Ct., Bend, OR 97701"
+ },
  "2728 ne black oak place bend or 97701": {
   "lat": "44.0770970",
   "lon": "-121.2574897",
@@ -1232,6 +1237,11 @@
   "lat": "44.0311434",
   "lon": "-121.3417218",
   "address": "61416 Elder Ridge St., Bend, OR 97702"
+ },
+ "61438 linton loop bend or 97701": {
+  "lat": "44.0317982",
+  "lon": "-121.3401877",
+  "address": "61438 Linton Loop, Bend, OR 97701"
  },
  "61456 se brosterhous rd bend or 97702": {
   "lat": "44.0193058",
