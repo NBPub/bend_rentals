@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-13. 127 listings from 15 companies. Every source answered.
+Latest run: 2026-11-14. 124 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,34 @@ Latest run: 2026-11-13. 127 listings from 15 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-06 to 2026-11-13. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-07 to 2026-11-14. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-14
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Desert | 0 | 1 |
+| Mountain View | 0 | 2 |
+| Plus | 1 | 0 |
+| Preferred Residential | 1 | 3 |
+| Ridgeline | 1 | 0 |
+
+<details>
+<summary>9 listings</summary>
+
+- added: [1401 NE 10th St, Unit 2 ADU, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/70) ($1750, 1 BR, 1 BA, Ridgeline)
+- added: [20278 Knightsbridge Pl, Bend, OR 97702](https://prbend.com/property/three-bedroom-home-with-office/) ($2795, 3 BR, 2.5 BA, Preferred Residential)
+- added: [800 NE Copperleaf Loop - #1, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/6ccd8d65-f44b-4cb1-af64-8bb0014d509a) ($2195, 3 BR, 2.5 BA, Plus)
+- removed: [21170 SE Golden Market Ln, Bend, OR 97702](https://prbend.com/property/northwest-crossing-townhouse/) ($2999, 2 BR, 2.5 BA, Preferred Residential)
+- removed: [2728 NE Black Oak Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/b4aa166d-8793-4d1a-8d00-70cf9c2fbe8c) ($2800, 3 BR, 2.5 BA, High Desert)
+- removed: [335 NE Kearney Ave, Bend, OR 97701](https://prbend.com/property/midtown-bend-with-fenced-yard/) ($2395, 2 BR, 1 BA, Preferred Residential)
+- removed: [565 NE Norton Avenue, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/9f305c1b-89da-4972-aba6-37f74b55b786) ($2095, 3 BR, 2 BA, Mountain View)
+- removed: [60303 Addie Triplett Loop, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/67ffe704-a647-4152-b224-eb49b4c56d4e) ($2395, 3 BR, 2.5 BA, Mountain View)
+- removed: [61473 Linton Loop, Bend, OR 97702](https://prbend.com/property/sagewood-house-sw-bend/) ($3395, 3 BR, 2.5 BA, Preferred Residential)
+
+</details>
 
 ### 2026-11-13
 
@@ -138,21 +163,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 <summary>1 listing</summary>
 
 - added: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
-
-</details>
-
-### 2026-11-07
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Mountain View | 1 | 0 |
-| PMI | 0 | 1 |
-
-<details>
-<summary>2 listings</summary>
-
-- added: [2052 NW Black Pines Pl #2, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/8b60602a-e2ce-4563-8285-4eb2739804d7) ($1895, 2 BR, 1 BA, Mountain View)
-- removed: [20540 Gloucester Lane, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/240) ($2500, 3 BR, 3 BA, PMI)
 
 </details>
 
