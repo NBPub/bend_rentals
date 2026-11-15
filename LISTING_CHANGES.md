@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-14. 124 listings from 16 companies. Every source answered.
+Latest run: 2026-11-15. 124 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,13 @@ Latest run: 2026-11-14. 124 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-07 to 2026-11-14. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-08 to 2026-11-15. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-15
+
+No listings added or removed since 2026-11-14.
 
 ### 2026-11-14
 
@@ -150,19 +154,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - added: [62908 NE Nolan Street, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/610452ba-6950-4316-b2ce-5e7a9571b799) ($2895, 3 BR, 2.5 BA, Mountain View)
 - removed: [1425 NW Lexington, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3) ($2300, 2 BR, ? BA, Trailhead)
 - removed: [20287 Schaeffer Dr., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64) ($2195, 3 BR, 2.5 BA, Mountain View)
-
-</details>
-
-### 2026-11-08
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-
-<details>
-<summary>1 listing</summary>
-
-- added: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
 
 </details>
 
