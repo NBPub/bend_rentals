@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-15. 124 listings from 16 companies. Every source answered.
+Latest run: 2026-11-16. 122 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,27 @@ Latest run: 2026-11-15. 124 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-08 to 2026-11-15. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-09 to 2026-11-16. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-16
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Hummingbird | 0 | 1 |
+| Lifestyles | 1 | 0 |
+| Mountain View | 0 | 2 |
+
+<details>
+<summary>4 listings</summary>
+
+- added: [686 SW Otter Way, Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/fc57030d-2f7b-4949-be5d-7c7b7818a7b4) ($3650, 3 BR, 3 BA, Lifestyles)
+- removed: [1605 NW 1st St., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/d5c92685-543c-49b2-bb75-04f39c2f8486) ($1995, 2 BR, 1 BA, Mountain View)
+- removed: [1870 Northeast Monroe Avenue, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/152780) ($2375, 3 BR, 2.5 BA, Hummingbird)
+- removed: [60615 River Bend Dr, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/e41c37d7-626d-4758-a087-ea5596456eaa) ($5595, 3 BR, 2.5 BA, Mountain View)
+
+</details>
 
 ### 2026-11-15
 
@@ -131,29 +149,6 @@ No listings added or removed since 2026-11-14.
 - removed: [1286 NE Dawson Dr, Unit B, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/69) ($1850, 2 BR, 3 BA, Ridgeline)
 - removed: [20824 Gateway Dr. , Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/42739e34-6452-4f9e-8c34-3ac02f4e8af5) ($2750, 3 BR, 2.5 BA, Velocity)
 - removed: [55803 Snow Goose Rd , Bend, OR 97707](https://utopiamanagement.appfolio.com/listings/detail/5e229b31-37af-41bd-8daf-2d67e4d29d01) ($2150, 3 BR, 2 BA, Utopia)
-
-</details>
-
-### 2026-11-09
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Mountain View | 1 | 1 |
-| Mt. Bachelor | 1 | 0 |
-| PMI | 1 | 0 |
-| Trailhead | 0 | 1 |
-| Utopia | 2 | 0 |
-
-<details>
-<summary>7 listings</summary>
-
-- added: [20514 SE Cameron Avenue, Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/d86d036d-4bb5-4a9f-924e-bf3f226f3371) ($2850, 3 BR, 2.5 BA, Utopia)
-- added: [20540 Gloucester Lane, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/240) ($2500, 3 BR, 3 BA, PMI)
-- added: [206- 200 SW Summer Lake Dr , Unit 202, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/bba4be5e-5712-4ec9-9aaf-82e0179b2ac2) ($1795, 2 BR, 2 BA, Mt. Bachelor)
-- added: [2318 NE Atherton Ct., Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/b1e2d5f3-57ad-4c3f-833f-4fd0160fe528) ($3995, 4 BR, 3.5 BA, Utopia)
-- added: [62908 NE Nolan Street, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/610452ba-6950-4316-b2ce-5e7a9571b799) ($2895, 3 BR, 2.5 BA, Mountain View)
-- removed: [1425 NW Lexington, Bend OR 97703](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-jgzrz-w6gr3) ($2300, 2 BR, ? BA, Trailhead)
-- removed: [20287 Schaeffer Dr., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/60ef5e6a-fc26-4b0e-b9b9-10b5da3bdf64) ($2195, 3 BR, 2.5 BA, Mountain View)
 
 </details>
 
