@@ -1390,6 +1390,12 @@
   "address": "63273 NW Ski Ln, Unit 2, Bend, OR 97703",
   "failed_at": "2026-10-03"
  },
+ "63273 ski lane unit 1 bend or 97703": {
+  "lat": "?",
+  "lon": "?",
+  "address": "63273 SKI LANE , Unit 1, Bend, OR 97703",
+  "failed_at": "2026-11-17"
+ },
  "63323 wrangler place bend or 97703": {
   "lat": "44.0985940",
   "lon": "-121.3148534",

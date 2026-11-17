@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-16. 122 listings from 16 companies. Every source answered.
+Latest run: 2026-11-17. 120 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,27 @@ Latest run: 2026-11-16. 122 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-09 to 2026-11-16. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-10 to 2026-11-17. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-17
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Country | 0 | 1 |
+| Mt. Bachelor | 1 | 1 |
+| Utopia | 0 | 1 |
+
+<details>
+<summary>4 listings</summary>
+
+- added: [63273 SKI LANE , Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/6f38af63-62de-4fbb-94b6-bedb74330e45) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
+- removed: [2218 NE Carrie Lane, Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/c44a59aa-c5a8-49bc-b430-b60c18406f35) ($2295, 3 BR, 2 BA, Utopia)
+- removed: [60881 SE Sweet Pea Drive, Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/e1658edc-bfed-4b7a-a8c4-4ddbd311dffd) ($2795, 3 BR, 2 BA, High Country)
+- removed: [63273 NW Ski Ln, Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/717a53db-8bc1-4679-922e-61541aeb0989) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
+
+</details>
 
 ### 2026-11-16
 
@@ -131,27 +149,6 @@ No listings added or removed since 2026-11-14.
 
 </details>
 
-### 2026-11-10
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Plus | 1 | 0 |
-| Ridgeline | 0 | 1 |
-| Superior | 0 | 1 |
-| Utopia | 0 | 1 |
-| Velocity | 0 | 1 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [1615 NW Portland - #4, Bend, OR 97703](https://pluspmllc.appfolio.com/listings/detail/af0c9891-8718-4fff-8b76-c65adb45a375) ($1700, 1 BR, 1 BA, Plus)
-- removed: [1157 SW Silver Lake Blvd, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/b2568d19-a6c1-427c-ad72-d60c508a66af) ($2495, 3 BR, 2 BA, Superior)
-- removed: [1286 NE Dawson Dr, Unit B, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/69) ($1850, 2 BR, 3 BA, Ridgeline)
-- removed: [20824 Gateway Dr. , Bend, OR 97702](https://velocitypm.appfolio.com/listings/detail/42739e34-6452-4f9e-8c34-3ac02f4e8af5) ($2750, 3 BR, 2.5 BA, Velocity)
-- removed: [55803 Snow Goose Rd , Bend, OR 97707](https://utopiamanagement.appfolio.com/listings/detail/5e229b31-37af-41bd-8daf-2d67e4d29d01) ($2150, 3 BR, 2 BA, Utopia)
-
-</details>
-
 ## Geocoding
 
 4 listing(s) have no coordinates and are listed below the map rather than placed on it.
@@ -159,11 +156,11 @@ No listings added or removed since 2026-11-14.
 | Company | Address | Map |
 |---|---|---|
 | High Desert | 61608 SE Quill Place, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61608+SE+Quill+Place%2C+Bend%2C+OR+97702) |
-| Mt. Bachelor | 63273 NW Ski Ln, Unit 1, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+NW+Ski+Ln%2C+Unit+1%2C+Bend%2C+OR+97703) |
+| Mt. Bachelor | 63273 SKI LANE , Unit 1, Bend, OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=63273+SKI+LANE+%2C+Unit+1%2C+Bend%2C+OR+97703) |
 | Superior | 61525 Jennifer Ln. - #3, Bend, OR 97702 | [search](https://www.google.com/maps/search/?api=1&query=61525+Jennifer+Ln.+-+%233%2C+Bend%2C+OR+97702) |
 | Trailhead | 1643 NW Knoll, Bend OR 97703 | [search](https://www.google.com/maps/search/?api=1&query=1643+NW+Knoll%2C+Bend+OR+97703) |
 
-11 address(es) are cached as unresolved; the oldest is already due and will be retried the next time its address appears in a listing.
+12 address(es) are cached as unresolved; the oldest is already due and will be retried the next time its address appears in a listing.
 
 ## Stale listings
 
