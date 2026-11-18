@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-17. 120 listings from 16 companies. Every source answered.
+Latest run: 2026-11-18. 119 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,29 @@ Latest run: 2026-11-17. 120 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-10 to 2026-11-17. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-11 to 2026-11-18. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-18
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Desert | 1 | 0 |
+| Mt. Bachelor | 0 | 1 |
+| PMI | 1 | 0 |
+| Superior | 0 | 2 |
+
+<details>
+<summary>5 listings</summary>
+
+- added: [20402 Penhollow Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/ddffff44-2889-4033-b173-358677f693cf) ($3195, 4 BR, 2.5 BA, High Desert)
+- added: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, 1 BR, 1 BA, PMI)
+- removed: [11 NW Hixon Ave - #1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/a18abe59-b71a-48bf-86ca-dcca1bffe5eb) ($2295, 3 BR, 1 BA, Superior)
+- removed: [1145 NW Knoxville - 1145, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/88f65811-962c-4334-8969-7066eeff098e) ($2495, 2 BR, 2 BA, Superior)
+- removed: [1940 NW Monterey Pines, #15, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/f5b74f22-81c1-4d6e-98f9-28efbfa5d12d) ($2195, 1 BR, 1 BA, Mt. Bachelor)
+
+</details>
 
 ### 2026-11-17
 
@@ -125,27 +145,6 @@ No listings added or removed since 2026-11-14.
 - removed: [403 SE 4th Street, Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/02e00c6e-7047-4cc3-93f5-68b28ced0fdb) ($1995, 2 BR, 1 BA, Utopia)
 - removed: [61320 SW Blakely #5, Bend OR  97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-966b3) ($1600, 1 BR, ? BA, Trailhead)
 - removed: [82 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/15ed2f3f-059f-4643-b4a5-f8ef2bdbd6fb) ($1595, 1 BR, 1 BA, Mountain View)
-
-</details>
-
-### 2026-11-11
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 0 |
-| Elevation | 0 | 1 |
-| Mountain View | 3 | 0 |
-| Superior | 0 | 1 |
-
-<details>
-<summary>6 listings</summary>
-
-- added: [21169 SE Golden Market Ln. - 1, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/40450826-2528-4d31-8785-13b15a708d01) ($2595, 3 BR, 2.5 BA, Mountain View)
-- added: [413 SE Yew Ln - 3, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/c255e901-7eb9-4289-a3bc-87cf9c895ea3) ($1950, 2 BR, 1 BA, Mountain View)
-- added: [414 NE Norton Avenue #6, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/2526ad10-1448-4bba-910c-8cdf863c0a0c) ($1595, 2 BR, 1 BA, Mountain View)
-- added: [674 SE Centennial St., Bend, OR 97702](https://bend.appfolio.com/listings/detail/f340a4ef-3781-4ac8-ad0f-afbc257785fb) ($1350, 3 BR, 1 BA, Bend PM)
-- removed: [3525 NW McCready Drive, Bend, OR 97703](https://elevationpropmgmt.appfolio.com/listings/detail/c1166e9b-e17d-40c3-aff5-98d26566df39) ($4500, 3 BR, 2.5 BA, Elevation)
-- removed: [61349 Elkhorn St., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/dd6ca8b5-4f07-44d3-8bcd-3f8faaa634d6) ($2995, 5 BR, 3 BA, Superior)
 
 </details>
 
