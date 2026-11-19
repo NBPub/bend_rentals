@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-18. 119 listings from 16 companies. Every source answered.
+Latest run: 2026-11-19. 119 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,39 @@ Latest run: 2026-11-18. 119 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-11 to 2026-11-18. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-12 to 2026-11-19. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-19
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Bend PM | 1 | 2 |
+| Elevation | 1 | 0 |
+| High Country | 1 | 0 |
+| High Desert | 1 | 0 |
+| Hummingbird | 1 | 0 |
+| Mountain View | 1 | 2 |
+| Superior | 0 | 2 |
+
+<details>
+<summary>12 listings</summary>
+
+- added: [1039 NW Ogden Ave #1, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/95d5e1c4-4ac0-45f5-b7c7-5ba456161f12) ($1750, 1 BR, 1 BA, High Desert)
+- added: [20773 Liberty Lane, Bend, OR 97701](https://bend.appfolio.com/listings/detail/2d30fcce-a1b2-4978-ad3d-4769667bd5e9) ($2450, 3 BR, 2.5 BA, Bend PM)
+- added: [21184 Darnel Avenue, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/82a54ad7-50e0-4ae2-8d9b-41b1b6c14d5b) ($2600, 3 BR, 2.5 BA, Elevation)
+- added: [3534 Northwest Braid Drive, Bend, OR 97703](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/155836) ($6500, 3 BR, 3.5 BA, Hummingbird)
+- added: [54 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/a9fecd69-a95e-4ff1-be47-889d5faf5b82) ($1595, 1 BR, 1 BA, Mountain View)
+- added: [652 se Gleneden Pl., Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/17f8248a-5482-452e-94a2-9a84398b9e75) ($2795, 4 BR, 2.5 BA, High Country)
+- removed: [1205 NE Ross Rd - B, Bend, OR 97701](https://bend.appfolio.com/listings/detail/3dc8688c-4353-42cb-9176-4b5fb26e14fb) ($1550, 2 BR, 1 BA, Bend PM)
+- removed: [1529 SW Knoll Ave., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/465bbff8-b0f2-4a4c-a8f1-0b5b6bc08c37) ($1495, 1 BR, 1 BA, Mountain View)
+- removed: [19650 Harvard Pl., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/f017ddf9-470d-4009-b994-180a11495e04) ($2995, 3 BR, 2.5 BA, Superior)
+- removed: [20289 Schaeffer Drive, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/c18a06df-422d-4593-be8f-11824d926b6c) ($1995, 2 BR, 2.5 BA, Superior)
+- removed: [21375 NE Kristin Court, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/5f63f537-27bf-4433-b1ee-be956b0f9913) ($2195, 3 BR, 2 BA, Mountain View)
+- removed: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
+
+</details>
 
 ### 2026-11-18
 
@@ -120,31 +150,6 @@ No listings added or removed since 2026-11-14.
 - removed: [24 SW 15th St. - 22, Bend, OR 97702](https://bend.appfolio.com/listings/detail/fb7af5d4-d07a-498c-beac-3bb88f6464de) ($1095, 1 BR, 1 BA, Bend PM)
 - removed: [2741 NE Laramie Way , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/43c6ebf7-be9d-4d28-a457-f576286e5231) ($2375, 3 BR, 2 BA, High Desert)
 - removed: [65145 76th Street, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/41888f22-de9b-4850-b32c-52ac85836111) ($4495, 4 BR, 3.5 BA, Mountain View)
-
-</details>
-
-### 2026-11-12
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Country | 0 | 1 |
-| Mountain View | 0 | 3 |
-| Ridgeline | 0 | 1 |
-| Superior | 0 | 1 |
-| Trailhead | 0 | 1 |
-| Utopia | 0 | 1 |
-
-<details>
-<summary>8 listings</summary>
-
-- removed: [2022 NE Neil Way #4, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/af92fe9b-269f-49d7-8d9f-f08d062a2777) ($1495, 2 BR, 1.5 BA, Mountain View)
-- removed: [20788 SE Shea Ct., Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/4a36d7ea-d9d6-48ac-9444-e969c92b6dfe) ($2895, 4 BR, 3 BA, High Country)
-- removed: [2301 NE Mary Rose Pl. - #2, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/6cb3974c-2138-4a70-a9b3-ed0435fdd2ef) ($1795, 2 BR, 1 BA, Superior)
-- removed: [312 SW McKinley Ave, Bend, OR 97702](https://ridgelinepropertymgmt.rentvine.com/public/listings/67) ($2595, 2 BR, 1 BA, Ridgeline)
-- removed: [39 NE Cessna Dr #1, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/e8f89f64-8a4a-4310-a4b3-18f161739caf) ($2575, 3 BR, 2 BA, Mountain View)
-- removed: [403 SE 4th Street, Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/02e00c6e-7047-4cc3-93f5-68b28ced0fdb) ($1995, 2 BR, 1 BA, Utopia)
-- removed: [61320 SW Blakely #5, Bend OR  97702](https://www.trailheadpropertymanagement.com/portfolio-1/7skzwc5x2lt3m3s-ddc8l-zr9mp-63mfg-gny8k-xd5by-wrn37-993e9-zales-966b3) ($1600, 1 BR, ? BA, Trailhead)
-- removed: [82 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/15ed2f3f-059f-4643-b4a5-f8ef2bdbd6fb) ($1595, 1 BR, 1 BA, Mountain View)
 
 </details>
 

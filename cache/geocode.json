@@ -39,6 +39,11 @@
   "lon": "-121.3008773",
   "address": "1031 SE 4th St. #22, Bend, OR 97702"
  },
+ "1039 nw ogden ave 1 bend or 97701": {
+  "lat": "44.0631876",
+  "lon": "-121.3268495",
+  "address": "1039 NW Ogden Ave #1, Bend, OR 97701"
+ },
  "1095 ne hidden valley dr - b bend or 97701": {
   "lat": "44.0778969",
   "lon": "-121.2892898",
@@ -691,6 +696,11 @@
   "lon": "-121.2860100",
   "address": "20769 SE Shea Ct., Bend, OR 97702"
  },
+ "20773 liberty lane bend or 97701": {
+  "lat": "44.0983150",
+  "lon": "-121.2840978",
+  "address": "20773 Liberty Lane, Bend, OR 97701"
+ },
  "20783 boulderfield avenue - 1 bend or 97701": {
   "lat": "44.0919847",
   "lon": "-121.2857217",
@@ -755,6 +765,11 @@
   "lat": "44.0482558",
   "lon": "-121.2643277",
   "address": "21183 Copperfield Ave., Bend, OR 97702"
+ },
+ "21184 darnel avenue bend or 97702": {
+  "lat": "44.0435078",
+  "lon": "-121.2646591",
+  "address": "21184 Darnel Avenue, Bend, OR 97702"
  },
  "21185 se golden market ln - 2 bend or 97702": {
   "lat": "44.037432191642",
@@ -1001,6 +1016,11 @@
   "lon": "-121.3551560",
   "address": "3525 NW McCready Drive, Bend, OR 97703"
  },
+ "3534 northwest braid drive bend or 97703": {
+  "lat": "44.0880301",
+  "lon": "-121.3498061",
+  "address": "3534 Northwest Braid Drive, Bend, OR 97703"
+ },
  "379 nw riverside blvd bend or 97703": {
   "lat": "44.0552565",
   "lon": "-121.3234752",
@@ -1080,6 +1100,11 @@
   "lat": "44.0556332",
   "lon": "-121.3112892",
   "address": "532 NW Sisemore, Bend, OR 97703"
+ },
+ "54 ne cessna dr 2 bend or 97701": {
+  "lat": "44.0527348",
+  "lon": "-121.2764285",
+  "address": "54 NE Cessna Dr #2, Bend, OR 97701"
  },
  "55 ne cessna dr 2 bend or 97701": {
   "lat": "44.0527348",
@@ -1450,6 +1475,11 @@
   "lat": "44.166500481564",
   "lon": "-121.261245576785",
   "address": "65145 76th Street, Bend, OR 97703"
+ },
+ "652 se gleneden pl bend or 97702": {
+  "lat": "44.0403170",
+  "lon": "-121.2948234",
+  "address": "652 se Gleneden Pl., Bend, OR 97702"
  },
  "65280 76th st bend or 97701": {
   "lat": "44.169465583536",
