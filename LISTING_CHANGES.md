@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-19. 119 listings from 16 companies. Every source answered.
+Latest run: 2026-11-20. 117 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,35 @@ Latest run: 2026-11-19. 119 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-12 to 2026-11-19. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-13 to 2026-11-20. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-20
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 1 | 0 |
+| Lifestyles | 0 | 1 |
+| Mountain View | 0 | 2 |
+| PMI | 0 | 1 |
+| Plus | 0 | 1 |
+| Superior | 1 | 0 |
+| Utopia | 1 | 0 |
+
+<details>
+<summary>8 listings</summary>
+
+- added: [16997 Indio Rd, Bend, OR 97707](https://utopiamanagement.appfolio.com/listings/detail/cb8fc866-7a75-4b98-8497-b230a97702ea) ($2295, 2 BR, 2 BA, Utopia)
+- added: [20064 Mount Hope Lane, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/05770612-6a10-4576-8371-0d84aed4756f) ($2600, 3 BR, 2 BA, Elevation)
+- added: [61184 Bachelor View Rd, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/7fa5637e-a477-47e3-a0e5-49d6286cf3af) ($3995, 3 BR, 2.5 BA, Superior)
+- removed: [20870 Dione Way, Bend, OR 97703-8424](https://mountainviewpm.appfolio.com/listings/detail/f19a25ac-7e40-4f23-a1ef-c35a37777b43) ($3395, 3 BR, 2.5 BA, Mountain View)
+- removed: [61235 SE Splendor Lane, Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/22634e1a-cc22-42b5-aaca-750f098541b1) ($3500, 4 BR, 2.5 BA, Lifestyles)
+- removed: [61416 Elder Ridge St., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/0315a443-5c40-4988-8ea7-52be3cf767b6) ($3095, 3 BR, 2.5 BA, Mountain View)
+- removed: [65709 93rd St, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/31) ($2250, 3 BR, 2 BA, PMI)
+- removed: [792 NE Copperleaf Loop - #2, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/53e26fe0-4a2c-4b09-83d4-a4c1d09114fd) ($2050, 2 BR, 2.5 BA, Plus)
+
+</details>
 
 ### 2026-11-19
 
@@ -131,25 +157,6 @@ No listings added or removed since 2026-11-14.
 - removed: [565 NE Norton Avenue, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/9f305c1b-89da-4972-aba6-37f74b55b786) ($2095, 3 BR, 2 BA, Mountain View)
 - removed: [60303 Addie Triplett Loop, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/67ffe704-a647-4152-b224-eb49b4c56d4e) ($2395, 3 BR, 2.5 BA, Mountain View)
 - removed: [61473 Linton Loop, Bend, OR 97702](https://prbend.com/property/sagewood-house-sw-bend/) ($3395, 3 BR, 2.5 BA, Preferred Residential)
-
-</details>
-
-### 2026-11-13
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 1 |
-| High Desert | 1 | 1 |
-| Mountain View | 0 | 1 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [2705 NE Flower Ct., Bend, OR 97701](https://bend.appfolio.com/listings/detail/b79144dd-cb36-44ba-9a89-96579dcb75f9) ($2150, 3 BR, 2 BA, Bend PM)
-- added: [61438 Linton Loop, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/f9d47211-408b-4fb1-9a15-5742eb555dab) ($4495, 3 BR, 3 BA, High Desert)
-- removed: [24 SW 15th St. - 22, Bend, OR 97702](https://bend.appfolio.com/listings/detail/fb7af5d4-d07a-498c-beac-3bb88f6464de) ($1095, 1 BR, 1 BA, Bend PM)
-- removed: [2741 NE Laramie Way , Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/43c6ebf7-be9d-4d28-a457-f576286e5231) ($2375, 3 BR, 2 BA, High Desert)
-- removed: [65145 76th Street, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/41888f22-de9b-4850-b32c-52ac85836111) ($4495, 4 BR, 3.5 BA, Mountain View)
 
 </details>
 

@@ -325,6 +325,11 @@
   "lon": "-121.3390189",
   "address": "1695 NW Portland - #7, Bend, OR 97703"
  },
+ "16997 indio rd bend or 97707": {
+  "lat": "43.850380584685",
+  "lon": "-121.476268485478",
+  "address": "16997 Indio Rd, Bend, OR 97707"
+ },
  "17127 merganser drive bend or 97707": {
   "lat": "43.845451118767",
   "lon": "-121.461825455046",
@@ -479,6 +484,11 @@
   "lat": "44.0259355",
   "lon": "-121.3213873",
   "address": "20058 Mount Faith Place, Bend, OR 97702"
+ },
+ "20064 mount hope lane bend or 97702": {
+  "lat": "44.0264300",
+  "lon": "-121.3208110",
+  "address": "20064 Mount Hope Lane, Bend, OR 97702"
  },
  "20068 sw doanna way - 02 bend or 97702": {
   "lat": "44.0275073",
@@ -1237,6 +1247,11 @@
   "lat": "44.0226118",
   "lon": "-121.2760082",
   "address": "61175 Ferguson Rd., Bend, OR 97702"
+ },
+ "61184 bachelor view rd bend or 97702": {
+  "lat": "44.0205286",
+  "lon": "-121.3595549",
+  "address": "61184 Bachelor View Rd, Bend, OR 97702"
  },
  "61235 se splendor lane bend or 97702": {
   "lat": "44.024201708628",
