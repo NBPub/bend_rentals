@@ -189,6 +189,11 @@
   "lon": "-121.3180143",
   "address": "1427 NW 4th Street - 1, Bend, OR 97703"
  },
+ "143 nw revere ave 2 bend or 97703": {
+  "lat": "44.0674900",
+  "lon": "-121.3092954",
+  "address": "143 NW Revere Ave, #2, Bend, OR 97703"
+ },
  "1453 ne tucson way 1 bend or 97701": {
   "lat": "44.0644535",
   "lon": "-121.2613582",
@@ -213,6 +218,11 @@
   "lat": "44.0597437",
   "lon": "-121.3332557",
   "address": "1469 NW Kingston , Bend, OR 97703"
+ },
+ "1506 ne covington lane bend or 97701": {
+  "lat": "44.0654310",
+  "lon": "-121.2591130",
+  "address": "1506 NE Covington Lane , Bend, OR 97701"
  },
  "1519 nw juniper 4 bend or 97701": {
   "lat": "44.0636718",
@@ -350,6 +360,11 @@
   "lon": "-121.2779230",
   "address": "1743 NE Lotus Drive - A, Bend, OR 97701"
  },
+ "1743 sw forest ridge ave - 3 1-5 bend or 97702": {
+  "lat": "44.048164755284",
+  "lon": "-121.338100296543",
+  "address": "1743 SW Forest Ridge Ave. - 3, 1-5, Bend, OR 97702"
+ },
  "1746 ne janice way bend or 97701": {
   "lat": "44.0673306",
   "lon": "-121.2780072",
@@ -369,6 +384,11 @@
   "lat": "44.0681984",
   "lon": "-121.3371372",
   "address": "1821 NW Iowa Ave., Bend, OR 97703"
+ },
+ "1823 wichita way bend or 97701": {
+  "lat": "44.0681890",
+  "lon": "-121.2632203",
+  "address": "1823 Wichita Way, Bend, OR 97701"
  },
  "1870 northeast monroe avenue bend or 97701": {
   "lat": "44.082011507958",
@@ -811,6 +831,11 @@
   "lon": "-121.3082450",
   "address": "2150 NW Hill Street - 4, Bend, OR 97703"
  },
+ "2150 nw hill street - 6 bend or 97703": {
+  "lat": "44.0710624",
+  "lon": "-121.3082460",
+  "address": "2150 NW Hill Street - 6, Bend, OR 97703"
+ },
  "21730 ne butler market rd bend or 97701": {
   "lat": "44.0947603",
   "lon": "-121.2382012",
@@ -835,6 +860,11 @@
   "lat": "44.0734749",
   "lon": "-121.2615628",
   "address": "2318 NE Atherton Ct., Bend, OR 97701"
+ },
+ "2342 nw 6th st bend or 97703": {
+  "lat": "44.0702178",
+  "lon": "-121.3203770",
+  "address": "2342 NW 6th St., Bend, OR 97703"
  },
  "2345 nw quinn creek loop bend or 97703": {
   "lat": "44.0529230",
@@ -1125,6 +1155,11 @@
   "lat": "44.0510096",
   "lon": "-121.3177473",
   "address": "55 SW Wall St, Bend OR 97702"
+ },
+ "55650 campsite dr bend or 97707": {
+  "lat": "43.821786201434",
+  "lon": "-121.494579995118",
+  "address": "55650 Campsite Dr, Bend, OR 97707"
  },
  "55803 snow goose rd bend or 97707": {
   "lat": "43.827276518555",

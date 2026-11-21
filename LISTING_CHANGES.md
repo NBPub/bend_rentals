@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-20. 117 listings from 16 companies. Every source answered.
+Latest run: 2026-11-21. 124 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,30 @@ Latest run: 2026-11-20. 117 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-13 to 2026-11-20. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-14 to 2026-11-21. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-21
+
+| Company | Added | Removed |
+|---|---:|---:|
+| High Desert | 1 | 0 |
+| Mountain View | 2 | 0 |
+| Superior | 4 | 0 |
+
+<details>
+<summary>7 listings</summary>
+
+- added: [143 NW Revere Ave, #2, Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/7cd01d10-a6af-4115-82bc-089b051c8c42) ($1595, 1 BR, 1 BA, Mountain View)
+- added: [1506 NE Covington Lane , Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/57c3131c-6fbd-457e-9a5c-ced3616213dd) ($2195, 2 BR, 2 BA, Mountain View)
+- added: [1743 SW Forest Ridge Ave. - 3, 1-5, Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/919225c7-ed9f-48a5-9b2c-eda284554fc0) ($1495, 1 BR, 1 BA, Superior)
+- added: [1823 Wichita Way, Bend, OR 97701](https://asuperior.appfolio.com/listings/detail/735ea18b-d98a-4b34-b6e6-772e7582cf0f) ($1795, 2 BR, 1 BA, Superior)
+- added: [2150 NW Hill Street - 6, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/3892dbfc-2ee0-4640-bf8c-80303d811eeb) ($1895, 2 BR, 1 BA, Superior)
+- added: [2342 NW 6th St., Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/e6b829d5-46f5-4a9d-ae99-7f8391a75f5a) ($4000, 4 BR, 3.5 BA, Superior)
+- added: [55650 Campsite Dr, Bend, OR 97707](https://highdesertpm.appfolio.com/listings/detail/d60b5a6d-ad1e-462f-b18a-3f560fc161cd) ($2225, 3 BR, 2.5 BA, High Desert)
+
+</details>
 
 ### 2026-11-20
 
@@ -134,31 +155,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 ### 2026-11-15
 
 No listings added or removed since 2026-11-14.
-
-### 2026-11-14
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Desert | 0 | 1 |
-| Mountain View | 0 | 2 |
-| Plus | 1 | 0 |
-| Preferred Residential | 1 | 3 |
-| Ridgeline | 1 | 0 |
-
-<details>
-<summary>9 listings</summary>
-
-- added: [1401 NE 10th St, Unit 2 ADU, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/70) ($1750, 1 BR, 1 BA, Ridgeline)
-- added: [20278 Knightsbridge Pl, Bend, OR 97702](https://prbend.com/property/three-bedroom-home-with-office/) ($2795, 3 BR, 2.5 BA, Preferred Residential)
-- added: [800 NE Copperleaf Loop - #1, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/6ccd8d65-f44b-4cb1-af64-8bb0014d509a) ($2195, 3 BR, 2.5 BA, Plus)
-- removed: [21170 SE Golden Market Ln, Bend, OR 97702](https://prbend.com/property/northwest-crossing-townhouse/) ($2999, 2 BR, 2.5 BA, Preferred Residential)
-- removed: [2728 NE Black Oak Place, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/b4aa166d-8793-4d1a-8d00-70cf9c2fbe8c) ($2800, 3 BR, 2.5 BA, High Desert)
-- removed: [335 NE Kearney Ave, Bend, OR 97701](https://prbend.com/property/midtown-bend-with-fenced-yard/) ($2395, 2 BR, 1 BA, Preferred Residential)
-- removed: [565 NE Norton Avenue, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/9f305c1b-89da-4972-aba6-37f74b55b786) ($2095, 3 BR, 2 BA, Mountain View)
-- removed: [60303 Addie Triplett Loop, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/67ffe704-a647-4152-b224-eb49b4c56d4e) ($2395, 3 BR, 2.5 BA, Mountain View)
-- removed: [61473 Linton Loop, Bend, OR 97702](https://prbend.com/property/sagewood-house-sw-bend/) ($3395, 3 BR, 2.5 BA, Preferred Residential)
-
-</details>
 
 ## Geocoding
 
