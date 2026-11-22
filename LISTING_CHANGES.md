@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-21. 124 listings from 16 companies. Every source answered.
+Latest run: 2026-11-22. 125 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
 
 **Contents**
 
@@ -15,9 +15,22 @@ Latest run: 2026-11-21. 124 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-14 to 2026-11-21. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-15 to 2026-11-22. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-22
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Ridgeline | 1 | 0 |
+
+<details>
+<summary>1 listing</summary>
+
+- added: [3867 NE Petrosa Ave, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/75) ($3150, 3 BR, 3 BA, Ridgeline)
+
+</details>
 
 ### 2026-11-21
 
@@ -151,10 +164,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [60615 River Bend Dr, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/e41c37d7-626d-4758-a087-ea5596456eaa) ($5595, 3 BR, 2.5 BA, Mountain View)
 
 </details>
-
-### 2026-11-15
-
-No listings added or removed since 2026-11-14.
 
 ## Geocoding
 
