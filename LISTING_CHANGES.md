@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-23. 128 listings from 16 companies. Every source answered.
+Latest run: 2026-11-24. 131 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,32 @@ Latest run: 2026-11-23. 128 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-16 to 2026-11-23. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-17 to 2026-11-24. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-24
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Lifestyles | 1 | 0 |
+| Mountain View | 2 | 0 |
+| Mt. Bachelor | 1 | 0 |
+| PMI | 1 | 1 |
+| Utopia | 0 | 1 |
+
+<details>
+<summary>7 listings</summary>
+
+- added: [20563 Slalom Way, Bend, OR 97702](https://pmicentraloregon.rentvine.com/public/listings/238) ($2475, 3 BR, 2 BA, PMI)
+- added: [427 NE Thurston Ave B8, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/2cf70866-7f96-4ea5-bdeb-e9082cc5b759) ($1795, 3 BR, 1.5 BA, Mountain View)
+- added: [512 NW Colorado Ave, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/cc3b4eba-42f3-4b68-abf8-ac40d26df38b) ($3100, 4 BR, 1 BA, Mt. Bachelor)
+- added: [61554 Devils Lake Dr., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/a3438085-9b58-42e5-ba42-93af7a125f49) ($3295, 2 BR, 2.5 BA, Mountain View)
+- added: [63119 O.B. Riley Rd., Bend, OR 97703](https://lifestylesrealty.appfolio.com/listings/detail/93fab79a-550f-47bc-9c14-6b2346f3c9a2) ($3695, 4 BR, 2.5 BA, Lifestyles)
+- removed: [20540 Gloucester Lane, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/240) ($2500, 3 BR, 3 BA, PMI)
+- removed: [905 SW Pelton Pl , Bend, OR 97702](https://utopiamanagement.appfolio.com/listings/detail/4c0d573a-710a-4efd-90aa-1a81e14529e2) ($1550, 2 BR, 1 BA, Utopia)
+
+</details>
 
 ### 2026-11-23
 
@@ -142,24 +165,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [11 NW Hixon Ave - #1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/a18abe59-b71a-48bf-86ca-dcca1bffe5eb) ($2295, 3 BR, 1 BA, Superior)
 - removed: [1145 NW Knoxville - 1145, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/88f65811-962c-4334-8969-7066eeff098e) ($2495, 2 BR, 2 BA, Superior)
 - removed: [1940 NW Monterey Pines, #15, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/f5b74f22-81c1-4d6e-98f9-28efbfa5d12d) ($2195, 1 BR, 1 BA, Mt. Bachelor)
-
-</details>
-
-### 2026-11-17
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Country | 0 | 1 |
-| Mt. Bachelor | 1 | 1 |
-| Utopia | 0 | 1 |
-
-<details>
-<summary>4 listings</summary>
-
-- added: [63273 SKI LANE , Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/6f38af63-62de-4fbb-94b6-bedb74330e45) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-- removed: [2218 NE Carrie Lane, Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/c44a59aa-c5a8-49bc-b430-b60c18406f35) ($2295, 3 BR, 2 BA, Utopia)
-- removed: [60881 SE Sweet Pea Drive, Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/e1658edc-bfed-4b7a-a8c4-4ddbd311dffd) ($2795, 3 BR, 2 BA, High Country)
-- removed: [63273 NW Ski Ln, Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/717a53db-8bc1-4679-922e-61541aeb0989) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
 
 </details>
 

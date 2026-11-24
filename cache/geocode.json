@@ -1121,6 +1121,11 @@
   "lon": "-121.3146980",
   "address": "423 SW Garfield - 100, Bend, OR 97702"
  },
+ "427 ne thurston ave b8 bend or 97701": {
+  "lat": "44.069445113788",
+  "lon": "-121.299488878356",
+  "address": "427 NE Thurston Ave B8, Bend, OR 97701"
+ },
  "437 se railroad st bend or 97702": {
   "lat": "44.0493261",
   "lon": "-121.3010232",
@@ -1145,6 +1150,11 @@
   "lat": "44.0532279",
   "lon": "-121.3144658",
   "address": "510 Northwest Delaware Avenue, Bend, OR 97703"
+ },
+ "512 nw colorado ave bend or 97703": {
+  "lat": "44.0524069",
+  "lon": "-121.3144749",
+  "address": "512 NW Colorado Ave, Bend, OR 97703"
  },
  "525 nw broadway bend or 97703": {
   "lat": "44.0568593",
@@ -1384,6 +1394,11 @@
   "lon": "-121.3031614",
   "address": "61550 Brosterhous Rd. - 38, Bend, OR 97702"
  },
+ "61554 devils lake dr bend or 97702": {
+  "lat": "44.03598843763",
+  "lon": "-121.34619874898",
+  "address": "61554 Devils Lake Dr., Bend, OR 97702"
+ },
  "61579 lucia st bend or 97702": {
   "lat": "?",
   "lon": "?",
@@ -1456,6 +1471,11 @@
   "lat": "44.0442971",
   "lon": "-121.2908435",
   "address": "631 SE Wilson Ave. - #2, Bend, OR 97702"
+ },
+ "63119 o b riley rd bend or 97703": {
+  "lat": "44.092008483124",
+  "lon": "-121.310657569883",
+  "address": "63119 O.B. Riley Rd., Bend, OR 97703"
  },
  "63150 dakota dr bend or 97701": {
   "lat": "44.092807876317",
