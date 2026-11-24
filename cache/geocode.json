@@ -279,6 +279,11 @@
   "lon": "-121.3358936",
   "address": "1590 NW Hartford, Bend, OR 97703"
  },
+ "1601 nw 3rd st 2 bend or 97701": {
+  "lat": "44.0642650",
+  "lon": "-121.3169360",
+  "address": "1601 NW 3rd St., #2, Bend, OR 97701"
+ },
  "1601 nw 3rd st 5 bend or 97703": {
   "lat": "44.0642650",
   "lon": "-121.3169360",
@@ -303,7 +308,7 @@
   "lat": "?",
   "lon": "?",
   "address": "1643 NW Knoll, Bend OR 97703",
-  "failed_at": "2026-10-24"
+  "failed_at": "2026-11-23"
  },
  "1663 nw elgin ave bend or 97703": {
   "lat": "44.0549749",
@@ -681,6 +686,11 @@
   "lon": "-121.3111263",
   "address": "206- 200 SW Summer Lake Dr , Unit 202, Bend, OR 97702"
  },
+ "206- 200 sw summer lake dr unit 206 bend or 97702": {
+  "lat": "44.0383120",
+  "lon": "-121.3111263",
+  "address": "206- 200 SW Summer Lake Dr , Unit 206, Bend, OR 97702"
+ },
  "20605 se slate ave bend or 97702": {
   "lat": "44.0313696",
   "lon": "-121.2962862",
@@ -1030,6 +1040,11 @@
   "lat": "44.0466414",
   "lon": "-121.2836673",
   "address": "330 SE 15th St. #4, Bend, OR 97702"
+ },
+ "3334 nw bungalow dr bend or 97703": {
+  "lat": "44.0864856",
+  "lon": "-121.3235422",
+  "address": "3334 NW Bungalow Dr., Bend, OR 97703"
  },
  "3336 nw celilo ln - 1 bend or 97703": {
   "lat": "44.0660401",

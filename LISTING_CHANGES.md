@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-22. 125 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
+Latest run: 2026-11-23. 128 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,25 @@ Latest run: 2026-11-22. 125 listings from 16 companies. 1 source did not answer 
 
 ## Recent changes
 
-Covering 7 days, 2026-11-15 to 2026-11-22. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-16 to 2026-11-23. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-23
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Mt. Bachelor | 1 | 0 |
+| Velocity | 2 | 0 |
+
+<details>
+<summary>3 listings</summary>
+
+- added: [1601 NW 3rd St., #2, Bend, OR 97701](https://velocitypm.appfolio.com/listings/detail/6306affc-9c5d-47ec-940d-800e67690312) ($1395, 0 BR, 1 BA, Velocity)
+- added: [206- 200 SW Summer Lake Dr , Unit 206, Bend, OR 97702](https://mtbachpm.appfolio.com/listings/detail/72694b6a-56e1-4d46-89ac-a357bc27bce5) ($1795, 2 BR, 2 BA, Mt. Bachelor)
+- added: [3334 NW Bungalow Dr., Bend, OR 97703](https://velocitypm.appfolio.com/listings/detail/15208c8c-7532-422b-a200-997eb375fd4e) ($3395, 4 BR, 3 BA, Velocity)
+
+</details>
 
 ### 2026-11-22
 
@@ -144,24 +160,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [2218 NE Carrie Lane, Bend, OR 97701](https://utopiamanagement.appfolio.com/listings/detail/c44a59aa-c5a8-49bc-b430-b60c18406f35) ($2295, 3 BR, 2 BA, Utopia)
 - removed: [60881 SE Sweet Pea Drive, Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/e1658edc-bfed-4b7a-a8c4-4ddbd311dffd) ($2795, 3 BR, 2 BA, High Country)
 - removed: [63273 NW Ski Ln, Unit 1, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/717a53db-8bc1-4679-922e-61541aeb0989) ($2500, 2 BR, 2.5 BA, Mt. Bachelor)
-
-</details>
-
-### 2026-11-16
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Hummingbird | 0 | 1 |
-| Lifestyles | 1 | 0 |
-| Mountain View | 0 | 2 |
-
-<details>
-<summary>4 listings</summary>
-
-- added: [686 SW Otter Way, Bend, OR 97702](https://lifestylesrealty.appfolio.com/listings/detail/fc57030d-2f7b-4949-be5d-7c7b7818a7b4) ($3650, 3 BR, 3 BA, Lifestyles)
-- removed: [1605 NW 1st St., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/d5c92685-543c-49b2-bb75-04f39c2f8486) ($1995, 2 BR, 1 BA, Mountain View)
-- removed: [1870 Northeast Monroe Avenue, Bend, OR 97701](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/152780) ($2375, 3 BR, 2.5 BA, Hummingbird)
-- removed: [60615 River Bend Dr, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/e41c37d7-626d-4758-a087-ea5596456eaa) ($5595, 3 BR, 2.5 BA, Mountain View)
 
 </details>
 
