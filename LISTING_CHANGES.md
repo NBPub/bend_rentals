@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-24. 131 listings from 16 companies. Every source answered.
+Latest run: 2026-11-25. 126 listings from 16 companies. Every source answered.
 
 **Contents**
 
@@ -15,9 +15,31 @@ Latest run: 2026-11-24. 131 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-17 to 2026-11-24. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-18 to 2026-11-25. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-25
+
+| Company | Added | Removed |
+|---|---:|---:|
+| Elevation | 0 | 2 |
+| High Country | 0 | 1 |
+| Mountain View | 1 | 2 |
+| Ridgeline | 0 | 1 |
+
+<details>
+<summary>7 listings</summary>
+
+- added: [21177 SE Golden Market Ln. - 1, Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/212f07d3-b93d-4199-b391-bfe9a8f854ee) ($2595, 3 BR, 2.5 BA, Mountain View)
+- removed: [236 NW Newport Ave., Bend, OR 97703](https://mountainviewpm.appfolio.com/listings/detail/14fafc3c-7bbb-4921-aa3c-e699e3416080) ($3250, 4 BR, 2 BA, Mountain View)
+- removed: [312 NE 4th St. - Unit B, Bend, OR 97701](https://highcountrypropmgmt.appfolio.com/listings/detail/a7ed523d-8edf-4974-aa71-a3d7e83a3d80) ($1995, 2 BR, 1 BA, High Country)
+- removed: [3867 NE Petrosa Ave, Bend, OR 97701](https://ridgelinepropertymgmt.rentvine.com/public/listings/75) ($3150, 3 BR, 3 BA, Ridgeline)
+- removed: [54 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/a9fecd69-a95e-4ff1-be47-889d5faf5b82) ($1595, 1 BR, 1 BA, Mountain View)
+- removed: [61049 Larkspur Loop, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/fd4fa7d0-e904-43c3-90d0-3712b4f929e3) ($2700, 3 BR, 2 BA, Elevation)
+- removed: [959 NE Hidden Valley Drive, Bend, OR 97701](https://elevationpropmgmt.appfolio.com/listings/detail/720a359e-86fe-4cd6-9bee-bfea6f2e3d06) ($2200, 3 BR, 2.5 BA, Elevation)
+
+</details>
 
 ### 2026-11-24
 
@@ -145,26 +167,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [20289 Schaeffer Drive, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/c18a06df-422d-4593-be8f-11824d926b6c) ($1995, 2 BR, 2.5 BA, Superior)
 - removed: [21375 NE Kristin Court, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/5f63f537-27bf-4433-b1ee-be956b0f9913) ($2195, 3 BR, 2 BA, Mountain View)
 - removed: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
-
-</details>
-
-### 2026-11-18
-
-| Company | Added | Removed |
-|---|---:|---:|
-| High Desert | 1 | 0 |
-| Mt. Bachelor | 0 | 1 |
-| PMI | 1 | 0 |
-| Superior | 0 | 2 |
-
-<details>
-<summary>5 listings</summary>
-
-- added: [20402 Penhollow Ln, Bend, OR 97702](https://highdesertpm.appfolio.com/listings/detail/ddffff44-2889-4033-b173-358677f693cf) ($3195, 4 BR, 2.5 BA, High Desert)
-- added: [524 NE Olney Ave Unit 2, Bend, OR 97701](https://pmicentraloregon.rentvine.com/public/listings/22) ($1500, 1 BR, 1 BA, PMI)
-- removed: [11 NW Hixon Ave - #1, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/a18abe59-b71a-48bf-86ca-dcca1bffe5eb) ($2295, 3 BR, 1 BA, Superior)
-- removed: [1145 NW Knoxville - 1145, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/88f65811-962c-4334-8969-7066eeff098e) ($2495, 2 BR, 2 BA, Superior)
-- removed: [1940 NW Monterey Pines, #15, Bend, OR 97703](https://mtbachpm.appfolio.com/listings/detail/f5b74f22-81c1-4d6e-98f9-28efbfa5d12d) ($2195, 1 BR, 1 BA, Mt. Bachelor)
 
 </details>
 
