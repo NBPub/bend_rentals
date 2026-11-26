@@ -2,7 +2,7 @@
 
 Generated on every scrape by [`build_changes.py`](build_changes.py). The complete record is [`data/listings.csv`](data/listings.csv) and its commit history; this is a readable summary of the last few days of it.
 
-Latest run: 2026-11-25. 126 listings from 16 companies. Every source answered.
+Latest run: 2026-11-26. 126 listings from 16 companies. 1 source did not answer and its listings are the ones published previously: Preferred Residential (1 day behind).
 
 **Contents**
 
@@ -15,9 +15,13 @@ Latest run: 2026-11-25. 126 listings from 16 companies. Every source answered.
 
 ## Recent changes
 
-Covering 7 days, 2026-11-18 to 2026-11-25. A shorter span than expected means git had less history to read than the window asked for.
+Covering 7 days, 2026-11-19 to 2026-11-26. A shorter span than expected means git had less history to read than the window asked for.
 
 A removed listing's link will usually no longer resolve: the company takes the page down when the property goes. The address and price are kept here so the record survives the link.
+
+### 2026-11-26
+
+No listings added or removed since 2026-11-25.
 
 ### 2026-11-25
 
@@ -137,36 +141,6 @@ A removed listing's link will usually no longer resolve: the company takes the p
 - removed: [61416 Elder Ridge St., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/0315a443-5c40-4988-8ea7-52be3cf767b6) ($3095, 3 BR, 2.5 BA, Mountain View)
 - removed: [65709 93rd St, Bend, OR 97703](https://pmicentraloregon.rentvine.com/public/listings/31) ($2250, 3 BR, 2 BA, PMI)
 - removed: [792 NE Copperleaf Loop - #2, Bend, OR 97701](https://pluspmllc.appfolio.com/listings/detail/53e26fe0-4a2c-4b09-83d4-a4c1d09114fd) ($2050, 2 BR, 2.5 BA, Plus)
-
-</details>
-
-### 2026-11-19
-
-| Company | Added | Removed |
-|---|---:|---:|
-| Bend PM | 1 | 2 |
-| Elevation | 1 | 0 |
-| High Country | 1 | 0 |
-| High Desert | 1 | 0 |
-| Hummingbird | 1 | 0 |
-| Mountain View | 1 | 2 |
-| Superior | 0 | 2 |
-
-<details>
-<summary>12 listings</summary>
-
-- added: [1039 NW Ogden Ave #1, Bend, OR 97701](https://highdesertpm.appfolio.com/listings/detail/95d5e1c4-4ac0-45f5-b7c7-5ba456161f12) ($1750, 1 BR, 1 BA, High Desert)
-- added: [20773 Liberty Lane, Bend, OR 97701](https://bend.appfolio.com/listings/detail/2d30fcce-a1b2-4978-ad3d-4769667bd5e9) ($2450, 3 BR, 2.5 BA, Bend PM)
-- added: [21184 Darnel Avenue, Bend, OR 97702](https://elevationpropmgmt.appfolio.com/listings/detail/82a54ad7-50e0-4ae2-8d9b-41b1b6c14d5b) ($2600, 3 BR, 2.5 BA, Elevation)
-- added: [3534 Northwest Braid Drive, Bend, OR 97703](https://hummingbirdpropertymanagement.managebuilding.com/Resident/public/rentals/155836) ($6500, 3 BR, 3.5 BA, Hummingbird)
-- added: [54 NE Cessna Dr #2, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/a9fecd69-a95e-4ff1-be47-889d5faf5b82) ($1595, 1 BR, 1 BA, Mountain View)
-- added: [652 se Gleneden Pl., Bend, OR 97702](https://highcountrypropmgmt.appfolio.com/listings/detail/17f8248a-5482-452e-94a2-9a84398b9e75) ($2795, 4 BR, 2.5 BA, High Country)
-- removed: [1205 NE Ross Rd - B, Bend, OR 97701](https://bend.appfolio.com/listings/detail/3dc8688c-4353-42cb-9176-4b5fb26e14fb) ($1550, 2 BR, 1 BA, Bend PM)
-- removed: [1529 SW Knoll Ave., Bend, OR 97702](https://mountainviewpm.appfolio.com/listings/detail/465bbff8-b0f2-4a4c-a8f1-0b5b6bc08c37) ($1495, 1 BR, 1 BA, Mountain View)
-- removed: [19650 Harvard Pl., Bend, OR 97702](https://asuperior.appfolio.com/listings/detail/f017ddf9-470d-4009-b994-180a11495e04) ($2995, 3 BR, 2.5 BA, Superior)
-- removed: [20289 Schaeffer Drive, Bend, OR 97703](https://asuperior.appfolio.com/listings/detail/c18a06df-422d-4593-be8f-11824d926b6c) ($1995, 2 BR, 2.5 BA, Superior)
-- removed: [21375 NE Kristin Court, Bend, OR 97701](https://mountainviewpm.appfolio.com/listings/detail/5f63f537-27bf-4433-b1ee-be956b0f9913) ($2195, 3 BR, 2 BA, Mountain View)
-- removed: [423 SW Garfield - 100, Bend, OR 97702](https://bend.appfolio.com/listings/detail/38c5f255-2890-48bf-a49f-99982f3c1d5f) ($2095, 3 BR, 2 BA, Bend PM)
 
 </details>
 
